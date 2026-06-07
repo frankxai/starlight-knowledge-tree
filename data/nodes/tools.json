@@ -1,0 +1,112 @@
+[
+  {
+    "id": "tool-pytorch",
+    "type": "tool",
+    "label": "PyTorch",
+    "description": "An open-source deep learning framework for research and production. The primary tool for implementing neural networks.",
+    "domain": "domain-ai-architect",
+    "tags": ["deep-learning", "python", "framework", "ai"],
+    "status": "stable",
+    "url": "https://pytorch.org",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "applies_to", "target": "skill-train-basic-nn" },
+      { "type": "applies_to", "target": "skill-implement-transformer" },
+      { "type": "teaches", "target": "concept-neural-network-basics" }
+    ]
+  },
+  {
+    "id": "tool-huggingface-transformers",
+    "type": "tool",
+    "label": "Hugging Face Transformers",
+    "description": "A library of pretrained transformer models and fine-tuning utilities. The standard toolkit for LLM practitioners.",
+    "domain": "domain-ai-architect",
+    "tags": ["transformers", "llm", "fine-tuning", "python"],
+    "status": "stable",
+    "url": "https://huggingface.co/docs/transformers",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "applies_to", "target": "skill-finetune-llm" },
+      { "type": "teaches", "target": "concept-transformer-architecture" }
+    ]
+  },
+  {
+    "id": "tool-gmat",
+    "type": "tool",
+    "label": "GMAT (General Mission Analysis Tool)",
+    "description": "NASA open-source space mission design and navigation tool for trajectory analysis, orbit determination, and optimization.",
+    "domain": "domain-space-builder",
+    "tags": ["astrodynamics", "trajectory", "mission-design", "nasa"],
+    "status": "stable",
+    "url": "https://software.nasa.gov/software/GSC-17177-1",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "applies_to", "target": "skill-calculate-orbit" },
+      { "type": "applies_to", "target": "skill-plan-trajectory" }
+    ]
+  },
+  {
+    "id": "tool-openrocket",
+    "type": "tool",
+    "label": "OpenRocket",
+    "description": "An open-source rocket simulation software for designing and simulating model rockets.",
+    "domain": "domain-space-builder",
+    "tags": ["rockets", "simulation", "propulsion", "open-source"],
+    "status": "stable",
+    "url": "https://openrocket.info",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "applies_to", "target": "skill-size-propulsion-system" }
+    ]
+  },
+  {
+    "id": "tool-jupyter-notebook",
+    "type": "tool",
+    "label": "Jupyter Notebook",
+    "description": "An interactive computing environment for creating reproducible research notebooks combining code, text, and visualizations.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": ["notebook", "python", "research", "data-science"],
+    "status": "stable",
+    "url": "https://jupyter.org",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "applies_to", "target": "skill-design-cognitive-experiment" },
+      { "type": "applies_to", "target": "skill-evaluate-longevity-intervention" }
+    ]
+  },
+  {
+    "id": "tool-notion",
+    "type": "tool",
+    "label": "Notion",
+    "description": "A connected workspace for documentation, product specs, databases, and company knowledge management.",
+    "domain": "domain-creator-founder",
+    "tags": ["productivity", "docs", "pm", "knowledge-management"],
+    "status": "stable",
+    "url": "https://notion.so",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "applies_to", "target": "skill-write-product-spec" }
+    ]
+  },
+  {
+    "id": "tool-linear",
+    "type": "tool",
+    "label": "Linear",
+    "description": "A project management tool designed for software teams with fast issue tracking, cycles, and roadmaps.",
+    "domain": "domain-creator-founder",
+    "tags": ["pm", "project-management", "engineering", "startup"],
+    "status": "stable",
+    "url": "https://linear.app",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "applies_to", "target": "skill-ship-mvp" }
+    ]
+  }
+]

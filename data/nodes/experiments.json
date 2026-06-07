@@ -1,0 +1,52 @@
+[
+  {
+    "id": "experiment-implement-miniGPT",
+    "type": "experiment",
+    "label": "Implement miniGPT from Scratch",
+    "description": "Build a character-level GPT implementation from scratch in PyTorch, train on a text corpus, and analyze what the model learns.",
+    "domain": "domain-ai-architect",
+    "tags": ["transformers", "implementation", "training", "experiment"],
+    "status": "stable",
+    "protocol": "Follow Karpathy's nanoGPT approach: implement multi-head attention, positional embedding, and training loop. Train on Shakespeare. Measure loss and generate samples.",
+    "expected_outputs": ["training loss curve", "generated text samples", "annotated code"],
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "tests", "target": "skill-implement-transformer" },
+      { "type": "tests", "target": "concept-transformer-architecture" }
+    ]
+  },
+  {
+    "id": "experiment-lora-finetune",
+    "type": "experiment",
+    "label": "LoRA Fine-tuning on Custom Dataset",
+    "description": "Fine-tune a 7B LLM using LoRA on a custom instruction-following dataset and evaluate against a baseline.",
+    "domain": "domain-ai-architect",
+    "tags": ["fine-tuning", "lora", "llm", "experiment"],
+    "status": "stable",
+    "protocol": "Prepare a 1000-sample instruction dataset. Fine-tune using LoRA rank=8. Evaluate on held-out prompts. Compare outputs to base model.",
+    "expected_outputs": ["fine-tuned weights (shared)", "eval comparison table", "training log"],
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "tests", "target": "skill-finetune-llm" }
+    ]
+  },
+  {
+    "id": "experiment-hohmann-transfer-simulation",
+    "type": "experiment",
+    "label": "Hohmann Transfer Simulation in GMAT",
+    "description": "Simulate a Hohmann transfer from LEO to GEO in GMAT. Compute delta-v requirements and validate against analytical solution.",
+    "domain": "domain-space-builder",
+    "tags": ["orbital-mechanics", "hohmann", "gmat", "simulation"],
+    "status": "stable",
+    "protocol": "Set up a LEO initial orbit in GMAT (400km circular). Define target GEO orbit (35786km circular). Compute two-impulse Hohmann transfer. Compare to analytical Tsiolkovsky calculation.",
+    "expected_outputs": ["GMAT script", "delta-v comparison table", "orbit visualization"],
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "tests", "target": "skill-calculate-orbit" },
+      { "type": "tests", "target": "concept-hohmann-transfer" }
+    ]
+  }
+]

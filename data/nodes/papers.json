@@ -1,0 +1,95 @@
+[
+  {
+    "id": "paper-attention-is-all-you-need",
+    "type": "paper",
+    "label": "Attention Is All You Need",
+    "description": "Vaswani et al. (2017) introduced the transformer architecture, replacing recurrence and convolution with multi-head self-attention. The foundational paper for modern LLMs.",
+    "domain": "domain-ai-architect",
+    "tags": ["transformers", "attention", "nlp", "deep-learning"],
+    "status": "stable",
+    "authors": ["Ashish Vaswani", "Noam Shazeer", "Niki Parmar", "Jakob Uszkoreit", "Llion Jones", "Aidan N. Gomez", "Łukasz Kaiser", "Illia Polosukhin"],
+    "year": 2017,
+    "url": "https://arxiv.org/abs/1706.03762",
+    "abstract": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "evidenced_by", "target": "concept-attention-mechanism" },
+      { "type": "evidenced_by", "target": "concept-transformer-architecture" }
+    ]
+  },
+  {
+    "id": "paper-gpt3",
+    "type": "paper",
+    "label": "Language Models are Few-Shot Learners (GPT-3)",
+    "description": "Brown et al. (2020) demonstrated that scaling language models to 175B parameters enables few-shot learning across a wide range of NLP tasks without task-specific fine-tuning.",
+    "domain": "domain-ai-architect",
+    "tags": ["llm", "gpt", "few-shot", "scaling", "pretraining"],
+    "status": "stable",
+    "authors": ["Tom B. Brown", "Benjamin Mann", "Nick Ryder", "Melanie Subbiah", "Jared Kaplan", "et al."],
+    "year": 2020,
+    "url": "https://arxiv.org/abs/2005.14165",
+    "abstract": "We train GPT-3, an autoregressive language model with 175 billion parameters, and test its few-shot performance across NLP tasks. GPT-3 achieves strong performance on many benchmarks, often matching or exceeding the performance of fine-tuned models.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "evidenced_by", "target": "concept-pretraining-objectives" },
+      { "type": "evidenced_by", "target": "concept-llm-prompting" }
+    ]
+  },
+  {
+    "id": "paper-hallmarks-of-aging-lopez-otin",
+    "type": "paper",
+    "label": "The Hallmarks of Aging",
+    "description": "Lopez-Otin et al. (2013, updated 2023) defined the molecular and cellular hallmarks of aging, providing the foundational framework for longevity research.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": ["aging", "longevity", "biology", "hallmarks"],
+    "status": "stable",
+    "authors": ["Carlos Lopez-Otin", "Maria A. Blasco", "Linda Partridge", "Manuel Serrano", "Guido Kroemer"],
+    "year": 2013,
+    "url": "https://doi.org/10.1016/j.cell.2013.05.039",
+    "abstract": "Aging is characterized by a progressive loss of physiological integrity, leading to impaired function and increased vulnerability to death. We enumerateand describe the hallmarks of aging.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "evidenced_by", "target": "concept-hallmarks-of-aging" }
+    ]
+  },
+  {
+    "id": "paper-sleep-performance-walker",
+    "type": "paper",
+    "label": "Why We Sleep (research basis)",
+    "description": "Matthew Walker's research program on sleep and cognitive performance, establishing the mechanisms by which sleep deprivation impairs memory consolidation, emotional regulation, and immune function.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": ["sleep", "cognition", "performance", "neuroscience"],
+    "status": "stable",
+    "authors": ["Matthew Walker"],
+    "year": 2017,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6281147/",
+    "abstract": "Sleep plays a critical role in cognitive performance, memory consolidation, and health. This body of work establishes the mechanisms and consequences of sleep insufficiency.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "evidenced_by", "target": "concept-sleep-and-cognition" }
+    ]
+  },
+  {
+    "id": "paper-fundamentals-astrodynamics",
+    "type": "paper",
+    "label": "Fundamentals of Astrodynamics (Bate, Mueller, White)",
+    "description": "The foundational textbook for orbital mechanics: two-body problem, orbital elements, maneuvers, and introductory mission design.",
+    "domain": "domain-space-builder",
+    "tags": ["orbital-mechanics", "astrodynamics", "textbook", "space-foundation"],
+    "status": "stable",
+    "authors": ["Roger R. Bate", "Donald D. Mueller", "Jerry E. White"],
+    "year": 1971,
+    "url": "https://www.amazon.com/Fundamentals-Astrodynamics-Dover-Aeronautical-Engineering/dp/0486600610",
+    "abstract": "A classic introduction to astrodynamics covering the two-body problem, orbital elements, orbital maneuvers, and preliminary orbit determination.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "teaches", "target": "concept-orbital-elements" },
+      { "type": "teaches", "target": "concept-keplers-laws" }
+    ]
+  }
+]

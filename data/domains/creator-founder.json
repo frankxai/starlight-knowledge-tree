@@ -1,0 +1,89 @@
+{
+  "id": "domain-creator-founder",
+  "type": "domain",
+  "label": "Creator-Founder",
+  "description": "The domain of building products, companies, creative systems, and audiences — combining leverage, distribution, execution, and taste into compounding creative and commercial output.",
+  "tags": ["startups", "products", "distribution", "creative-systems", "leverage", "founders"],
+  "status": "stable",
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z",
+  "edges": [],
+  "root_problems": [
+    "problem-distribution-cold-start",
+    "problem-product-market-fit-detection",
+    "problem-creative-consistency-at-scale"
+  ],
+  "paths": [
+    {
+      "id": "path-creator-founder-product",
+      "label": "Product Thinking",
+      "description": "From user insight to product definition and iteration.",
+      "nodes": [
+        "concept-jobs-to-be-done",
+        "concept-product-market-fit",
+        "concept-user-research",
+        "concept-product-spec",
+        "concept-mvp",
+        "skill-conduct-user-interview",
+        "skill-write-product-spec",
+        "skill-ship-mvp"
+      ]
+    },
+    {
+      "id": "path-creator-founder-distribution",
+      "label": "Distribution and Audience",
+      "description": "Building and sustaining an audience across platforms.",
+      "nodes": [
+        "concept-content-leverage",
+        "concept-distribution-channels",
+        "concept-network-effects",
+        "concept-compound-content",
+        "skill-write-high-signal-post",
+        "skill-build-email-list",
+        "skill-grow-audience"
+      ]
+    },
+    {
+      "id": "path-creator-founder-company",
+      "label": "Company Building",
+      "description": "From idea to funded, operating company.",
+      "nodes": [
+        "concept-business-model",
+        "concept-unit-economics",
+        "concept-fundraising-mechanics",
+        "concept-hiring-first-team",
+        "concept-culture-by-design",
+        "skill-build-financial-model",
+        "skill-pitch-investors",
+        "skill-close-first-customers"
+      ]
+    },
+    {
+      "id": "path-creator-founder-leverage",
+      "label": "Leverage and Systems",
+      "description": "Building systems that produce compounding output.",
+      "nodes": [
+        "concept-mechanical-leverage",
+        "concept-code-as-leverage",
+        "concept-media-as-leverage",
+        "concept-capital-as-leverage",
+        "concept-people-as-leverage",
+        "skill-build-automated-system",
+        "skill-delegate-effectively"
+      ]
+    }
+  ],
+  "seed_nodes": [
+    "concept-jobs-to-be-done",
+    "concept-product-market-fit",
+    "concept-content-leverage",
+    "concept-network-effects",
+    "concept-unit-economics",
+    "skill-conduct-user-interview",
+    "skill-ship-mvp",
+    "skill-write-high-signal-post",
+    "tool-notion",
+    "tool-linear",
+    "problem-distribution-cold-start"
+  ]
+}

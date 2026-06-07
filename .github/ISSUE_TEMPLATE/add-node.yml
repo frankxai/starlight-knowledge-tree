@@ -1,0 +1,121 @@
+name: Add Node
+description: Propose a new node for the Starlight Knowledge Tree graph
+title: "[Node] "
+labels: ["node-proposal", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Add a Node to the Knowledge Tree
+
+        Before submitting, check that your node does not already exist in `data/nodes/` or `data/domains/`.
+        All nodes must conform to the schema in `data/schemas/node.schema.json`.
+
+        > ⚠️ **Privacy:** Never include personal health data, genetic data, biometric data, or data covered by GDPR/HIPAA.
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Node Type
+      description: What type of node is this?
+      options:
+        - concept
+        - skill
+        - tool
+        - paper
+        - dataset
+        - experiment
+        - artifact
+        - credential
+        - open_problem
+        - contribution_task
+    validations:
+      required: true
+
+  - type: input
+    id: id
+    attributes:
+      label: Node ID
+      description: "Kebab-case ID prefixed with type. Example: concept-transformer-attention"
+      placeholder: "concept-my-concept"
+    validations:
+      required: true
+
+  - type: input
+    id: label
+    attributes:
+      label: Label
+      description: Human-readable name for the node
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: 1–3 sentences describing this node precisely.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      options:
+        - domain-ai-architect
+        - domain-space-builder
+        - domain-bio-human-intelligence
+        - domain-creator-founder
+    validations:
+      required: true
+
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: Comma-separated keywords (1–10)
+      placeholder: "transformers, attention, nlp"
+    validations:
+      required: true
+
+  - type: textarea
+    id: edges
+    attributes:
+      label: Proposed Edges
+      description: |
+        List edges this node should have. Format: `type: target-id`
+        Example:
+        ```
+        requires: concept-linear-algebra
+        unlocks: skill-implement-transformer
+        ```
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidence_types
+    attributes:
+      label: Evidence Types (skill nodes only)
+      description: "If this is a skill node, list valid evidence types: explanation, implementation, public_artifact, experiment_log, reproducible_notebook, contribution, teaching_artifact"
+    validations:
+      required: false
+
+  - type: input
+    id: source
+    attributes:
+      label: Source or Reference
+      description: URL, DOI, or citation supporting this node's accuracy
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission checklist
+      options:
+        - label: I have checked that this node does not already exist
+          required: true
+        - label: This node does not contain personal, health, genetic, or biometric data
+          required: true
+        - label: I have included at least one edge
+          required: false

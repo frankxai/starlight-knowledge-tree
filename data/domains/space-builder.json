@@ -1,0 +1,73 @@
+{
+  "id": "domain-space-builder",
+  "type": "domain",
+  "label": "Space Builder",
+  "description": "The domain of understanding, designing, and building space systems — from orbital mechanics and propulsion through mission design, spacecraft engineering, and space economy.",
+  "tags": ["space", "orbital-mechanics", "propulsion", "spacecraft", "missions", "astro"],
+  "status": "stable",
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z",
+  "edges": [],
+  "root_problems": [
+    "problem-reusable-launch-cost",
+    "problem-in-situ-resource-utilization",
+    "problem-radiation-biology-deep-space"
+  ],
+  "paths": [
+    {
+      "id": "path-space-builder-orbital-mechanics",
+      "label": "Orbital Mechanics",
+      "description": "Kepler to Hohmann — foundations of orbital motion.",
+      "nodes": [
+        "concept-newtonian-gravity",
+        "concept-keplers-laws",
+        "concept-orbital-elements",
+        "concept-hohmann-transfer",
+        "concept-delta-v-budget",
+        "skill-calculate-orbit",
+        "skill-plan-trajectory"
+      ]
+    },
+    {
+      "id": "path-space-builder-propulsion",
+      "label": "Propulsion Systems",
+      "description": "Chemical, electric, and advanced propulsion concepts.",
+      "nodes": [
+        "concept-tsiolkovsky-rocket-equation",
+        "concept-specific-impulse",
+        "concept-chemical-propulsion",
+        "concept-electric-propulsion",
+        "concept-nuclear-thermal-propulsion",
+        "skill-size-propulsion-system"
+      ]
+    },
+    {
+      "id": "path-space-builder-mission-design",
+      "label": "Mission Design",
+      "description": "End-to-end spacecraft and mission engineering.",
+      "nodes": [
+        "concept-mission-requirements",
+        "concept-systems-engineering",
+        "concept-mass-budget",
+        "concept-power-budget",
+        "concept-thermal-control",
+        "concept-communications-link-budget",
+        "skill-design-cubesat-mission",
+        "skill-develop-cdr"
+      ]
+    }
+  ],
+  "seed_nodes": [
+    "concept-keplers-laws",
+    "concept-delta-v-budget",
+    "concept-tsiolkovsky-rocket-equation",
+    "concept-specific-impulse",
+    "concept-systems-engineering",
+    "skill-calculate-orbit",
+    "skill-plan-trajectory",
+    "tool-gmat",
+    "tool-openrocket",
+    "paper-fundamentals-astrodynamics",
+    "problem-reusable-launch-cost"
+  ]
+}

@@ -1,0 +1,99 @@
+name: Add Experiment
+description: Propose a reproducible experiment protocol for a skill or concept node
+title: "[Experiment] "
+labels: ["experiment-proposal", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Add an Experiment
+
+        Experiments are reproducible protocols that produce verifiable evidence of a skill.
+        A good experiment has a clear hypothesis, defined steps, expected outputs, and failure modes.
+
+        All tools required must be publicly accessible (no paid APIs without noted alternatives).
+
+  - type: input
+    id: id
+    attributes:
+      label: Experiment ID
+      description: "Must start with 'experiment-'. Example: experiment-build-rag-pipeline"
+      placeholder: "experiment-my-experiment"
+    validations:
+      required: true
+
+  - type: input
+    id: label
+    attributes:
+      label: Experiment Label
+      description: Human-readable name
+    validations:
+      required: true
+
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      options:
+        - domain-ai-architect
+        - domain-space-builder
+        - domain-bio-human-intelligence
+        - domain-creator-founder
+    validations:
+      required: true
+
+  - type: input
+    id: target_skill
+    attributes:
+      label: Target Skill Node ID
+      description: The skill this experiment tests. Must be an existing skill node ID.
+      placeholder: "skill-finetune-llm"
+    validations:
+      required: true
+
+  - type: textarea
+    id: protocol
+    attributes:
+      label: Protocol
+      description: Step-by-step instructions. Specific enough that two independent people get comparable results.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_outputs
+    attributes:
+      label: Expected Outputs
+      description: What artifacts or metrics should result from completing this experiment?
+    validations:
+      required: true
+
+  - type: textarea
+    id: tools
+    attributes:
+      label: Tools Required
+      description: List all tools, datasets, or compute required (must all be publicly accessible)
+    validations:
+      required: true
+
+  - type: input
+    id: estimated_hours
+    attributes:
+      label: Estimated Hours
+      description: Rough estimate of time required to complete this experiment
+      placeholder: "4"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission checklist
+      options:
+        - label: The target skill node already exists
+          required: true
+        - label: All required tools are publicly accessible
+          required: true
+        - label: The protocol is specific enough to be reproducible
+          required: true
+        - label: Expected outputs are defined and measurable
+          required: true

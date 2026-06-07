@@ -1,0 +1,89 @@
+{
+  "id": "domain-ai-architect",
+  "type": "domain",
+  "label": "AI Architect",
+  "description": "The domain of understanding, designing, and building AI systems — from mathematical foundations through large language models, agents, reasoning systems, and alignment.",
+  "tags": ["ai", "machine-learning", "deep-learning", "llm", "agents", "alignment"],
+  "status": "stable",
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z",
+  "edges": [],
+  "root_problems": [
+    "problem-alignment-superhumanai",
+    "problem-reasoning-reliability",
+    "problem-agent-safety"
+  ],
+  "paths": [
+    {
+      "id": "path-ai-architect-foundation",
+      "label": "AI Foundation",
+      "description": "Mathematical and conceptual prerequisites for deep learning.",
+      "nodes": [
+        "concept-linear-algebra",
+        "concept-probability-statistics",
+        "concept-calculus-optimization",
+        "concept-gradient-descent",
+        "concept-neural-network-basics",
+        "concept-backpropagation",
+        "skill-train-basic-nn"
+      ]
+    },
+    {
+      "id": "path-ai-architect-transformers",
+      "label": "Transformer Architecture",
+      "description": "From attention mechanisms to modern foundation models.",
+      "nodes": [
+        "concept-sequence-modeling",
+        "concept-attention-mechanism",
+        "concept-transformer-architecture",
+        "concept-pretraining-objectives",
+        "skill-implement-transformer",
+        "skill-finetune-llm",
+        "skill-evaluate-llm"
+      ]
+    },
+    {
+      "id": "path-ai-architect-agents",
+      "label": "AI Agents",
+      "description": "Building autonomous, tool-using, multi-step AI agents.",
+      "nodes": [
+        "concept-llm-prompting",
+        "concept-tool-use",
+        "concept-agent-loop",
+        "concept-memory-context",
+        "skill-build-agent",
+        "skill-multi-agent-coordination"
+      ]
+    },
+    {
+      "id": "path-ai-architect-alignment",
+      "label": "Alignment and Safety",
+      "description": "Foundations and practice of making AI systems safe and aligned.",
+      "nodes": [
+        "concept-rlhf",
+        "concept-constitutional-ai",
+        "concept-interpretability",
+        "concept-mechanistic-interpretability",
+        "skill-red-team-llm",
+        "skill-evaluate-alignment"
+      ]
+    }
+  ],
+  "seed_nodes": [
+    "concept-linear-algebra",
+    "concept-probability-statistics",
+    "concept-gradient-descent",
+    "concept-attention-mechanism",
+    "concept-transformer-architecture",
+    "concept-rlhf",
+    "concept-agent-loop",
+    "skill-implement-transformer",
+    "skill-finetune-llm",
+    "skill-build-agent",
+    "tool-pytorch",
+    "tool-huggingface-transformers",
+    "paper-attention-is-all-you-need",
+    "paper-gpt3",
+    "problem-alignment-superhumanai"
+  ]
+}
