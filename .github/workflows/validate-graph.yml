@@ -1,0 +1,80 @@
+name: "Validate Graph"
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "packages/**"
+  pull_request:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "packages/**"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Validate Knowledge Graph
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: |
+          cd packages/graph-schema && npm ci
+          cd ../graph-utils && npm ci
+
+      - name: Build graph-schema
+        run: cd packages/graph-schema && npm run build
+
+      - name: Build graph-utils
+        run: cd packages/graph-utils && npm run build
+
+      - name: Run graph validator
+        run: cd packages/graph-utils && npm run validate -- ../../data
+        env:
+          NODE_ENV: ci
+
+      - name: Check for private data patterns
+        run: |
+          echo "Scanning for potential private data patterns..."
+          # Check for patterns that suggest personal health/genetic data
+          # These are heuristic checks — the Privacy Steward agent does full review
+          if grep -rE "(SSN|social.security|passport.number|medical.record|patient.id)" data/ --include="*.json" -i; then
+            echo "❌ Potential personal identifier pattern detected in data/"
+            exit 1
+          fi
+          if grep -rE "(GCACTAG|ATCGATCG)" data/ --include="*.json"; then
+            echo "❌ Potential DNA sequence detected in data/"
+            exit 1
+          fi
+          echo "✅ No private data patterns detected"
+
+      - name: Validate JSON syntax
+        run: |
+          echo "Validating JSON syntax in data/..."
+          find data/ -name "*.json" | while read file; do
+            if ! python3 -m json.tool "$file" > /dev/null 2>&1; then
+              echo "❌ Invalid JSON: $file"
+              exit 1
+            fi
+          done
+          echo "✅ All JSON files are syntactically valid"
+
+      - name: Post validation summary
+        if: always()
+        run: |
+          echo "## Graph Validation Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Data directory scanned: \`data/\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "See validator output above for details." >> $GITHUB_STEP_SUMMARY

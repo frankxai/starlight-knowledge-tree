@@ -1,0 +1,561 @@
+[
+  {
+    "id": "concept-linear-algebra",
+    "type": "concept",
+    "label": "Linear Algebra",
+    "description": "Vectors, matrices, eigenvalues, and linear transformations — the mathematical substrate of neural networks and AI.",
+    "domain": "domain-ai-architect",
+    "tags": ["mathematics", "ai-foundation", "vectors", "matrices"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "unlocks", "target": "concept-gradient-descent" },
+      { "type": "unlocks", "target": "concept-attention-mechanism" }
+    ]
+  },
+  {
+    "id": "concept-probability-statistics",
+    "type": "concept",
+    "label": "Probability and Statistics",
+    "description": "Distributions, inference, Bayes' theorem, and statistical reasoning — required for understanding model training and evaluation.",
+    "domain": "domain-ai-architect",
+    "tags": ["mathematics", "statistics", "probability", "ai-foundation"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "unlocks", "target": "concept-gradient-descent" },
+      { "type": "unlocks", "target": "concept-pretraining-objectives" }
+    ]
+  },
+  {
+    "id": "concept-calculus-optimization",
+    "type": "concept",
+    "label": "Calculus and Optimization",
+    "description": "Derivatives, gradients, chain rule, and optimization landscapes — the foundation of learning algorithms.",
+    "domain": "domain-ai-architect",
+    "tags": ["mathematics", "calculus", "optimization", "ai-foundation"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "unlocks", "target": "concept-gradient-descent" },
+      { "type": "unlocks", "target": "concept-backpropagation" }
+    ]
+  },
+  {
+    "id": "concept-gradient-descent",
+    "type": "concept",
+    "label": "Gradient Descent",
+    "description": "Iterative optimization via first-order gradients. The core learning algorithm behind neural networks.",
+    "domain": "domain-ai-architect",
+    "tags": ["optimization", "training", "deep-learning"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-calculus-optimization" },
+      { "type": "unlocks", "target": "concept-backpropagation" },
+      { "type": "unlocks", "target": "skill-train-basic-nn" }
+    ]
+  },
+  {
+    "id": "concept-backpropagation",
+    "type": "concept",
+    "label": "Backpropagation",
+    "description": "Efficient computation of gradients through a neural network using the chain rule. Required to understand how networks learn.",
+    "domain": "domain-ai-architect",
+    "tags": ["training", "deep-learning", "gradients"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-gradient-descent" },
+      { "type": "unlocks", "target": "concept-neural-network-basics" }
+    ]
+  },
+  {
+    "id": "concept-neural-network-basics",
+    "type": "concept",
+    "label": "Neural Network Basics",
+    "description": "Layers, activations, loss functions, and forward/backward passes in a feedforward network.",
+    "domain": "domain-ai-architect",
+    "tags": ["deep-learning", "neural-networks", "architecture"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-backpropagation" },
+      { "type": "unlocks", "target": "concept-sequence-modeling" }
+    ]
+  },
+  {
+    "id": "concept-sequence-modeling",
+    "type": "concept",
+    "label": "Sequence Modeling",
+    "description": "Modeling ordered data — text, time series, code. From RNNs and LSTMs through the transformer revolution.",
+    "domain": "domain-ai-architect",
+    "tags": ["nlp", "sequences", "rnn", "lstm", "transformers"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-neural-network-basics" },
+      { "type": "unlocks", "target": "concept-attention-mechanism" }
+    ]
+  },
+  {
+    "id": "concept-attention-mechanism",
+    "type": "concept",
+    "label": "Attention Mechanism",
+    "description": "Scaled dot-product attention: how a model learns to weigh different positions in a sequence when producing each output.",
+    "domain": "domain-ai-architect",
+    "tags": ["transformers", "attention", "deep-learning", "nlp"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-linear-algebra" },
+      { "type": "requires", "target": "concept-sequence-modeling" },
+      { "type": "unlocks", "target": "concept-transformer-architecture" },
+      { "type": "evidenced_by", "target": "paper-attention-is-all-you-need" }
+    ]
+  },
+  {
+    "id": "concept-transformer-architecture",
+    "type": "concept",
+    "label": "Transformer Architecture",
+    "description": "The encoder-decoder architecture based on multi-head self-attention. The dominant paradigm for language, vision, and multimodal models.",
+    "domain": "domain-ai-architect",
+    "tags": ["transformers", "architecture", "nlp", "foundation-models"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-attention-mechanism" },
+      { "type": "unlocks", "target": "concept-pretraining-objectives" },
+      { "type": "unlocks", "target": "skill-implement-transformer" },
+      { "type": "evidenced_by", "target": "paper-attention-is-all-you-need" }
+    ]
+  },
+  {
+    "id": "concept-pretraining-objectives",
+    "type": "concept",
+    "label": "Pretraining Objectives",
+    "description": "Self-supervised objectives for training language models: next-token prediction, masked language modeling, contrastive learning.",
+    "domain": "domain-ai-architect",
+    "tags": ["pretraining", "self-supervised", "llm", "training"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-transformer-architecture" },
+      { "type": "requires", "target": "concept-probability-statistics" },
+      { "type": "unlocks", "target": "skill-finetune-llm" }
+    ]
+  },
+  {
+    "id": "concept-rlhf",
+    "type": "concept",
+    "label": "Reinforcement Learning from Human Feedback (RLHF)",
+    "description": "The process of aligning a language model to human preferences using a reward model trained on human comparisons.",
+    "domain": "domain-ai-architect",
+    "tags": ["alignment", "rlhf", "fine-tuning", "llm"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-pretraining-objectives" },
+      { "type": "unlocks", "target": "skill-evaluate-alignment" },
+      { "type": "unlocks", "target": "concept-constitutional-ai" }
+    ]
+  },
+  {
+    "id": "concept-constitutional-ai",
+    "type": "concept",
+    "label": "Constitutional AI",
+    "description": "Anthropic's technique for training AI systems to be helpful, harmless, and honest using a set of principles (a 'constitution') without solely relying on human feedback.",
+    "domain": "domain-ai-architect",
+    "tags": ["alignment", "constitutional-ai", "anthropic", "safety"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-rlhf" },
+      { "type": "unlocks", "target": "concept-interpretability" }
+    ]
+  },
+  {
+    "id": "concept-interpretability",
+    "type": "concept",
+    "label": "Interpretability",
+    "description": "Methods for understanding what a neural network has learned — from saliency maps to circuit analysis.",
+    "domain": "domain-ai-architect",
+    "tags": ["interpretability", "safety", "alignment", "xai"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "unlocks", "target": "concept-mechanistic-interpretability" }
+    ]
+  },
+  {
+    "id": "concept-mechanistic-interpretability",
+    "type": "concept",
+    "label": "Mechanistic Interpretability",
+    "description": "Reverse-engineering neural networks at the level of circuits and features to understand how specific computations are implemented.",
+    "domain": "domain-ai-architect",
+    "tags": ["interpretability", "circuits", "features", "alignment", "safety"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-interpretability" },
+      { "type": "requires", "target": "concept-transformer-architecture" }
+    ]
+  },
+  {
+    "id": "concept-llm-prompting",
+    "type": "concept",
+    "label": "LLM Prompting",
+    "description": "Techniques for eliciting desired behavior from language models: zero-shot, few-shot, chain-of-thought, and structured prompting.",
+    "domain": "domain-ai-architect",
+    "tags": ["prompting", "llm", "few-shot", "chain-of-thought"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-transformer-architecture" },
+      { "type": "unlocks", "target": "concept-tool-use" },
+      { "type": "unlocks", "target": "concept-agent-loop" }
+    ]
+  },
+  {
+    "id": "concept-tool-use",
+    "type": "concept",
+    "label": "Tool Use in LLMs",
+    "description": "Function calling, tool schemas, and structured output — enabling language models to invoke external APIs and code.",
+    "domain": "domain-ai-architect",
+    "tags": ["agents", "tool-use", "function-calling", "llm"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-llm-prompting" },
+      { "type": "unlocks", "target": "concept-agent-loop" }
+    ]
+  },
+  {
+    "id": "concept-agent-loop",
+    "type": "concept",
+    "label": "Agent Loop",
+    "description": "The perceive-think-act-observe loop that enables autonomous multi-step task completion by an LLM-based agent.",
+    "domain": "domain-ai-architect",
+    "tags": ["agents", "agentic-ai", "planning", "tool-use"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-tool-use" },
+      { "type": "unlocks", "target": "skill-build-agent" }
+    ]
+  },
+  {
+    "id": "concept-memory-context",
+    "type": "concept",
+    "label": "Memory and Context in Agents",
+    "description": "Short-term context window, long-term memory stores, retrieval-augmented generation, and episodic memory in AI agents.",
+    "domain": "domain-ai-architect",
+    "tags": ["agents", "memory", "rag", "context"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-agent-loop" },
+      { "type": "unlocks", "target": "skill-multi-agent-coordination" }
+    ]
+  },
+  {
+    "id": "concept-keplers-laws",
+    "type": "concept",
+    "label": "Kepler's Laws of Planetary Motion",
+    "description": "The three empirical laws describing the motion of planets: elliptical orbits, equal areas in equal times, and the orbital period relationship.",
+    "domain": "domain-space-builder",
+    "tags": ["orbital-mechanics", "physics", "space-foundation"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-newtonian-gravity" },
+      { "type": "unlocks", "target": "concept-orbital-elements" }
+    ]
+  },
+  {
+    "id": "concept-newtonian-gravity",
+    "type": "concept",
+    "label": "Newtonian Gravity and Two-Body Problem",
+    "description": "Newton's law of universal gravitation and the analytical solution to the gravitational two-body problem.",
+    "domain": "domain-space-builder",
+    "tags": ["physics", "orbital-mechanics", "space-foundation"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "unlocks", "target": "concept-keplers-laws" }
+    ]
+  },
+  {
+    "id": "concept-orbital-elements",
+    "type": "concept",
+    "label": "Orbital Elements",
+    "description": "The six Keplerian orbital elements (semi-major axis, eccentricity, inclination, RAAN, argument of perigee, true anomaly) used to uniquely define an orbit.",
+    "domain": "domain-space-builder",
+    "tags": ["orbital-mechanics", "space-foundation", "navigation"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-keplers-laws" },
+      { "type": "unlocks", "target": "concept-hohmann-transfer" }
+    ]
+  },
+  {
+    "id": "concept-delta-v-budget",
+    "type": "concept",
+    "label": "Delta-v Budget",
+    "description": "The total velocity change required for a mission profile. The fundamental currency of spaceflight planning.",
+    "domain": "domain-space-builder",
+    "tags": ["orbital-mechanics", "propulsion", "mission-design"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-hohmann-transfer" },
+      { "type": "requires", "target": "concept-tsiolkovsky-rocket-equation" },
+      { "type": "unlocks", "target": "skill-plan-trajectory" }
+    ]
+  },
+  {
+    "id": "concept-tsiolkovsky-rocket-equation",
+    "type": "concept",
+    "label": "Tsiolkovsky Rocket Equation",
+    "description": "The fundamental equation relating delta-v, exhaust velocity, and mass ratio. Defines the limits of chemical propulsion.",
+    "domain": "domain-space-builder",
+    "tags": ["propulsion", "rocket-equation", "space-foundation"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "unlocks", "target": "concept-delta-v-budget" },
+      { "type": "unlocks", "target": "concept-specific-impulse" }
+    ]
+  },
+  {
+    "id": "concept-specific-impulse",
+    "type": "concept",
+    "label": "Specific Impulse (Isp)",
+    "description": "A measure of propellant efficiency — the thrust produced per unit of propellant consumed per second.",
+    "domain": "domain-space-builder",
+    "tags": ["propulsion", "efficiency", "space-foundation"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-tsiolkovsky-rocket-equation" },
+      { "type": "unlocks", "target": "skill-size-propulsion-system" }
+    ]
+  },
+  {
+    "id": "concept-hohmann-transfer",
+    "type": "concept",
+    "label": "Hohmann Transfer Orbit",
+    "description": "A two-impulse elliptical maneuver used to transfer between two circular orbits with minimum delta-v.",
+    "domain": "domain-space-builder",
+    "tags": ["orbital-mechanics", "maneuvers", "delta-v"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-orbital-elements" },
+      { "type": "unlocks", "target": "concept-delta-v-budget" }
+    ]
+  },
+  {
+    "id": "concept-systems-engineering",
+    "type": "concept",
+    "label": "Systems Engineering",
+    "description": "The discipline of designing and managing complex systems across their lifecycle, including requirements, interfaces, verification, and validation.",
+    "domain": "domain-space-builder",
+    "tags": ["systems-engineering", "mission-design", "spacecraft"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "unlocks", "target": "skill-design-cubesat-mission" }
+    ]
+  },
+  {
+    "id": "concept-hallmarks-of-aging",
+    "type": "concept",
+    "label": "Hallmarks of Aging",
+    "description": "The molecular and cellular mechanisms underlying biological aging, as defined by Lopez-Otin et al. (2013, 2023): genomic instability, telomere attrition, epigenetic alterations, etc.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": ["aging", "longevity", "biology", "molecular-biology"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "evidenced_by", "target": "paper-hallmarks-of-aging-lopez-otin" },
+      { "type": "unlocks", "target": "concept-epigenetic-clocks" },
+      { "type": "unlocks", "target": "concept-senescence" }
+    ]
+  },
+  {
+    "id": "concept-epigenetic-clocks",
+    "type": "concept",
+    "label": "Epigenetic Clocks",
+    "description": "Biological age estimators based on DNA methylation patterns (Horvath, GrimAge, DunedinPACE). Used to measure biological aging rate.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": ["aging", "epigenetics", "biomarkers", "longevity"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-hallmarks-of-aging" },
+      { "type": "unlocks", "target": "skill-evaluate-longevity-intervention" }
+    ]
+  },
+  {
+    "id": "concept-plasticity",
+    "type": "concept",
+    "label": "Neuroplasticity",
+    "description": "The ability of the nervous system to reorganize its structure, function, and connections in response to experience.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": ["neuroscience", "learning", "cognition", "plasticity"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-neuron-anatomy" },
+      { "type": "unlocks", "target": "concept-learning-and-memory-consolidation" }
+    ]
+  },
+  {
+    "id": "concept-neuron-anatomy",
+    "type": "concept",
+    "label": "Neuron Anatomy and Physiology",
+    "description": "Structure and function of neurons: dendrites, soma, axon, myelin sheath, and synaptic terminals.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": ["neuroscience", "biology", "foundation"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "unlocks", "target": "concept-action-potential" },
+      { "type": "unlocks", "target": "concept-plasticity" }
+    ]
+  },
+  {
+    "id": "concept-action-potential",
+    "type": "concept",
+    "label": "Action Potential",
+    "description": "The electrical impulse generated by a neuron when it fires: depolarization, repolarization, and refractory period.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": ["neuroscience", "electrophysiology", "biology"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-neuron-anatomy" },
+      { "type": "unlocks", "target": "concept-synaptic-transmission" }
+    ]
+  },
+  {
+    "id": "concept-working-memory",
+    "type": "concept",
+    "label": "Working Memory",
+    "description": "The cognitive system responsible for temporarily holding and manipulating information for use in ongoing tasks.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": ["cognition", "memory", "psychology"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "unlocks", "target": "skill-design-cognitive-experiment" }
+    ]
+  },
+  {
+    "id": "concept-jobs-to-be-done",
+    "type": "concept",
+    "label": "Jobs to Be Done (JTBD)",
+    "description": "A theory of innovation: customers hire products to fulfill a job — a functional, social, or emotional progress they seek to make.",
+    "domain": "domain-creator-founder",
+    "tags": ["product", "jtbd", "user-research", "innovation"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "unlocks", "target": "concept-product-market-fit" },
+      { "type": "unlocks", "target": "skill-conduct-user-interview" }
+    ]
+  },
+  {
+    "id": "concept-product-market-fit",
+    "type": "concept",
+    "label": "Product-Market Fit",
+    "description": "The degree to which a product satisfies a strong market demand. The critical threshold between searching and scaling.",
+    "domain": "domain-creator-founder",
+    "tags": ["product", "pmf", "startup", "growth"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-jobs-to-be-done" },
+      { "type": "unlocks", "target": "skill-ship-mvp" }
+    ]
+  },
+  {
+    "id": "concept-content-leverage",
+    "type": "concept",
+    "label": "Content Leverage",
+    "description": "The mechanism by which written, audio, or visual content creates compounding distribution and audience at near-zero marginal cost.",
+    "domain": "domain-creator-founder",
+    "tags": ["distribution", "content", "leverage", "media"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "unlocks", "target": "skill-write-high-signal-post" },
+      { "type": "unlocks", "target": "skill-grow-audience" }
+    ]
+  },
+  {
+    "id": "concept-network-effects",
+    "type": "concept",
+    "label": "Network Effects",
+    "description": "The phenomenon where a product or service becomes more valuable as more people use it. A primary driver of startup moats.",
+    "domain": "domain-creator-founder",
+    "tags": ["network-effects", "growth", "moats", "startup"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "unlocks", "target": "concept-unit-economics" }
+    ]
+  },
+  {
+    "id": "concept-unit-economics",
+    "type": "concept",
+    "label": "Unit Economics",
+    "description": "The revenue and costs attributable to a single unit of business (LTV, CAC, gross margin, payback period).",
+    "domain": "domain-creator-founder",
+    "tags": ["finance", "business-model", "startup", "metrics"],
+    "status": "stable",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "unlocks", "target": "skill-build-financial-model" }
+    ]
+  }
+]

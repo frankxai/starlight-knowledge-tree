@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://starlightintelligence.org/knowledge-tree/schemas/path.schema.json",
+  "title": "KnowledgeTreePath",
+  "description": "An ordered skill path through the knowledge graph",
+  "type": "object",
+  "required": ["id", "label", "domain", "nodes"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^path-[a-z][a-z0-9-]*$",
+      "description": "Unique path identifier, prefixed with 'path-'"
+    },
+    "label": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 200
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "domain": {
+      "type": "string",
+      "pattern": "^domain-[a-z][a-z0-9-]*$"
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9-]*$"
+      },
+      "minItems": 2,
+      "description": "Ordered list of node IDs in the path"
+    },
+    "branches": {
+      "type": "array",
+      "description": "Optional branching paths",
+      "items": {
+        "type": "object",
+        "required": ["condition", "nodes"],
+        "properties": {
+          "condition": {
+            "type": "string",
+            "description": "Plain-language description of when to take this branch"
+          },
+          "nodes": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["seed", "draft", "stable", "deprecated"]
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,138 @@
+[
+  {
+    "id": "problem-alignment-superhumanai",
+    "type": "open_problem",
+    "label": "Alignment of Superhuman AI Systems",
+    "description": "How do we ensure that AI systems that surpass human-level capability in a domain remain aligned with human values and intent, including in situations their designers did not anticipate?",
+    "domain": "domain-ai-architect",
+    "tags": ["alignment", "safety", "superintelligence", "x-risk"],
+    "status": "stable",
+    "difficulty": "unsolved",
+    "prize_or_benchmark": null,
+    "related_papers": ["paper-attention-is-all-you-need"],
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "part_of", "target": "domain-ai-architect" }
+    ]
+  },
+  {
+    "id": "problem-reasoning-reliability",
+    "type": "open_problem",
+    "label": "Reliable Multi-Step Reasoning in LLMs",
+    "description": "Language models still fail in systematic ways on multi-step mathematical and logical reasoning. What architectural or training changes would produce reliably correct reasoning?",
+    "domain": "domain-ai-architect",
+    "tags": ["reasoning", "llm", "reliability", "math"],
+    "status": "stable",
+    "difficulty": "hard",
+    "prize_or_benchmark": "GSM8K, MATH, ARC-Challenge",
+    "related_papers": [],
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "part_of", "target": "domain-ai-architect" }
+    ]
+  },
+  {
+    "id": "problem-agent-safety",
+    "type": "open_problem",
+    "label": "Safe Agentic AI in Open Environments",
+    "description": "How do we build AI agents that act safely and reversibly in open-ended environments where mistakes have real-world consequences?",
+    "domain": "domain-ai-architect",
+    "tags": ["agents", "safety", "alignment", "agentic-ai"],
+    "status": "stable",
+    "difficulty": "hard",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "part_of", "target": "domain-ai-architect" }
+    ]
+  },
+  {
+    "id": "problem-reusable-launch-cost",
+    "type": "open_problem",
+    "label": "Sub-$100/kg to LEO Launch Cost",
+    "description": "What combination of reusability architecture, materials, and manufacturing innovation would reduce launch cost to LEO below $100/kg at scale?",
+    "domain": "domain-space-builder",
+    "tags": ["launch", "reusability", "cost", "access-to-space"],
+    "status": "stable",
+    "difficulty": "hard",
+    "prize_or_benchmark": "Current best: ~$1500/kg (Falcon 9 reusable)",
+    "related_papers": [],
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "part_of", "target": "domain-space-builder" }
+    ]
+  },
+  {
+    "id": "problem-in-situ-resource-utilization",
+    "type": "open_problem",
+    "label": "In-Situ Resource Utilization (ISRU) at Scale",
+    "description": "What processing and manufacturing systems would allow a human settlement on the Moon or Mars to produce propellant, structural materials, and life support consumables from local resources?",
+    "domain": "domain-space-builder",
+    "tags": ["isru", "moon", "mars", "resource-extraction", "settlement"],
+    "status": "stable",
+    "difficulty": "hard",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "part_of", "target": "domain-space-builder" }
+    ]
+  },
+  {
+    "id": "problem-aging-mechanism",
+    "type": "open_problem",
+    "label": "Primary Causal Mechanism of Aging",
+    "description": "Is aging driven primarily by information loss in epigenetics (Sinclair), accumulation of senescent cells, mitochondrial dysfunction, or another mechanism? What intervention best addresses the root cause?",
+    "domain": "domain-bio-human-intelligence",
+    "tags": ["aging", "longevity", "mechanism", "biology"],
+    "status": "stable",
+    "difficulty": "unsolved",
+    "prize_or_benchmark": null,
+    "related_papers": ["paper-hallmarks-of-aging-lopez-otin"],
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "part_of", "target": "domain-bio-human-intelligence" }
+    ]
+  },
+  {
+    "id": "problem-consciousness-hard-problem",
+    "type": "open_problem",
+    "label": "The Hard Problem of Consciousness",
+    "description": "Why does subjective experience (qualia) exist at all? How does physical neural activity give rise to the felt quality of experience?",
+    "domain": "domain-bio-human-intelligence",
+    "tags": ["consciousness", "qualia", "neuroscience", "philosophy-of-mind"],
+    "status": "stable",
+    "difficulty": "unsolved",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "part_of", "target": "domain-bio-human-intelligence" }
+    ]
+  },
+  {
+    "id": "problem-distribution-cold-start",
+    "type": "open_problem",
+    "label": "Distribution Cold-Start Problem",
+    "description": "How does a new creator or product get its first 1000 genuine, engaged users in a world of algorithmic gatekeeping and attention scarcity?",
+    "domain": "domain-creator-founder",
+    "tags": ["distribution", "growth", "audience", "cold-start"],
+    "status": "stable",
+    "difficulty": "accessible",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "part_of", "target": "domain-creator-founder" }
+    ]
+  }
+]

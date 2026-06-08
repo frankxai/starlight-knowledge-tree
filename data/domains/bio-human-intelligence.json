@@ -1,0 +1,74 @@
+{
+  "id": "domain-bio-human-intelligence",
+  "type": "domain",
+  "label": "Bio / Human Intelligence",
+  "description": "The domain of understanding human cognition, neuroscience, longevity, performance, and biosystems — grounded in peer-reviewed science and evidence-based practice. No personal health data.",
+  "tags": ["neuroscience", "cognition", "longevity", "biology", "performance", "health-science"],
+  "status": "stable",
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z",
+  "edges": [],
+  "privacy_warning": "This domain covers population-level and peer-reviewed scientific research only. Never add personal health records, genetic data, biometric data, or any data covered by GDPR/HIPAA to this repository.",
+  "root_problems": [
+    "problem-aging-mechanism",
+    "problem-consciousness-hard-problem",
+    "problem-cognitive-enhancement-safety"
+  ],
+  "paths": [
+    {
+      "id": "path-bio-neuroscience-foundations",
+      "label": "Neuroscience Foundations",
+      "description": "From neurons to networks — how the brain computes.",
+      "nodes": [
+        "concept-neuron-anatomy",
+        "concept-action-potential",
+        "concept-synaptic-transmission",
+        "concept-neural-circuits",
+        "concept-plasticity",
+        "skill-read-neuroscience-paper",
+        "skill-interpret-fmri-data"
+      ]
+    },
+    {
+      "id": "path-bio-longevity",
+      "label": "Longevity Science",
+      "description": "Mechanistic understanding of aging and healthspan interventions.",
+      "nodes": [
+        "concept-hallmarks-of-aging",
+        "concept-mtor-pathway",
+        "concept-senescence",
+        "concept-epigenetic-clocks",
+        "concept-caloric-restriction-mimetics",
+        "skill-evaluate-longevity-intervention",
+        "skill-design-longevity-experiment"
+      ]
+    },
+    {
+      "id": "path-bio-cognitive-performance",
+      "label": "Cognitive Performance",
+      "description": "Evidence-based approaches to understanding and improving cognitive function.",
+      "nodes": [
+        "concept-working-memory",
+        "concept-attention-and-focus",
+        "concept-sleep-and-cognition",
+        "concept-exercise-and-brain",
+        "concept-learning-and-memory-consolidation",
+        "skill-design-cognitive-experiment",
+        "skill-analyze-behavioral-data"
+      ]
+    }
+  ],
+  "seed_nodes": [
+    "concept-neuron-anatomy",
+    "concept-plasticity",
+    "concept-hallmarks-of-aging",
+    "concept-epigenetic-clocks",
+    "concept-working-memory",
+    "skill-evaluate-longevity-intervention",
+    "skill-design-cognitive-experiment",
+    "tool-jupyter-notebook",
+    "paper-hallmarks-of-aging-lopez-otin",
+    "paper-sleep-performance-walker",
+    "problem-aging-mechanism"
+  ]
+}

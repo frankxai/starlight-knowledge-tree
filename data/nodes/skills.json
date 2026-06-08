@@ -1,0 +1,356 @@
+[
+  {
+    "id": "skill-train-basic-nn",
+    "type": "skill",
+    "label": "Train a Basic Neural Network",
+    "description": "Implement, train, and evaluate a feedforward neural network from scratch using a modern deep learning framework.",
+    "domain": "domain-ai-architect",
+    "tags": ["deep-learning", "pytorch", "training"],
+    "status": "stable",
+    "prerequisites": ["concept-backpropagation", "concept-gradient-descent"],
+    "evidence_types": ["implementation", "experiment_log", "reproducible_notebook"],
+    "unlock_criteria": "Train a network on a real dataset, achieve a reported baseline metric, and publish the code or notebook.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-backpropagation" },
+      { "type": "unlocks", "target": "skill-implement-transformer" },
+      { "type": "applies_to", "target": "tool-pytorch" }
+    ]
+  },
+  {
+    "id": "skill-implement-transformer",
+    "type": "skill",
+    "label": "Implement a Transformer",
+    "description": "Build a transformer architecture from scratch: multi-head attention, positional encoding, feed-forward layers, and training loop.",
+    "domain": "domain-ai-architect",
+    "tags": ["transformers", "implementation", "deep-learning"],
+    "status": "stable",
+    "prerequisites": ["concept-transformer-architecture", "skill-train-basic-nn"],
+    "evidence_types": ["implementation", "reproducible_notebook", "public_artifact"],
+    "unlock_criteria": "Publish a working transformer implementation with training code, a README, and a performance benchmark on a standard task.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-transformer-architecture" },
+      { "type": "requires", "target": "skill-train-basic-nn" },
+      { "type": "unlocks", "target": "skill-finetune-llm" }
+    ]
+  },
+  {
+    "id": "skill-finetune-llm",
+    "type": "skill",
+    "label": "Fine-tune an LLM",
+    "description": "Adapt a pretrained language model to a new task or domain using supervised fine-tuning (SFT), LoRA, or PEFT methods.",
+    "domain": "domain-ai-architect",
+    "tags": ["fine-tuning", "llm", "lora", "peft"],
+    "status": "stable",
+    "prerequisites": ["concept-pretraining-objectives", "skill-implement-transformer"],
+    "evidence_types": ["implementation", "experiment_log", "public_artifact"],
+    "unlock_criteria": "Fine-tune a model (e.g., Llama, Mistral) on a custom dataset, report eval metrics, and publish code or weights.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-pretraining-objectives" },
+      { "type": "unlocks", "target": "skill-evaluate-llm" },
+      { "type": "applies_to", "target": "tool-huggingface-transformers" }
+    ]
+  },
+  {
+    "id": "skill-evaluate-llm",
+    "type": "skill",
+    "label": "Evaluate an LLM",
+    "description": "Design and run evaluations for language models: benchmark selection, prompt design, metric choice, and failure mode analysis.",
+    "domain": "domain-ai-architect",
+    "tags": ["evaluation", "llm", "benchmarks", "evals"],
+    "status": "stable",
+    "prerequisites": ["skill-finetune-llm"],
+    "evidence_types": ["experiment_log", "public_artifact", "explanation"],
+    "unlock_criteria": "Publish an eval suite for a model with documented methodology, results, and interpretation.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "skill-finetune-llm" },
+      { "type": "unlocks", "target": "skill-evaluate-alignment" }
+    ]
+  },
+  {
+    "id": "skill-build-agent",
+    "type": "skill",
+    "label": "Build an AI Agent",
+    "description": "Design and implement an LLM-based agent with tool use, a memory strategy, and a multi-step task loop.",
+    "domain": "domain-ai-architect",
+    "tags": ["agents", "tool-use", "llm", "agentic-ai"],
+    "status": "stable",
+    "prerequisites": ["concept-agent-loop", "concept-tool-use"],
+    "evidence_types": ["implementation", "public_artifact", "experiment_log"],
+    "unlock_criteria": "Deploy an agent that successfully completes a defined multi-step task. Publish the code and a task log.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-agent-loop" },
+      { "type": "unlocks", "target": "skill-multi-agent-coordination" }
+    ]
+  },
+  {
+    "id": "skill-multi-agent-coordination",
+    "type": "skill",
+    "label": "Multi-Agent Coordination",
+    "description": "Design systems where multiple AI agents coordinate to complete complex tasks: orchestrators, subagents, handoffs, and shared memory.",
+    "domain": "domain-ai-architect",
+    "tags": ["multi-agent", "agents", "orchestration", "coordination"],
+    "status": "draft",
+    "prerequisites": ["skill-build-agent", "concept-memory-context"],
+    "evidence_types": ["implementation", "experiment_log", "public_artifact"],
+    "unlock_criteria": "Build and demonstrate a working multi-agent system with at least two cooperating agents completing a task neither could complete alone.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "skill-build-agent" }
+    ]
+  },
+  {
+    "id": "skill-red-team-llm",
+    "type": "skill",
+    "label": "Red-Team an LLM",
+    "description": "Systematically probe a language model for safety failures, jailbreaks, hallucinations, and misuse vectors.",
+    "domain": "domain-ai-architect",
+    "tags": ["safety", "red-teaming", "alignment", "evaluation"],
+    "status": "stable",
+    "prerequisites": ["concept-rlhf"],
+    "evidence_types": ["experiment_log", "public_artifact", "contribution"],
+    "unlock_criteria": "Publish a structured red-team report for a model with documented attack categories, prompt examples, and findings.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-rlhf" }
+    ]
+  },
+  {
+    "id": "skill-evaluate-alignment",
+    "type": "skill",
+    "label": "Evaluate Alignment",
+    "description": "Design and run alignment-specific evaluations: helpfulness, harmlessness, honesty, and refusal calibration.",
+    "domain": "domain-ai-architect",
+    "tags": ["alignment", "evaluation", "safety", "hhh"],
+    "status": "stable",
+    "prerequisites": ["concept-rlhf", "skill-evaluate-llm"],
+    "evidence_types": ["experiment_log", "public_artifact", "explanation"],
+    "unlock_criteria": "Publish an alignment eval methodology with documented criteria, results, and open questions.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-rlhf" },
+      { "type": "requires", "target": "skill-evaluate-llm" }
+    ]
+  },
+  {
+    "id": "skill-calculate-orbit",
+    "type": "skill",
+    "label": "Calculate an Orbit",
+    "description": "Compute orbital elements from state vectors, propagate an orbit, and analyze coverage or ground track.",
+    "domain": "domain-space-builder",
+    "tags": ["orbital-mechanics", "astrodynamics", "computation"],
+    "status": "stable",
+    "prerequisites": ["concept-orbital-elements", "concept-keplers-laws"],
+    "evidence_types": ["implementation", "reproducible_notebook", "experiment_log"],
+    "unlock_criteria": "Compute and validate orbital elements for a real satellite from TLE data. Publish the code and verification.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-orbital-elements" },
+      { "type": "unlocks", "target": "skill-plan-trajectory" },
+      { "type": "applies_to", "target": "tool-gmat" }
+    ]
+  },
+  {
+    "id": "skill-plan-trajectory",
+    "type": "skill",
+    "label": "Plan a Mission Trajectory",
+    "description": "Design a mission trajectory from launch to destination, including delta-v budget, maneuver sequencing, and margin analysis.",
+    "domain": "domain-space-builder",
+    "tags": ["trajectory", "mission-design", "delta-v", "astrodynamics"],
+    "status": "stable",
+    "prerequisites": ["concept-delta-v-budget", "skill-calculate-orbit"],
+    "evidence_types": ["implementation", "experiment_log", "public_artifact"],
+    "unlock_criteria": "Design a complete trajectory for a reference mission (e.g., LEO to GEO transfer). Publish the analysis.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-delta-v-budget" }
+    ]
+  },
+  {
+    "id": "skill-size-propulsion-system",
+    "type": "skill",
+    "label": "Size a Propulsion System",
+    "description": "Select and size a propulsion system for a given mission delta-v, spacecraft mass, and thrust requirement.",
+    "domain": "domain-space-builder",
+    "tags": ["propulsion", "mission-design", "sizing", "spacecraft"],
+    "status": "stable",
+    "prerequisites": ["concept-specific-impulse", "concept-tsiolkovsky-rocket-equation"],
+    "evidence_types": ["implementation", "experiment_log"],
+    "unlock_criteria": "Size a propulsion system for a reference spacecraft and document the trade study with mass and performance margins.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-specific-impulse" }
+    ]
+  },
+  {
+    "id": "skill-design-cubesat-mission",
+    "type": "skill",
+    "label": "Design a CubeSat Mission",
+    "description": "Define requirements, concept of operations, subsystem sizing, and launch vehicle selection for a 1U–12U CubeSat mission.",
+    "domain": "domain-space-builder",
+    "tags": ["cubesat", "mission-design", "smallsat", "systems-engineering"],
+    "status": "stable",
+    "prerequisites": ["concept-systems-engineering", "skill-plan-trajectory"],
+    "evidence_types": ["public_artifact", "experiment_log", "implementation"],
+    "unlock_criteria": "Produce a mission concept document (equivalent to a Phase A study) with ConOps, budget allocations, and risk log.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-systems-engineering" }
+    ]
+  },
+  {
+    "id": "skill-evaluate-longevity-intervention",
+    "type": "skill",
+    "label": "Evaluate a Longevity Intervention",
+    "description": "Critically assess the evidence quality, mechanism, and translational relevance of a proposed longevity intervention.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": ["longevity", "evidence-evaluation", "aging", "research"],
+    "status": "stable",
+    "prerequisites": ["concept-hallmarks-of-aging", "concept-epigenetic-clocks"],
+    "evidence_types": ["explanation", "public_artifact", "teaching_artifact"],
+    "unlock_criteria": "Publish a structured evidence review of a specific longevity intervention with mechanism, study quality, and translational assessment.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-hallmarks-of-aging" }
+    ]
+  },
+  {
+    "id": "skill-design-cognitive-experiment",
+    "type": "skill",
+    "label": "Design a Cognitive Experiment",
+    "description": "Design a well-controlled behavioral or cognitive experiment with defined hypotheses, measures, controls, and analysis plan.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": ["cognition", "experimental-design", "psychology", "research"],
+    "status": "stable",
+    "prerequisites": ["concept-working-memory"],
+    "evidence_types": ["experiment_log", "reproducible_notebook", "public_artifact"],
+    "unlock_criteria": "Design and document a cognitive experiment protocol with pre-registration or equivalent methodological rigor.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-working-memory" }
+    ]
+  },
+  {
+    "id": "skill-conduct-user-interview",
+    "type": "skill",
+    "label": "Conduct a User Interview",
+    "description": "Plan, conduct, and synthesize user interviews to surface jobs-to-be-done, pain points, and existing behaviors.",
+    "domain": "domain-creator-founder",
+    "tags": ["user-research", "jtbd", "product", "discovery"],
+    "status": "stable",
+    "prerequisites": ["concept-jobs-to-be-done"],
+    "evidence_types": ["public_artifact", "teaching_artifact", "explanation"],
+    "unlock_criteria": "Conduct 5+ interviews, synthesize findings into a documented insight report, and share key learnings publicly.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-jobs-to-be-done" },
+      { "type": "unlocks", "target": "skill-write-product-spec" }
+    ]
+  },
+  {
+    "id": "skill-write-product-spec",
+    "type": "skill",
+    "label": "Write a Product Spec",
+    "description": "Define a product or feature through a written spec: problem statement, user stories, success criteria, and non-goals.",
+    "domain": "domain-creator-founder",
+    "tags": ["product", "spec", "writing", "pm"],
+    "status": "stable",
+    "prerequisites": ["skill-conduct-user-interview"],
+    "evidence_types": ["public_artifact", "contribution"],
+    "unlock_criteria": "Publish a product spec for a real feature. The spec must include problem statement, users, success metrics, and explicit non-goals.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "skill-conduct-user-interview" },
+      { "type": "unlocks", "target": "skill-ship-mvp" }
+    ]
+  },
+  {
+    "id": "skill-ship-mvp",
+    "type": "skill",
+    "label": "Ship an MVP",
+    "description": "Define, build, and launch a minimum viable product. Get it in front of real users and collect feedback.",
+    "domain": "domain-creator-founder",
+    "tags": ["mvp", "product", "launch", "startup"],
+    "status": "stable",
+    "prerequisites": ["concept-product-market-fit", "skill-write-product-spec"],
+    "evidence_types": ["public_artifact", "implementation", "experiment_log"],
+    "unlock_criteria": "Launch a working product, share a public URL or download, and document at least 3 user feedback points.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "skill-write-product-spec" }
+    ]
+  },
+  {
+    "id": "skill-write-high-signal-post",
+    "type": "skill",
+    "label": "Write a High-Signal Post",
+    "description": "Produce a written piece that clearly communicates a non-obvious insight, earns attention from a target audience, and drives action.",
+    "domain": "domain-creator-founder",
+    "tags": ["writing", "distribution", "content", "leverage"],
+    "status": "stable",
+    "prerequisites": ["concept-content-leverage"],
+    "evidence_types": ["public_artifact"],
+    "unlock_criteria": "Publish a post with documented audience reach and at least one concrete response (reply, share, or downstream action) from someone you did not know.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-content-leverage" },
+      { "type": "unlocks", "target": "skill-grow-audience" }
+    ]
+  },
+  {
+    "id": "skill-grow-audience",
+    "type": "skill",
+    "label": "Grow an Audience",
+    "description": "Build a consistent, engaged audience through repeated high-signal content across one or more channels.",
+    "domain": "domain-creator-founder",
+    "tags": ["audience", "distribution", "content", "growth"],
+    "status": "stable",
+    "prerequisites": ["skill-write-high-signal-post"],
+    "evidence_types": ["public_artifact", "experiment_log"],
+    "unlock_criteria": "Demonstrate 3-month consistent growth in a documented audience channel with engagement metrics.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "skill-write-high-signal-post" }
+    ]
+  },
+  {
+    "id": "skill-build-financial-model",
+    "type": "skill",
+    "label": "Build a Financial Model",
+    "description": "Create a bottom-up financial model with unit economics, revenue drivers, cost structure, and scenario analysis.",
+    "domain": "domain-creator-founder",
+    "tags": ["finance", "modeling", "unit-economics", "startup"],
+    "status": "stable",
+    "prerequisites": ["concept-unit-economics"],
+    "evidence_types": ["public_artifact", "implementation"],
+    "unlock_criteria": "Publish a financial model template or a documented model for a real business with at least three scenarios.",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2025-01-01T00:00:00Z",
+    "edges": [
+      { "type": "requires", "target": "concept-unit-economics" }
+    ]
+  }
+]

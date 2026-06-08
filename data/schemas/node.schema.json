@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://starlightintelligence.org/knowledge-tree/schemas/node.schema.json",
+  "title": "KnowledgeTreeNode",
+  "description": "A node in the Starlight Knowledge Tree graph",
+  "type": "object",
+  "required": ["id", "type", "label", "description", "domain", "tags", "status", "edges", "created_at", "updated_at"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Unique node identifier in kebab-case, prefixed with type"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "domain",
+        "concept",
+        "skill",
+        "tool",
+        "paper",
+        "dataset",
+        "experiment",
+        "artifact",
+        "credential",
+        "open_problem",
+        "contribution_task"
+      ]
+    },
+    "label": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 200
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 1000
+    },
+    "domain": {
+      "type": "string",
+      "pattern": "^domain-[a-z][a-z0-9-]*$"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "maxItems": 20
+    },
+    "status": {
+      "type": "string",
+      "enum": ["seed", "draft", "stable", "deprecated"]
+    },
+    "edges": {
+      "type": "array",
+      "items": { "$ref": "edge.schema.json" }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "if": {
+    "properties": { "type": { "const": "skill" } }
+  },
+  "then": {
+    "required": ["prerequisites", "evidence_types", "unlock_criteria"],
+    "properties": {
+      "prerequisites": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "evidence_types": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "explanation",
+            "implementation",
+            "public_artifact",
+            "experiment_log",
+            "reproducible_notebook",
+            "contribution",
+            "teaching_artifact"
+          ]
+        },
+        "minItems": 1
+      },
+      "unlock_criteria": {
+        "type": "string",
+        "minLength": 10
+      }
+    }
+  },
+  "definitions": {
+    "paper_fields": {
+      "required": ["authors", "year", "url"],
+      "properties": {
+        "authors": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 2100
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "abstract": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

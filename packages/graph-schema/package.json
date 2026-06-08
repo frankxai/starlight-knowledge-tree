@@ -1,0 +1,19 @@
+{
+  "name": "@starlight/graph-schema",
+  "version": "0.1.0",
+  "description": "Zod schemas for the Starlight Knowledge Tree graph",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "@types/node": "^20.0.0"
+  }
+}

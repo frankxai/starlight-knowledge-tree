@@ -1,0 +1,19 @@
+{
+  "name": "starlight-knowledge-tree",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An open intelligence graph for human capability, scientific knowledge, and contribution paths.",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "validate": "cd packages/graph-utils && npm run validate",
+    "build": "npm run build --workspaces",
+    "lint": "npm run lint --workspaces --if-present",
+    "dev": "cd apps/web && npm run dev"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

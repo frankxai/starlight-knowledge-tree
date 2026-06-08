@@ -1,0 +1,24 @@
+{
+  "name": "@starlight/graph-utils",
+  "version": "0.1.0",
+  "description": "Graph traversal and validation utilities for Starlight Knowledge Tree",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "validate-graph": "./dist/cli/validate.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "validate": "node dist/cli/validate.js",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "@starlight/graph-schema": "workspace:*",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "@types/node": "^20.0.0"
+  }
+}
