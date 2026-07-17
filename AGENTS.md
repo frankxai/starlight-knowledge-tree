@@ -4,10 +4,25 @@ This repo is part of the FrankX / Starlight / Arcanea agent estate.
 
 ## Classification
 
-- Repo: $title
-- Class: $Classification
-- Default health command: $HealthCommand
-- Remote: $Remote
+- Repo: starlight-knowledge-tree
+- Class: tooling
+- Default health command: `npm run build`
+- Remote: https://github.com/frankxai/starlight-knowledge-tree.git
+
+## What This Repo Is
+
+An open intelligence graph (concepts, skills, tools, papers, experiments, open problems) with
+seed data under `data/domains/` and `data/nodes/`, Zod schemas in `packages/graph-schema/`,
+graph traversal utilities in `packages/graph-utils/`, a Next.js public-site scaffold in
+`apps/web/`, and agent instruction files in `agents/`. See `README.md` for the full model and
+`ONTOLOGY.md` for node/edge types.
+
+## Real Commands (npm workspaces — this repo has no lockfile yet, run `npm install` before scripts)
+
+- `npm run validate` — validates graph data via `packages/graph-utils`
+- `npm run build` — builds all workspaces (also the CI/health check, see `.github/workflows/validate-graph.yml`)
+- `npm run lint` — lints all workspaces (`--if-present`)
+- `npm run dev` — runs the `apps/web` dev server
 
 ## Agent Rules
 
@@ -17,11 +32,14 @@ This repo is part of the FrankX / Starlight / Arcanea agent estate.
 - Prefer existing repo conventions over new abstractions.
 - Run the health command before handoff when feasible.
 - Do not publish secrets, private memory, credentials, or internal-only strategy.
+- This is a **public** repo (MIT licensed) — never commit private health/genetic/biometric data
+  or personal identifiers, per the privacy warning in `README.md`.
 
 ## Class-Specific Guidance
 
 - Keep utility commands safe and documented.
 - Validate scripts before recommending operational use.
+- New knowledge/skill/tool nodes belong under `data/`, validated against `data/schemas/`.
 
 ## Handoff
 
