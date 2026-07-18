@@ -8,7 +8,9 @@
     "apps/*"
   ],
   "scripts": {
-    "validate": "cd packages/graph-utils && npm run validate",
+    "validate": "npm run build --workspace @starlight/graph-schema && npm run validate --workspace @starlight/graph-utils",
+    "validate:fiction": "npm run build --workspace @starlight/graph-schema && npm run validate:fiction --workspace @starlight/graph-utils",
+    "test:fiction": "npm run build --workspace @starlight/graph-schema && npm run test --workspace @starlight/graph-utils",
     "build": "npm run build --workspaces",
     "lint": "npm run lint --workspaces --if-present",
     "dev": "cd apps/web && npm run dev"

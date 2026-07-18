@@ -66,18 +66,39 @@ export type EvidenceType = z.infer<typeof EvidenceTypeSchema>;
 
 // ── Base node ─────────────────────────────────────────────────────────────────
 
-const BaseNodeSchema = z.object({
+const CommonNodeSchema = z.object({
   id: z.string().regex(/^[a-z][a-z0-9-]*$/),
   type: NodeTypeSchema,
   label: z.string().min(2).max(200),
   description: z.string().min(10).max(1000),
-  domain: z.string().regex(/^domain-[a-z][a-z0-9-]*$/),
   tags: z.array(z.string()).min(1).max(20),
   status: StatusSchema,
   edges: z.array(EdgeSchema),
   created_at: z.string().datetime(),
   updated_at: z.string().datetime(),
 });
+
+const BaseNodeSchema = CommonNodeSchema.extend({
+  domain: z.string().regex(/^domain-[a-z][a-z0-9-]*$/),
+});
+
+const DomainPathSchema = z.object({
+  id: z.string().regex(/^path-[a-z][a-z0-9-]*$/),
+  label: z.string().min(2).max(200),
+  description: z.string().max(500).optional(),
+  nodes: z.array(z.string()).min(1),
+});
+
+export const DomainNodeSchema = CommonNodeSchema.extend({
+  id: z.string().regex(/^domain-[a-z][a-z0-9-]*$/),
+  type: z.literal("domain"),
+  root_problems: z.array(z.string()).min(1),
+  paths: z.array(DomainPathSchema).min(1),
+  seed_nodes: z.array(z.string()).min(1),
+  privacy_warning: z.string().min(10).optional(),
+});
+
+export type DomainNode = z.infer<typeof DomainNodeSchema>;
 
 // ── Skill node ────────────────────────────────────────────────────────────────
 
@@ -128,6 +149,7 @@ export type ContributionTaskNode = z.infer<typeof ContributionTaskNodeSchema>;
 // ── Generic node ──────────────────────────────────────────────────────────────
 
 export const NodeSchema = z.union([
+  DomainNodeSchema,
   SkillNodeSchema,
   PaperNodeSchema,
   OpenProblemNodeSchema,
@@ -155,3 +177,5 @@ export const PathSchema = z.object({
 });
 
 export type Path = z.infer<typeof PathSchema>;
+
+export * from "./fiction-world";
