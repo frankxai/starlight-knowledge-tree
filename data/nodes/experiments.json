@@ -1,6 +1,6 @@
 [
   {
-    "id": "experiment-implement-miniGPT",
+    "id": "experiment-implement-minigpt",
     "type": "experiment",
     "label": "Implement miniGPT from Scratch",
     "description": "Build a character-level GPT implementation from scratch in PyTorch, train on a text corpus, and analyze what the model learns.",

@@ -149,7 +149,9 @@ export function getNodesByDomain(
   domain: string,
   nodes: KnowledgeTreeNode[]
 ): KnowledgeTreeNode[] {
-  return nodes.filter((n) => n.domain === domain);
+  return nodes.filter((node) =>
+    "domain" in node ? node.domain === domain : node.type === "domain" && node.id === domain
+  );
 }
 
 export function getNodesByType(
@@ -158,3 +160,5 @@ export function getNodesByType(
 ): KnowledgeTreeNode[] {
   return nodes.filter((n) => n.type === type);
 }
+
+export * from "./fiction-world";
