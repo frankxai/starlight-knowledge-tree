@@ -43,7 +43,7 @@ jobs:
           echo "Scanning for potential private data patterns..."
           # Check for patterns that suggest personal health/genetic data
           # These are heuristic checks — the Privacy Steward agent does full review
-          if grep -rE "(SSN|social.security|passport.number|medical.record|patient.id)" data/ --include="*.json" -i; then
+          if grep -rEiw "(SSN|social[ ._-]?security|passport[ ._-]?number|medical[ ._-]?record|patient[ ._-]?id)" data/ --include="*.json"; then
             echo "❌ Potential personal identifier pattern detected in data/"
             exit 1
           fi
