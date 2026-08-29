@@ -53,7 +53,7 @@ Teacher status is never inferred from audience size. It emerges from learner tra
 | Architect | Can I design the system and defend trade-offs? | Working system, decision record, evaluation, operational outcome |
 | Guardian | Can I grow capability in others and protect the standard? | Teaching method, learner-transfer evidence, accepted refinement, stewardship record |
 
-Progress is a vector, not a single score. A person can be an Architect in system design, a Practitioner in sales, and an Explorer in music theory. Levels expire when evidence becomes stale or the field changes.
+Progress is a vector, not a single score. A person can be an Architect in system design, a Practitioner in sales, and an Explorer in music theory. Historical achievement remains recorded; current readiness becomes `review_due` or `stale` when evidence ages or the field changes.
 
 ## Five verbs of compounding identity
 
@@ -199,4 +199,3 @@ Relationships, health, finance, and private identity remain constraint and stewa
 - Daily capture and weekly synthesis automations.
 - Three priority capability tracks seeded with real but privacy-safe evidence candidates.
 - One completed weekly review that changes a decision, practice, artifact, or teaching method.
-
