@@ -11,7 +11,7 @@ Each capability carries five evidence lanes:
 | Learn | Source note, concept map, retrieval check, changed belief |
 | Build | Shipped artifact, decision, experiment, or operating result |
 | Teach | Lesson, demonstration, critique, or published explanation |
-| Evolve | Documented refinement with before/after evidence |
+| Refine | Documented improvement with before/after evidence |
 | Guide | Consented learner outcome attributable to the guidance |
 
 Use one mastery scale across the graph. The capability name is canonical; the word after the slash describes the observable state:
