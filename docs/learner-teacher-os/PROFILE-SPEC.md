@@ -818,12 +818,12 @@ Never use generic last-write-wins synchronization.
 /rubrics/
 /scoring/
 /validators/
-/profiles/releases-private/<profile_id>/
+/profiles/public/<profile_id>/
 /attribution/
 /automation/
 ```
 
-Public repositories contain schemas, public knowledge, and non-sensitive artifacts. Personal profile manifests remain private unless explicitly approved and structurally safe for immutable history.
+Public repositories contain schemas, public knowledge, and non-sensitive artifacts. Personal profile manifests remain in a private store; only an explicitly approved, consent-filtered release belongs under `/profiles/public/`.
 
 ### Notion databases
 
