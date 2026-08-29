@@ -14,14 +14,14 @@ Each capability carries five evidence lanes:
 | Evolve | Documented refinement with before/after evidence |
 | Guide | Consented learner outcome attributable to the guidance |
 
-Use one mastery scale across the graph:
+Use one mastery scale across the graph. The capability name is canonical; the word after the slash describes the observable state:
 
-- `L0 Unmapped` — no reliable vocabulary.
-- `L1 Literate` — can define, distinguish, and locate primary sources.
-- `L2 Practiced` — can execute with scaffolding.
-- `L3 Reliable` — can ship independently under real constraints.
-- `L4 Transferable` — can solve unfamiliar cases and teach the method.
-- `L5 Steward` — can set standards, diagnose others, and advance the practice.
+- `L0 Unrated / Unmapped` — no reliable evidence or vocabulary yet.
+- `L1 Explorer / Literate` — can define, distinguish, and locate primary sources.
+- `L2 Apprentice / Practiced` — can execute with scaffolding and apply feedback.
+- `L3 Practitioner / Reliable` — can ship independently under real constraints.
+- `L4 Architect / Transferable` — can solve unfamiliar cases, design reusable systems, and teach the method.
+- `L5 Guardian / Steward` — can set standards, diagnose others, grow successors, and advance the practice.
 
 Never infer mastery from a book title, conversation, credential, or self-rating. Every level links to evidence, evaluator, date, confidence, and next test. Source states remain explicit: `queued → sampled → studied → applied → taught → challenged`.
 
