@@ -1,51 +1,318 @@
 {
+  "$schema": "https://starlightintelligence.org/schemas/profile-release/0.1.0.json",
   "schema_version": "0.1.0",
-  "record_type": "public_profile_projection",
+  "record_type": "profile_release",
+  "record_status": "active",
+  "release_status": "approved",
+  "revision": 1,
   "synthetic": true,
-  "release_id": "rel_00000000-0000-4000-8000-000000000001",
+  "id": "rel_00000000-0000-4000-8000-000000000001",
   "profile_id": "prf_00000000-0000-4000-8000-000000000001",
   "subject_actor": {
     "actor_id": "act_00000000-0000-4000-8000-000000000001",
-    "kind": "human",
-    "public_alias": "Example Learner"
+    "kind": "human"
   },
-  "projection": {
+  "created_at": "2026-08-29T00:00:00Z",
+  "updated_at": "2026-08-29T00:00:00Z",
+  "generated_at": "2026-08-29T00:00:00Z",
+  "created_by_actor_id": "act_00000000-0000-4000-8000-000000000003",
+  "projection_policy": {
+    "purpose_codes": [
+      "capability_attestation"
+    ],
     "audience": "public",
-    "purpose": "capability-attestation",
-    "generated_at": "2026-08-29T00:00:00Z",
-    "consent_snapshot_sha256": "sha256:REPLACE_AT_RELEASE",
-    "policy_snapshot_sha256": "sha256:REPLACE_AT_RELEASE",
-    "human_approval_review_id": "rev_00000000-0000-4000-8000-000000000001",
-    "revocable": true
+    "identifiability": "pseudonymous",
+    "channel": "public_git_synthetic",
+    "withdrawal_scope": "future_official_projections_only"
+  },
+  "provenance": {
+    "canonical_authority": "notion",
+    "source_record_ref": "rsr_00000000-0000-4000-8000-000000000001",
+    "ontology_release_ref": "rsr_00000000-0000-4000-8000-000000000002",
+    "drive_workbook": {
+      "resolver_ref": "rsr_00000000-0000-4000-8000-000000000003",
+      "mode": "read_only_derived",
+      "generated_at": "2026-08-29T00:00:00Z",
+      "generator_version": "0.1.0"
+    },
+    "generator": {
+      "name": "starlight-profile-release-builder",
+      "version": "0.1.0",
+      "code_revision": "synthetic-revision-0001"
+    }
+  },
+  "privacy": {
+    "classification": "public",
+    "data_classes": [
+      "learning",
+      "authorship"
+    ],
+    "publishable": true
+  },
+  "consent": {
+    "consent_grant_refs": [
+      "cns_00000000-0000-4000-8000-000000000001"
+    ],
+    "evaluated_at": "2026-08-29T00:00:00Z",
+    "effective_audiences": [
+      "public"
+    ],
+    "purpose_codes": [
+      "capability_attestation"
+    ],
+    "publication_approved": true
+  },
+  "review": {
+    "approval_review_id": "rev_00000000-0000-4000-8000-000000000001",
+    "decision": "approved",
+    "reviewed_at": "2026-08-29T00:00:00Z",
+    "reviewer_kind": "human"
   },
   "learner_profile": {
-    "proof_capsules": [],
+    "proof_capsules": [
+      {
+        "attestation_ref": "att_00000000-0000-4000-8000-000000000002",
+        "role": "learner",
+        "scope": {
+          "scope_id": "sco_00000000-0000-4000-8000-000000000001",
+          "skill_id": "skl_00000000-0000-4000-8000-000000000001",
+          "context": {
+            "domain_id": "dom_00000000-0000-4000-8000-000000000001",
+            "context_code": "synthetic-bounded-context"
+          }
+        },
+        "attained": {
+          "level": "apprentice",
+          "as_of": "2026-08-29T00:00:00Z",
+          "rubric_version": "0.1.0"
+        },
+        "readiness": {
+          "level": "apprentice",
+          "state": "fresh",
+          "as_of": "2026-08-29T00:00:00Z",
+          "last_qualifying_independent_confirmation_at": "2026-08-29T00:00:00Z",
+          "review_due_at": "2027-02-25T00:00:00Z",
+          "confidence_score": 67,
+          "confidence_tier": "supported",
+          "calibration_state": "insufficient_data"
+        },
+        "evidence_classes": [
+          "artifact",
+          "independent_assessment"
+        ],
+        "provenance": {
+          "resolver_refs": [
+            "rsr_00000000-0000-4000-8000-000000000004"
+          ]
+        },
+        "consent": {
+          "consent_grant_refs": [
+            "cns_00000000-0000-4000-8000-000000000001"
+          ],
+          "effective_audiences": [
+            "public"
+          ],
+          "identifiability": "pseudonymous"
+        },
+        "review": {
+          "review_id": "rev_00000000-0000-4000-8000-000000000002",
+          "decision": "approved",
+          "reviewed_at": "2026-08-29T00:00:00Z",
+          "reviewer_kind": "human"
+        },
+        "contribution_attributions": [
+          {
+            "contribution_id": "ctr_00000000-0000-4000-8000-000000000001",
+            "actor_ref": "act_00000000-0000-4000-8000-000000000001",
+            "actor_kind": "human",
+            "roles": [
+              "learner",
+              "director"
+            ],
+            "execution_mode": "human_agent_assisted",
+            "accountable": true,
+            "disclosure": "agent_assisted"
+          },
+          {
+            "contribution_id": "ctr_00000000-0000-4000-8000-000000000002",
+            "actor_ref": "act_00000000-0000-4000-8000-000000000002",
+            "actor_kind": "agent",
+            "roles": [
+              "executor"
+            ],
+            "execution_mode": "agent_generated_human_reviewed",
+            "accountable": false,
+            "disclosure": "agent_generated_human_reviewed"
+          }
+        ]
+      }
+    ],
     "next_proof": []
   },
   "teacher_profile": {
-    "authorized_scopes": [],
-    "proof_capsules": [],
-    "delayed_transfer_outcomes": []
+    "authorized_scopes": [
+      {
+        "scope": {
+          "scope_id": "sco_00000000-0000-4000-8000-000000000002",
+          "skill_id": "skl_00000000-0000-4000-8000-000000000001",
+          "context": {
+            "domain_id": "dom_00000000-0000-4000-8000-000000000001",
+            "context_code": "synthetic-bounded-context"
+          }
+        },
+        "maximum_level": "explorer",
+        "attestation_ref": "att_00000000-0000-4000-8000-000000000003"
+      }
+    ],
+    "proof_capsules": [
+      {
+        "attestation_ref": "att_00000000-0000-4000-8000-000000000003",
+        "role": "teacher",
+        "authorized_scope_ref": "sco_00000000-0000-4000-8000-000000000002",
+        "scope": {
+          "scope_id": "sco_00000000-0000-4000-8000-000000000002",
+          "skill_id": "skl_00000000-0000-4000-8000-000000000001",
+          "context": {
+            "domain_id": "dom_00000000-0000-4000-8000-000000000001",
+            "context_code": "synthetic-bounded-context"
+          }
+        },
+        "attained": {
+          "level": "explorer",
+          "as_of": "2026-08-29T00:00:00Z",
+          "rubric_version": "0.1.0"
+        },
+        "readiness": {
+          "level": "explorer",
+          "state": "fresh",
+          "as_of": "2026-08-29T00:00:00Z",
+          "last_qualifying_independent_confirmation_at": "2026-08-29T00:00:00Z",
+          "review_due_at": "2027-02-25T00:00:00Z",
+          "confidence_score": 61,
+          "confidence_tier": "supported",
+          "calibration_state": "insufficient_data"
+        },
+        "evidence_classes": [
+          "direct_observation",
+          "aggregate_outcome"
+        ],
+        "provenance": {
+          "resolver_refs": [
+            "rsr_00000000-0000-4000-8000-000000000005"
+          ]
+        },
+        "consent": {
+          "consent_grant_refs": [
+            "cns_00000000-0000-4000-8000-000000000001"
+          ],
+          "effective_audiences": [
+            "public"
+          ],
+          "identifiability": "pseudonymous"
+        },
+        "review": {
+          "review_id": "rev_00000000-0000-4000-8000-000000000003",
+          "decision": "approved",
+          "reviewed_at": "2026-08-29T00:00:00Z",
+          "reviewer_kind": "human"
+        },
+        "contribution_attributions": [
+          {
+            "contribution_id": "ctr_00000000-0000-4000-8000-000000000003",
+            "actor_ref": "act_00000000-0000-4000-8000-000000000001",
+            "actor_kind": "human",
+            "roles": [
+              "teacher",
+              "guide"
+            ],
+            "execution_mode": "human_direct",
+            "accountable": true,
+            "disclosure": "human_only"
+          }
+        ]
+      }
+    ],
+    "aggregate_teaching_outcomes": [
+      {
+        "aggregate_id": "agg_00000000-0000-4000-8000-000000000001",
+        "skill_id": "skl_00000000-0000-4000-8000-000000000001",
+        "authorized_scope_ref": "sco_00000000-0000-4000-8000-000000000002",
+        "identifiability": "aggregate",
+        "effective_audiences": [
+          "public"
+        ],
+        "cohort_size": 8,
+        "minimum_group_size": 5,
+        "metric_code": "delayed_transfer_rate",
+        "outcome_value": 0.75,
+        "outcome_scale_ref": "osc_00000000-0000-4000-8000-000000000001",
+        "observed_from": "2026-07-01T00:00:00Z",
+        "observed_to": "2026-08-29T00:00:00Z",
+        "measurement_design": "observational",
+        "interpretation": "association",
+        "causal_claim_permitted": false,
+        "consent_grant_refs": [
+          "cns_00000000-0000-4000-8000-000000000001"
+        ],
+        "review_id": "rev_00000000-0000-4000-8000-000000000003"
+      }
+    ]
   },
   "contribution_vector": {
-    "learned": [],
-    "built": [],
-    "taught": [],
+    "learned": [
+      "ctr_00000000-0000-4000-8000-000000000001"
+    ],
+    "built": [
+      "ctr_00000000-0000-4000-8000-000000000002"
+    ],
+    "taught": [
+      "ctr_00000000-0000-4000-8000-000000000003"
+    ],
     "refined": [],
     "guided": []
   },
-  "agent_attribution": {
-    "disclosure": "human_agent_assisted",
-    "accountable_human_actor_id": "act_00000000-0000-4000-8000-000000000001",
-    "agent_actor_ids": [
-      "act_00000000-0000-4000-8000-000000000002"
-    ]
-  },
+  "contribution_attributions": [
+    {
+      "contribution_id": "ctr_00000000-0000-4000-8000-000000000001",
+      "actor_ref": "act_00000000-0000-4000-8000-000000000001",
+      "actor_kind": "human",
+      "roles": [
+        "learner",
+        "director"
+      ],
+      "execution_mode": "human_agent_assisted",
+      "accountable": true,
+      "disclosure": "agent_assisted"
+    },
+    {
+      "contribution_id": "ctr_00000000-0000-4000-8000-000000000002",
+      "actor_ref": "act_00000000-0000-4000-8000-000000000002",
+      "actor_kind": "agent",
+      "roles": [
+        "executor"
+      ],
+      "execution_mode": "agent_generated_human_reviewed",
+      "accountable": false,
+      "disclosure": "agent_generated_human_reviewed"
+    },
+    {
+      "contribution_id": "ctr_00000000-0000-4000-8000-000000000003",
+      "actor_ref": "act_00000000-0000-4000-8000-000000000001",
+      "actor_kind": "human",
+      "roles": [
+        "teacher",
+        "guide"
+      ],
+      "execution_mode": "human_direct",
+      "accountable": true,
+      "disclosure": "human_only"
+    }
+  ],
   "omitted_record_counts": {
     "no_consent": 0,
     "privacy_restricted": 0,
     "review_incomplete": 0,
     "withdrawn": 0
   },
-  "manifest_sha256": "sha256:REPLACE_AT_RELEASE"
+  "release_attestation_ref": "att_00000000-0000-4000-8000-000000000004"
 }
