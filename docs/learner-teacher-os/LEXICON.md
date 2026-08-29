@@ -1,14 +1,37 @@
 # Starlight Learner & Teacher OS — Foundational Lexicon
 
-Competence is not familiarity. A term is learned when you can **explain it, apply it, diagnose failures, produce evidence, teach it, and improve the underlying method**. Every evidence item should resolve to a dated artifact, decision, behavior, or outcome.
+Competence is not familiarity. Learning is evidenced only when a subject passes a bounded assessment that includes retained retrieval and application under declared conditions. Teaching is a separate capability: a source note, explanation, lesson, workshop, or curriculum is only a candidate artifact until learner baseline, intervention, and delayed transfer are evidenced. Every evidence item should resolve to a dated observation, artifact, decision, behavior, or outcome with provenance and authorized scope.
 
-## 1. Venture and Business Architecture
+> **Educational-use boundary:** This lexicon is educational and is not medical, legal, tax, or investment advice. Consequential health decisions require review by an appropriately qualified clinician; legal, entity, tax, privacy, employment, and IP decisions require review by jurisdiction-appropriate counsel; regulated investment decisions require review by a suitably licensed adviser. These definitions improve questions and records; they do not replace professional judgment.
+
+## 1. Starlight Evidence and Profile Primitives
+
+| Term | Operational meaning | Why it matters | Evidence or validation | Adjacent concepts |
+|---|---|---|---|---|
+| Capability claim | A bounded proposition that a named subject can understand or perform a specified capability within a declared context, difficulty, and scope. A claim is not evidence. | Prevents vague identity labels from replacing testable assertions. | Stable claim ID, subject, capability, context, rubric version, and evidence links. | Competency, skill, level, context |
+| Evidence class | A classification of an observation by type, strength, independence, and the inferences it is allowed to support; it is not a universal quality score. | Stops completion traces, artifacts, assessments, and external outcomes from being treated as interchangeable. | Versioned class rules applied to a dated observation with declared evaluator and allowed use. | Assessment, observation, evidence tier, rubric |
+| Contribution event | A dated record that a subject learned, built, taught, refined, or guided within an authorized scope. Recording an event does not automatically promote a capability claim. | Separates activity and contribution history from readiness decisions. | Event type, subject, claim, artifact, context, contribution mode, outcome, and review state. | Ledger, event, outcome, attribution |
+| Projection | A derived, audience-specific view of canonical records produced under visibility, consent, and revocation policy; it is not a second source of truth. | Allows one evidence graph to support private, community, and public profiles without uncontrolled copying. | Reproducible query or transform, policy version, audience, generated time, and source identifiers. | View, profile, privacy, redaction |
+| Authorized scope | The domain, task, context, difficulty, risk, audience, and role boundary within which a claim, action, or teaching authority is valid. | Prevents a bounded success from becoming a global title or unrestricted mandate. | Explicit scope fields, exclusions, approving authority, review date, and exception record. | Permission, delegation, competency boundary, mandate |
+| Current readiness | The presently supportable ability to perform a capability, inferred from sufficiently fresh, relevant, and non-contradictory evidence. | Separates what was once achieved from what can responsibly be relied on now. | Current evidence window, readiness state, review horizon, contradictions, and next test. | Recency, review due, stale, operational readiness |
+| Historical attainment | The highest capability state previously verified under a named rubric and scope, retained as history even when current readiness becomes stale. | Preserves real achievement without misrepresenting present capability. | Dated promotion record, rubric version, supporting evidence, and later state changes. | Credential, history, decay, archival record |
+| Freshness | The fitness of evidence for a present claim given its age, the capability’s rate of change, context drift, and prescribed review horizon. | A recent timestamp is not enough when the field or context changed materially. | Evidence date, review rule, environmental changes, and resulting `current`, `review_due`, or `stale` state. | Recency, decay, drift, review cadence |
+| Confidence | A bounded expression of uncertainty about a specific claim after considering evidence quality, contradictions, scope, and model limitations. | Makes uncertainty visible without turning it into false precision. | Declared confidence category or interval, rationale, counterevidence, and update condition. | Uncertainty, posterior, contested, support |
+| Calibration | The degree to which stated probabilities, confidence categories, or ratings agree with observed outcomes over repeated comparable judgments. | Distinguishes confidence from demonstrated reliability. | Forecast or rating history, outcome set, scoring rule, and calibration analysis. | Brier score, reliability, forecast, bias |
+| Independence cluster | A group of evidence items sharing a material source, artifact, evaluator, task, or causal pathway and therefore not safe to count as independent confirmations. | Prevents one underlying event from being multiplied into artificial certainty. | Cluster ID, dependence rationale, capped contribution rule, and linked evidence. | Correlation, double counting, provenance, evidence weight |
+| Provenance | The traceable origin, custody, attribution, and transformation history of a claim, artifact, datum, or model output. | Makes evidence inspectable and supports correction, rights, and responsibility. | Source identity, timestamps, transformations, contributors, digests where appropriate, and lineage links. | Lineage, chain of custody, citation, attribution |
+| Canonical authority / write plane | The designated system and governance path permitted to originate or modify a record type; other surfaces consume derived projections or submit reviewed change requests. | Prevents GitHub, Notion, Drive, apps, and agents from silently becoming conflicting authorities. | Authority matrix, record type, allowed writers, conflict policy, synchronization logs, and change approvals. | Source of truth, control plane, projection, synchronization |
+| Consent grant | Specific, informed, attributable, and revocable permission from an authorized party for a defined use, audience, purpose, and duration. Silence or URL availability is not consent. | Makes relationship, learner, customer, and personal evidence governable. | Grantor, scope, purpose, audience, expiry or review date, revocation path, and proof of grant. | Privacy, lawful basis, permission, revocation |
+| Attestation | An attributable assertion by an evaluator or authority about what was observed under a named rubric and scope; it is evidence about an observation, not proof by status alone. | Preserves evaluator accountability without confusing authority with truth. | Evaluator identity and role, observation, rubric, date, signature or audit trail, limitations, and conflicts. | Review, endorsement, verification, credential |
+| Execution mode | The declared configuration by which work was performed—for example human-only, agent-assisted, agent-executed with human supervision, team-executed, or system-automated—with material responsibilities stated. | Prevents agent output from being misattributed as human capability and avoids fake contribution percentages. | Mode, participating subjects or systems, responsibility boundaries, approvals, tools, and intervention trace. | Attribution, human-in-the-loop, delegation, provenance |
+
+## 2. Venture and Business Architecture
 
 | Term | Operational meaning | Why it matters | Evidence of competence | Adjacent concepts |
 |---|---|---|---|---|
 | Venture thesis | A falsifiable belief about a valuable future, underserved actor, and winning mechanism. | Prevents vision from dissolving into unrelated projects. | Thesis memo with assumptions, disconfirming signals, and review date. | Market thesis, timing, edge, scenario |
 | Ideal Customer Profile | The narrow actor with the strongest pain, ability to pay, and strategic fit. | Concentrates product, language, distribution, and proof. | Ranked segment model validated by interviews, conversion, and retention. | Persona, segmentation, buyer committee, beachhead |
-| Job to Be Done | The progress an actor hires a product or relationship to create. | Keeps invention anchored to transformation rather than features. | Job map connecting triggers, anxieties, alternatives, and desired outcomes. | Demand, switching forces, outcome, workflow |
+| Job to Be Done | The contextual progress a customer seeks in a particular circumstance; it is a demand-analysis lens, not a claim that every need is singular, stable, or literally “hires” a product. | Keeps invention anchored to desired progress and switching behavior rather than feature requests alone. | Interviews and observed choices support a job statement with circumstance, desired progress, alternatives, and switching forces. | Demand, switching forces, outcome, workflow |
 | Wedge | The smallest use case that creates entry, proof, and expansion rights. | Allows a broad ecosystem to start with a sharp commercial attack. | One segment, pain, promise, channel, and expansion path producing adoption. | Beachhead, land-and-expand, niche, sequencing |
 | Business model | The system by which value is created, delivered, captured, and renewed. | Determines whether creative output compounds into a durable institution. | Coherent model linking customer, offer, delivery cost, margin, and recurrence. | Revenue model, value chain, pricing, retention |
 | Offer architecture | The designed relationship among promise, scope, mechanism, proof, price, and risk reversal. | Converts intellectual capability into something legible and buyable. | Offer page plus fulfilled customer outcome within target cost and time. | Packaging, guarantee, ladder, positioning |
@@ -16,21 +39,21 @@ Competence is not familiarity. A term is learned when you can **explain it, appl
 | Moat | A compounding advantage that becomes harder to reproduce with use and time. | Protects the ecosystem from fast followers and commodity tooling. | Increasing advantage from data, community, brand, workflow, or network effects. | Defensibility, switching cost, economies of scale, IP |
 | Operating leverage | Revenue or impact growing faster than the labor and cost required. | Preserves freedom while expanding reach. | Rising contribution margin or users served per operator-hour. | Automation, marginal cost, standardization, scalability |
 
-## 2. Capital and Investing
+## 3. Capital and Investing
 
 | Term | Operational meaning | Why it matters | Evidence of competence | Adjacent concepts |
 |---|---|---|---|---|
 | Capital allocation | Assigning scarce cash, time, attention, and reputation to their highest-return uses. | Founder attention is often scarcer than money. | Explicit allocation policy and post-investment reviews against alternatives. | Opportunity cost, hurdle rate, portfolio |
 | Runway | Time until available liquid resources can no longer fund the current burn. | Determines negotiating power and experimentation capacity. | Rolling base, upside, and downside cash forecast with trigger points. | Burn rate, liquidity, survival horizon |
 | Unit economics | Revenue and direct costs expressed per customer, transaction, or unit. | Reveals whether scale compounds value or losses. | Cohort-level economics that reconcile with financial statements. | Gross margin, payback, cohort |
-| Customer Acquisition Cost | Fully loaded cost required to acquire one incremental customer. | Prevents confusing reach with economically useful growth. | Channel-specific CAC including labor, tools, creative, and sales cost. | Blended CAC, marginal CAC, attribution |
+| Customer Acquisition Cost | Attributed sales and marketing cost divided by newly acquired customers for a specified cohort and time window, with inclusion and attribution policy explicit. It is not automatically marginal or causal acquisition cost. | Prevents confusing reach with economically useful growth while exposing attribution assumptions. | Channel and blended CAC calculations identify cost inclusions, cohort, window, customer denominator, attribution model, and reconciliation limits. | Blended CAC, marginal CAC, incrementality, attribution |
 | Lifetime Value | Risk-adjusted contribution expected from a customer relationship. | Sets rational acquisition and service investment ceilings. | Cohort-derived LTV using retention and contribution, not optimistic revenue. | Churn, retention, ARPU, discount rate |
 | Contribution margin | Revenue remaining after costs directly caused by delivering the sale. | Shows what each sale contributes to fixed costs and profit. | Offer-level margin after support, inference, fulfillment, and transaction costs. | Gross margin, variable cost, break-even |
 | Cash conversion cycle | Time between paying to create value and collecting cash from it. | Profitable ventures can still die from timing. | Measured receivable, inventory, payable, and prepayment cycle. | Working capital, deposits, payment terms |
 | Return on Invested Capital | Operating return generated per unit of capital committed. | Disciplines hardware, hiring, acquisition, and product bets. | Comparable investment memos with expected and realized ROIC. | Hurdle rate, WACC, payback, IRR |
 | Portfolio construction | Designing a set of bets whose combined return and risk outperform isolated choices. | Balances core cash engines, strategic options, and asymmetric experiments. | Allocation by risk class, correlation, time horizon, and kill criteria. | Diversification, barbell, position sizing, rebalancing |
 
-## 3. AI and Agent Systems
+## 4. AI and Agent Systems
 
 | Term | Operational meaning | Why it matters | Evidence of competence | Adjacent concepts |
 |---|---|---|---|---|
@@ -38,14 +61,15 @@ Competence is not familiarity. A term is learned when you can **explain it, appl
 | Agent | A bounded system that observes state, selects actions, uses tools, and pursues goals. | Converts intelligence from response generation into accountable work. | Agent completes a defined job with reproducible success and logged failures. | Policy, environment, goal, tool use |
 | Agentic loop | The repeated observe–reason–act–verify cycle driving an agent toward completion. | Determines whether autonomy converges or merely consumes tokens. | Traces showing termination, recovery, verification, and bounded iteration. | Planning, reflection, retry, stopping condition |
 | Context engineering | Selecting and structuring the information available at each inference step. | Context quality often dominates prompt cleverness. | Higher task accuracy with lower token cost across a controlled evaluation set. | Prompting, compression, routing, context window |
-| Tool contract and MCP | A typed interface defining what an agent can call, with which inputs, permissions, and outputs. | Makes capabilities composable across models, products, and organizations. | Versioned tools with schemas, authorization, errors, tests, and documentation. | Function calling, capability, connector, protocol |
-| Grounding and RAG | Supplying retrieved evidence so outputs depend on authoritative external state. | Separates sourced knowledge from plausible generation. | Answers include relevant citations and pass retrieval and faithfulness evaluations. | Embeddings, search, reranking, citation |
+| Tool contract | A versioned interface specifying a callable operation’s inputs, outputs, errors, behavioral expectations, and relevant permission requirements. | Makes tool use testable without assuming a particular transport or agent protocol. | Schemas, behavioral tests, error semantics, authorization checks, version policy, and documentation. | Function calling, API contract, capability, connector |
+| Model Context Protocol (MCP) | An open client–server protocol for exposing and consuming contextual capabilities such as tools, resources, and prompts. MCP standardizes exchange patterns; it does not by itself guarantee authorization, sandboxing, trust, or semantic compatibility. | Reduces bespoke integration while keeping security and product policy explicit. | A conformant host, client, or server implementation with negotiated capabilities, protocol-version handling, tests, and separately verified authorization controls. | JSON-RPC, tool contract, connector, capability negotiation |
+| Retrieval-augmented generation (RAG) | A pipeline pattern that retrieves external information and supplies selected results to a generative model at inference time. Retrieval does not by itself make sources authoritative, outputs faithful, or citations correct. | Allows answers to use information outside model parameters while exposing retrieval and synthesis as separate failure surfaces. | Retrieval relevance and coverage, source-quality policy, citation correctness, answer faithfulness, abstention, and end-to-end task evaluations. | Search, embeddings, reranking, grounding, citation |
 | Memory architecture | The rules for writing, retrieving, consolidating, expiring, and protecting agent memory. | Enables continuity without uncontrolled context growth or false recollection. | Memory improves future task performance with traceable provenance and deletion controls. | Episodic memory, semantic memory, profile, decay |
 | Orchestration | Coordinating models, agents, tools, queues, state, and handoffs across a workflow. | Allows specialist capability without creating an ungovernable swarm. | End-to-end workflow with ownership, state transitions, retry, and cost bounds. | Supervisor, delegation, DAG, durable execution |
 | Evaluation harness | A repeatable test system measuring quality, safety, cost, latency, and regressions. | Turns “the agent feels better” into engineering evidence. | Versioned datasets, graders, baselines, thresholds, and release gates. | Golden set, judge model, red team, benchmark |
-| Agent observability | The ability to inspect traces, decisions, tool calls, costs, provenance, and failure states. | Makes autonomous work governable, debuggable, and teachable. | Production traces reconstruct why an outcome occurred and who approved it. | Telemetry, audit log, lineage, autonomy boundary |
+| Agent observability | The telemetry and correlation needed to inspect observable execution state, model requests and responses where policy permits, tool calls, errors, latency, cost, provenance, and approvals. It does not imply access to latent model reasoning. | Makes agent workflows debuggable and auditable within declared logging and privacy limits. | Correlated production traces reconstruct the observable sequence, state transitions, tool effects, errors, and approvals without claiming hidden causal reasoning. | Telemetry, trace, audit log, lineage, autonomy boundary |
 
-## 4. Product and Engineering Systems
+## 5. Product and Engineering Systems
 
 | Term | Operational meaning | Why it matters | Evidence of competence | Adjacent concepts |
 |---|---|---|---|---|
@@ -55,12 +79,12 @@ Competence is not familiarity. A term is learned when you can **explain it, appl
 | Data model | The formal representation of entities, relationships, constraints, and lifecycle. | Data structure becomes the long-term skeleton of products and intelligence. | Schema supports required queries, integrity, migration, and lineage. | Ontology, schema, normalization, event |
 | API contract | A stable agreement on requests, responses, errors, identity, and version behavior. | Allows teams and agents to evolve independently without silent breakage. | Contract tests and compatibility policy across producers and consumers. | Interface, schema, idempotency, versioning |
 | State machine | An explicit model of valid states, transitions, guards, and terminal conditions. | Eliminates ambiguous workflow behavior and impossible combinations. | Transition diagram plus tests for legal, illegal, retry, and recovery paths. | Workflow, lifecycle, invariant, saga |
-| Event-driven architecture | Components communicating through durable facts about state changes. | Enables loose coupling, automation, replay, and auditability. | Events have schemas, idempotent consumers, ordering policy, and dead-letter handling. | Queue, pub-sub, event sourcing, webhook |
+| Event-driven architecture | Components publish or consume events representing occurrences. Delivery, durability, ordering, retention, replay, and consistency semantics are design choices and may be absent. | Can decouple producers and consumers in time and ownership, while introducing explicit consistency and operational trade-offs. | Event schemas and ownership plus declared delivery and ordering semantics, retries, observability, and idempotency or dead-letter handling where the guarantees require them. | Queue, pub-sub, event sourcing, webhook |
 | Continuous Integration and Delivery | Automated integration, testing, packaging, and safe release of changes. | Makes shipping frequent without making production fragile. | Small releases pass automated gates and can be rolled back or disabled. | Pipeline, feature flag, deployment, rollback |
 | Service-Level Objective | A measurable reliability target backed by an error budget. | Aligns engineering effort with user-visible reliability rather than perfection. | Availability, latency, or correctness SLO tied to alerts and release decisions. | SLI, SLA, error budget, incident |
 | Technical debt | Future change cost created by expedient structural compromises. | Distinguishes useful shortcuts from compounding fragility. | Debt register links tradeoffs to impact, owner, repayment trigger, and interest. | Refactoring, entropy, coupling, maintainability |
 
-## 5. Media, Taste, and Story Systems
+## 6. Media, Taste, and Story Systems
 
 | Term | Operational meaning | Why it matters | Evidence of competence | Adjacent concepts |
 |---|---|---|---|---|
@@ -74,10 +98,12 @@ Competence is not familiarity. A term is learned when you can **explain it, appl
 | Taste calibration | Training judgment through comparison, decomposition, selection, and articulated rejection. | Raises the quality ceiling of both human and generated work. | Reference sets, rejection reasons, ranked variants, and improved blind evaluations. | Critique, benchmark, curation, discernment |
 | Content flywheel | A loop in which research, creation, distribution, response, and reuse improve future output. | Makes every artifact strengthen the next one. | One primary work generates measured derivative reach, learning, and demand. | Atomization, repurposing, feedback loop, archive |
 
-## 6. Learning and Teaching Systems
+## 7. Learning and Teaching Systems
 
 | Term | Operational meaning | Why it matters | Evidence of competence | Adjacent concepts |
 |---|---|---|---|---|
+| Learned event | A dated claim that a subject acquired or retained a bounded concept or capability, supported by a claim-relevant assessment that samples unaided or appropriately cued retrieval and application under declared conditions. Source notes and explanations remain candidate artifacts until this gate is met. | Prevents research activity and polished notes from being misreported as learning. | Assessment result, delayed retrieval result, application result, timing, scope, evaluator, provenance, and counterevidence. | Retrieval, assessment, application, retention |
+| Taught event | A dated claim that an intervention contributed to another subject’s retained and transferable capability. A lesson or curriculum remains a candidate artifact until baseline, intervention, and delayed transfer are observed. | Separates instructional production and satisfaction from teaching effectiveness. | Consented learner baseline, documented intervention, delayed assessment or novel transfer, attribution confidence, and authorized scope. | Instruction, transfer, retention, learner outcome |
 | Competency model | A defined set of capabilities, behaviors, knowledge, and standards for a role. | Makes growth measurable without reducing it to course completion. | Observable competencies map to real work and expert review. | Role, proficiency, capability, standard |
 | Prerequisite graph | A dependency map showing what must be understood before later capabilities become tractable. | Prevents fragmented learning and premature complexity. | Learners traverse dependencies with fewer recurring conceptual failures. | Skill tree, knowledge graph, sequence |
 | Learning objective | A precise statement of what someone will be able to do under specified conditions. | Forces instruction toward capability rather than exposure. | Assessment directly tests the named action and standard. | Outcome, task, transfer, criterion |
@@ -88,7 +114,7 @@ Competence is not familiarity. A term is learned when you can **explain it, appl
 | Mastery criterion | The minimum evidence required to trust a capability in realistic conditions. | Prevents badges from outrunning competence. | Repeated successful performance under variation, constraints, and transfer. | Certification, threshold, reliability, transfer |
 | Evidence portfolio | A curated, provenance-rich record of what was learned, built, taught, and improved. | Turns identity claims into inspectable capability and compounding reputation. | Dated artifacts link role, decision, feedback, outcome, and reflection. | Credential, case study, changelog, proof |
 
-## 7. Relationships, Family, and Friendship
+## 8. Relationships, Family, and Friendship
 
 | Term | Operational meaning | Why it matters | Evidence of competence | Adjacent concepts |
 |---|---|---|---|---|
@@ -101,7 +127,7 @@ Competence is not familiarity. A term is learned when you can **explain it, appl
 | Reciprocity | A fair, context-sensitive exchange of care, effort, opportunity, and responsibility over time. | Prevents generosity from becoming exploitation or scorekeeping. | Both parties can describe the relationship as mutually life-giving. | Mutuality, asymmetry, contribution, fairness |
 | Family system | The network of roles, loyalties, patterns, and feedback loops shaping individual behavior. | Stops one person’s symptom from being treated as an isolated defect. | Recurring patterns, alliances, triggers, and role changes are mapped and tested. | Triangulation, role, lineage, homeostasis |
 
-## 8. Health and State Regulation
+## 9. Health and State Regulation
 
 | Term | Operational meaning | Why it matters | Evidence of competence | Adjacent concepts |
 |---|---|---|---|---|
@@ -114,7 +140,7 @@ Competence is not familiarity. A term is learned when you can **explain it, appl
 | Interoception | Perception and interpretation of internal bodily signals. | Improves early detection of stress, emotion, fatigue, and illness. | Sensations are identified accurately without immediate avoidance or catastrophic meaning. | Somatic awareness, emotion, pain, proprioception |
 | State-dependent cognition | The principle that perception, memory, and decisions vary with physiological and emotional state. | Prevents temporary states from dictating permanent decisions. | Major decisions are state-checked and revisited under regulated conditions. | Affect, bias, arousal, metacognition |
 
-## 9. Leadership and Community
+## 10. Leadership and Community
 
 | Term | Operational meaning | Why it matters | Evidence of competence | Adjacent concepts |
 |---|---|---|---|---|
@@ -127,7 +153,7 @@ Competence is not familiarity. A term is learned when you can **explain it, appl
 | Ritual architecture | Deliberately recurring events that reinforce identity, transition, reflection, and coordination. | Makes culture embodied and memorable rather than textual. | Rituals persist because participants experience functional and symbolic value. | Ceremony, cadence, initiation, review |
 | Stewardship | Holding power and resources in trust for a mission beyond personal extraction. | Aligns leadership, wealth, reputation, and legacy. | Decisions protect long-term system health despite short-term personal upside. | Fiduciary care, custodianship, legacy, commons |
 
-## 10. Creativity and Music
+## 11. Creativity and Music
 
 | Term | Operational meaning | Why it matters | Evidence of competence | Adjacent concepts |
 |---|---|---|---|---|
@@ -140,7 +166,7 @@ Competence is not familiarity. A term is learned when you can **explain it, appl
 | Arrangement and orchestration | Assigning musical functions across instruments, voices, registers, and time. | Turns a strong idea into a complete emotional architecture. | Every layer has a role and removal tests reveal no decorative clutter. | Register, voicing, density, instrumentation |
 | Sound design and production chain | Creating and transforming sound through capture, synthesis, processing, space, and mix decisions. | Makes artistic intent survive playback systems and production scale. | Repeatable sessions, stems, routing, and masters translate across environments. | Synthesis, signal flow, mix, mastering |
 
-## 11. Philosophy and Meaning
+## 12. Philosophy and Meaning
 
 | Term | Operational meaning | Why it matters | Evidence of competence | Adjacent concepts |
 |---|---|---|---|---|
@@ -153,11 +179,11 @@ Competence is not familiarity. A term is learned when you can **explain it, appl
 | Identity narrative | The evolving story that organizes memory, agency, roles, and future possibility. | Identity can coordinate action or imprison it in inherited scripts. | The narrative integrates contradiction while permitting evidence-based revision. | Self-concept, archetype, role, continuity |
 | Existential commitment | A chosen responsibility enacted despite uncertainty and finite time. | Meaning becomes real through irreversible allocation, not aspiration alone. | Calendar, capital, conduct, and sacrifice converge around the commitment. | Freedom, responsibility, finitude, vocation |
 
-## 12. Law, Risk, and Governance
+## 13. Law, Risk, and Governance
 
 | Term | Operational meaning | Why it matters | Evidence of competence | Adjacent concepts |
 |---|---|---|---|---|
-| Legal entity separation | Maintaining distinct ownership, contracts, accounts, duties, and liabilities among entities and people. | Protects assets and keeps a venture ecosystem governable. | Clean books, intercompany agreements, approvals, and no commingling. | Limited liability, holding structure, veil |
+| Legal entity separation | Maintaining distinct ownership, contracts, accounts, records, approvals, and conduct among entities and people. It supports—but does not guarantee—limited-liability and governance boundaries, whose effect depends on jurisdiction, facts, guarantees, solvency, and court treatment. | Reduces ambiguity about ownership, duties, transactions, and responsibility without promising that assets or liabilities are insulated in every case. | Clean records, separate accounts, documented intercompany terms, approvals, no commingling, and review by jurisdiction-appropriate legal and tax counsel. | Limited liability, holding structure, veil piercing, guarantee |
 | Fiduciary duty | The duty to act loyally, carefully, and within authority for another party or entity. | Founder control does not erase obligations to companies, investors, or beneficiaries. | Decisions disclose conflicts, record rationale, and protect the represented interest. | Loyalty, care, conflict, board |
 | Contract architecture | Designing agreements as a coherent allocation of scope, rights, obligations, incentives, and remedies. | Prevents each deal from creating incompatible promises. | Reusable agreement stack with controlled deviations and clear precedence. | Terms, warranty, indemnity, termination |
 | Intellectual-property chain of title | Documented continuity proving who created, transferred, and owns an intellectual asset. | Unclear ownership can make valuable assets uninvestable or unsellable. | Signed assignments connect every contributor and asset to the correct owner. | Copyright, patent, trademark, work-for-hire |
@@ -166,7 +192,7 @@ Competence is not familiarity. A term is learned when you can **explain it, appl
 | Risk register | A living record of threats, likelihood, impact, controls, owner, and response. | Moves risk from ambient anxiety into managed exposure. | Material risks have owners, indicators, mitigations, and review cadence. | Hazard, control, residual risk, scenario |
 | Internal control and audit trail | Mechanisms ensuring authorization, integrity, traceability, and review of consequential actions. | Scaled human-agent systems require proof of what happened and why. | Sensitive actions show identity, approval, change history, and reconciliation. | Segregation of duties, logging, audit, assurance |
 
-## 13. Lifestyle and Freedom Architecture
+## 14. Lifestyle and Freedom Architecture
 
 | Term | Operational meaning | Why it matters | Evidence of competence | Adjacent concepts |
 |---|---|---|---|---|
@@ -179,7 +205,7 @@ Competence is not familiarity. A term is learned when you can **explain it, appl
 | Reversibility | The degree to which a decision can be changed without prohibitive loss. | Determines how much evidence and deliberation a decision deserves. | Reversible choices move quickly; irreversible ones use explicit pre-mortems and gates. | Optionality, lock-in, one-way door |
 | Slack | Deliberately unallocated capacity that absorbs shocks and enables emergence. | Systems optimized to full utilization become brittle and unimaginative. | Calendar, cash, compute, and emotional capacity retain usable reserves. | Buffer, resilience, serendipity, capacity |
 
-## 14. Invention and Research
+## 15. Invention and Research
 
 | Term | Operational meaning | Why it matters | Evidence of competence | Adjacent concepts |
 |---|---|---|---|---|
