@@ -1,0 +1,954 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://starlightintelligence.org/schemas/profile-release/0.1.0.json",
+  "title": "Starlight Profile Release",
+  "description": "Normative v0.1 schema for a derived, consent-filtered Learner and Teacher profile release.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema_version",
+    "record_type",
+    "record_status",
+    "release_status",
+    "revision",
+    "synthetic",
+    "id",
+    "profile_id",
+    "subject_actor",
+    "created_at",
+    "updated_at",
+    "generated_at",
+    "created_by_actor_id",
+    "projection_policy",
+    "provenance",
+    "privacy",
+    "consent",
+    "review",
+    "learner_profile",
+    "teacher_profile",
+    "contribution_vector",
+    "contribution_attributions",
+    "omitted_record_counts",
+    "release_attestation_ref"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://starlightintelligence.org/schemas/profile-release/0.1.0.json"
+    },
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "record_type": {
+      "const": "profile_release"
+    },
+    "record_status": {
+      "enum": ["active", "superseded", "withdrawn", "tombstoned"]
+    },
+    "release_status": {
+      "enum": ["proposed", "approved", "withdrawn"]
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "synthetic": {
+      "type": "boolean"
+    },
+    "id": {
+      "$ref": "#/$defs/releaseId"
+    },
+    "profile_id": {
+      "$ref": "#/$defs/profileId"
+    },
+    "subject_actor": {
+      "$ref": "#/$defs/subjectActor"
+    },
+    "created_at": {
+      "$ref": "#/$defs/timestamp"
+    },
+    "updated_at": {
+      "$ref": "#/$defs/timestamp"
+    },
+    "generated_at": {
+      "$ref": "#/$defs/timestamp"
+    },
+    "created_by_actor_id": {
+      "$ref": "#/$defs/actorId"
+    },
+    "projection_policy": {
+      "$ref": "#/$defs/projectionPolicy"
+    },
+    "provenance": {
+      "$ref": "#/$defs/releaseProvenance"
+    },
+    "privacy": {
+      "$ref": "#/$defs/privacy"
+    },
+    "consent": {
+      "$ref": "#/$defs/releaseConsent"
+    },
+    "review": {
+      "$ref": "#/$defs/releaseReview"
+    },
+    "learner_profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["proof_capsules", "next_proof"],
+      "properties": {
+        "proof_capsules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/learnerProofCapsule"
+          }
+        },
+        "next_proof": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/claimId"
+          }
+        }
+      }
+    },
+    "teacher_profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["authorized_scopes", "proof_capsules", "aggregate_teaching_outcomes"],
+      "properties": {
+        "authorized_scopes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/authorizedScope"
+          }
+        },
+        "proof_capsules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/teacherProofCapsule"
+          }
+        },
+        "aggregate_teaching_outcomes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/aggregateTeachingOutcome"
+          }
+        }
+      }
+    },
+    "contribution_vector": {
+      "$ref": "#/$defs/contributionVector"
+    },
+    "contribution_attributions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/contributionAttribution"
+      }
+    },
+    "omitted_record_counts": {
+      "$ref": "#/$defs/omittedCounts"
+    },
+    "release_attestation_ref": {
+      "$ref": "#/$defs/attestationId"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "projection_policy": {
+            "properties": {
+              "channel": {
+                "const": "public_git_synthetic"
+              }
+            },
+            "required": ["channel"]
+          }
+        },
+        "required": ["projection_policy"]
+      },
+      "then": {
+        "properties": {
+          "synthetic": {
+            "const": true
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "synthetic": {
+            "const": false
+          },
+          "projection_policy": {
+            "properties": {
+              "audience": {
+                "const": "public"
+              }
+            },
+            "required": ["audience"]
+          }
+        },
+        "required": ["synthetic", "projection_policy"]
+      },
+      "then": {
+        "properties": {
+          "projection_policy": {
+            "properties": {
+              "channel": {
+                "const": "mutable_release_channel"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "semver": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+    },
+    "uuidBody": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "actorId": {
+      "type": "string",
+      "pattern": "^act_[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "profileId": {
+      "type": "string",
+      "pattern": "^prf_[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "releaseId": {
+      "type": "string",
+      "pattern": "^rel_[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "skillId": {
+      "type": "string",
+      "pattern": "^skl_[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "domainId": {
+      "type": "string",
+      "pattern": "^dom_[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "scopeId": {
+      "type": "string",
+      "pattern": "^sco_[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "claimId": {
+      "type": "string",
+      "pattern": "^clm_[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "reviewId": {
+      "type": "string",
+      "pattern": "^rev_[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "attestationId": {
+      "type": "string",
+      "pattern": "^att_[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "resolverId": {
+      "type": "string",
+      "pattern": "^rsr_[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "consentId": {
+      "type": "string",
+      "pattern": "^cns_[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "contributionId": {
+      "type": "string",
+      "pattern": "^ctr_[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "aggregateId": {
+      "type": "string",
+      "pattern": "^agg_[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "outcomeScaleId": {
+      "type": "string",
+      "pattern": "^osc_[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "actorKind": {
+      "enum": ["human", "agent", "team", "system", "organization"]
+    },
+    "level": {
+      "enum": [null, "explorer", "apprentice", "practitioner", "architect", "guardian"]
+    },
+    "nonNullLevel": {
+      "enum": ["explorer", "apprentice", "practitioner", "architect", "guardian"]
+    },
+    "audience": {
+      "enum": ["subject", "named_collaborators", "community", "public"]
+    },
+    "identifiability": {
+      "enum": ["aggregate", "pseudonymous", "named"]
+    },
+    "executionMode": {
+      "enum": [
+        "human_direct",
+        "human_agent_assisted",
+        "agent_generated_human_reviewed",
+        "agent_generated_unreviewed"
+      ]
+    },
+    "contributionRole": {
+      "enum": [
+        "originator",
+        "director",
+        "author",
+        "coauthor",
+        "executor",
+        "operator",
+        "editor",
+        "reviewer",
+        "approver",
+        "teacher",
+        "learner",
+        "guide",
+        "curator",
+        "maintainer"
+      ]
+    },
+    "subjectActor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["actor_id", "kind"],
+      "properties": {
+        "actor_id": {
+          "$ref": "#/$defs/actorId"
+        },
+        "kind": {
+          "$ref": "#/$defs/actorKind"
+        }
+      }
+    },
+    "projectionPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["purpose_codes", "audience", "identifiability", "channel", "withdrawal_scope"],
+      "properties": {
+        "purpose_codes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]{2,63}$"
+          }
+        },
+        "audience": {
+          "$ref": "#/$defs/audience"
+        },
+        "identifiability": {
+          "$ref": "#/$defs/identifiability"
+        },
+        "channel": {
+          "enum": ["private_internal", "mutable_release_channel", "public_git_synthetic"]
+        },
+        "withdrawal_scope": {
+          "enum": ["current_and_future_official_projection", "future_official_projections_only"]
+        }
+      }
+    },
+    "releaseProvenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["canonical_authority", "source_record_ref", "ontology_release_ref", "drive_workbook", "generator"],
+      "properties": {
+        "canonical_authority": {
+          "const": "notion"
+        },
+        "source_record_ref": {
+          "$ref": "#/$defs/resolverId"
+        },
+        "ontology_release_ref": {
+          "$ref": "#/$defs/resolverId"
+        },
+        "drive_workbook": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["resolver_ref", "mode", "generated_at", "generator_version"],
+          "properties": {
+            "resolver_ref": {
+              "$ref": "#/$defs/resolverId"
+            },
+            "mode": {
+              "const": "read_only_derived"
+            },
+            "generated_at": {
+              "$ref": "#/$defs/timestamp"
+            },
+            "generator_version": {
+              "$ref": "#/$defs/semver"
+            }
+          }
+        },
+        "generator": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "version", "code_revision"],
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            },
+            "version": {
+              "$ref": "#/$defs/semver"
+            },
+            "code_revision": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            }
+          }
+        }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["classification", "data_classes", "publishable"],
+      "properties": {
+        "classification": {
+          "enum": ["public", "community", "collaborators", "private", "restricted"]
+        },
+        "data_classes": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]{1,63}$"
+          }
+        },
+        "publishable": {
+          "type": "boolean"
+        }
+      }
+    },
+    "releaseConsent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["consent_grant_refs", "evaluated_at", "effective_audiences", "purpose_codes", "publication_approved"],
+      "properties": {
+        "consent_grant_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/consentId"
+          }
+        },
+        "evaluated_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "effective_audiences": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/audience"
+          }
+        },
+        "purpose_codes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]{2,63}$"
+          }
+        },
+        "publication_approved": {
+          "type": "boolean"
+        }
+      }
+    },
+    "releaseReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["approval_review_id", "decision", "reviewed_at", "reviewer_kind"],
+      "properties": {
+        "approval_review_id": {
+          "$ref": "#/$defs/reviewId"
+        },
+        "decision": {
+          "const": "approved"
+        },
+        "reviewed_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "reviewer_kind": {
+          "const": "human"
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scope_id", "skill_id", "context"],
+      "properties": {
+        "scope_id": {
+          "$ref": "#/$defs/scopeId"
+        },
+        "skill_id": {
+          "$ref": "#/$defs/skillId"
+        },
+        "context": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["domain_id", "context_code"],
+          "properties": {
+            "domain_id": {
+              "$ref": "#/$defs/domainId"
+            },
+            "context_code": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9-]{2,63}$"
+            }
+          }
+        }
+      }
+    },
+    "attained": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["level", "as_of", "rubric_version"],
+      "properties": {
+        "level": {
+          "$ref": "#/$defs/level"
+        },
+        "as_of": {
+          "oneOf": [
+            {"$ref": "#/$defs/timestamp"},
+            {"type": "null"}
+          ]
+        },
+        "rubric_version": {
+          "$ref": "#/$defs/semver"
+        }
+      }
+    },
+    "readiness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "level",
+        "state",
+        "as_of",
+        "last_qualifying_independent_confirmation_at",
+        "review_due_at",
+        "confidence_score",
+        "confidence_tier",
+        "calibration_state"
+      ],
+      "properties": {
+        "level": {
+          "$ref": "#/$defs/level"
+        },
+        "state": {
+          "enum": ["unrated", "fresh", "review_due", "stale", "contested", "invalidated"]
+        },
+        "as_of": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "last_qualifying_independent_confirmation_at": {
+          "oneOf": [
+            {"$ref": "#/$defs/timestamp"},
+            {"type": "null"}
+          ]
+        },
+        "review_due_at": {
+          "oneOf": [
+            {"$ref": "#/$defs/timestamp"},
+            {"type": "null"}
+          ]
+        },
+        "confidence_score": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "confidence_tier": {
+          "enum": ["unrated", "provisional", "supported", "strong"]
+        },
+        "calibration_state": {
+          "enum": ["unrated", "insufficient_data", "overconfident", "calibrated", "underconfident"]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "const": "unrated"
+              }
+            },
+            "required": ["state"]
+          },
+          "then": {
+            "properties": {
+              "level": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "capsuleProvenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["resolver_refs"],
+      "properties": {
+        "resolver_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/resolverId"
+          }
+        }
+      }
+    },
+    "capsuleConsent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["consent_grant_refs", "effective_audiences", "identifiability"],
+      "properties": {
+        "consent_grant_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/consentId"
+          }
+        },
+        "effective_audiences": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/audience"
+          }
+        },
+        "identifiability": {
+          "$ref": "#/$defs/identifiability"
+        }
+      }
+    },
+    "capsuleReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["review_id", "decision", "reviewed_at", "reviewer_kind"],
+      "properties": {
+        "review_id": {
+          "$ref": "#/$defs/reviewId"
+        },
+        "decision": {
+          "const": "approved"
+        },
+        "reviewed_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "reviewer_kind": {
+          "const": "human"
+        }
+      }
+    },
+    "contributionAttribution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["contribution_id", "actor_ref", "actor_kind", "roles", "execution_mode", "accountable", "disclosure"],
+      "properties": {
+        "contribution_id": {
+          "$ref": "#/$defs/contributionId"
+        },
+        "actor_ref": {
+          "$ref": "#/$defs/actorId"
+        },
+        "actor_kind": {
+          "$ref": "#/$defs/actorKind"
+        },
+        "roles": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/contributionRole"
+          }
+        },
+        "execution_mode": {
+          "$ref": "#/$defs/executionMode"
+        },
+        "accountable": {
+          "type": "boolean"
+        },
+        "disclosure": {
+          "enum": ["human_only", "agent_assisted", "agent_generated_human_reviewed", "agent_generated_unreviewed"]
+        }
+      }
+    },
+    "proofCapsuleBase": {
+      "type": "object",
+      "required": [
+        "attestation_ref",
+        "role",
+        "scope",
+        "attained",
+        "readiness",
+        "evidence_classes",
+        "provenance",
+        "consent",
+        "review",
+        "contribution_attributions"
+      ],
+      "properties": {
+        "attestation_ref": {
+          "$ref": "#/$defs/attestationId"
+        },
+        "role": {
+          "enum": ["learner", "teacher"]
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        },
+        "attained": {
+          "$ref": "#/$defs/attained"
+        },
+        "readiness": {
+          "$ref": "#/$defs/readiness"
+        },
+        "evidence_classes": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "self_report",
+              "practice_trace",
+              "artifact",
+              "direct_observation",
+              "independent_assessment",
+              "external_outcome",
+              "aggregate_outcome",
+              "adoption",
+              "peer_panel"
+            ]
+          }
+        },
+        "provenance": {
+          "$ref": "#/$defs/capsuleProvenance"
+        },
+        "consent": {
+          "$ref": "#/$defs/capsuleConsent"
+        },
+        "review": {
+          "$ref": "#/$defs/capsuleReview"
+        },
+        "contribution_attributions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contributionAttribution"
+          }
+        }
+      }
+    },
+    "learnerProofCapsule": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/proofCapsuleBase"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "role": {
+              "const": "learner"
+            }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "teacherProofCapsule": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/proofCapsuleBase"
+        },
+        {
+          "type": "object",
+          "required": ["authorized_scope_ref"],
+          "properties": {
+            "role": {
+              "const": "teacher"
+            },
+            "authorized_scope_ref": {
+              "$ref": "#/$defs/scopeId"
+            }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "authorizedScope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scope", "maximum_level", "attestation_ref"],
+      "properties": {
+        "scope": {
+          "$ref": "#/$defs/scope"
+        },
+        "maximum_level": {
+          "$ref": "#/$defs/level"
+        },
+        "attestation_ref": {
+          "$ref": "#/$defs/attestationId"
+        }
+      }
+    },
+    "aggregateTeachingOutcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "aggregate_id",
+        "skill_id",
+        "authorized_scope_ref",
+        "identifiability",
+        "effective_audiences",
+        "cohort_size",
+        "minimum_group_size",
+        "metric_code",
+        "outcome_value",
+        "outcome_scale_ref",
+        "observed_from",
+        "observed_to",
+        "measurement_design",
+        "interpretation",
+        "causal_claim_permitted",
+        "consent_grant_refs",
+        "review_id"
+      ],
+      "properties": {
+        "aggregate_id": {
+          "$ref": "#/$defs/aggregateId"
+        },
+        "skill_id": {
+          "$ref": "#/$defs/skillId"
+        },
+        "authorized_scope_ref": {
+          "$ref": "#/$defs/scopeId"
+        },
+        "identifiability": {
+          "const": "aggregate"
+        },
+        "effective_audiences": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/audience"
+          }
+        },
+        "cohort_size": {
+          "type": "integer",
+          "minimum": 5
+        },
+        "minimum_group_size": {
+          "type": "integer",
+          "minimum": 5
+        },
+        "metric_code": {
+          "enum": ["delayed_transfer_rate", "retention_rate", "independent_performance_rate", "adjusted_delayed_outcome_association_pp"]
+        },
+        "outcome_value": {
+          "type": "number"
+        },
+        "outcome_scale_ref": {
+          "$ref": "#/$defs/outcomeScaleId"
+        },
+        "observed_from": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "observed_to": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "measurement_design": {
+          "enum": ["observational", "randomized", "validated_quasi_experimental"]
+        },
+        "interpretation": {
+          "enum": ["association", "causal_effect"]
+        },
+        "causal_claim_permitted": {
+          "type": "boolean"
+        },
+        "consent_grant_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/consentId"
+          }
+        },
+        "review_id": {
+          "$ref": "#/$defs/reviewId"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "measurement_design": {
+                "const": "observational"
+              }
+            },
+            "required": ["measurement_design"]
+          },
+          "then": {
+            "properties": {
+              "interpretation": {
+                "const": "association"
+              },
+              "causal_claim_permitted": {
+                "const": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    "contributionVector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["learned", "built", "taught", "refined", "guided"],
+      "properties": {
+        "learned": {"$ref": "#/$defs/contributionIdArray"},
+        "built": {"$ref": "#/$defs/contributionIdArray"},
+        "taught": {"$ref": "#/$defs/contributionIdArray"},
+        "refined": {"$ref": "#/$defs/contributionIdArray"},
+        "guided": {"$ref": "#/$defs/contributionIdArray"}
+      }
+    },
+    "contributionIdArray": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/contributionId"
+      }
+    },
+    "omittedCounts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["no_consent", "privacy_restricted", "review_incomplete", "withdrawn"],
+      "properties": {
+        "no_consent": {"type": "integer", "minimum": 0},
+        "privacy_restricted": {"type": "integer", "minimum": 0},
+        "review_incomplete": {"type": "integer", "minimum": 0},
+        "withdrawn": {"type": "integer", "minimum": 0}
+      }
+    }
+  }
+}
