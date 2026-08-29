@@ -1,83 +1,125 @@
 # Starlight Master Curriculum Map
 
-## Curriculum law
+## Map contract
 
-This is a capability graph, not a reading list. Knowledge counts only when it changes judgment, produces an artifact, survives an unfamiliar test, or improves another person’s agency.
+This is a learning map and capability graph, not an ordered prerequisite curriculum or a reading list. Module order is navigational. No prerequisite is implied unless a versioned dependency table, entry assessment, and exception rule are added. Knowledge counts only when it changes judgment, produces an artifact, or survives an unfamiliar assessment or application.
 
-Each capability carries five evidence lanes:
+Each module can generate candidates for five independent evidence lanes:
 
 | Lane | Evidence |
 |---|---|
-| Learn | Source note, concept map, retrieval check, changed belief |
+| Learn | Source note or concept map is a candidate artifact; `Learned` requires a bounded assessment that includes retained retrieval and application |
 | Build | Shipped artifact, decision, experiment, or operating result |
-| Teach | Lesson, demonstration, critique, or published explanation |
+| Teach | Lesson, demonstration, or curriculum is a candidate artifact; `Taught` requires a learner baseline, documented intervention, and delayed transfer evidence |
 | Refine | Documented improvement with before/after evidence |
-| Guide | Consented learner outcome attributable to the guidance |
+| Guide | Consented baseline, intervention, outcome, and evidence of increased learner autonomy |
 
-Use one mastery scale across the graph. The capability name is canonical; the word after the slash describes the observable state:
+Source notes, explanations, lessons, workshops, and curricula are candidate artifacts only. They do not by themselves prove either `Learned` or `Taught`.
 
-- `L0 Unrated / Unmapped` — no reliable evidence or vocabulary yet.
-- `L1 Explorer / Literate` — can define, distinguish, and locate primary sources.
-- `L2 Apprentice / Practiced` — can execute with scaffolding and apply feedback.
-- `L3 Practitioner / Reliable` — can ship independently under real constraints.
-- `L4 Architect / Transferable` — can solve unfamiliar cases, design reusable systems, and teach the method.
-- `L5 Guardian / Steward` — can set standards, diagnose others, grow successors, and advance the practice.
+### Learner readiness
 
-Never infer mastery from a book title, conversation, credential, or self-rating. Every level links to evidence, evaluator, date, confidence, and next test. Source states remain explicit: `queued → sampled → studied → applied → taught → challenged`.
+Learner readiness is assessed independently of teaching capability:
+
+- `L0 Unrated` — no reliable evidence yet; unknown is not zero.
+- `L1 Explorer` — passes a bounded assessment or retained-retrieval check on core distinctions and boundaries.
+- `L2 Apprentice` — applies the capability with scaffolding, produces an inspected artifact, and incorporates feedback.
+- `L3 Practitioner` — produces repeatable independent results under real constraints.
+- `L4 Architect` — transfers the capability to unfamiliar contexts, integrates it into reusable systems, and defends trade-offs.
+- `L5 Frontier` — advances the method through replicated refinements or cross-context validation. Teaching and succession are not learner gates.
+
+### Teacher capability
+
+Teacher capability is a separate projection and never follows automatically from learner readiness:
+
+- `T0 Unrated` — no valid teaching evidence yet.
+- `T1 Candidate Explainer` — has a reviewed explanatory artifact with authorized scope and explicit limitations; no `Taught` event is claimed.
+- `T2 Instructor` — one baseline, intervention, and delayed assessment shows retained learner improvement or transfer.
+- `T3 Teacher` — repeatedly produces delayed transfer across learners or materially different contexts.
+- `T4 Curriculum Architect` — designs validated curricula, assessments, and feedback systems with calibrated outcome evidence.
+- `T5 Guardian` — improves standards, audits teaching quality, and develops independently effective teachers.
+
+Never infer readiness or teaching capability from a book title, conversation, credential, audience size, or self-rating. Every level links to evidence, evaluator, date, freshness, confidence, authorized scope, and next test. Source states remain explicit: `queued → sampled → studied → assessed → applied → challenged`.
 
 Public profiles expose competencies, selected artifacts, teaching, and consented outcomes. Journals, health data, relationship evidence, raw finances, counterpart identities, customer material, and security findings remain permissioned.
 
+> **Educational-use boundary:** This map is educational and is not medical, legal, tax, or investment advice. Consequential health decisions require review by an appropriately qualified clinician; legal, entity, tax, privacy, employment, and IP decisions require review by jurisdiction-appropriate counsel; regulated investment decisions require review by a suitably licensed adviser. The map structures questions and evidence but does not replace professional judgment.
+
 ## Focus sequence
 
-The system maintains all constellations, but deliberate-practice work-in-progress stays capped at three active arcs.
+The system maintains all modules, but deliberate-practice work-in-progress stays capped at three active arcs.
 
 ### Always-on floors
 
-`C01 Sovereign State` · `C02 Epistemics` · `C03 Systems` · `C13 Capital` · `C16 Relationships` · `C17 Governance`
+`M01 Sovereign State` · `M02 Epistemics` · `M03 Systems` · `M13 Capital` · `M16 Relationships` · `M17 Governance`
 
 These protect energy, truth, solvency, bonds, and trust. They are never postponed for a launch.
 
 ### Now: 0–90 days
 
-1. **Starlight Knowledge Fabric** — `C04 + C06 + C15`  
+1. **Knowledge Fabric** — `M04 + M06 + M15`  
    Build the learner/teacher profile, evidence graph, agent-supported learning loop, and first executable skill path.
 
-2. **Proof-to-Revenue Engine** — `C08 + C11 + C12`  
+2. **Proof-to-Revenue Engine** — `M08 + M11 + M12`  
    Convert demonstrated expertise into excellent products, public proof, distribution, and paid outcomes.
 
-3. **Founder Operating System** — `C01 + C13 + C14 + C16 + C17`  
+3. **Founder Operating System** — `M01 + M13 + M14 + M16 + M17`  
    Protect freedom by making commitments, capital, agents, relationships, and risk legible.
 
 ### Next: 3–12 months
 
-- **Platformization** — `C05 + C06 + C14 + C17`
-- **Cinematic world and media engine** — `C08 + C09 + C10`
-- **Teacher and community multiplication** — `C14 + C15 + C17`
+- **Platformization** — `M05 + M06 + M14 + M17`
+- **Cinematic world and media engine** — `M08 + M09 + M10`
+- **Teacher and community multiplication** — `M14 + M15 + M17`
 
 ### Later: 12–36 months
 
-- **Starlight Invention Lab** — `C03 + C07 + C18`
-- **Institutional and capital scaling** — `C13 + C14 + C17 + C18`
-- **Civilizational media, infrastructure, and venture portfolios** — `C07 + C09 + C10 + C18`
+- **Invention Lab** — `M03 + M07 + M18`
+- **Institutional and capital scaling** — `M13 + M14 + M17 + M18`
+- **Civilizational media, infrastructure, and venture portfolios** — `M07 + M09 + M10 + M18`
 
 “Later” means formal depth and institutional deployment; minimum viable literacy applies immediately.
 
+## Module-to-constellation crosswalk
+
+`Mxx` identifies a module in this map. `Cxx` remains the canonical capability-constellation identifier in the README and private operating projection. The relationship is many-to-many; this map does not rename or redefine the canonical constellations.
+
+| Module | Canonical README/Notion constellation coverage |
+|---|---|
+| M01 Sovereign State, Attention, and Lifestyle Design | C01 Founder sovereignty and state regulation; C14 Health, strength, energy, recovery, and longevity; C17 Lifestyle architecture, geography, mobility, and freedom |
+| M02 Epistemics, Forecasting, and Decision Intelligence | C06 Research, epistemology, invention, and experimentation; C16 Philosophy, ethics, spirituality, meaning, and civilization |
+| M03 Systems Thinking, Complexity, and Strategy | C02 Venture strategy, portfolio design, and economic systems |
+| M04 AI Architecture and Agent Engineering | C05 AI architecture, agent systems, software, data, and security |
+| M05 Software, Product, and Platform Engineering | C05 AI architecture, agent systems, software, data, and security |
+| M06 Knowledge Graphs, Data, Memory, and Provenance | C05 AI architecture, agent systems, software, data, and security |
+| M07 Research, Experimentation, Invention, and IP | C06 Research, epistemology, invention, and experimentation |
+| M08 Product Design, Service Design, and Taste | C04 Product judgment, user value, and commercialization; C07 Design, taste, worldbuilding, narrative, and experience direction |
+| M09 Story, Worldbuilding, and Cinematic Experience | C07 Design, taste, worldbuilding, narrative, and experience direction |
+| M10 Music, Visual Art, Performance, and Symbolic Expression | C15 Music, performance, artistic craft, and creative production |
+| M11 Positioning, Brand, Content, and Distribution | C08 Media, content, distribution, persuasion, and reputation |
+| M12 Markets, Offers, Sales, and Partnerships | C04 Product judgment, user value, and commercialization; C09 Sales, negotiation, partnerships, and institutional adoption |
+| M13 Finance, Capital Allocation, and Investing | C03 Finance, accounting, capital allocation, and investing |
+| M14 Organizations, Agent Teams, Community, and Leadership | C10 Leadership, delegation, culture, and multi-agent organizations; C13 Friendship, hospitality, tribe, community, and civic contribution |
+| M15 Learning, Teaching, Assessment, and Human–Agent Apprenticeship | C11 Teaching, curriculum, assessment, mentorship, and institution building |
+| M16 Partnership, Intimacy, Family, Friendship, and Relational Stewardship | C12 Love, partnership, sexuality, marriage, and family stewardship; C13 Friendship, hospitality, tribe, community, and civic contribution |
+| M17 Governance, Law, Ethics, Risk, and Security | C05 AI architecture, agent systems, software, data, and security; C16 Philosophy, ethics, spirituality, meaning, and civilization |
+| M18 Civilization, Geopolitics, Infrastructure, and Futures | C13 Friendship, hospitality, tribe, community, and civic contribution; C16 Philosophy, ethics, spirituality, meaning, and civilization; C18 Stewardship archetypes: Owner, Investor, Architect, Teacher, Partner, Kin, Friend, Host, Artist, Lover, King, and Magician |
+
 ## Role coverage
 
-| Role | Dominant constellations |
+| Role | Dominant modules |
 |---|---|
-| Founder and business owner | C01, C03, C08, C11–C14, C17 |
-| AI architect and inventor | C02–C07, C15, C17–C18 |
-| Creator, musician, and artist | C08–C11 |
-| Investor and capital steward | C02, C03, C07, C13, C17–C18 |
-| Partner, husband, son, brother, lover, and friend | C01, C02, C16 |
-| Teacher and tribe leader | C14–C17 |
-| “King” as stewardship | C13, C14, C17, C18 |
-| “Magician” as transformation and synthesis | C02, C03, C07, C09, C10, C15 |
+| Founder and business owner | M01, M03, M08, M11–M14, M17 |
+| AI architect and inventor | M02–M07, M15, M17–M18 |
+| Creator, musician, and artist | M08–M11 |
+| Investor and capital steward | M02, M03, M07, M13, M17–M18 |
+| Partner, husband, son, brother, lover, and friend | M01, M02, M16 |
+| Teacher and tribe leader | M14–M17 |
+| “King” as stewardship | M13, M14, M17, M18 |
+| “Magician” as transformation and synthesis | M02, M03, M07, M09, M10, M15 |
 
 ---
 
-## C01 — Sovereign State, Attention, and Lifestyle Design
+## M01 — Sovereign State, Attention, and Lifestyle Design
 
 **First-principles questions**
 
@@ -91,14 +133,14 @@ Attention residue, deep work, circadian and ultradian rhythm, energy envelope, r
 
 **Source queue**
 
-Epictetus, *Discourses* and *Enchiridion*; Marcus Aurelius, *Meditations*; Mihaly Csikszentmihalyi, *Flow*; Cal Newport, *Deep Work*; current WHO physical-activity and sleep guidance as living primary references.
+Epictetus, *Discourses* and *Enchiridion*; Marcus Aurelius, *Meditations*; Mihaly Csikszentmihalyi, *Flow*; Cal Newport, *Deep Work*; current WHO *Guidelines on physical activity and sedentary behaviour* as a living primary reference. The cited WHO document is not a sleep guideline.
 
 **Projects and artifacts**
 
 - Personal Constitution: values, non-negotiables, decision rights, boundaries, “enough,” and freedom constraints.
 - Founder State Dashboard, ideal-week architecture, travel protocol, recovery protocol, and shutdown ritual.
 
-**Teaching output**
+**Candidate teaching artifact**
 
 A share-safe field guide on sustainable creative performance, clearly separating personal observations from general evidence.
 
@@ -108,7 +150,7 @@ Sustain agreed health, relationship, and capital floors through eight demanding 
 
 ---
 
-## C02 — Epistemics, Forecasting, and Decision Intelligence
+## M02 — Epistemics, Forecasting, and Decision Intelligence
 
 **First-principles questions**
 
@@ -129,7 +171,7 @@ Philip Tetlock and Dan Gardner, *Superforecasting*; Julia Galef, *The Scout Mind
 - Decision Ledger linking assumptions, forecasts, chosen action, opportunity cost, result, and postmortem.
 - A rolling set of business, technology, and market forecasts with explicit probabilities.
 
-**Teaching output**
+**Candidate teaching artifact**
 
 A recurring “What changed my mind?” case study showing the evidence and update, not merely the conclusion.
 
@@ -139,7 +181,7 @@ Make at least twenty time-bounded forecasts, score calibration, identify systema
 
 ---
 
-## C03 — Systems Thinking, Complexity, and Strategy
+## M03 — Systems Thinking, Complexity, and Strategy
 
 **First-principles questions**
 
@@ -157,10 +199,10 @@ Donella Meadows, *Thinking in Systems*; Richard Rumelt, *Good Strategy/Bad Strat
 
 **Projects and artifacts**
 
-- A causal map of the Starlight ecosystem: attention, knowledge, artifacts, trust, distribution, revenue, talent, and capital.
-- A strategy kernel for each brand containing diagnosis, governing policy, coherent actions, and a hard “not now” list.
+- A causal map of the operating ecosystem: attention, knowledge, artifacts, trust, distribution, revenue, talent, and capital.
+- A strategy kernel for each public or private projection containing diagnosis, governing policy, coherent actions, and a hard “not now” list.
 
-**Teaching output**
+**Candidate teaching artifact**
 
 A system teardown demonstrating why a visible problem persists and where intervention has the highest leverage.
 
@@ -170,7 +212,7 @@ Predict a material bottleneck or second-order effect before it appears, interven
 
 ---
 
-## C04 — AI Architecture and Agent Engineering
+## M04 — AI Architecture and Agent Engineering
 
 **First-principles questions**
 
@@ -188,10 +230,10 @@ The ReAct, Toolformer, and Generative Agents papers; the current Model Context P
 
 **Projects and artifacts**
 
-- A reference Starlight Workbench agent with explicit state, tools, memory, permissions, observability, and evaluation harness.
+- A reference learning-workbench agent with explicit state, tools, memory, permissions, observability, and evaluation harness.
 - A pattern library covering researcher, architect, creator, evaluator, teacher, operator, and guardian agents.
 
-**Teaching output**
+**Candidate teaching artifact**
 
 An AI Architect clinic that begins with requirements and failure modes, then derives the architecture.
 
@@ -201,7 +243,7 @@ The system passes an unseen benchmark across quality, cost, latency, recovery, t
 
 ---
 
-## C05 — Software, Product, and Platform Engineering
+## M05 — Software, Product, and Platform Engineering
 
 **First-principles questions**
 
@@ -219,10 +261,10 @@ Eric Evans, *Domain-Driven Design*; Martin Kleppmann, *Designing Data-Intensive 
 
 **Projects and artifacts**
 
-- Starlight profile and evidence service with exportable schemas, versioned APIs, and permission boundaries.
+- A profile and evidence service with exportable schemas, versioned APIs, and permission boundaries.
 - Architecture decision records, deployment runbook, recovery runbook, and vendor-exit plan.
 
-**Teaching output**
+**Candidate teaching artifact**
 
 A field note explaining one architectural tradeoff through constraints, rejected alternatives, and observed consequences.
 
@@ -232,7 +274,7 @@ Deploy, observe, roll back, restore, and migrate the system under a controlled f
 
 ---
 
-## C06 — Knowledge Graphs, Data, Memory, and Provenance
+## M06 — Knowledge Graphs, Data, Memory, and Provenance
 
 **First-principles questions**
 
@@ -253,9 +295,9 @@ W3C RDF, OWL, PROV-O, and SHACL specifications; the FAIR Guiding Principles pape
 - The canonical ontology for people, agents, concepts, sources, conversations, projects, artifacts, skills, evidence, lessons, and outcomes.
 - Sync contracts across GitHub, Notion, and Google Drive defining authority, identifiers, conflict policy, and export.
 
-**Teaching output**
+**Candidate teaching artifact**
 
-A Starlight Knowledge Object specification with examples and failure cases.
+A Knowledge Object specification with examples and failure cases.
 
 **Mastery test**
 
@@ -263,7 +305,7 @@ Answer a difficult question with exact provenance, reproduce the answer from sou
 
 ---
 
-## C07 — Research, Experimentation, Invention, and IP
+## M07 — Research, Experimentation, Invention, and IP
 
 **First-principles questions**
 
@@ -284,7 +326,7 @@ Karl Popper, *The Logic of Scientific Discovery*; R. A. Fisher, *The Design of E
 - One invention dossier: problem, prior art, claim of novelty, mechanism, prototype, tests, risks, economics, and IP decision.
 - A searchable experiment registry recording hypotheses, protocols, results, failures, and follow-on work.
 
-**Teaching output**
+**Candidate teaching artifact**
 
 A reproducible research note that enables another builder to test the same claim.
 
@@ -294,7 +336,7 @@ An independent person reproduces the result; the idea survives prior-art review;
 
 ---
 
-## C08 — Product Design, Service Design, and Taste
+## M08 — Product Design, Service Design, and Taste
 
 **First-principles questions**
 
@@ -312,10 +354,10 @@ Don Norman, *The Design of Everyday Things*; Christopher Alexander et al., *A Pa
 
 **Projects and artifacts**
 
-- A shared design constitution and taste canon with distinct projections for FrankX, Starlight, GenCreator, and Arcanea.
+- A shared design constitution and taste canon with distinct projections for public practice, academy, creator-business, and storyworld experiences.
 - One flagship onboarding journey tested with real users from promise through first meaningful result.
 
-**Teaching output**
+**Candidate teaching artifact**
 
 A critique format that names the intended effect, observed effect, broken principle, and exact revision.
 
@@ -325,7 +367,7 @@ Target users complete the core job without rescue, expert critique confirms cohe
 
 ---
 
-## C09 — Story, Worldbuilding, and Cinematic Experience
+## M09 — Story, Worldbuilding, and Cinematic Experience
 
 **First-principles questions**
 
@@ -343,10 +385,10 @@ Aristotle, *Poetics*; J. R. R. Tolkien, “On Fairy-Stories”; Ursula K. Le Gui
 
 **Projects and artifacts**
 
-- An Arcanea story bible, character graph, world rules, visual grammar, and canonical pilot episode.
+- A canonical storyworld bible, character graph, world rules, visual grammar, and pilot episode.
 - A short cinematic experience in which agents preserve character, lore, and visual continuity across formats.
 
-**Teaching output**
+**Candidate teaching artifact**
 
 A worldbuilding studio that moves from governing premise to scene-level consequence.
 
@@ -356,7 +398,7 @@ An unfamiliar audience can accurately retell the central desire, conflict, and w
 
 ---
 
-## C10 — Music, Visual Art, Performance, and Symbolic Expression
+## M10 — Music, Visual Art, Performance, and Symbolic Expression
 
 **First-principles questions**
 
@@ -374,10 +416,10 @@ Leonard Bernstein, *The Unanswered Question*; Walter Piston, *Harmony*; Wassily 
 
 **Projects and artifacts**
 
-- A Starlight sonic identity and Arcanea leitmotif suite with stems, visual counterparts, production notes, and rights metadata.
+- A sonic identity and storyworld leitmotif suite with stems, visual counterparts, production notes, and rights metadata.
 - One finished live, cinematic, or spatial performance rather than another concept collection.
 
-**Teaching output**
+**Candidate teaching artifact**
 
 A composition breakdown showing how motif, structure, orchestration, image, and emotion reinforce one another.
 
@@ -387,7 +429,7 @@ Blind listeners or viewers identify the intended emotional territory and brand f
 
 ---
 
-## C11 — Positioning, Brand, Content, and Distribution
+## M11 — Positioning, Brand, Content, and Distribution
 
 **First-principles questions**
 
@@ -405,10 +447,10 @@ April Dunford, *Obviously Awesome*; Al Ries and Jack Trout, *Positioning*; Evere
 
 **Projects and artifacts**
 
-- The canonical FrankX narrative: category, worldview, signature problems, proof library, offers, and editorial boundaries.
-- A twelve-week source-to-distribution series that produces distinct but connected outputs for all four brands.
+- A canonical public-practice narrative: category, worldview, signature problems, proof library, offers, and editorial boundaries.
+- A twelve-week source-to-distribution series that produces distinct but connected outputs for the selected projections.
 
-**Teaching output**
+**Candidate teaching artifact**
 
 A source-to-signal playbook demonstrating how one verified insight becomes an article, post, visual, lesson, product asset, and conversation.
 
@@ -418,7 +460,7 @@ Publish consistently for twelve weeks and generate qualified conversations, opt-
 
 ---
 
-## C12 — Markets, Offers, Sales, and Partnerships
+## M12 — Markets, Offers, Sales, and Partnerships
 
 **First-principles questions**
 
@@ -436,10 +478,10 @@ Rob Fitzpatrick, *The Mom Test*; Hamilton Helmer, *7 Powers*; Geoffrey Moore, *C
 
 **Projects and artifacts**
 
-- A coherent offer ladder spanning FrankX advisory and products, GenCreator pathways, Starlight systems, and Arcanea experiences or licensing.
+- A coherent offer ladder spanning advisory and products, creator pathways, intelligence systems, and cultural experiences or licensing.
 - Ten paid discovery engagements or pilots with structured outcome, margin, and objection evidence.
 
-**Teaching output**
+**Candidate teaching artifact**
 
 An anonymized sales-review series that separates customer truth, offer weakness, sales execution, and delivery risk.
 
@@ -449,7 +491,7 @@ Customers pay, attain the promised result, remain inside scope and margin, and r
 
 ---
 
-## C13 — Finance, Capital Allocation, and Investing
+## M13 — Finance, Capital Allocation, and Investing
 
 **First-principles questions**
 
@@ -470,7 +512,7 @@ Berkshire Hathaway shareholder letters; William Thorndike, *The Outsiders*; Aswa
 - A monthly capital-allocation memo covering reserves, business bets, investments, learning spend, and rejected allocations.
 - Reusable investment thesis, diligence, position-sizing, monitoring, and exit templates.
 
-**Teaching output**
+**Candidate teaching artifact**
 
 A company or venture teardown showing economics, expectations, downside, strategic fit, and what would invalidate the thesis.
 
@@ -480,7 +522,7 @@ The portfolio survives the defined downside scenario without forced liquidation;
 
 ---
 
-## C14 — Organizations, Agent Teams, Community, and Leadership
+## M14 — Organizations, Agent Teams, Community, and Leadership
 
 **First-principles questions**
 
@@ -498,10 +540,10 @@ Andy Grove, *High Output Management*; Eliyahu Goldratt, *The Goal*; Taiichi Ohno
 
 **Projects and artifacts**
 
-- Starlight Operating System: charters, roles, decision rights, weekly command center, agent-human responsibility matrix, escalation rules, and review cadence.
-- A repeatable Starlight Table or Circle format with invitation logic, hosting protocol, contribution paths, and follow-through.
+- An operating system: charters, roles, decision rights, weekly command center, agent-human responsibility matrix, escalation rules, and review cadence.
+- A repeatable hosted-circle format with invitation logic, hosting protocol, contribution paths, and follow-through.
 
-**Teaching output**
+**Candidate teaching artifact**
 
 An operator playbook covering delegation, agent supervision, meetings, decisions, incidents, and community stewardship.
 
@@ -511,7 +553,7 @@ A team or agent system completes a release cycle without founder rescue; partici
 
 ---
 
-## C15 — Learning, Teaching, Assessment, and Human–Agent Apprenticeship
+## M15 — Learning, Teaching, Assessment, and Human–Agent Apprenticeship
 
 **First-principles questions**
 
@@ -529,20 +571,24 @@ Brown, Roediger, and McDaniel, *Make It Stick*; Wiggins and McTighe, *Understand
 
 **Projects and artifacts**
 
-- The Starlight Learner and Teacher Profile schema with evidence lanes, capability levels, evaluator records, decay, and next-test logic.
+- The Learner and Teacher Profile schema with independent evidence lanes, capability levels, evaluator records, decay, and next-test logic.
 - One complete skill path each for AI architecture, creator business, and worldbuilding, sharing the same competency substrate.
 
-**Teaching output**
+**Candidate teaching artifact**
 
 A studio where learners study a model, practice a constrained component, ship an authentic artifact, receive critique, revise, and teach back.
 
-**Mastery test**
+**Learner mastery test**
 
-A learner succeeds on an unseen task, independent evaluators reach acceptable agreement, the learner ships a real artifact, and the teacher can diagnose the exact misconception or practice deficit.
+A learner succeeds on an unseen task, independent evaluators reach acceptable agreement, and the learner ships a real artifact. No teaching or successor outcome is required for learner promotion.
+
+**Teacher mastery test**
+
+Establish a learner baseline, deliver and document the intervention, then measure retained performance or transfer after a meaningful delay. Diagnosis quality and outcome attribution are reviewed separately from learner satisfaction.
 
 ---
 
-## C16 — Partnership, Intimacy, Family, Friendship, and Relational Stewardship
+## M16 — Partnership, Intimacy, Family, Friendship, and Relational Stewardship
 
 **First-principles questions**
 
@@ -563,7 +609,7 @@ Aristotle, *Nicomachean Ethics*, Books VIII–IX; John Gottman and Nan Silver, *
 - Private partnership, family, and friendship agreements covering communication, time, conflict, care, autonomy, shared decisions, and repair.
 - A relationship cadence that protects attention for partner, family, close friends, and community without turning affection into task management.
 
-**Teaching output**
+**Candidate teaching artifact**
 
 Only share-safe relational principles or anonymized patterns. Counterpart stories and private evidence remain private unless all parties explicitly consent.
 
@@ -573,7 +619,7 @@ The relevant people report greater reliability, truthfulness, safety, and aliven
 
 ---
 
-## C17 — Governance, Law, Ethics, Risk, and Security
+## M17 — Governance, Law, Ethics, Risk, and Security
 
 **First-principles questions**
 
@@ -591,10 +637,10 @@ Applicable primary corporate, contract, tax, employment, IP, consumer, and priva
 
 **Projects and artifacts**
 
-- A cross-brand governance pack: entity and IP map, approval thresholds, data classification, consent policy, AI-use policy, risk register, security baseline, and incident plan.
+- A cross-projection governance pack: entity and IP map, approval thresholds, data classification, consent policy, AI-use policy, risk register, security baseline, and incident plan.
 - Model and system cards for public-facing agents, including intended use, limits, tests, permissions, and escalation.
 
-**Teaching output**
+**Candidate teaching artifact**
 
 A founder-governance briefing translating obligations into architecture, product, and operating decisions.
 
@@ -604,7 +650,7 @@ Pass a tabletop security and continuity incident; trace rights, consent, provena
 
 ---
 
-## C18 — Civilization, Geopolitics, Infrastructure, and Futures
+## M18 — Civilization, Geopolitics, Infrastructure, and Futures
 
 **First-principles questions**
 
@@ -622,12 +668,12 @@ Vaclav Smil, *Energy and Civilization*; Daron Acemoglu and Simon Johnson, *Power
 
 **Projects and artifacts**
 
-- The Starlight Civilization Thesis with explicit claims about human capability, agentic systems, European leverage, global interdependence, peace, and abundance.
+- A civilization thesis with explicit claims about human capability, agentic systems, regional leverage, global interdependence, peace, and abundance.
 - 2030 and 2040 scenarios plus one small, economically viable pilot that demonstrates the thesis in practice.
 
-**Teaching output**
+**Candidate teaching artifact**
 
-An annual Starlight futures briefing paired with a cinematic narrative that makes the stakes experientially legible without presenting fiction as forecast.
+An annual futures briefing paired with a cinematic narrative that makes the stakes experientially legible without presenting fiction as forecast.
 
 **Mastery test**
 
@@ -635,11 +681,11 @@ The thesis survives review from materially different cultural, technical, econom
 
 ---
 
-## Brand convergence
+## Projection convergence
 
-The four brands are different projections of one evidence-producing system, not four independent content machines.
+Public practice, academy infrastructure, creator-business pathways, and storyworld media are different projections of one evidence-producing system, not independent content machines.
 
-| Layer | FrankX | Starlight | GenCreator | Arcanea |
+| Layer | Public practice | Intelligence and academy substrate | Creator-business pathway | Storyworld and media lab |
 |---|---|---|---|---|
 | Primary role | Founder laboratory and trust surface | Intelligence substrate, academy, standards, and institution | Applied creator-business pathway | Mythic, artistic, and cinematic embodiment |
 | Learner promise | See the thinking and proof | Become more capable with humans and agents | Turn capability into audience, products, and income | Master storyworlds, characters, art, and imaginative creation |
@@ -649,24 +695,24 @@ The four brands are different projections of one evidence-producing system, not 
 
 Every important insight should traverse one controlled loop:
 
-1. **Learn or discover** through Frank’s work, a source, an experiment, or another practitioner.
-2. **Encode** the concept, skill, provenance, evaluation, and reusable pattern in Starlight.
-3. **Demonstrate** it through a real FrankX decision, build, or case study.
-4. **Operationalize** it as a GenCreator workflow, product, or learning pathway.
-5. **Stress-test and embody** it through Arcanea’s stories, media, characters, and production systems.
+1. **Learn or discover** through practice, a source, an experiment, or another practitioner.
+2. **Encode** the concept, skill, provenance, evaluation, and reusable pattern in the academy substrate.
+3. **Demonstrate** it through a real decision, build, or public case study.
+4. **Operationalize** it as a creator workflow, product, or learning pathway.
+5. **Stress-test and embody** it through stories, media, characters, and production systems.
 6. **Return evidence** to the learner, teacher, artifact, and institutional profiles.
 
 One canonical object can therefore produce four valid projections without copying knowledge into four drifting repositories.
 
 ## Definition of completion
 
-The curriculum is working when:
+The map is working when:
 
-- Frank’s profile shows fewer claimed capabilities and more independently inspectable evidence.
-- Each quarter produces at least one artifact that combines three or more constellations.
-- Every flagship build becomes a lesson; every lesson is tested through a build.
-- Learners become builders, builders become teachers, and the strongest teachers improve the standard itself.
-- The brands compound one another while retaining distinct promises and aesthetics.
+- The profile shows fewer unsupported claims and more independently inspectable evidence.
+- Each quarter produces at least one artifact that combines three or more modules.
+- Every flagship build can become a candidate lesson; `Taught` is credited only after baseline, intervention, and delayed transfer evidence.
+- Learner readiness, teacher capability, and stewardship remain independently inspectable.
+- The projections compound one another while retaining distinct promises and aesthetics.
 - Growth increases freedom, artistic range, relationships, and civilizational usefulness rather than consuming them.
 
 ## Living primary-source register
@@ -685,4 +731,4 @@ Books provide durable models; standards, law, security guidance, and platform do
 - [*Good Strategy/Bad Strategy* — Penguin Random House](https://www.penguinrandomhouse.com/books/208668/good-strategy-bad-strategy-by-richard-rumelt/)
 - [*Thinking in Systems* — Chelsea Green](https://www.chelseagreen.com/product/thinking-in-systems/)
 
-Verification is a curriculum responsibility: quarterly reviews must update unstable sources, record superseded versions, and leave historical citations intact.
+Verification is a map-maintenance responsibility: quarterly reviews must update unstable sources, record superseded versions, and leave historical citations intact.
