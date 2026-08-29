@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "profile_version": "0.1.0",
+  "profile_id": "profile-example",
+  "subject": {
+    "kind": "human",
+    "display_name": "Example Learner",
+    "public_identifier": null
+  },
+  "projection": {
+    "visibility": "private",
+    "purpose": "personal-development",
+    "generated_at": "2026-08-29T00:00:00Z",
+    "revocable": true
+  },
+  "roles": [],
+  "capabilities": [],
+  "evidence_events": [],
+  "teaching": {
+    "methods_authored": [],
+    "missions_authored": [],
+    "learners_guided": [],
+    "transfer_evidence": []
+  },
+  "review": {
+    "last_reviewed_at": null,
+    "next_review_due_at": null,
+    "reviewer": null
+  }
+}
