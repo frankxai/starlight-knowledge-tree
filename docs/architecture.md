@@ -66,10 +66,13 @@ data/
     artifacts.json            ← all artifact nodes
     open-problems.json        ← all open problem nodes
     contribution-tasks.json   ← all contribution task nodes
+  fiction-worlds/
+    atlas.seed.json             ← rights-aware comparative-fiction seed
   schemas/
-    node.schema.json          ← JSON Schema for a node object
-    edge.schema.json          ← JSON Schema for an edge object
-    path.schema.json          ← JSON Schema for a skill path
+    node.schema.json            ← JSON Schema for a node object
+    edge.schema.json            ← JSON Schema for an edge object
+    path.schema.json            ← JSON Schema for a skill path
+    fiction-world.schema.json   ← Fiction Atlas structural contract
 ```
 
 ---
@@ -82,6 +85,17 @@ Schemas live in two places:
 2. **`packages/graph-schema/`** — Zod schemas for TypeScript runtime validation in `apps/web` and `packages/graph-utils`
 
 The two representations are kept in sync. The JSON Schema is the source of truth; the Zod schema is derived from it.
+
+### Fiction-world intelligence extension
+
+The comparative-fiction Atlas is isolated from native Arcanea canon. It stores source and rights evidence, abstract Pattern Cards, benchmark dimensions, research-only Arcanea translations, and naming candidates. Runtime validation adds type-aware reference resolution and naming-promotion policy checks that cannot be expressed as simple record shape. See [`fiction-world-intelligence-architecture.md`](fiction-world-intelligence-architecture.md).
+
+Run its clean-checkout-safe checks with:
+
+```bash
+npm run test:fiction
+npm run validate:fiction
+```
 
 ---
 

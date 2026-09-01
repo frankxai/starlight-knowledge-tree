@@ -25,22 +25,16 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          cache: "npm"
+          node-version: "24"
 
       - name: Install dependencies
-        run: |
-          cd packages/graph-schema && npm ci
-          cd ../graph-utils && npm ci
+        run: npm install --package-lock=false
 
-      - name: Build graph-schema
-        run: cd packages/graph-schema && npm run build
-
-      - name: Build graph-utils
-        run: cd packages/graph-utils && npm run build
+      - name: Run Fiction Atlas regression tests
+        run: npm run test:fiction
 
       - name: Run graph validator
-        run: cd packages/graph-utils && npm run validate -- ../../data
+        run: npm run validate
         env:
           NODE_ENV: ci
 
@@ -49,7 +43,7 @@ jobs:
           echo "Scanning for potential private data patterns..."
           # Check for patterns that suggest personal health/genetic data
           # These are heuristic checks — the Privacy Steward agent does full review
-          if grep -rE "(SSN|social.security|passport.number|medical.record|patient.id)" data/ --include="*.json" -i; then
+          if grep -rEiw "(SSN|social[ ._-]?security|passport[ ._-]?number|medical[ ._-]?record|patient[ ._-]?id)" data/ --include="*.json"; then
             echo "❌ Potential personal identifier pattern detected in data/"
             exit 1
           fi
