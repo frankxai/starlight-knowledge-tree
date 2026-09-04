@@ -26,12 +26,9 @@ jobs:
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: "20"
-          cache: "npm"
 
       - name: Install dependencies
-        run: |
-          cd packages/graph-schema && npm ci
-          cd ../graph-utils && npm ci
+        run: npm install --workspaces --include-workspace-root
 
       - name: Build graph-schema
         run: cd packages/graph-schema && npm run build
