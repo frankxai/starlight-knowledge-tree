@@ -64,6 +64,30 @@ export const EvidenceTypeSchema = z.enum([
 
 export type EvidenceType = z.infer<typeof EvidenceTypeSchema>;
 
+
+// ── Claim provenance ─────────────────────────────────────────────────────────
+
+export const ClaimClassSchema = z.enum([
+  "historical-source-claim",
+  "scholarly-interpretation",
+  "starlight-interpretation",
+  "original-starlight-philosophy",
+  "original-literary-mythic-material",
+  "arcanea-fiction",
+  "technical-operational",
+]);
+
+export type ClaimClass = z.infer<typeof ClaimClassSchema>;
+
+export const SourceRefSchema = z.object({
+  id: z.string().min(1),
+  url: z.string().url(),
+  title: z.string().min(1),
+  accessed_at: z.string().datetime().optional(),
+});
+
+export type SourceRef = z.infer<typeof SourceRefSchema>;
+
 // ── Base node ─────────────────────────────────────────────────────────────────
 
 const BaseNodeSchema = z.object({
@@ -77,6 +101,9 @@ const BaseNodeSchema = z.object({
   edges: z.array(EdgeSchema),
   created_at: z.string().datetime(),
   updated_at: z.string().datetime(),
+  claim_class: ClaimClassSchema.optional(),
+  sources: z.array(SourceRefSchema).optional(),
+  fiction_boundary: z.string().min(10).optional(),
 });
 
 // ── Skill node ────────────────────────────────────────────────────────────────
@@ -125,6 +152,21 @@ export const ContributionTaskNodeSchema = BaseNodeSchema.extend({
 
 export type ContributionTaskNode = z.infer<typeof ContributionTaskNodeSchema>;
 
+
+// Generic nodes deliberately exclude types with required specialist fields.
+// This prevents an invalid paper or skill from falling through the base schema.
+export const GenericNodeSchema = BaseNodeSchema.extend({
+  type: z.enum([
+    "domain",
+    "concept",
+    "tool",
+    "dataset",
+    "experiment",
+    "artifact",
+    "credential",
+  ]),
+});
+
 // ── Generic node ──────────────────────────────────────────────────────────────
 
 export const NodeSchema = z.union([
@@ -132,8 +174,27 @@ export const NodeSchema = z.union([
   PaperNodeSchema,
   OpenProblemNodeSchema,
   ContributionTaskNodeSchema,
-  BaseNodeSchema,
-]);
+  GenericNodeSchema,
+]).superRefine((node, ctx) => {
+  const sourced = new Set(["historical-source-claim", "scholarly-interpretation"]);
+  const fictional = new Set(["original-literary-mythic-material", "arcanea-fiction"]);
+
+  if (node.claim_class && sourced.has(node.claim_class) && (!node.sources || node.sources.length === 0)) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ["sources"],
+      message: `${node.claim_class} requires at least one source`,
+    });
+  }
+
+  if (node.claim_class && fictional.has(node.claim_class) && !node.fiction_boundary) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ["fiction_boundary"],
+      message: `${node.claim_class} requires an explicit fiction boundary`,
+    });
+  }
+});
 
 export type KnowledgeTreeNode = z.infer<typeof NodeSchema>;
 
