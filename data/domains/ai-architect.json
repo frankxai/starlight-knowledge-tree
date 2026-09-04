@@ -3,7 +3,14 @@
   "type": "domain",
   "label": "AI Architect",
   "description": "The domain of understanding, designing, and building AI systems — from mathematical foundations through large language models, agents, reasoning systems, and alignment.",
-  "tags": ["ai", "machine-learning", "deep-learning", "llm", "agents", "alignment"],
+  "tags": [
+    "ai",
+    "machine-learning",
+    "deep-learning",
+    "llm",
+    "agents",
+    "alignment"
+  ],
   "status": "stable",
   "created_at": "2025-01-01T00:00:00Z",
   "updated_at": "2025-01-01T00:00:00Z",
@@ -85,5 +92,6 @@
     "paper-attention-is-all-you-need",
     "paper-gpt3",
     "problem-alignment-superhumanai"
-  ]
+  ],
+  "domain": "domain-ai-architect"
 }
