@@ -10,6 +10,10 @@ Agents in this repository maintain and extend a knowledge graph. The graph must 
 
 ---
 
+## Canon and provenance
+
+Read [`../CANON_BOUNDARY.md`](../CANON_BOUNDARY.md). New or materially edited substantial claims must declare `claim_class`. Historical and scholarly claims require source records; literary and Arcanean material requires an explicit fiction boundary. Comparative entries preserve differences between traditions and never use science as proof of spiritual doctrine.
+
 ## General Rules
 
 1. **Never fabricate sources.** All `paper` nodes must reference real, verifiable publications. If you cannot find a real source, omit the node and note the gap as an `open_problem`.

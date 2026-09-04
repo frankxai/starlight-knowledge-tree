@@ -20,18 +20,15 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: "20"
-          cache: "npm"
 
       - name: Install dependencies
-        run: |
-          cd packages/graph-schema && npm ci
-          cd ../graph-utils && npm ci
+        run: npm install --workspaces --include-workspace-root
 
       - name: Build graph-schema
         run: cd packages/graph-schema && npm run build
@@ -41,6 +38,9 @@ jobs:
 
       - name: Run graph validator
         run: cd packages/graph-utils && npm run validate -- ../../data
+
+      - name: Verify provenance schema boundary
+        run: node scripts/schema-boundary-test.mjs
         env:
           NODE_ENV: ci
 
@@ -49,7 +49,7 @@ jobs:
           echo "Scanning for potential private data patterns..."
           # Check for patterns that suggest personal health/genetic data
           # These are heuristic checks — the Privacy Steward agent does full review
-          if grep -rE "(SSN|social.security|passport.number|medical.record|patient.id)" data/ --include="*.json" -i; then
+          if grep -rE "\\b(SSN|social[._ -]?security|passport[._ -]?number|medical[._ -]?record|patient[._ -]?id)\\b" data/ --include="*.json" -i; then
             echo "❌ Potential personal identifier pattern detected in data/"
             exit 1
           fi
