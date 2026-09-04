@@ -9,6 +9,10 @@ This repo is part of the FrankX / Starlight / Arcanea agent estate.
 - Default health command: `npm run build`
 - Remote: https://github.com/frankxai/starlight-knowledge-tree.git
 
+## Canon boundary
+
+Read [`CANON_BOUNDARY.md`](CANON_BOUNDARY.md) before adding historical, religious, philosophical, scientific, Starlight, or Arcanea-adjacent claims. This repo owns graph mechanics, not worldview or fictional canon. New or materially edited substantial claims require explicit provenance.
+
 ## What This Repo Is
 
 An open intelligence graph (concepts, skills, tools, papers, experiments, open problems) with
