@@ -3,7 +3,14 @@
   "type": "domain",
   "label": "Creator-Founder",
   "description": "The domain of building products, companies, creative systems, and audiences — combining leverage, distribution, execution, and taste into compounding creative and commercial output.",
-  "tags": ["startups", "products", "distribution", "creative-systems", "leverage", "founders"],
+  "tags": [
+    "startups",
+    "products",
+    "distribution",
+    "creative-systems",
+    "leverage",
+    "founders"
+  ],
   "status": "stable",
   "created_at": "2025-01-01T00:00:00Z",
   "updated_at": "2025-01-01T00:00:00Z",
@@ -85,5 +92,6 @@
     "tool-notion",
     "tool-linear",
     "problem-distribution-cold-start"
-  ]
+  ],
+  "domain": "domain-creator-founder"
 }
