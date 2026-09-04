@@ -3,7 +3,14 @@
   "type": "domain",
   "label": "Bio / Human Intelligence",
   "description": "The domain of understanding human cognition, neuroscience, longevity, performance, and biosystems — grounded in peer-reviewed science and evidence-based practice. No personal health data.",
-  "tags": ["neuroscience", "cognition", "longevity", "biology", "performance", "health-science"],
+  "tags": [
+    "neuroscience",
+    "cognition",
+    "longevity",
+    "biology",
+    "performance",
+    "health-science"
+  ],
   "status": "stable",
   "created_at": "2025-01-01T00:00:00Z",
   "updated_at": "2025-01-01T00:00:00Z",
@@ -70,5 +77,6 @@
     "paper-hallmarks-of-aging-lopez-otin",
     "paper-sleep-performance-walker",
     "problem-aging-mechanism"
-  ]
+  ],
+  "domain": "domain-bio-human-intelligence"
 }
