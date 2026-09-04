@@ -14,7 +14,7 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "@starlight/graph-schema": "workspace:*",
+    "@starlight/graph-schema": "*",
     "zod": "^3.22.0"
   },
   "devDependencies": {
