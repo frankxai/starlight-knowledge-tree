@@ -34,6 +34,9 @@ Starlight Knowledge Tree uses a typed graph to represent knowledge, capability, 
   edges: Edge[];        // see Edge Types below
   created_at: string;   // ISO 8601
   updated_at: string;   // ISO 8601
+  claim_class?: ClaimClass;      // required for new substantial claims
+  sources?: SourceRef[];         // required for historical/scholarly claims
+  fiction_boundary?: string;     // required for literary/Arcanean fiction
 }
 ```
 
@@ -78,6 +81,10 @@ Starlight Knowledge Tree uses a typed graph to represent knowledge, capability, 
 ```
 
 ---
+
+## Claim provenance
+
+New or materially edited substantial claims follow [`CANON_BOUNDARY.md`](CANON_BOUNDARY.md). Legacy nodes may omit provenance during the migration window; new historical or scholarly claims require sources, and fictional material requires an explicit fiction boundary.
 
 ## Edge Types
 
