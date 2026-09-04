@@ -9,6 +9,10 @@ It maps domains, concepts, skills, tools, papers, experiments, artifacts, open p
 
 ---
 
+## Authority boundary
+
+This repository owns the knowledge graph and evidence-progression mechanics. It does not own the Starlight worldview or Arcanean fiction. See [`CANON_BOUNDARY.md`](CANON_BOUNDARY.md) for the authority and provenance contract.
+
 ## What This Is
 
 Starlight Knowledge Tree is a public research and skill-progression graph. It organizes human knowledge and capability across domains into a structured, evidence-first graph — not a course catalogue, not a content library.
