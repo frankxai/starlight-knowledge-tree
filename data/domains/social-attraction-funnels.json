@@ -1,0 +1,60 @@
+{
+  "id": "domain-social-attraction-funnels",
+  "type": "domain",
+  "label": "Social Attraction, Funnels & Monetization",
+  "description": "Organic social distribution loops, viral hook design, Grand Slam Offer creation, value ladder architecture, VSL sales funnels, and lifecycle email automation.",
+  "tags": ["social-media", "attraction", "funnels", "lead-generation", "offers", "vsl", "email-marketing", "monetization"],
+  "status": "stable",
+  "created_at": "2026-08-23T00:00:00Z",
+  "updated_at": "2026-08-23T00:00:00Z",
+  "edges": [],
+  "root_problems": [
+    "problem-distribution-cold-start",
+    "problem-funnel-conversion-friction",
+    "problem-creator-platform-dependence"
+  ],
+  "paths": [
+    {
+      "id": "path-social-attraction-hooks",
+      "label": "Organic Attraction & Hook Design",
+      "description": "Short-form & long-form social algorithms, narrative hooks, and retention pacing.",
+      "nodes": [
+        "book-hormozi-100m-leads",
+        "concept-organic-distribution-loops",
+        "concept-scroll-stopping-hooks",
+        "concept-social-flywheel"
+      ]
+    },
+    {
+      "id": "path-funnels-grand-slam-offers",
+      "label": "Grand Slam Offers & Value Ladders",
+      "description": "Alex Hormozi offer mechanics, value discrepancy, and multi-tier pricing.",
+      "nodes": [
+        "book-hormozi-100m-offers",
+        "book-brunson-dotcom-secrets",
+        "concept-grand-slam-offers",
+        "concept-value-ladder-architecture"
+      ]
+    },
+    {
+      "id": "path-funnels-conversion-vsl-email",
+      "label": "VSL Funnels & Persuasion Engineering",
+      "description": "Video Sales Letters, Cialdini influence triggers, and automated lifecycle email sequences.",
+      "nodes": [
+        "book-brunson-expert-secrets",
+        "book-cialdini-influence",
+        "concept-vsl-funnel-architecture",
+        "concept-lifecycle-email-automation"
+      ]
+    }
+  ],
+  "seed_nodes": [
+    "book-hormozi-100m-offers",
+    "book-hormozi-100m-leads",
+    "book-brunson-dotcom-secrets",
+    "book-cialdini-influence",
+    "concept-grand-slam-offers",
+    "concept-organic-distribution-loops",
+    "concept-vsl-funnel-architecture"
+  ]
+}

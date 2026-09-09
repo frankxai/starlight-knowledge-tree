@@ -1,0 +1,148 @@
+[
+  {
+    "id": "workflow-daily-ops",
+    "type": "workflow",
+    "label": "Daily Operations & Estate Sync",
+    "description": "Morning synchronization workflow checking git worktree states, Linear issues, Notion Dev Hub status, storage health, and daily priority alignment.",
+    "domain": "domain-ai-architect",
+    "tags": ["workflow", "daily-ops", "estate-sync", "operations", "health-check"],
+    "status": "evergreen",
+    "trigger": "Manual / Morning Cron",
+    "schedule": "08:30 Mon-Fri",
+    "state_storage_path": "starlight/queen/reports/daily-ops.json",
+    "pipeline_stages": [
+      {
+        "stage_num": 1,
+        "name": "Estate Git Sweep",
+        "owner_agent": "starlight-concierge",
+        "input": "starlight/repos/* git status",
+        "output": "Dirty worktree and uncommitted branch list"
+      },
+      {
+        "stage_num": 2,
+        "name": "Storage & Machine Preflight",
+        "owner_agent": "memory-guardian",
+        "input": "Disk space (<50GB threshold) + WSL2 RAM metrics",
+        "output": "Storage Radar score & preflight clearance"
+      },
+      {
+        "stage_num": 3,
+        "name": "Task & Issue Triage",
+        "owner_agent": "starlight-queen",
+        "input": "Linear & GitHub Issue inboxes",
+        "output": "Daily top 3 focus priorities"
+      }
+    ],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      { "type": "applies_to", "target": "concept-agent-loop" }
+    ]
+  },
+  {
+    "id": "workflow-content-factory",
+    "type": "workflow",
+    "label": "ACOS Content Factory Pipeline",
+    "description": "Six-stage publishing lifecycle transforming raw concepts into peer-reviewed, visually attested articles deployed to Vercel.",
+    "domain": "domain-creator-strategy-wealth",
+    "tags": ["workflow", "content-factory", "publishing", "mdx", "vercel-deploy"],
+    "status": "evergreen",
+    "trigger": "User Command / Content Brief",
+    "state_storage_path": "agentic-creator-os/data/factory-state.json",
+    "pipeline_stages": [
+      {
+        "stage_num": 1,
+        "name": "Research & Grounding",
+        "owner_agent": "research-scout",
+        "input": "Idea topic + Context7 live API retrieval",
+        "output": "Structured evidence dossier"
+      },
+      {
+        "stage_num": 2,
+        "name": "Drafting",
+        "owner_agent": "creation-engine",
+        "input": "Evidence dossier + Brand Voice guidelines",
+        "output": "Raw MDX draft"
+      },
+      {
+        "stage_num": 3,
+        "name": "Visual Asset Generation",
+        "owner_agent": "infogenius-director",
+        "input": "Draft key concepts + Nano Banana prompt parameters",
+        "output": "Vector/Raster hero assets and diagrams"
+      },
+      {
+        "stage_num": 4,
+        "name": "Adversarial Review (Santa Loop)",
+        "owner_agent": "adversarial-reviewer",
+        "input": "Draft + Visuals + TASTE.md",
+        "output": "Audit score & required fixes"
+      },
+      {
+        "stage_num": 5,
+        "name": "Staging & Vercel Preview",
+        "owner_agent": "nextjs-deployer",
+        "input": "Approved MDX -> content/blog/",
+        "output": "Vercel Preview URL"
+      },
+      {
+        "stage_num": 6,
+        "name": "Human Approval & Production Ship",
+        "owner_agent": "human-witness",
+        "input": "Preview review",
+        "output": "Live deployment on frankx.ai"
+      }
+    ],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      { "type": "applies_to", "target": "concept-content-factory-flywheel" }
+    ]
+  },
+  {
+    "id": "workflow-vercel-preview-gate",
+    "type": "workflow",
+    "label": "Vercel Preview Promotion Gate",
+    "description": "Cloud-first workflow that enforces draft-first PRs, prevents local dev server clutter, and gates production deployment on automated Santa verification.",
+    "domain": "domain-systems-engineering",
+    "tags": ["workflow", "vercel", "cloud-first", "preview-gate", "ci-cd"],
+    "status": "evergreen",
+    "trigger": "Git Push / Agent PR",
+    "state_storage_path": "starlight/queen/reports/vercel-gates.json",
+    "pipeline_stages": [
+      {
+        "stage_num": 1,
+        "name": "Draft PR Creation",
+        "owner_agent": "coding-agent",
+        "input": "Feature branch changes",
+        "output": "gh pr create --draft ([skip ci])"
+      },
+      {
+        "stage_num": 2,
+        "name": "Local Fast Typecheck",
+        "owner_agent": "test-runner",
+        "input": "tsc --noEmit",
+        "output": "Typecheck pass/fail"
+      },
+      {
+        "stage_num": 3,
+        "name": "Ready for Review (Cloud Build)",
+        "owner_agent": "starlight-queen",
+        "input": "gh pr ready",
+        "output": "Single isolated Vercel preview deployment"
+      },
+      {
+        "stage_num": 4,
+        "name": "Live Cross-Device Review",
+        "owner_agent": "human-architect",
+        "input": "Vercel Preview URL",
+        "output": "PR merge to main"
+      }
+    ],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      { "type": "applies_to", "target": "concept-dependency-inversion" }
+    ]
+  }
+]

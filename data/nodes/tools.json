@@ -5,15 +5,29 @@
     "label": "PyTorch",
     "description": "An open-source deep learning framework for research and production. The primary tool for implementing neural networks.",
     "domain": "domain-ai-architect",
-    "tags": ["deep-learning", "python", "framework", "ai"],
+    "tags": [
+      "deep-learning",
+      "python",
+      "framework",
+      "ai"
+    ],
     "status": "stable",
     "url": "https://pytorch.org",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "applies_to", "target": "skill-train-basic-nn" },
-      { "type": "applies_to", "target": "skill-implement-transformer" },
-      { "type": "teaches", "target": "concept-neural-network-basics" }
+      {
+        "type": "applies_to",
+        "target": "skill-train-basic-nn"
+      },
+      {
+        "type": "applies_to",
+        "target": "skill-implement-transformer"
+      },
+      {
+        "type": "teaches",
+        "target": "concept-neural-network-basics"
+      }
     ]
   },
   {
@@ -22,14 +36,142 @@
     "label": "Hugging Face Transformers",
     "description": "A library of pretrained transformer models and fine-tuning utilities. The standard toolkit for LLM practitioners.",
     "domain": "domain-ai-architect",
-    "tags": ["transformers", "llm", "fine-tuning", "python"],
+    "tags": [
+      "transformers",
+      "llm",
+      "fine-tuning",
+      "python"
+    ],
     "status": "stable",
     "url": "https://huggingface.co/docs/transformers",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "applies_to", "target": "skill-finetune-llm" },
-      { "type": "teaches", "target": "concept-transformer-architecture" }
+      {
+        "type": "applies_to",
+        "target": "skill-finetune-llm"
+      },
+      {
+        "type": "teaches",
+        "target": "concept-transformer-architecture"
+      }
+    ]
+  },
+  {
+    "id": "tool-threejs",
+    "type": "tool",
+    "label": "Three.js & React Three Fiber",
+    "description": "3D WebGL library for rendering spatial canvases, constellations, and interactive shader environments.",
+    "domain": "domain-impeccable-design",
+    "tags": [
+      "threejs",
+      "webgl",
+      "3d",
+      "spatial-ui",
+      "shaders"
+    ],
+    "status": "evergreen",
+    "url": "https://threejs.org",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "applies_to",
+        "target": "concept-shader-materials"
+      }
+    ]
+  },
+  {
+    "id": "tool-gsap",
+    "type": "tool",
+    "label": "GSAP (GreenSock Animation Platform)",
+    "description": "High-performance JavaScript animation library for timeline orchestration, scroll-driven visual narratives, and UI spring dynamics.",
+    "domain": "domain-impeccable-design",
+    "tags": [
+      "gsap",
+      "animation",
+      "motion",
+      "ui-ux",
+      "timelines"
+    ],
+    "status": "evergreen",
+    "url": "https://gsap.com",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "applies_to",
+        "target": "concept-physics-spring-motion"
+      }
+    ]
+  },
+  {
+    "id": "tool-remotion",
+    "type": "tool",
+    "label": "Remotion",
+    "description": "Framework for creating programmatic, frame-accurate MP4/WebM videos in React using web standards.",
+    "domain": "domain-media-generative-cinema",
+    "tags": [
+      "remotion",
+      "video-as-code",
+      "react",
+      "motion-graphics"
+    ],
+    "status": "evergreen",
+    "url": "https://www.remotion.dev",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "applies_to",
+        "target": "concept-video-as-code-remotion"
+      }
+    ]
+  },
+  {
+    "id": "tool-suno-ai",
+    "type": "tool",
+    "label": "Suno AI Platform",
+    "description": "Generative audio system producing broadcast-grade music arrangements, vocal stems, and harmonic compositions.",
+    "domain": "domain-media-generative-cinema",
+    "tags": [
+      "suno",
+      "audio",
+      "generative-music",
+      "stems"
+    ],
+    "status": "stable",
+    "url": "https://suno.com",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "applies_to",
+        "target": "concept-audio-arrangement-curves"
+      }
+    ]
+  },
+  {
+    "id": "tool-sds-supervisor",
+    "type": "tool",
+    "label": "SDS (Single Dev Server Supervisor)",
+    "description": "CLI supervisor managing transient local development ports with idle TTL and automatic cleanup.",
+    "domain": "domain-systems-engineering",
+    "tags": [
+      "sds",
+      "cli",
+      "dev-server",
+      "process-manager"
+    ],
+    "status": "evergreen",
+    "url": "https://starlightintelligence.org/sds",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "applies_to",
+        "target": "concept-dependency-inversion"
+      }
     ]
   },
   {
@@ -38,14 +180,25 @@
     "label": "GMAT (General Mission Analysis Tool)",
     "description": "NASA open-source space mission design and navigation tool for trajectory analysis, orbit determination, and optimization.",
     "domain": "domain-space-builder",
-    "tags": ["astrodynamics", "trajectory", "mission-design", "nasa"],
+    "tags": [
+      "astrodynamics",
+      "trajectory",
+      "mission-design",
+      "nasa"
+    ],
     "status": "stable",
     "url": "https://software.nasa.gov/software/GSC-17177-1",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "applies_to", "target": "skill-calculate-orbit" },
-      { "type": "applies_to", "target": "skill-plan-trajectory" }
+      {
+        "type": "applies_to",
+        "target": "skill-calculate-orbit"
+      },
+      {
+        "type": "applies_to",
+        "target": "skill-plan-trajectory"
+      }
     ]
   },
   {
@@ -54,13 +207,21 @@
     "label": "OpenRocket",
     "description": "An open-source rocket simulation software for designing and simulating model rockets.",
     "domain": "domain-space-builder",
-    "tags": ["rockets", "simulation", "propulsion", "open-source"],
+    "tags": [
+      "rockets",
+      "simulation",
+      "propulsion",
+      "open-source"
+    ],
     "status": "stable",
     "url": "https://openrocket.info",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "applies_to", "target": "skill-size-propulsion-system" }
+      {
+        "type": "applies_to",
+        "target": "skill-size-propulsion-system"
+      }
     ]
   },
   {
@@ -69,14 +230,25 @@
     "label": "Jupyter Notebook",
     "description": "An interactive computing environment for creating reproducible research notebooks combining code, text, and visualizations.",
     "domain": "domain-bio-human-intelligence",
-    "tags": ["notebook", "python", "research", "data-science"],
+    "tags": [
+      "notebook",
+      "python",
+      "research",
+      "data-science"
+    ],
     "status": "stable",
     "url": "https://jupyter.org",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "applies_to", "target": "skill-design-cognitive-experiment" },
-      { "type": "applies_to", "target": "skill-evaluate-longevity-intervention" }
+      {
+        "type": "applies_to",
+        "target": "skill-design-cognitive-experiment"
+      },
+      {
+        "type": "applies_to",
+        "target": "skill-evaluate-longevity-intervention"
+      }
     ]
   },
   {
@@ -85,13 +257,21 @@
     "label": "Notion",
     "description": "A connected workspace for documentation, product specs, databases, and company knowledge management.",
     "domain": "domain-creator-founder",
-    "tags": ["productivity", "docs", "pm", "knowledge-management"],
+    "tags": [
+      "productivity",
+      "docs",
+      "pm",
+      "knowledge-management"
+    ],
     "status": "stable",
     "url": "https://notion.so",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "applies_to", "target": "skill-write-product-spec" }
+      {
+        "type": "applies_to",
+        "target": "skill-write-product-spec"
+      }
     ]
   },
   {
@@ -100,13 +280,261 @@
     "label": "Linear",
     "description": "A project management tool designed for software teams with fast issue tracking, cycles, and roadmaps.",
     "domain": "domain-creator-founder",
-    "tags": ["pm", "project-management", "engineering", "startup"],
+    "tags": [
+      "pm",
+      "project-management",
+      "engineering",
+      "startup"
+    ],
     "status": "stable",
     "url": "https://linear.app",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "applies_to", "target": "skill-ship-mvp" }
+      {
+        "type": "applies_to",
+        "target": "skill-ship-mvp"
+      }
+    ]
+  },
+  {
+    "id": "tool-figma",
+    "type": "tool",
+    "label": "Figma",
+    "description": "Collaborative interface design and prototyping tool for design systems, vector assets, and token handoffs.",
+    "domain": "domain-web-graphic-design",
+    "tags": [
+      "figma",
+      "ui-ux",
+      "design-system",
+      "prototyping",
+      "vector"
+    ],
+    "status": "evergreen",
+    "url": "https://figma.com",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "teaches",
+        "target": "concept-design-token-system"
+      }
+    ]
+  },
+  {
+    "id": "tool-framer",
+    "type": "tool",
+    "label": "Framer",
+    "description": "Interactive canvas and CMS publishing platform that turns design layouts directly into production React websites with fluid animations.",
+    "domain": "domain-web-graphic-design",
+    "tags": [
+      "framer",
+      "web-design",
+      "react",
+      "motion",
+      "cms"
+    ],
+    "status": "evergreen",
+    "url": "https://framer.com",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "teaches",
+        "target": "concept-micro-interactions"
+      }
+    ]
+  },
+  {
+    "id": "tool-ahrefs",
+    "type": "tool",
+    "label": "Ahrefs",
+    "description": "SEO intelligence platform for backlink analysis, keyword clustering, search volume estimation, and competitor gap auditing.",
+    "domain": "domain-content-seo-publishing",
+    "tags": [
+      "seo",
+      "ahrefs",
+      "keyword-research",
+      "backlinks",
+      "analytics"
+    ],
+    "status": "stable",
+    "url": "https://ahrefs.com",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "applies_to",
+        "target": "concept-topical-authority"
+      }
+    ]
+  },
+  {
+    "id": "tool-beehiiv",
+    "type": "tool",
+    "label": "Beehiiv",
+    "description": "Newsletter platform built for sovereign creators with audience analytics, referral programs, and custom domains.",
+    "domain": "domain-content-seo-publishing",
+    "tags": [
+      "newsletter",
+      "beehiiv",
+      "email",
+      "publishing",
+      "monetization"
+    ],
+    "status": "stable",
+    "url": "https://beehiiv.com",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "applies_to",
+        "target": "concept-organic-distribution-loops"
+      }
+    ]
+  },
+  {
+    "id": "tool-stripe",
+    "type": "tool",
+    "label": "Stripe",
+    "description": "Financial infrastructure and checkout APIs powering global subscription billing, one-click payments, and creator revenue settlement.",
+    "domain": "domain-social-attraction-funnels",
+    "tags": [
+      "stripe",
+      "payments",
+      "checkout",
+      "billing",
+      "fintech"
+    ],
+    "status": "evergreen",
+    "url": "https://stripe.com",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "applies_to",
+        "target": "concept-grand-slam-offers"
+      }
+    ]
+  },
+  {
+    "id": "tool-tradingview",
+    "type": "tool",
+    "label": "TradingView",
+    "description": "Financial charting platform providing real-time market data, technical indicators, and macroeconomic asset ratio tracking.",
+    "domain": "domain-investing-wealth-capital",
+    "tags": [
+      "tradingview",
+      "charting",
+      "markets",
+      "technical-analysis",
+      "macro"
+    ],
+    "status": "stable",
+    "url": "https://tradingview.com",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "applies_to",
+        "target": "concept-macro-credit-cycles"
+      }
+    ]
+  },
+  {
+    "id": "tool-lancedb",
+    "type": "tool",
+    "label": "LanceDB",
+    "description": "Developer-friendly, serverless vector database for AI applications, written in Rust with native Node.js and Python bindings. Stores vectors and relational metadata in columnar Lance files.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "lancedb",
+      "vector-db",
+      "serverless",
+      "rust",
+      "columnar"
+    ],
+    "status": "evergreen",
+    "url": "https://lancedb.com",
+    "created_at": "2026-09-09T00:00:00Z",
+    "updated_at": "2026-09-09T00:00:00Z",
+    "edges": [
+      {
+        "type": "applies_to",
+        "target": "concept-lancedb-columnar-vector-scale"
+      }
+    ]
+  },
+  {
+    "id": "tool-langfuse",
+    "type": "tool",
+    "label": "Langfuse",
+    "description": "Open source LLM engineering platform providing observability, trace visualization, prompt management, and automated evaluation metrics for multi-agent swarms.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "langfuse",
+      "observability",
+      "tracing",
+      "evals",
+      "telemetry"
+    ],
+    "status": "evergreen",
+    "url": "https://langfuse.com",
+    "created_at": "2026-09-09T00:00:00Z",
+    "updated_at": "2026-09-09T00:00:00Z",
+    "edges": [
+      {
+        "type": "applies_to",
+        "target": "pattern-evaluator-optimizer"
+      }
+    ]
+  },
+  {
+    "id": "tool-redis-bullmq",
+    "type": "tool",
+    "label": "BullMQ & Redis",
+    "description": "High-performance, message-based distributed task queue for Node.js and TypeScript. Supports delayed jobs, parent-child task flows, rate limiting, and failure retries.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "bullmq",
+      "redis",
+      "task-queue",
+      "distributed-jobs",
+      "concurrency"
+    ],
+    "status": "stable",
+    "url": "https://bullmq.io",
+    "created_at": "2026-09-09T00:00:00Z",
+    "updated_at": "2026-09-09T00:00:00Z",
+    "edges": [
+      {
+        "type": "applies_to",
+        "target": "pattern-queue-backed-agent-workers"
+      }
+    ]
+  },
+  {
+    "id": "tool-litellm-proxy",
+    "type": "tool",
+    "label": "LiteLLM Proxy & Universal Gateway",
+    "description": "High-throughput proxy server allowing 100+ LLMs in OpenAI-compatible format with built-in load balancing, fallbacks, spend tracking, and rate-limit sharding.",
+    "domain": "domain-scale-distributed-agentics",
+    "status": "stable",
+    "url": "https://github.com/BerriAI/litellm",
+    "created_at": "2026-09-09T00:00:00Z",
+    "updated_at": "2026-09-09T00:00:00Z",
+    "tags": [
+      "litellm",
+      "proxy",
+      "load-balancing",
+      "gateway",
+      "cost-tracking"
+    ],
+    "edges": [
+      {
+        "type": "applies_to",
+        "target": "pattern-semantic-model-router"
+      }
     ]
   }
 ]

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DemandCaptureWaitlist } from "@/components/DemandCaptureWaitlist";
 
 const PATHS = [
   { href: "/paths/ai-architect", label: "AI Architect" },
@@ -114,6 +115,11 @@ export default function HomePage() {
             <span className="text-cyan-primary font-medium">evidence</span>.
           </p>
         </div>
+      </section>
+
+      {/* Waitlist Section */}
+      <section className="py-20 px-6 max-w-4xl mx-auto">
+        <DemandCaptureWaitlist />
       </section>
     </>
   );

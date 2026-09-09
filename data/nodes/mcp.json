@@ -1,0 +1,192 @@
+[
+  {
+    "id": "mcp-starlight-memory",
+    "type": "mcp",
+    "label": "Starlight Memory MCP Server",
+    "description": "The sovereign long-term memory server for Starlight swarms, providing semantic recall, vault reading, reflection retrieval, and episodic indexing.",
+    "domain": "domain-ai-architect",
+    "tags": ["mcp", "memory", "starlight-memory", "semantic-search", "vault-access", "privacy-guardian"],
+    "status": "evergreen",
+    "server_name": "starlight-memory",
+    "protocol_version": "2024-11-05",
+    "transport": "stdio",
+    "auth_model": "local_process",
+    "install_command": "node C:/Users/frank/starlight/repos/starlight-memory/dist/index.js",
+    "verified_in_repos": ["Starlight-Intelligence-System", "second-brain-vault", "agentic-creator-os"],
+    "latency_tier": "low",
+    "tools": [
+      {
+        "name": "memory_recall",
+        "description": "Recall high-relevance memories and historical context for a prompt or query.",
+        "safety_level": "read_only"
+      },
+      {
+        "name": "memory_search",
+        "description": "Search memory nodes using hybrid semantic and keyword search.",
+        "safety_level": "read_only"
+      },
+      {
+        "name": "memory_remember",
+        "description": "Store a new attested fact or insight into the episodic memory graph.",
+        "safety_level": "idempotent_write"
+      },
+      {
+        "name": "memory_forget",
+        "description": "Prune or supersede a memory node.",
+        "safety_level": "destructive"
+      },
+      {
+        "name": "vault_read",
+        "description": "Read a note from the sovereign Second Brain vault.",
+        "safety_level": "read_only"
+      },
+      {
+        "name": "vault_list",
+        "description": "List notes in a vault subdirectory.",
+        "safety_level": "read_only"
+      },
+      {
+        "name": "memory_stats",
+        "description": "Get telemetry and node count statistics for the memory engine.",
+        "safety_level": "read_only"
+      }
+    ],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      { "type": "applies_to", "target": "concept-memory-context" }
+    ]
+  },
+  {
+    "id": "mcp-starlight-v0",
+    "type": "mcp",
+    "label": "Starlight V0 MCP Server",
+    "description": "Interface for generating, branding, iterating, and pulling production-grade V0 UI components directly into Starlight repositories.",
+    "domain": "domain-impeccable-design",
+    "tags": ["mcp", "v0", "ui-generation", "design-systems", "tailwind", "shadcn"],
+    "status": "stable",
+    "server_name": "starlight-v0",
+    "protocol_version": "2024-11-05",
+    "transport": "stdio",
+    "auth_model": "api_key_env",
+    "install_command": "node C:/Users/frank/starlight/repos/v0-template-os/dist/mcp.js",
+    "verified_in_repos": ["frankx.ai-vercel-website", "arcanea-studio", "starlight-agent-canvas"],
+    "latency_tier": "medium",
+    "tools": [
+      {
+        "name": "v0_setup_check",
+        "description": "Verify V0 API connectivity and design token registry.",
+        "safety_level": "read_only"
+      },
+      {
+        "name": "v0_generate",
+        "description": "Generate a new UI component from a structured design prompt.",
+        "safety_level": "idempotent_write"
+      },
+      {
+        "name": "v0_generate_branded",
+        "description": "Generate a UI component strictly locked to Starlight/Arcanea design tokens.",
+        "safety_level": "idempotent_write"
+      },
+      {
+        "name": "v0_iterate",
+        "description": "Refine an existing V0 chat component based on review critique.",
+        "safety_level": "idempotent_write"
+      },
+      {
+        "name": "v0_pull_code",
+        "description": "Download generated TSX/CSS code into the target repository component tree.",
+        "safety_level": "idempotent_write"
+      }
+    ],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      { "type": "applies_to", "target": "concept-design-token-system" }
+    ]
+  },
+  {
+    "id": "mcp-context7",
+    "type": "mcp",
+    "label": "Context7 MCP Server",
+    "description": "Universal live retrieval MCP for frontier framework documentation, library APIs, and latest release specs without prompt bloat.",
+    "domain": "domain-ai-architect",
+    "tags": ["mcp", "context7", "live-docs", "api-retrieval", "auto-hook"],
+    "status": "evergreen",
+    "server_name": "context7",
+    "protocol_version": "2024-11-05",
+    "transport": "http",
+    "auth_model": "bearer_token",
+    "install_command": "npx -y @context7/mcp-server",
+    "verified_in_repos": ["all-starlight-repos"],
+    "latency_tier": "low",
+    "tools": [
+      {
+        "name": "context7_search",
+        "description": "Query official live documentation for any framework or library (Next.js 15, React 19, Tailwind v4, etc.).",
+        "safety_level": "read_only"
+      }
+    ],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      { "type": "applies_to", "target": "concept-tool-use" }
+    ]
+  },
+  {
+    "id": "mcp-browser-hub",
+    "type": "mcp",
+    "label": "CDP Multiplexer Browser Hub MCP",
+    "description": "Centralized Chrome DevTools Protocol multiplexer (:9223) that routes all agent web automation through an observable shared hub.",
+    "domain": "domain-ai-architect",
+    "tags": ["mcp", "browser-hub", "cdp", "web-automation", "ram-safety", "observability"],
+    "status": "evergreen",
+    "server_name": "browser-hub",
+    "protocol_version": "2024-11-05",
+    "transport": "websocket",
+    "auth_model": "local_endpoint",
+    "install_command": "curl -s http://localhost:9223/wsEndpoint",
+    "verified_in_repos": ["Starlight-Intelligence-System", "agentic-creator-os"],
+    "latency_tier": "low",
+    "tools": [
+      {
+        "name": "browser_connect",
+        "description": "Acquire an isolated CDP browser context session from the multiplexer hub.",
+        "safety_level": "read_only"
+      }
+    ],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      { "type": "applies_to", "target": "concept-tool-use" }
+    ]
+  },
+  {
+    "id": "mcp-suno-server",
+    "type": "mcp",
+    "label": "Suno Music Generation MCP Server",
+    "description": "Automates Suno v4.5 audio generation, prompt compilation, stem extraction, and catalog ingestion for Starlight audio engines.",
+    "domain": "domain-media-generative-cinema",
+    "tags": ["mcp", "suno", "audio-generation", "music-production", "stems"],
+    "status": "stable",
+    "server_name": "suno-mcp-server",
+    "protocol_version": "2024-11-05",
+    "transport": "stdio",
+    "auth_model": "api_key_env",
+    "install_command": "node C:/Users/frank/starlight/repos/suno-mcp-server/dist/index.js",
+    "verified_in_repos": ["music-intelligence-os", "arcanea-ai-app"],
+    "latency_tier": "high",
+    "tools": [
+      {
+        "name": "suno_generate_track",
+        "description": "Generate high-fidelity audio tracks with genre tags, BPM, and structured lyrics.",
+        "safety_level": "idempotent_write"
+      }
+    ],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      { "type": "applies_to", "target": "concept-audio-arrangement-curves" }
+    ]
+  }
+]

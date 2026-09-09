@@ -1,0 +1,548 @@
+[
+  {
+    "id": "swarm-pattern-santa-loop",
+    "type": "swarm_pattern",
+    "label": "The Santa Method (Adversarial Maker ≠ Checker)",
+    "description": "A dual-agent convergence loop where a generator subagent (Fire Gate) creates the initial artifact, and an independent adversarial reviewer subagent (Crown Gate) ruthlessly audits against taste and canon until strict consensus is reached.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "swarm-pattern",
+      "santa-loop",
+      "adversarial-review",
+      "maker-checker",
+      "convergence"
+    ],
+    "status": "evergreen",
+    "pattern_name": "The Santa Method",
+    "maker_roles": [
+      "arcanea-coder",
+      "creation-engine",
+      "kilo-generator"
+    ],
+    "checker_roles": [
+      "adversarial-reviewer",
+      "canon-guardian",
+      "crown-gate-auditor"
+    ],
+    "convergence_rule": "Output is only delivered to the user or committed to git when both agents agree and all 4 audit dimensions (Attestation, Contradiction, Taste, Safety) pass with 0 blocking issues.",
+    "failure_modes": [
+      "Infinite critique loops without progress (mitigated by max 3 iterations before human escalation)",
+      "Checker leniency (mitigated by strict rubrics in TASTE.md and CANON_LOCKED.md)"
+    ],
+    "token_budget_profile": "standard",
+    "code_example": "1. Dispatch Fire Gate Generator -> Draft.\n2. Dispatch Crown Gate Reviewer -> Critique & Score.\n3. If Score < 90, Generator refines addressing exact feedback.\n4. If Score >= 90, emit SIP Attestation and merge.",
+    "live_reference_file": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System/skills/adversarial-review/SKILL.md",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "applies_to",
+        "target": "concept-agent-loop"
+      }
+    ]
+  },
+  {
+    "id": "swarm-pattern-dreaming-engine",
+    "type": "swarm_pattern",
+    "label": "The Dreaming Reflection Engine",
+    "description": "Scheduled sleep-time background agent (Letta pattern) that scans delta modifications in the vault, formulates higher-order epistemic questions, retrieves cited evidence, and generates verified reflection nodes.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "swarm-pattern",
+      "dreaming",
+      "sleep-compute",
+      "generative-agents",
+      "reflection-tree",
+      "second-brain"
+    ],
+    "status": "evergreen",
+    "pattern_name": "Starlight Dreaming Engine",
+    "maker_roles": [
+      "DreamingAgent"
+    ],
+    "checker_roles": [
+      "ContradictionDetector",
+      "PrivacyGuardian"
+    ],
+    "convergence_rule": "Candidate insights must cite existing notes with exact path and anchor, pass privacy redaction, and survive contradiction checks before writing to patterns/YYYY-Www.md.",
+    "failure_modes": [
+      "Hallucinated relationships across unlinked notes (mitigated by mandatory citation verification)",
+      "Privacy leakage of local_core into public summaries (mitigated by PrivacyGuardian regex filter)"
+    ],
+    "token_budget_profile": "light",
+    "code_example": "1. Delta scan at 04:00 daily.\n2. Pose 3-5 salient questions about recent decisions and patterns.\n3. Retrieve notes by Relevance x Recency x Importance.\n4. Synthesize Lens framed insights with SIP attestation.\n5. Log reflection delta to calibrate next week's generator.",
+    "live_reference_file": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System/src/dreaming.ts",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "applies_to",
+        "target": "concept-memory-context"
+      }
+    ]
+  },
+  {
+    "id": "swarm-pattern-sds-supervisor",
+    "type": "swarm_pattern",
+    "label": "Single Dev Server (SDS) Transient Compute",
+    "description": "Policy and supervisor tool ensuring local dev servers are treated as ephemeral compute with idle TTL, keeping memory free and directing persistent reviews to Vercel previews.",
+    "domain": "domain-systems-engineering",
+    "tags": [
+      "swarm-pattern",
+      "sds",
+      "dev-server",
+      "ephemeral-compute",
+      "vercel-gate"
+    ],
+    "status": "evergreen",
+    "pattern_name": "SDS Supervisor",
+    "maker_roles": [
+      "local-dev-runner"
+    ],
+    "checker_roles": [
+      "sds-watchdog"
+    ],
+    "convergence_rule": "Dev servers automatically terminate after 30 minutes of idle inactivity. Port allocations are strictly managed without collisions.",
+    "failure_modes": [
+      "Orphaned background node processes consuming RAM (mitigated by sds doctor and process tree reaping)"
+    ],
+    "token_budget_profile": "light",
+    "live_reference_file": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System/skills/sds/SKILL.md",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "applies_to",
+        "target": "concept-dependency-inversion"
+      }
+    ]
+  },
+  {
+    "id": "swarm-pattern-cross-model-shootout",
+    "type": "swarm_pattern",
+    "label": "Cross-Model Verification Shootout",
+    "description": "Maker and Checker must run on different model architectures/providers to eliminate shared blindspots (e.g., Kilo free-tier generates, Codex GPT-5.6 Sol or Claude Opus audits).",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "swarm-pattern",
+      "model-diversity",
+      "shootout",
+      "verification-gate"
+    ],
+    "status": "evergreen",
+    "pattern_name": "Cross-Model Gate",
+    "maker_roles": [
+      "kilo-auto-free",
+      "qwen-coder"
+    ],
+    "checker_roles": [
+      "codex-gpt-5.6-sol",
+      "claude-3.7-sonnet",
+      "grok-4.5"
+    ],
+    "convergence_rule": "High-impact changes must be attested by a secondary model from a distinct lab/family.",
+    "failure_modes": [
+      "Single-model blindspot reinforcement (eliminated by architecture diversity)"
+    ],
+    "token_budget_profile": "standard",
+    "live_reference_file": "C:/Users/frank/starlight/repos/starlight-agent-config/CROSS-MODEL-GATE.md",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "applies_to",
+        "target": "concept-agent-loop"
+      }
+    ]
+  },
+  {
+    "id": "pattern-queen-conductor-worker",
+    "type": "swarm_pattern",
+    "label": "Hierarchical Queen-Conductor-Worker Swarm",
+    "description": "Decouples meta-strategic planning from task decomposition and task execution. The Queen manages the global objective, Conductor orchestrates worktrees, and Workers execute bounded tasks in parallel isolated branches.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "orchestration",
+      "hierarchical-swarm",
+      "queen",
+      "conductor",
+      "worktree-isolation"
+    ],
+    "status": "evergreen",
+    "maker_role": "Worker Agent (Execution / Code Generation / File Edits)",
+    "checker_role": "Queen / Conductor (Goal Verification & Integration Gate)",
+    "convergence_rule": "All subagent worktrees pass unit tests (npm test), static linting (npm run lint), and git diff verification before conductor executes merge into primary integration branch.",
+    "failure_modes_mitigated": [
+      "Context drift in long execution loops",
+      "Conflicting parallel file writes across worktrees",
+      "Premature goal termination before complete verification"
+    ],
+    "live_reference_file": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System/skills/sis-activate/SKILL.md",
+    "cross_repo_applications": [
+      {
+        "repo": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System",
+        "context": "Queen meta-orchestration for estate-wide maintenance."
+      },
+      {
+        "repo": "C:/Users/frank/starlight/repos/starlight-agent-canvas",
+        "context": "Visual task tree execution and worker telemetry."
+      }
+    ],
+    "created_at": "2026-08-25T00:00:00Z",
+    "updated_at": "2026-08-25T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "pattern-semantic-model-router"
+      },
+      {
+        "type": "unlocks",
+        "target": "pattern-blackboard-workspace"
+      }
+    ]
+  },
+  {
+    "id": "pattern-semantic-model-router",
+    "type": "swarm_pattern",
+    "label": "Dynamic Semantic Dispatch & Model Routing",
+    "description": "Routes agent tasks dynamically based on cognitive load and cost tier: fast lightweight models for mechanical lookups and scans (Shift/Flow gates); high-reasoning frontier models for architecture, judgment, and adversarial reviews (Crown/Unity gates).",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "model-routing",
+      "cost-optimization",
+      "semantic-dispatch",
+      "latency-tuning"
+    ],
+    "status": "evergreen",
+    "maker_role": "Semantic Dispatcher (Task Classifier)",
+    "checker_role": "Quality Sentinel (Performance & Hallucination Auditor)",
+    "convergence_rule": "Routing heuristic: Single-file edits and AST lookups (<2k tokens) route to Free Tier / Haiku; multi-file refactors and architectural reviews route to Frontier Tier (Opus / GPT-5.6 Sol) with automatic fallback to secondary provider if error rate > 0%.",
+    "failure_modes_mitigated": [
+      "Overspending on trivial text formatting tasks",
+      "Under-reasoning on complex architectural decisions",
+      "Single-provider outage vulnerabilities"
+    ],
+    "live_reference_file": "C:/Users/frank/kilo.json",
+    "cross_repo_applications": [
+      {
+        "repo": "C:/Users/frank/kilo.json",
+        "context": "Default free auto-router mapped to frontier escalation."
+      },
+      {
+        "repo": "C:/Users/frank/starlight/repos/ai-capability-registry",
+        "context": "Universal provider capability matrix and fallback routes."
+      }
+    ],
+    "created_at": "2026-08-25T00:00:00Z",
+    "updated_at": "2026-08-25T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-permissionless-agent-economy"
+      }
+    ]
+  },
+  {
+    "id": "pattern-evaluator-optimizer",
+    "type": "swarm_pattern",
+    "label": "Evaluator-Optimizer & Self-Refining Teleprompters",
+    "description": "Iterative feedback loop where an Optimizer agent generates candidate prompts or code, an Evaluator agent scores against a suite of assertion tests, and teleprompter algorithms compile few-shot examples into optimized execution weights.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "dspy",
+      "evaluator-optimizer",
+      "prompt-compilation",
+      "self-refinement"
+    ],
+    "status": "evergreen",
+    "maker_role": "Optimizer / Generator",
+    "checker_role": "Evaluator / Test Suite Runner",
+    "convergence_rule": "Iteration stops when test suite assertion pass rate >= 95.0% across 50 holdout validation prompts, or when performance score delta across 3 consecutive iterations is < 0.01.",
+    "failure_modes_mitigated": [
+      "Superficial prompt tuning without ground-truth metrics",
+      "Regression errors in multi-turn tool calling",
+      "Model drift across provider updates"
+    ],
+    "live_reference_file": "C:/Users/frank/starlight/repos/prompt-library/README.md",
+    "cross_repo_applications": [
+      {
+        "repo": "C:/Users/frank/starlight/repos/prompt-library",
+        "context": "Automated evaluation and ranking of system prompts."
+      }
+    ],
+    "created_at": "2026-08-25T00:00:00Z",
+    "updated_at": "2026-08-25T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "swarm-pattern-santa-loop"
+      }
+    ]
+  },
+  {
+    "id": "pattern-blackboard-workspace",
+    "type": "swarm_pattern",
+    "label": "Blackboard Architecture & Shared Observable Workspace",
+    "description": "A centralized, observable state repository where autonomous specialist agents read shared problem states, post intermediate discoveries, and react to changes asynchronously without tight peer-to-peer coupling.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "blackboard-architecture",
+      "shared-state",
+      "decoupled-swarms",
+      "observability"
+    ],
+    "status": "evergreen",
+    "maker_role": "Specialist Contributor Agents",
+    "checker_role": "Blackboard Controller / Arbiter",
+    "convergence_rule": "Arbiter verifies: 1) Zero unresolved merge conflicts, 2) All required field schemas validated via Zod, 3) 100% test pass rate, and 4) State SHA-256 checksum matches integration target.",
+    "failure_modes_mitigated": [
+      "N-squared communication explosion in large swarms",
+      "State desynchronization across parallel subagents",
+      "Lost intermediate discoveries during agent restarts"
+    ],
+    "live_reference_file": "C:/Users/frank/starlight/repos/starlight-agent-canvas/README.md",
+    "cross_repo_applications": [
+      {
+        "repo": "C:/Users/frank/starlight/repos/starlight-agent-canvas",
+        "context": "Visual blackboard surface for human and agent interaction."
+      },
+      {
+        "repo": "C:/Users/frank/starlight/repos/second-brain-vault",
+        "context": "Persistent markdown blackboard for daily knowledge logs."
+      }
+    ],
+    "created_at": "2026-08-25T00:00:00Z",
+    "updated_at": "2026-08-25T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-hierarchical-memory-paging"
+      }
+    ]
+  },
+  {
+    "id": "pattern-map-reduce-scanner",
+    "type": "swarm_pattern",
+    "label": "Map-Reduce Parallel Swarm Scanner",
+    "description": "Fan-out of dozens of lightweight scout agents to inspect distinct files, repositories, or API endpoints in parallel (Map), followed by a synthesis agent that aggregates, deduplicates, and condenses findings into a single coherent dossier (Reduce).",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "map-reduce",
+      "parallel-scouts",
+      "fan-out",
+      "estate-audit"
+    ],
+    "status": "evergreen",
+    "maker_role": "Scout Agents (Parallel Readers)",
+    "checker_role": "Synthesizer / Reducer Agent",
+    "convergence_rule": "100% of mapped repository paths return valid JSON AST receipts, and reducer verifies zero duplicate node IDs before compiling master estate index.",
+    "failure_modes_mitigated": [
+      "Sequential bottleneck in multi-repo scanning",
+      "Context window overflow from massive code dumps",
+      "Incomplete estate discovery"
+    ],
+    "live_reference_file": "C:/Users/frank/starlight/repos/starlight-knowledge-tree/scripts/index-estate.ts",
+    "cross_repo_applications": [
+      {
+        "repo": "C:/Users/frank/starlight/repos/starlight-knowledge-tree",
+        "context": "Estate indexing script scanning 221 repositories in parallel."
+      }
+    ],
+    "created_at": "2026-08-25T00:00:00Z",
+    "updated_at": "2026-08-25T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "pattern-adversarial-debate",
+    "type": "swarm_pattern",
+    "label": "Multi-Agent Adversarial Debate & Red-Teaming",
+    "description": "Two or more frontier models debate an architectural, security, or strategic proposition from opposing stances (Thesis vs Antithesis), moderated by an impartial Judge model that extracts synthesized truth (Synthesis).",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "adversarial-debate",
+      "red-team",
+      "dialectic-synthesis",
+      "cross-model"
+    ],
+    "status": "evergreen",
+    "maker_role": "Advocate & Red-Team Challenger",
+    "checker_role": "Judge / Synthesis Model",
+    "convergence_rule": "Judge model extracts non-contradicted propositions with >= 90/100 rubric score, generates reconciled AST diff, and verifies 0 logical contradictions against CANON_LOCKED.md.",
+    "failure_modes_mitigated": [
+      "Model confirmation bias and sycophancy",
+      "Overlooking subtle security vulnerabilities",
+      "Premature consensus on suboptimal architectures"
+    ],
+    "live_reference_file": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System/skills/thesis-debate/SKILL.md",
+    "cross_repo_applications": [
+      {
+        "repo": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System",
+        "context": "Thesis debate protocol for strategic investments and architecture."
+      }
+    ],
+    "created_at": "2026-08-25T00:00:00Z",
+    "updated_at": "2026-08-25T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "pattern-queue-backed-agent-workers",
+    "type": "swarm_pattern",
+    "label": "Queue-Backed Durable Agent Worker Swarm",
+    "description": "A distributed job queue (BullMQ/Redis or SQLite durable queue) decouples user request dispatch from execution. Workers pull tasks from priority queues with token rate-limit sharding, exponential backoff with jitter, and dead-letter queues for failed trajectories.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "queue-workers",
+      "concurrency",
+      "bullmq",
+      "backoff",
+      "resilience"
+    ],
+    "status": "evergreen",
+    "maker_role": "Queue Worker Agent (Isolated Task Runner)",
+    "checker_role": "Dead-Letter Sentinel & Supervisor",
+    "convergence_rule": "Task payload produces verifiable git commit or signed artifact hash, updates job state to completed with zero unhandled exceptions, and cleans up temporary worktree.",
+    "failure_modes_mitigated": [
+      "Provider 429 rate limit cascades",
+      "Process crash losing in-memory agent state",
+      "Uncontrolled memory spikes from simultaneous unthrottled spawns"
+    ],
+    "live_reference_file": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System/skills/queen/COORDINATION.md",
+    "cross_repo_applications": [
+      {
+        "repo": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System",
+        "context": "Coordinates multi-agent task queue and state handoffs."
+      },
+      {
+        "repo": "C:/Users/frank/starlight/repos/starlight-agent-canvas",
+        "context": "Visualizes job status, worker slots, and throughput telemetry."
+      }
+    ],
+    "created_at": "2026-09-09T00:00:00Z",
+    "updated_at": "2026-09-09T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-token-rate-limit-sharding"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-memory-guardian-oom-prevention"
+      }
+    ]
+  },
+  {
+    "id": "pattern-kv-cache-prefix-compaction",
+    "type": "swarm_pattern",
+    "label": "KV-Cache Prefix Alignment & Context Compaction",
+    "description": "Maximizes provider prompt caching (Anthropic 90% discount, Gemini context caching) by structuring agent prompts with an immutable static prefix (System contract, tools schema, core lore) followed by dynamic turn deltas, reducing inference latency by 80% and token cost by 75%.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "kv-cache",
+      "prompt-caching",
+      "cost-reduction",
+      "token-economics"
+    ],
+    "status": "evergreen",
+    "maker_role": "Context Compactor / Prompt Assembler",
+    "checker_role": "Cache Hit Telemetry Monitor",
+    "convergence_rule": "Prompt prefix hash remains identical across >= 90% of swarm turns, achieving verifiable cache hit rate >= 80% on supported model endpoints.",
+    "failure_modes_mitigated": [
+      "Compounding API billing from repeated full-history reinjection",
+      "Context processing latency spikes in multi-turn loops",
+      "Context truncation shedding critical rules"
+    ],
+    "live_reference_file": "C:/Users/frank/starlight/AGENTS.md",
+    "cross_repo_applications": [
+      {
+        "repo": "C:/Users/frank/starlight",
+        "context": "Static prefix contract enforced across all harness adapters."
+      },
+      {
+        "repo": "C:/Users/frank/starlight/repos/prompt-library",
+        "context": "Prompt templates compiled with deterministic static-header blocks."
+      }
+    ],
+    "created_at": "2026-09-09T00:00:00Z",
+    "updated_at": "2026-09-09T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-hierarchical-memory-paging"
+      }
+    ]
+  },
+  {
+    "id": "pattern-hierarchical-graph-partitioning",
+    "type": "swarm_pattern",
+    "label": "Hierarchical Graph Partitioning & 2-Hop Neighborhoods",
+    "description": "When the knowledge graph scales past thousands of entities, agents do not ingest the whole tree. The graph is sharded into domain clusters, and agents query only the 2-hop radius around target concepts via topological traversal or semantic vector filtering.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "graph-partitioning",
+      "subgraph-retrieval",
+      "scale",
+      "topological-query"
+    ],
+    "status": "evergreen",
+    "maker_role": "Subgraph Extractor (Query Router)",
+    "checker_role": "Partition Boundary Validator",
+    "convergence_rule": "Extracted subgraph context fits within <= 8,000 tokens while capturing 100% of direct prerequisite and unlock edges for target problem.",
+    "failure_modes_mitigated": [
+      "Context window exhaustion from loading whole-estate schemas",
+      "Irrelevant distractors degrading agent reasoning accuracy",
+      "Client-side bundle bloat on the web visualizer"
+    ],
+    "live_reference_file": "C:/Users/frank/starlight/repos/starlight-knowledge-tree/packages/graph-utils/src/index.ts",
+    "cross_repo_applications": [
+      {
+        "repo": "C:/Users/frank/starlight/repos/starlight-knowledge-tree",
+        "context": "Dynamic domain loader sharding data files."
+      },
+      {
+        "repo": "C:/Users/frank/starlight/repos/second-brain-vault",
+        "context": "Obsidian folder and tag partitioning."
+      }
+    ],
+    "created_at": "2026-09-09T00:00:00Z",
+    "updated_at": "2026-09-09T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-lancedb-columnar-vector-scale"
+      }
+    ]
+  },
+  {
+    "id": "pattern-agent-sandbox-isolation",
+    "type": "swarm_pattern",
+    "label": "Agent Sandbox Isolation & Blast Radius Containment",
+    "description": "Executes untrusted code, web scraping, and third-party dependencies inside isolated lightweight containers or WASM sandboxes with restricted network access, virtualized filesystems, and strict Phone Link / root directory search bans.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "sandbox",
+      "isolation",
+      "security",
+      "blast-radius",
+      "safety-gate"
+    ],
+    "status": "evergreen",
+    "maker_role": "Sandboxed Worker",
+    "checker_role": "Security Sentinel & Egress Auditor",
+    "convergence_rule": "Execution finishes within resource limits (CPU, memory, timeout), produces signed outputs in scratch directory, and leaves host filesystem completely unaltered.",
+    "failure_modes_mitigated": [
+      "Accidental deletion or corruption of host files",
+      "Malicious code execution from third-party repositories",
+      "Phone Link recursive sync triggering infinite mobile file downloads"
+    ],
+    "live_reference_file": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System/skills/safety-guard/SKILL.md",
+    "cross_repo_applications": [
+      {
+        "repo": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System",
+        "context": "Enforces execution safety gates and mutation permissions."
+      }
+    ],
+    "created_at": "2026-09-09T00:00:00Z",
+    "updated_at": "2026-09-09T00:00:00Z",
+    "edges": []
+  }
+]

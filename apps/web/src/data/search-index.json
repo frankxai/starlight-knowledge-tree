@@ -1,5 +1,929 @@
 [
   {
+    "id": "book-kleppmann-ddia",
+    "type": "book",
+    "label": "Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems",
+    "description": "Explores the fundamental trade-offs in data storage and processing technologies. Covers data models, storage engines (LSM-trees vs B-trees), encoding formats, replication (single-leader, multi-leader, leaderless), partitioning, transactions (ACID vs serializability), and distributed stream processing.",
+    "domain": "domain-systems-engineering",
+    "tags": [
+      "systems",
+      "databases",
+      "distributed-systems",
+      "replication",
+      "consensus",
+      "transactions"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-evans-ddd",
+    "type": "book",
+    "label": "Domain-Driven Design: Tackling Complexity in the Heart of Software",
+    "description": "Presents a systematic approach to domain-driven design, introducing ubiquitous language, bounded contexts, entities, value objects, aggregates, repositories, and context mapping to isolate subdomains.",
+    "domain": "domain-systems-engineering",
+    "tags": [
+      "software-architecture",
+      "domain-modeling",
+      "bounded-context",
+      "aggregate-roots",
+      "ubiquitous-language"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-martin-clean-architecture",
+    "type": "book",
+    "label": "Clean Architecture: A Craftsman's Guide to Software Structure and Design",
+    "description": "Details architectural boundaries, SOLID design principles, component cohesion, and the Dependency Rule (source code dependencies must point inward toward higher-level policies).",
+    "domain": "domain-systems-engineering",
+    "tags": [
+      "clean-architecture",
+      "solid-principles",
+      "dependency-inversion",
+      "software-design"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-wathan-refactoring-ui",
+    "type": "book",
+    "label": "Refactoring UI",
+    "description": "Tactical advice on designing interfaces from a developer perspective. Emphasizes establishing visual hierarchy with font weight and color rather than size, using strict spacing systems, starting with grayscale, and avoiding premature ornamentation.",
+    "domain": "domain-impeccable-design",
+    "tags": [
+      "ui-ux",
+      "design",
+      "tailwind",
+      "visual-hierarchy",
+      "typography",
+      "spacing"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-tufte-visual-display",
+    "type": "book",
+    "label": "The Visual Display of Quantitative Information",
+    "description": "Establishes foundational theory for statistical graphics. Explains the Data-Ink Ratio, elimination of chartjunk, graphical integrity, small multiples, and high-density data presentations.",
+    "domain": "domain-impeccable-design",
+    "tags": [
+      "data-visualization",
+      "information-design",
+      "data-ink-ratio",
+      "graphical-integrity",
+      "tufte"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-campbell-hero-thousand-faces",
+    "type": "book",
+    "label": "The Hero with a Thousand Faces",
+    "description": "Dissects world mythologies to uncover the monomyth: the hero ventures from the common world into a region of supernatural wonder, encounters fabulous forces, wins a decisive victory, and returns with the power to bestow boons upon fellow humans.",
+    "domain": "domain-arcanea-worldbuilding",
+    "tags": [
+      "mythology",
+      "monomyth",
+      "hero-journey",
+      "archetypes",
+      "campbell",
+      "storytelling"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-tolkien-on-fairy-stories",
+    "type": "book",
+    "label": "On Fairy-Stories",
+    "description": "Establishes the philosophical foundation of fantasy worldbuilding. Rejects mere escapism in favor of Recovery, Escape, Consolation, and Eucatastrophe (the sudden joyous turn). Argues that successful myth creates a Secondary World commanding Secondary Belief through complete internal coherence.",
+    "domain": "domain-arcanea-worldbuilding",
+    "tags": [
+      "worldbuilding",
+      "sub-creation",
+      "tolkien",
+      "secondary-belief",
+      "eucatastrophe",
+      "lore"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-helmer-seven-powers",
+    "type": "book",
+    "label": "7 Powers: The Foundations of Business Strategy",
+    "description": "Identifies the 7 fundamental powers: Scale Economies, Network Effects, Counter-Positioning, Switching Costs, Branding, Cornered Resource, and Process Power. Explains the Statics and Dynamics of value creation.",
+    "domain": "domain-creator-strategy-wealth",
+    "tags": [
+      "strategy",
+      "7-powers",
+      "business-strategy",
+      "economic-moat",
+      "network-effects",
+      "switching-costs"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-taleb-antifragile",
+    "type": "book",
+    "label": "Antifragile: Things That Gain from Disorder",
+    "description": "Introduces the Triad (Fragile - Robust - Antifragile). Argues that fragile entities break under volatility, robust entities resist, while antifragile entities grow stronger. Details Via Negativa (subtractive knowledge), Convexity (more upside than downside), and Skin in the Game.",
+    "domain": "domain-creator-strategy-wealth",
+    "tags": [
+      "antifragility",
+      "taleb",
+      "convexity",
+      "via-negativa",
+      "risk",
+      "resilience"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-grove-high-output-management",
+    "type": "book",
+    "label": "High Output Management",
+    "description": "Treats knowledge work through the lens of manufacturing operations. Teaches how to identify limiting steps, apply high-leverage activities, conduct operational reviews, and maximize total organizational output.",
+    "domain": "domain-creator-strategy-wealth",
+    "tags": [
+      "management",
+      "leverage",
+      "output",
+      "andy-grove",
+      "operations",
+      "okrs"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-muller-brockmann-grid",
+    "type": "book",
+    "label": "Grid Systems in Graphic Design",
+    "description": "The classic treatise on using modular grid systems to solve visual communication problems with systematic clarity, functional hierarchy, and proportional harmony.",
+    "domain": "domain-web-graphic-design",
+    "tags": [
+      "grid-systems",
+      "swiss-design",
+      "graphic-design",
+      "layout",
+      "typography"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-bringhurst-typography",
+    "type": "book",
+    "label": "The Elements of Typographic Style",
+    "description": "A poetic yet rigorously technical exploration of typography. Explains vertical and horizontal rhythm, modular type scales, optical adjustments, punctuation, and structural proportion.",
+    "domain": "domain-web-graphic-design",
+    "tags": [
+      "typography",
+      "letterforms",
+      "type-scale",
+      "kerning",
+      "rhythm"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-lupton-thinking-with-type",
+    "type": "book",
+    "label": "Thinking with Type",
+    "description": "Practical and theoretical framework on how type behaves on the page and screen. Covers anatomy of letterforms, tracking, kerning, leading, hierarchy, and grid layouts.",
+    "domain": "domain-web-graphic-design",
+    "tags": [
+      "typography",
+      "visual-communication",
+      "graphic-design",
+      "layout"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-vignelli-canon",
+    "type": "book",
+    "label": "The Vignelli Canon",
+    "description": "The iconic modernist design manual. Details 12 intangible principles (Semantics, Syntactics, Pragmatics, Discipline, Appropriateness, Ambiguity, History, Timelessness, Responsibility, Structure, Emotion) and tangible layout execution rules.",
+    "domain": "domain-web-graphic-design",
+    "tags": [
+      "vignelli",
+      "modernism",
+      "graphic-design",
+      "brand-identity",
+      "timeless-design"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-walter-design-for-emotion",
+    "type": "book",
+    "label": "Designing for Emotion",
+    "description": "Explains how emotional connection turns indifferent users into passionate advocates. Extends Maslow's hierarchy to UI: Functional -> Reliable -> Usable -> Delightful.",
+    "domain": "domain-web-graphic-design",
+    "tags": [
+      "emotional-design",
+      "ui-ux",
+      "delight",
+      "psychology",
+      "user-experience"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-schwartz-product-led-seo",
+    "type": "book",
+    "label": "Product-Led SEO",
+    "description": "A revolutionary shift from legacy SEO tactics to product-first organic discovery. Focuses on user intent, conversion-driven landing experiences, programmatic page generation, and brand search dominance.",
+    "domain": "domain-content-seo-publishing",
+    "tags": [
+      "seo",
+      "product-led-seo",
+      "search-strategy",
+      "programmatic-seo",
+      "information-gain"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-schwartz-breakthrough-advertising",
+    "type": "book",
+    "label": "Breakthrough Advertising",
+    "description": "The ultimate textbook on persuasion engineering. Explains that copy cannot create desire for a product; it can only channel the existing hopes, dreams, and fears of millions of people onto a specific product.",
+    "domain": "domain-content-seo-publishing",
+    "tags": [
+      "copywriting",
+      "advertising",
+      "market-awareness",
+      "market-sophistication",
+      "psychology"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-handley-everybody-writes",
+    "type": "book",
+    "label": "Everybody Writes",
+    "description": "A comprehensive manual for writing with clarity, empathy, and authority in the digital age. Details writing rules, storytelling structures, cadence, grammar, and publishing discipline.",
+    "domain": "domain-content-seo-publishing",
+    "tags": [
+      "content-writing",
+      "storytelling",
+      "editorial",
+      "brand-voice",
+      "content-creation"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-bly-copywriters-handbook",
+    "type": "book",
+    "label": "The Copywriter's Handbook",
+    "description": "The standard reference for professional copywriters. Covers the 4 U's formula for headlines (Urgent, Unique, Ultra-specific, Useful), FAB formula (Features, Advantages, Benefits), and lead generation mechanics.",
+    "domain": "domain-content-seo-publishing",
+    "tags": [
+      "copywriting",
+      "direct-response",
+      "headlines",
+      "lead-generation",
+      "marketing"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-hormozi-100m-offers",
+    "type": "book",
+    "label": "$100M Offers",
+    "description": "Teaches how to eliminate commoditization and price resistance by constructing asymmetric Grand Slam Offers. Formulates the Value Equation: Value = (Dream Outcome x Perceived Likelihood of Achievement) / (Time Delay x Effort & Sacrifice).",
+    "domain": "domain-social-attraction-funnels",
+    "tags": [
+      "offers",
+      "value-equation",
+      "pricing",
+      "monetization",
+      "grand-slam-offers"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-hormozi-100m-leads",
+    "type": "book",
+    "label": "$100M Leads",
+    "description": "The companion to $100M Offers detailing the Core 4 methods to get leads: Warm Outreach, Cold Outreach, Free Content (Organic), and Paid Ads. Details Hook-Retain-Reward content mechanics and Lead Magnet creation.",
+    "domain": "domain-social-attraction-funnels",
+    "tags": [
+      "lead-generation",
+      "marketing",
+      "distribution",
+      "lead-magnets",
+      "organic-content"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-brunson-dotcom-secrets",
+    "type": "book",
+    "label": "DotCom Secrets",
+    "description": "Lays out the fundamental architecture of online sales funnels: The Value Ladder (Lead Magnet -> Tripwire -> Core Offer -> High-Ticket Backend), Soap Opera Email Sequences, and One-Click Upsells.",
+    "domain": "domain-social-attraction-funnels",
+    "tags": [
+      "funnels",
+      "sales-funnels",
+      "value-ladder",
+      "conversion",
+      "opt-in"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-brunson-expert-secrets",
+    "type": "book",
+    "label": "Expert Secrets",
+    "description": "Teaches how to package knowledge into a charismatic leader identity, create a mass movement with a Future-Based Cause, and deliver high-converting VSL presentations using the Epiphany Bridge script.",
+    "domain": "domain-social-attraction-funnels",
+    "tags": [
+      "expert-secrets",
+      "storytelling",
+      "webinars",
+      "vsl",
+      "movement-building"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-cialdini-influence",
+    "type": "book",
+    "label": "Influence: The Psychology of Persuasion",
+    "description": "Identifies the fundamental psychological triggers that cause humans to say yes: Reciprocity, Commitment & Consistency, Social Proof, Authority, Liking, Scarcity, and Unity.",
+    "domain": "domain-social-attraction-funnels",
+    "tags": [
+      "psychology",
+      "persuasion",
+      "behavioral-economics",
+      "influence",
+      "social-proof"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-graham-intelligent-investor",
+    "type": "book",
+    "label": "The Intelligent Investor",
+    "description": "The cornerstone of modern finance. Delineates investment vs speculation. Introduces Mr. Market as an emotional counterparty and establishes the Margin of Safety as the central secret of enduring capital preservation.",
+    "domain": "domain-investing-wealth-capital",
+    "tags": [
+      "value-investing",
+      "margin-of-safety",
+      "benjamin-graham",
+      "mr-market",
+      "fundamental-analysis"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-munger-poor-charlies-almanack",
+    "type": "book",
+    "label": "Poor Charlie's Almanack",
+    "description": "Collects Charlie Munger's legendary talks on constructing a Latticework of Mental Models, the Psychology of Human Misjudgment, Inversion, and Circle of Competence.",
+    "domain": "domain-investing-wealth-capital",
+    "tags": [
+      "charlie-munger",
+      "mental-models",
+      "latticework",
+      "inversion",
+      "multidisciplinary-thinking"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-marks-most-important-thing",
+    "type": "book",
+    "label": "The Most Important Thing",
+    "description": "Distills Howard Marks' Oaktree memos into 20 essential chapters. Details Second-Level Thinking, understanding that risk is the probability of permanent capital loss, and leaning against market extremes.",
+    "domain": "domain-investing-wealth-capital",
+    "tags": [
+      "howard-marks",
+      "risk-management",
+      "market-cycles",
+      "second-level-thinking",
+      "contrarian"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-dalio-principles-debt-crises",
+    "type": "book",
+    "label": "Principles for Navigating Big Debt Crises",
+    "description": "The comprehensive mechanics of credit creation, asset bubbles, tightening phases, beautiful deleveragings, and currency devaluations across 48 historical crises.",
+    "domain": "domain-investing-wealth-capital",
+    "tags": [
+      "ray-dalio",
+      "debt-crises",
+      "credit-cycles",
+      "macroeconomics",
+      "deleveraging"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "book-naval-almanack",
+    "type": "book",
+    "label": "The Almanack of Naval Ravikant",
+    "description": "Collects Naval Ravikant's wisdom on sovereign wealth creation. Explains how to acquire Specific Knowledge, take on Accountability, and apply Permissionless Leverage (Code, Media, Autonomous Agent Swarms).",
+    "domain": "domain-investing-wealth-capital",
+    "tags": [
+      "naval",
+      "wealth-creation",
+      "permissionless-leverage",
+      "specific-knowledge",
+      "sovereignty"
+    ],
+    "href": "/library"
+  },
+  {
+    "id": "paper-attention-is-all-you-need",
+    "type": "paper",
+    "label": "Attention Is All You Need",
+    "description": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "transformers",
+      "attention",
+      "nlp",
+      "deep-learning"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-gpt3",
+    "type": "paper",
+    "label": "Language Models are Few-Shot Learners (GPT-3)",
+    "description": "We train GPT-3, an autoregressive language model with 175 billion parameters, and test its few-shot performance across NLP tasks. GPT-3 achieves strong performance on many benchmarks, often matching or exceeding the performance of fine-tuned models.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "llm",
+      "gpt",
+      "few-shot",
+      "scaling",
+      "pretraining",
+      "in-context-learning"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-generative-agents-stanford",
+    "type": "paper",
+    "label": "Generative Agents: Interactive Simulacra of Human Behavior",
+    "description": "We introduce generative agents—computational software agents that simulate believable human behavior. Generative agents draw on an architecture that extends a large language model to store a complete record of the agent's experiences using natural language, synthesize those memories over time into higher-level reflections, and retrieve them dynamically to plan behavior.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "agents",
+      "memory-stream",
+      "reflection",
+      "planning",
+      "simulacra",
+      "generative-agents"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-reflexion-shinn",
+    "type": "paper",
+    "label": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+    "description": "We present Reflexion, an approach that endows an agent with dynamic memory and self-reflection capabilities for reasoning, decision-making, and programming tasks. Reflexion agents verbally reflect on task feedback signals, then maintain their own reflective text in an episodic memory buffer to induce better decision-making in subsequent trials.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "reflexion",
+      "verbal-rl",
+      "self-correction",
+      "error-recalibration",
+      "adversarial-check"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-react-reasoning-acting",
+    "type": "paper",
+    "label": "ReAct: Synergizing Reasoning and Acting in Language Models",
+    "description": "We explore the use of LLMs to generate both reasoning traces and task-specific actions in an interleaved manner, allowing for greater synergy between the two: reasoning traces help the model induce, track, and update action plans as well as handle exceptions, while actions allow it to interface with and gather additional information from external sources.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "react",
+      "reasoning",
+      "tool-use",
+      "agent-trajectory",
+      "interleaved-loop"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-dspy-khattab",
+    "type": "paper",
+    "label": "DSPy: Compiling Declarative Language Model Calls",
+    "description": "We present DSPy, a framework for programming with foundation models that separates the flow of your program (modules) from the parameters (prompts and weights) of each step. DSPy synthesizes and optimizes prompts based on a pipeline specification and training examples.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "dspy",
+      "declarative-ai",
+      "compilation",
+      "teleprompter",
+      "prompt-optimization"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-voyager-wang",
+    "type": "paper",
+    "label": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
+    "description": "We introduce Voyager, the first LLM-powered embodied lifelong learning agent in Minecraft that continuously explores the world, acquires diverse skills, and makes novel discoveries without human intervention. Voyager consists of an automatic curriculum, a skill library of executable code, and an iterative prompting mechanism.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "voyager",
+      "skill-library",
+      "lifelong-learning",
+      "embodied-ai",
+      "open-ended-exploration"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-toolformer-schick",
+    "type": "paper",
+    "label": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+    "description": "We introduce Toolformer, a model trained to decide which APIs to call, when to call them, what arguments to pass, and how to best incorporate the results into future token prediction. This is done in a self-supervised way, requiring only a handful of human demonstrations.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "toolformer",
+      "tool-use",
+      "function-calling",
+      "self-supervised-learning"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-memgpt-packer",
+    "type": "paper",
+    "label": "MemGPT: Towards LLMs as Operating Systems",
+    "description": "Large language models are constrained by finite context windows. We present MemGPT (Memory-GPT), a system that intelligently manages different memory tiers in LLMs to effectively provide extended context within the LLM's limited context window, drawing inspiration from hierarchical memory management in operating systems.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "memgpt",
+      "hierarchical-memory",
+      "virtual-context",
+      "sleep-compute",
+      "long-term-memory"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-deepseek-r1",
+    "type": "paper",
+    "label": "DeepSeek-R1: Incentivizing Reasoning via Reinforcement Learning",
+    "description": "We introduce our first-generation reasoning models, DeepSeek-R1-Zero and DeepSeek-R1. DeepSeek-R1-Zero, a model trained via large-scale reinforcement learning without supervised fine-tuning (SFT) as a preliminary step, demonstrates remarkable reasoning capabilities. Through RL, DeepSeek-R1-Zero naturally emerges with numerous powerful and intriguing reasoning behaviors.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "deepseek-r1",
+      "reasoning",
+      "reinforcement-learning",
+      "grpo",
+      "self-verification",
+      "chain-of-thought"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-constitutional-ai-anthropic",
+    "type": "paper",
+    "label": "Constitutional AI: A Framework for Machine Learning with Principles",
+    "description": "We introduce Constitutional AI (CAI), a method for training a harmless AI assistant through self-improvement, without human feedback labels for harmfulness. The only human oversight is provided through a list of rules or principles, forming a constitution.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "constitutional-ai",
+      "alignment",
+      "rlaif",
+      "self-critique",
+      "safety-principles"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-hallmarks-of-aging-lopez-otin",
+    "type": "paper",
+    "label": "The Hallmarks of Aging",
+    "description": "Aging is characterized by a progressive loss of physiological integrity, leading to impaired function and increased vulnerability to death. We enumerate and describe the hallmarks of aging.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": [
+      "aging",
+      "longevity",
+      "biology",
+      "hallmarks"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-sleep-performance-walker",
+    "type": "paper",
+    "label": "Sleep and Cognitive Performance Research",
+    "description": "Sleep plays a critical role in cognitive performance, memory consolidation, and health. This body of work establishes the mechanisms and consequences of sleep insufficiency.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": [
+      "sleep",
+      "cognition",
+      "performance",
+      "neuroscience"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-fundamentals-astrodynamics",
+    "type": "paper",
+    "label": "Fundamentals of Astrodynamics (Bate, Mueller, White)",
+    "description": "A classic introduction to astrodynamics covering the two-body problem, orbital elements, orbital maneuvers, and preliminary orbit determination.",
+    "domain": "domain-space-builder",
+    "tags": [
+      "orbital-mechanics",
+      "astrodynamics",
+      "textbook",
+      "space-foundation"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-tree-of-thoughts",
+    "type": "paper",
+    "label": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+    "description": "Yao et al. paradigm enabling language models to explore multiple reasoning paths, self-evaluate intermediate choices, and perform lookahead or backtracking when problem solving.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "tree-of-thoughts",
+      "deliberate-reasoning",
+      "search-algorithms",
+      "lookahead"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "mcp-starlight-memory",
+    "type": "mcp_server",
+    "label": "Starlight Memory MCP Server",
+    "description": "The sovereign long-term memory server for Starlight swarms, providing semantic recall, vault reading, reflection retrieval, and episodic indexing.",
+    "tags": [
+      "mcp",
+      "memory",
+      "starlight-memory",
+      "semantic-search",
+      "vault-access",
+      "privacy-guardian"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "mcp-starlight-v0",
+    "type": "mcp_server",
+    "label": "Starlight V0 MCP Server",
+    "description": "Interface for generating, branding, iterating, and pulling production-grade V0 UI components directly into Starlight repositories.",
+    "tags": [
+      "mcp",
+      "v0",
+      "ui-generation",
+      "design-systems",
+      "tailwind",
+      "shadcn"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "mcp-context7",
+    "type": "mcp_server",
+    "label": "Context7 MCP Server",
+    "description": "Universal live retrieval MCP for frontier framework documentation, library APIs, and latest release specs without prompt bloat.",
+    "tags": [
+      "mcp",
+      "context7",
+      "live-docs",
+      "api-retrieval",
+      "auto-hook"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "mcp-browser-hub",
+    "type": "mcp_server",
+    "label": "CDP Multiplexer Browser Hub MCP",
+    "description": "Centralized Chrome DevTools Protocol multiplexer (:9223) that routes all agent web automation through an observable shared hub.",
+    "tags": [
+      "mcp",
+      "browser-hub",
+      "cdp",
+      "web-automation",
+      "ram-safety",
+      "observability"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "mcp-suno-server",
+    "type": "mcp_server",
+    "label": "Suno Music Generation MCP Server",
+    "description": "Automates Suno v4.5 audio generation, prompt compilation, stem extraction, and catalog ingestion for Starlight audio engines.",
+    "tags": [
+      "mcp",
+      "suno",
+      "audio-generation",
+      "music-production",
+      "stems"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "swarm-pattern-santa-loop",
+    "type": "swarm_pattern",
+    "label": "The Santa Method (Adversarial Maker ≠ Checker)",
+    "description": "A dual-agent convergence loop where a generator subagent (Fire Gate) creates the initial artifact, and an independent adversarial reviewer subagent (Crown Gate) ruthlessly audits against taste and canon until strict consensus is reached.",
+    "tags": [
+      "swarm-pattern",
+      "santa-loop",
+      "adversarial-review",
+      "maker-checker",
+      "convergence"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "swarm-pattern-dreaming-engine",
+    "type": "swarm_pattern",
+    "label": "The Dreaming Reflection Engine",
+    "description": "Scheduled sleep-time background agent (Letta pattern) that scans delta modifications in the vault, formulates higher-order epistemic questions, retrieves cited evidence, and generates verified reflection nodes.",
+    "tags": [
+      "swarm-pattern",
+      "dreaming",
+      "sleep-compute",
+      "generative-agents",
+      "reflection-tree",
+      "second-brain"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "swarm-pattern-sds-supervisor",
+    "type": "swarm_pattern",
+    "label": "Single Dev Server (SDS) Transient Compute",
+    "description": "Policy and supervisor tool ensuring local dev servers are treated as ephemeral compute with idle TTL, keeping memory free and directing persistent reviews to Vercel previews.",
+    "tags": [
+      "swarm-pattern",
+      "sds",
+      "dev-server",
+      "ephemeral-compute",
+      "vercel-gate"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "swarm-pattern-cross-model-shootout",
+    "type": "swarm_pattern",
+    "label": "Cross-Model Verification Shootout",
+    "description": "Maker and Checker must run on different model architectures/providers to eliminate shared blindspots (e.g., Kilo free-tier generates, Codex GPT-5.6 Sol or Claude Opus audits).",
+    "tags": [
+      "swarm-pattern",
+      "model-diversity",
+      "shootout",
+      "verification-gate"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "pattern-queen-conductor-worker",
+    "type": "swarm_pattern",
+    "label": "Hierarchical Queen-Conductor-Worker Swarm",
+    "description": "Decouples meta-strategic planning from task decomposition and task execution. The Queen manages the global objective, Conductor orchestrates worktrees, and Workers execute bounded tasks in parallel isolated branches.",
+    "tags": [
+      "orchestration",
+      "hierarchical-swarm",
+      "queen",
+      "conductor",
+      "worktree-isolation"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "pattern-semantic-model-router",
+    "type": "swarm_pattern",
+    "label": "Dynamic Semantic Dispatch & Model Routing",
+    "description": "Routes agent tasks dynamically based on cognitive load and cost tier: fast lightweight models for mechanical lookups and scans (Shift/Flow gates); high-reasoning frontier models for architecture, judgment, and adversarial reviews (Crown/Unity gates).",
+    "tags": [
+      "model-routing",
+      "cost-optimization",
+      "semantic-dispatch",
+      "latency-tuning"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "pattern-evaluator-optimizer",
+    "type": "swarm_pattern",
+    "label": "Evaluator-Optimizer & Self-Refining Teleprompters",
+    "description": "Iterative feedback loop where an Optimizer agent generates candidate prompts or code, an Evaluator agent scores against a suite of assertion tests, and teleprompter algorithms compile few-shot examples into optimized execution weights.",
+    "tags": [
+      "dspy",
+      "evaluator-optimizer",
+      "prompt-compilation",
+      "self-refinement"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "pattern-blackboard-workspace",
+    "type": "swarm_pattern",
+    "label": "Blackboard Architecture & Shared Observable Workspace",
+    "description": "A centralized, observable state repository where autonomous specialist agents read shared problem states, post intermediate discoveries, and react to changes asynchronously without tight peer-to-peer coupling.",
+    "tags": [
+      "blackboard-architecture",
+      "shared-state",
+      "decoupled-swarms",
+      "observability"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "pattern-map-reduce-scanner",
+    "type": "swarm_pattern",
+    "label": "Map-Reduce Parallel Swarm Scanner",
+    "description": "Fan-out of dozens of lightweight scout agents to inspect distinct files, repositories, or API endpoints in parallel (Map), followed by a synthesis agent that aggregates, deduplicates, and condenses findings into a single coherent dossier (Reduce).",
+    "tags": [
+      "map-reduce",
+      "parallel-scouts",
+      "fan-out",
+      "estate-audit"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "pattern-adversarial-debate",
+    "type": "swarm_pattern",
+    "label": "Multi-Agent Adversarial Debate & Red-Teaming",
+    "description": "Two or more frontier models debate an architectural, security, or strategic proposition from opposing stances (Thesis vs Antithesis), moderated by an impartial Judge model that extracts synthesized truth (Synthesis).",
+    "tags": [
+      "adversarial-debate",
+      "red-team",
+      "dialectic-synthesis",
+      "cross-model"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "pattern-queue-backed-agent-workers",
+    "type": "swarm_pattern",
+    "label": "Queue-Backed Durable Agent Worker Swarm",
+    "description": "A distributed job queue (BullMQ/Redis or SQLite durable queue) decouples user request dispatch from execution. Workers pull tasks from priority queues with token rate-limit sharding, exponential backoff with jitter, and dead-letter queues for failed trajectories.",
+    "tags": [
+      "queue-workers",
+      "concurrency",
+      "bullmq",
+      "backoff",
+      "resilience"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "pattern-kv-cache-prefix-compaction",
+    "type": "swarm_pattern",
+    "label": "KV-Cache Prefix Alignment & Context Compaction",
+    "description": "Maximizes provider prompt caching (Anthropic 90% discount, Gemini context caching) by structuring agent prompts with an immutable static prefix (System contract, tools schema, core lore) followed by dynamic turn deltas, reducing inference latency by 80% and token cost by 75%.",
+    "tags": [
+      "kv-cache",
+      "prompt-caching",
+      "cost-reduction",
+      "token-economics"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "pattern-hierarchical-graph-partitioning",
+    "type": "swarm_pattern",
+    "label": "Hierarchical Graph Partitioning & 2-Hop Neighborhoods",
+    "description": "When the knowledge graph scales past thousands of entities, agents do not ingest the whole tree. The graph is sharded into domain clusters, and agents query only the 2-hop radius around target concepts via topological traversal or semantic vector filtering.",
+    "tags": [
+      "graph-partitioning",
+      "subgraph-retrieval",
+      "scale",
+      "topological-query"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "pattern-agent-sandbox-isolation",
+    "type": "swarm_pattern",
+    "label": "Agent Sandbox Isolation & Blast Radius Containment",
+    "description": "Executes untrusted code, web scraping, and third-party dependencies inside isolated lightweight containers or WASM sandboxes with restricted network access, virtualized filesystems, and strict Phone Link / root directory search bans.",
+    "tags": [
+      "sandbox",
+      "isolation",
+      "security",
+      "blast-radius",
+      "safety-gate"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
     "id": "concept-linear-algebra",
     "type": "concept",
     "label": "Linear Algebra",
@@ -11,19 +935,7 @@
       "vectors",
       "matrices"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-gradient-descent"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-attention-mechanism"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-probability-statistics",
@@ -37,19 +949,7 @@
       "probability",
       "ai-foundation"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-gradient-descent"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-pretraining-objectives"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-calculus-optimization",
@@ -63,19 +963,7 @@
       "optimization",
       "ai-foundation"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-gradient-descent"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-backpropagation"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-gradient-descent",
@@ -88,23 +976,7 @@
       "training",
       "deep-learning"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-calculus-optimization"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-backpropagation"
-      },
-      {
-        "type": "unlocks",
-        "target": "skill-train-basic-nn"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-backpropagation",
@@ -117,19 +989,7 @@
       "deep-learning",
       "gradients"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-gradient-descent"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-neural-network-basics"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-neural-network-basics",
@@ -142,19 +1002,7 @@
       "neural-networks",
       "architecture"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-backpropagation"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-sequence-modeling"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-sequence-modeling",
@@ -169,19 +1017,7 @@
       "lstm",
       "transformers"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-neural-network-basics"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-attention-mechanism"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-attention-mechanism",
@@ -195,27 +1031,7 @@
       "deep-learning",
       "nlp"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-linear-algebra"
-      },
-      {
-        "type": "requires",
-        "target": "concept-sequence-modeling"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-transformer-architecture"
-      },
-      {
-        "type": "evidenced_by",
-        "target": "paper-attention-is-all-you-need"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-transformer-architecture",
@@ -229,27 +1045,7 @@
       "nlp",
       "foundation-models"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-attention-mechanism"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-pretraining-objectives"
-      },
-      {
-        "type": "unlocks",
-        "target": "skill-implement-transformer"
-      },
-      {
-        "type": "evidenced_by",
-        "target": "paper-attention-is-all-you-need"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-pretraining-objectives",
@@ -263,23 +1059,7 @@
       "llm",
       "training"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-transformer-architecture"
-      },
-      {
-        "type": "requires",
-        "target": "concept-probability-statistics"
-      },
-      {
-        "type": "unlocks",
-        "target": "skill-finetune-llm"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-rlhf",
@@ -293,23 +1073,7 @@
       "fine-tuning",
       "llm"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-pretraining-objectives"
-      },
-      {
-        "type": "unlocks",
-        "target": "skill-evaluate-alignment"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-constitutional-ai"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-constitutional-ai",
@@ -323,19 +1087,7 @@
       "anthropic",
       "safety"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-rlhf"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-interpretability"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-interpretability",
@@ -349,15 +1101,7 @@
       "alignment",
       "xai"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-mechanistic-interpretability"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-mechanistic-interpretability",
@@ -372,19 +1116,7 @@
       "alignment",
       "safety"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-interpretability"
-      },
-      {
-        "type": "requires",
-        "target": "concept-transformer-architecture"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-llm-prompting",
@@ -398,23 +1130,7 @@
       "few-shot",
       "chain-of-thought"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-transformer-architecture"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-tool-use"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-agent-loop"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-tool-use",
@@ -428,19 +1144,7 @@
       "function-calling",
       "llm"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-llm-prompting"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-agent-loop"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-agent-loop",
@@ -454,19 +1158,7 @@
       "planning",
       "tool-use"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-tool-use"
-      },
-      {
-        "type": "unlocks",
-        "target": "skill-build-agent"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-memory-context",
@@ -480,19 +1172,7 @@
       "rag",
       "context"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-agent-loop"
-      },
-      {
-        "type": "unlocks",
-        "target": "skill-multi-agent-coordination"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-keplers-laws",
@@ -505,19 +1185,7 @@
       "physics",
       "space-foundation"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-newtonian-gravity"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-orbital-elements"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-newtonian-gravity",
@@ -530,15 +1198,7 @@
       "orbital-mechanics",
       "space-foundation"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-keplers-laws"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-orbital-elements",
@@ -551,19 +1211,7 @@
       "space-foundation",
       "navigation"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-keplers-laws"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-hohmann-transfer"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-delta-v-budget",
@@ -576,23 +1224,7 @@
       "propulsion",
       "mission-design"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-hohmann-transfer"
-      },
-      {
-        "type": "requires",
-        "target": "concept-tsiolkovsky-rocket-equation"
-      },
-      {
-        "type": "unlocks",
-        "target": "skill-plan-trajectory"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-tsiolkovsky-rocket-equation",
@@ -605,19 +1237,7 @@
       "rocket-equation",
       "space-foundation"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-delta-v-budget"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-specific-impulse"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-specific-impulse",
@@ -630,19 +1250,7 @@
       "efficiency",
       "space-foundation"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-tsiolkovsky-rocket-equation"
-      },
-      {
-        "type": "unlocks",
-        "target": "skill-size-propulsion-system"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-hohmann-transfer",
@@ -655,19 +1263,7 @@
       "maneuvers",
       "delta-v"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-orbital-elements"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-delta-v-budget"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-systems-engineering",
@@ -680,15 +1276,7 @@
       "mission-design",
       "spacecraft"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "skill-design-cubesat-mission"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-hallmarks-of-aging",
@@ -702,23 +1290,7 @@
       "biology",
       "molecular-biology"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "evidenced_by",
-        "target": "paper-hallmarks-of-aging-lopez-otin"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-epigenetic-clocks"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-senescence"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-epigenetic-clocks",
@@ -732,19 +1304,7 @@
       "biomarkers",
       "longevity"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-hallmarks-of-aging"
-      },
-      {
-        "type": "unlocks",
-        "target": "skill-evaluate-longevity-intervention"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-plasticity",
@@ -758,19 +1318,7 @@
       "cognition",
       "plasticity"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-neuron-anatomy"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-learning-and-memory-consolidation"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-neuron-anatomy",
@@ -783,19 +1331,7 @@
       "biology",
       "foundation"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-action-potential"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-plasticity"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-action-potential",
@@ -808,19 +1344,7 @@
       "electrophysiology",
       "biology"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-neuron-anatomy"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-synaptic-transmission"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-working-memory",
@@ -833,15 +1357,7 @@
       "memory",
       "psychology"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "skill-design-cognitive-experiment"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-jobs-to-be-done",
@@ -855,19 +1371,7 @@
       "user-research",
       "innovation"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-product-market-fit"
-      },
-      {
-        "type": "unlocks",
-        "target": "skill-conduct-user-interview"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-product-market-fit",
@@ -881,19 +1385,7 @@
       "startup",
       "growth"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "requires",
-        "target": "concept-jobs-to-be-done"
-      },
-      {
-        "type": "unlocks",
-        "target": "skill-ship-mvp"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-content-leverage",
@@ -907,19 +1399,7 @@
       "leverage",
       "media"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "skill-write-high-signal-post"
-      },
-      {
-        "type": "unlocks",
-        "target": "skill-grow-audience"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-network-effects",
@@ -933,15 +1413,7 @@
       "moats",
       "startup"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-unit-economics"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-unit-economics",
@@ -955,15 +1427,7 @@
       "startup",
       "metrics"
     ],
-    "status": "stable",
-    "created_at": "2025-01-01T00:00:00Z",
-    "updated_at": "2025-01-01T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "skill-build-financial-model"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-distributed-consensus",
@@ -977,15 +1441,7 @@
       "raft",
       "paxos"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-replication-partitioning"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-replication-partitioning",
@@ -999,15 +1455,7 @@
       "sharding",
       "databases"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-acid-vs-base"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-acid-vs-base",
@@ -1021,10 +1469,7 @@
       "transactions",
       "consistency"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-domain-driven-design",
@@ -1038,15 +1483,7 @@
       "bounded-context",
       "architecture"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-dependency-inversion"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-dependency-inversion",
@@ -1059,10 +1496,7 @@
       "clean-architecture",
       "dependency-inversion"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-design-token-system",
@@ -1076,15 +1510,7 @@
       "tailwind",
       "typography"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-anti-slop-rules"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-anti-slop-rules",
@@ -1098,10 +1524,7 @@
       "design-standards",
       "visual-qa"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-shader-materials",
@@ -1116,15 +1539,7 @@
       "threejs",
       "liquid-glass"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-physics-spring-motion"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-physics-spring-motion",
@@ -1139,10 +1554,7 @@
       "animation",
       "micro-interactions"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-monomyth-journey",
@@ -1156,15 +1568,7 @@
       "hero-journey",
       "archetypes"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-ten-gates-progression"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-secondary-belief",
@@ -1178,15 +1582,7 @@
       "worldbuilding",
       "secondary-belief"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-ten-gates-progression"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-ten-gates-progression",
@@ -1201,19 +1597,7 @@
       "initiation",
       "alchemical-progression"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-alchemical-frequencies"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-origin-classes"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-alchemical-frequencies",
@@ -1228,10 +1612,7 @@
       "sound",
       "alchemy"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-origin-classes",
@@ -1245,10 +1626,7 @@
       "character-forge",
       "rpg-systems"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-video-as-code-remotion",
@@ -1262,15 +1640,7 @@
       "react",
       "programmatic-rendering"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-spring-animation-curves"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-spring-animation-curves",
@@ -1284,10 +1654,7 @@
       "remotion",
       "motion-design"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-audio-arrangement-curves",
@@ -1301,10 +1668,7 @@
       "music-theory",
       "mixing"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-economic-moat",
@@ -1318,15 +1682,7 @@
       "strategy",
       "pricing-power"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-convexity-and-via-negativa"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-convexity-and-via-negativa",
@@ -1340,15 +1696,7 @@
       "convexity",
       "via-negativa"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-content-factory-flywheel"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-content-factory-flywheel",
@@ -1362,15 +1710,7 @@
       "publishing",
       "high-output"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-prompt-engineering-monetization"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-prompt-engineering-monetization",
@@ -1384,10 +1724,7 @@
       "monetization",
       "digital-products"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-senescence",
@@ -1401,10 +1738,7 @@
       "biology",
       "longevity"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-learning-and-memory-consolidation",
@@ -1418,10 +1752,7 @@
       "memory-consolidation",
       "learning"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-synaptic-transmission",
@@ -1435,10 +1766,7 @@
       "neurotransmitters",
       "biology"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-sleep-and-cognition",
@@ -1452,10 +1780,7 @@
       "neuroscience",
       "health"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-modular-scale",
@@ -1469,15 +1794,7 @@
       "font-sizes",
       "design-system"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-baseline-grid"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-baseline-grid",
@@ -1491,10 +1808,7 @@
       "baseline-grid",
       "layout"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-aesthetic-usability-effect",
@@ -1508,15 +1822,7 @@
       "usability",
       "visual-design"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-micro-interactions"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-micro-interactions",
@@ -1530,10 +1836,7 @@
       "feedback",
       "animation"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-brand-dna-matrix",
@@ -1547,15 +1850,7 @@
       "identity",
       "design-tokens"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-vector-first-assets"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-vector-first-assets",
@@ -1569,10 +1864,7 @@
       "asset-pipeline",
       "crisp-rendering"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-topical-authority",
@@ -1586,15 +1878,7 @@
       "semantic-search",
       "entity-graphs"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-information-gain-score"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-information-gain-score",
@@ -1608,15 +1892,7 @@
       "seo",
       "original-research"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-programmatic-seo"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-programmatic-seo",
@@ -1630,10 +1906,7 @@
       "dynamic-routes",
       "database-driven"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-pillar-cluster-model",
@@ -1647,15 +1920,7 @@
       "topic-clusters",
       "internal-linking"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-mdx-publishing-pipeline"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-mdx-publishing-pipeline",
@@ -1669,10 +1934,7 @@
       "publishing",
       "content-layer"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-market-sophistication-stages",
@@ -1686,15 +1948,7 @@
       "positioning",
       "eugene-schwartz"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-direct-response-copywriting"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-direct-response-copywriting",
@@ -1708,10 +1962,7 @@
       "conversion",
       "headlines"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-organic-distribution-loops",
@@ -1725,15 +1976,7 @@
       "organic-growth",
       "viral-loops"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-scroll-stopping-hooks"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-scroll-stopping-hooks",
@@ -1747,15 +1990,7 @@
       "retention",
       "attention-capture"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-social-flywheel"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-social-flywheel",
@@ -1769,10 +2004,7 @@
       "multi-channel",
       "growth"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-grand-slam-offers",
@@ -1787,15 +2019,7 @@
       "value-equation",
       "monetization"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-value-ladder-architecture"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-value-ladder-architecture",
@@ -1809,15 +2033,7 @@
       "ascension",
       "customer-ltv"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-vsl-funnel-architecture"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-vsl-funnel-architecture",
@@ -1831,15 +2047,7 @@
       "conversion",
       "funnel-optimization"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-lifecycle-email-automation"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-lifecycle-email-automation",
@@ -1853,10 +2061,7 @@
       "drip-campaigns",
       "nurturing"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-margin-of-safety",
@@ -1870,19 +2075,7 @@
       "risk-management",
       "capital-preservation"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-circle-of-competence"
-      },
-      {
-        "type": "unlocks",
-        "target": "concept-intrinsic-value-dcf"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-circle-of-competence",
@@ -1896,10 +2089,7 @@
       "mental-models",
       "decision-making"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-intrinsic-value-dcf",
@@ -1913,10 +2103,7 @@
       "valuation",
       "cash-flow"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-second-level-thinking",
@@ -1930,15 +2117,7 @@
       "contrarian",
       "alpha"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-macro-credit-cycles"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-macro-credit-cycles",
@@ -1952,10 +2131,7 @@
       "ray-dalio",
       "liquidity"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-barbell-capital-allocation",
@@ -1969,15 +2145,7 @@
       "portfolio-allocation",
       "sovereign-wealth"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-permissionless-leverage"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-permissionless-leverage",
@@ -1991,15 +2159,7 @@
       "automation",
       "swarms"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-sovereign-wealth-engine"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-sovereign-wealth-engine",
@@ -2013,10 +2173,7 @@
       "compounding",
       "financial-sovereignty"
     ],
-    "status": "stable",
-    "created_at": "2026-08-23T00:00:00Z",
-    "updated_at": "2026-08-23T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-hierarchical-memory-paging",
@@ -2031,15 +2188,7 @@
       "virtual-memory",
       "long-term-state"
     ],
-    "status": "stable",
-    "created_at": "2026-08-25T00:00:00Z",
-    "updated_at": "2026-08-25T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-bi-temporal-knowledge-graph"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-bi-temporal-knowledge-graph",
@@ -2053,15 +2202,7 @@
       "fact-verification",
       "temporal-reasoning"
     ],
-    "status": "stable",
-    "created_at": "2026-08-25T00:00:00Z",
-    "updated_at": "2026-08-25T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-reciprocal-rank-fusion"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-reciprocal-rank-fusion",
@@ -2076,15 +2217,7 @@
       "vector-search",
       "retrieval-engineering"
     ],
-    "status": "stable",
-    "created_at": "2026-08-25T00:00:00Z",
-    "updated_at": "2026-08-25T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-episodic-reflection-buffer"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-episodic-reflection-buffer",
@@ -2098,15 +2231,7 @@
       "verbal-rl",
       "trajectory-learning"
     ],
-    "status": "stable",
-    "created_at": "2026-08-25T00:00:00Z",
-    "updated_at": "2026-08-25T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-sleep-time-consolidation"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-sleep-time-consolidation",
@@ -2120,15 +2245,7 @@
       "nightly-cron",
       "knowledge-distillation"
     ],
-    "status": "stable",
-    "created_at": "2026-08-25T00:00:00Z",
-    "updated_at": "2026-08-25T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-mcp-resource-grounding"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-mcp-resource-grounding",
@@ -2142,15 +2259,7 @@
       "context-hydration",
       "citation-grounding"
     ],
-    "status": "stable",
-    "created_at": "2026-08-25T00:00:00Z",
-    "updated_at": "2026-08-25T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-maker-checker-convergence"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-maker-checker-convergence",
@@ -2164,10 +2273,7 @@
       "verification-gate",
       "cross-model-eval"
     ],
-    "status": "stable",
-    "created_at": "2026-08-25T00:00:00Z",
-    "updated_at": "2026-08-25T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-permissionless-agent-economy",
@@ -2181,10 +2287,7 @@
       "autonomous-services",
       "monetization"
     ],
-    "status": "stable",
-    "created_at": "2026-08-25T00:00:00Z",
-    "updated_at": "2026-08-25T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   },
   {
     "id": "concept-token-rate-limit-sharding",
@@ -2198,15 +2301,7 @@
       "sharding",
       "high-availability"
     ],
-    "status": "stable",
-    "created_at": "2026-09-09T00:00:00Z",
-    "updated_at": "2026-09-09T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-memory-guardian-oom-prevention"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-memory-guardian-oom-prevention",
@@ -2220,15 +2315,7 @@
       "oom-prevention",
       "resource-governance"
     ],
-    "status": "stable",
-    "created_at": "2026-09-09T00:00:00Z",
-    "updated_at": "2026-09-09T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-incremental-static-regeneration-isr"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-incremental-static-regeneration-isr",
@@ -2243,15 +2330,7 @@
       "web-scale",
       "on-demand-revalidation"
     ],
-    "status": "stable",
-    "created_at": "2026-09-09T00:00:00Z",
-    "updated_at": "2026-09-09T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-entity-resolution-deduplication"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-entity-resolution-deduplication",
@@ -2265,15 +2344,7 @@
       "data-quality",
       "knowledge-graph"
     ],
-    "status": "stable",
-    "created_at": "2026-09-09T00:00:00Z",
-    "updated_at": "2026-09-09T00:00:00Z",
-    "edges": [
-      {
-        "type": "unlocks",
-        "target": "concept-lancedb-columnar-vector-scale"
-      }
-    ]
+    "href": "/tree"
   },
   {
     "id": "concept-lancedb-columnar-vector-scale",
@@ -2288,9 +2359,6 @@
       "zero-daemon",
       "scale"
     ],
-    "status": "stable",
-    "created_at": "2026-09-09T00:00:00Z",
-    "updated_at": "2026-09-09T00:00:00Z",
-    "edges": []
+    "href": "/tree"
   }
 ]

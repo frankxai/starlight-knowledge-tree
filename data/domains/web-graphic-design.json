@@ -1,0 +1,60 @@
+{
+  "id": "domain-web-graphic-design",
+  "type": "domain",
+  "label": "Web Design, Graphic Design & Spatial UI",
+  "description": "The canon of visual aesthetics, Swiss grid systems, typographic rhythm, emotional UI/UX, responsive interaction design, and brand identity architecture.",
+  "tags": ["web-design", "graphic-design", "typography", "grid-systems", "ui-ux", "swiss-design", "visual-hierarchy", "brand-identity"],
+  "status": "stable",
+  "created_at": "2026-08-23T00:00:00Z",
+  "updated_at": "2026-08-23T00:00:00Z",
+  "edges": [],
+  "root_problems": [
+    "problem-visual-slop-in-ai",
+    "problem-typographic-hierarchy-failure",
+    "problem-accessible-spatial-interfaces"
+  ],
+  "paths": [
+    {
+      "id": "path-design-typography-grids",
+      "label": "Typography & Grid Architecture",
+      "description": "Modular typographic scales, baseline grids, and Swiss layout composition.",
+      "nodes": [
+        "book-muller-brockmann-grid",
+        "book-bringhurst-typography",
+        "book-lupton-thinking-with-type",
+        "concept-modular-scale",
+        "concept-baseline-grid"
+      ]
+    },
+    {
+      "id": "path-design-emotional-uiux",
+      "label": "Emotional & Interaction Design",
+      "description": "Affordances, mental models, micro-interactions, and delight psychology.",
+      "nodes": [
+        "book-norman-design-everyday-things",
+        "book-walter-design-for-emotion",
+        "concept-aesthetic-usability-effect",
+        "concept-micro-interactions"
+      ]
+    },
+    {
+      "id": "path-design-brand-vector-systems",
+      "label": "Brand Identity & Vector Systems",
+      "description": "Vignelli modernist doctrine, vector-first assets, and immutable design tokens.",
+      "nodes": [
+        "book-vignelli-canon",
+        "concept-brand-dna-matrix",
+        "concept-vector-first-assets"
+      ]
+    }
+  ],
+  "seed_nodes": [
+    "book-muller-brockmann-grid",
+    "book-bringhurst-typography",
+    "book-norman-design-everyday-things",
+    "book-vignelli-canon",
+    "concept-modular-scale",
+    "concept-baseline-grid",
+    "concept-aesthetic-usability-effect"
+  ]
+}
