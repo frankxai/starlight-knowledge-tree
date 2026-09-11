@@ -10,15 +10,19 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "validate": "node dist/cli/validate.js",
+    "validate": "npm run build && node dist/cli/validate.js",
+    "validate:fiction": "npm run build && node dist/cli/validate-fiction.js",
+    "test": "npm run build && node --test test/*.test.js",
     "lint": "eslint src"
   },
   "dependencies": {
-    "@starlight/graph-schema": "workspace:*",
+    "@starlight/graph-schema": "0.1.0",
     "zod": "^3.22.0"
   },
   "devDependencies": {
     "typescript": "^5.3.0",
-    "@types/node": "^20.0.0"
+    "@types/node": "^20.0.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
   }
 }

@@ -1,0 +1,282 @@
+{
+  "schema_version": "0.1.0",
+  "generated_at": "2026-07-18T21:18:03Z",
+  "worlds": [
+    {
+      "id": "world-jujutsu-kaisen",
+      "label": "Jujutsu Kaisen",
+      "work_title": "Jujutsu Kaisen",
+      "creator": "Gege Akutami",
+      "medium": "manga",
+      "first_publication_year": 2018,
+      "original_summary": "A comparative reference for studying specialist hazard work, individualized combat capability, institutional training, and the conversion of human distress into supernatural danger. This summary is original analysis, not copied lore.",
+      "sources": [
+        {
+          "url": "https://www.viz.com/jujutsu-kaisen",
+          "source_title": "Jujutsu Kaisen official series page",
+          "publisher": "VIZ Media",
+          "evidence_type": "official_publisher",
+          "accessed_at": "2026-07-18T21:18:03Z",
+          "verification_status": "metadata_only",
+          "license_scope": "Official reference page; metadata and editorial comparison only.",
+          "rights_reviewed_at": "2026-07-18",
+          "review_reference": "docs/fiction-world-intelligence-architecture.md#rights-and-provenance"
+        }
+      ],
+      "rights": {
+        "tier": "editorial_reference",
+        "allowed_uses": ["factual identification", "comparative criticism", "original abstract pattern analysis"],
+        "blocked_uses": ["copied lore text", "franchise terminology in Arcanea canon", "character or technique imitation"],
+        "notes": "Names and source-specific expression remain external reference material and never become Arcanea entities."
+      }
+    },
+    {
+      "id": "world-harry-potter",
+      "label": "Harry Potter",
+      "work_title": "Harry Potter series",
+      "creator": "J. K. Rowling",
+      "medium": "novel",
+      "first_publication_year": 1997,
+      "original_summary": "A comparative reference for the social power of school belonging, cohort identity, progressive education, hidden-world adjacency, and the tension between childhood wonder and institutional failure. This is original analysis.",
+      "sources": [
+        {
+          "url": "https://www.jkrowling.com/book/harry-potter-philosophers-stone/",
+          "source_title": "Harry Potter and the Philosopher's Stone official book page",
+          "publisher": "J. K. Rowling official site",
+          "evidence_type": "official_creator",
+          "accessed_at": "2026-07-18T21:18:03Z",
+          "verification_status": "metadata_only",
+          "license_scope": "Official reference page; metadata and editorial comparison only.",
+          "rights_reviewed_at": "2026-07-18",
+          "review_reference": "docs/fiction-world-intelligence-architecture.md#rights-and-provenance"
+        }
+      ],
+      "rights": {
+        "tier": "editorial_reference",
+        "allowed_uses": ["factual identification", "comparative criticism", "original abstract pattern analysis"],
+        "blocked_uses": ["copied school structures", "copied spells or artifacts", "franchise names used as Arcanea product labels"],
+        "notes": "The Atlas may explain why the institution works for readers but cannot reproduce its distinctive expression."
+      }
+    },
+    {
+      "id": "world-inheritance-cycle",
+      "label": "The Inheritance Cycle",
+      "work_title": "The Inheritance Cycle",
+      "creator": "Christopher Paolini",
+      "medium": "novel",
+      "first_publication_year": 2002,
+      "original_summary": "A comparative reference for reciprocal human-dragon bonds, shared risk, interspecies ethics, inherited institutions, and the emotional cost of power that depends on another free being. This is original analysis.",
+      "sources": [
+        {
+          "url": "https://www.paolini.net/biographies/christopher-paolini-full/inheritance-cycle/",
+          "source_title": "The Inheritance Cycle creator reference page",
+          "publisher": "Paolini.net",
+          "evidence_type": "official_creator",
+          "accessed_at": "2026-07-18T21:18:03Z",
+          "verification_status": "metadata_only",
+          "license_scope": "Creator reference page; metadata and editorial comparison only.",
+          "rights_reviewed_at": "2026-07-18",
+          "review_reference": "docs/fiction-world-intelligence-architecture.md#rights-and-provenance"
+        }
+      ],
+      "rights": {
+        "tier": "editorial_reference",
+        "allowed_uses": ["factual identification", "comparative criticism", "original abstract pattern analysis"],
+        "blocked_uses": ["copied bond rules", "copied organizations or languages", "character and plot imitation"],
+        "notes": "Arcanea may study reciprocal bond appeal while using its own dragons, institutions, costs, history, and language."
+      }
+    }
+  ],
+  "patterns": [
+    {
+      "id": "pattern-hazard-profession",
+      "label": "Hazard as profession",
+      "kind": "social_role",
+      "definition": "A society turns an invisible supernatural danger into trained fieldwork with recruitment, doctrine, triage, rank, casualties, politics, and competing ideas about what protection permits.",
+      "human_appeal": "The character gains a legible identity and peer culture while every assignment tests whether the institution deserves loyalty.",
+      "mechanics": ["hazard detection", "specialized response teams", "individual capability", "institutional doctrine", "visible personal cost"],
+      "example_worlds": ["world-jujutsu-kaisen"],
+      "expression_exclusions": ["Do not copy source-specific energy, technique, domain, clan, school, costume, or rank vocabulary."]
+    },
+    {
+      "id": "pattern-school-belonging",
+      "label": "School as belonging machine",
+      "kind": "institution",
+      "definition": "Education becomes a social world: cohorts, mentors, rivalries, rooms, ceremonies, rules, inherited prejudice, and private places where students decide who they are beyond the curriculum.",
+      "human_appeal": "Readers receive both a home and a pressure chamber, with recurring places and relationships that make growth emotionally measurable.",
+      "mechanics": ["cohort identity", "mentor access", "progressive mastery", "institutional secrets", "peer rivalry and loyalty"],
+      "example_worlds": ["world-harry-potter"],
+      "expression_exclusions": ["Do not copy sorting rituals, house stereotypes, point systems, school sports, architecture, artifacts, or spell vocabulary."]
+    },
+    {
+      "id": "pattern-reciprocal-dragon-bond",
+      "label": "Reciprocal sovereign bond",
+      "kind": "bond",
+      "definition": "Power emerges from an enduring bond between two self-directed beings. Neither is equipment; consent, disagreement, vulnerability, shared consequence, and unequal lifespans shape every use of power.",
+      "human_appeal": "The fantasy of exceptional partnership is balanced by intimacy, obligation, and the risk of losing someone who can refuse you.",
+      "mechanics": ["mutual consent", "shared consequence", "asymmetric knowledge", "bond-specific capability", "conflict between partners"],
+      "example_worlds": ["world-inheritance-cycle"],
+      "expression_exclusions": ["Do not copy source-specific telepathy, language, rider order, artifacts, political history, or plot sequence."]
+    }
+  ],
+  "benchmark_dimensions": [
+    {
+      "id": "benchmark-spoken-identity",
+      "label": "Spoken identity",
+      "layer": "language",
+      "evaluation_question": "Can a character claim, fear, mock, teach, or whisper the term naturally without stopping to explain the lore document behind it?",
+      "failure_signals": ["modifier stacks", "technical substrate language", "every culture using the same register", "a label that only works as a heading"],
+      "evidence_required": ["read-aloud transcript", "dialogue examples across at least three social registers", "inflection and plural forms"]
+    },
+    {
+      "id": "benchmark-linguistic-depth",
+      "label": "Linguistic depth",
+      "layer": "language",
+      "evaluation_question": "Does the term belong to a documented word family, culture, historical change, and speech community rather than a random fantasy syllable generator?",
+      "failure_signals": ["fake etymology added after selection", "repeated pseudo-Latin suffixes", "random apostrophes", "identical phonology across unrelated cultures"],
+      "evidence_required": ["root and sound rules", "formal and spoken variants", "speaker map", "collision research"]
+    },
+    {
+      "id": "benchmark-character-choice-pressure",
+      "label": "Character choice pressure",
+      "layer": "character",
+      "evaluation_question": "Does the world system force decisions that reveal this character, or does the character merely demonstrate mechanics and carry exposition?",
+      "failure_signals": ["occupation replacing personality", "mandatory trauma used as depth", "power solves the same problem every time", "choices without relationship cost"],
+      "evidence_required": ["three pressure scenes", "at least one costly refusal", "relationship change caused by a decision"]
+    },
+    {
+      "id": "benchmark-social-embedding",
+      "label": "Social embedding",
+      "layer": "world",
+      "evaluation_question": "If this power or institution exists, can we see its effects on work, law, status, education, family, crime, medicine, faith, and ordinary language?",
+      "failure_signals": ["magic exists only during fights", "institutions without budgets or incentives", "ordinary people have no opinion", "identical rules across every place"],
+      "evidence_required": ["stakeholder map", "one ordinary-life scene", "one institutional conflict", "one unintended economic or legal consequence"]
+    },
+    {
+      "id": "benchmark-progression-payoff",
+      "label": "Progression payoff",
+      "layer": "narrative",
+      "evaluation_question": "Does each threshold change what the character can attempt, what others expect, and which moral problem becomes unavoidable?",
+      "failure_signals": ["rank as a larger number", "new abilities without changed responsibility", "training montage without changed relationships", "final mastery repeating the first solution at larger scale"],
+      "evidence_required": ["threshold map", "capability delta", "social delta", "new failure mode at each major threshold"]
+    },
+    {
+      "id": "benchmark-transmedia-memory",
+      "label": "Transmedia memory",
+      "layer": "transmedia",
+      "evaluation_question": "Can the concept retain its identity in prose, dialogue, interface copy, an icon, a silhouette, sound, and a short scene without leaning on another franchise?",
+      "failure_signals": ["recognizable only through exposition", "visual shorthand copied from a reference", "name and image telling different stories", "generic trailer language"],
+      "evidence_required": ["one-sentence identity", "spoken line", "interface label", "original visual or sonic motif", "derivative-distance review"]
+    }
+  ],
+  "translations": [
+    {
+      "id": "translation-shadow-hazard-response",
+      "source_worlds": ["world-jujutsu-kaisen"],
+      "source_patterns": ["pattern-hazard-profession"],
+      "arcanea_anchors": ["Void/Spirit", "Malachar", "the Ten Gates", "consent and restoration"],
+      "retained_intents": ["specialists confront hazards born from human damage", "each practitioner develops a personal embodied method", "the institution creates moral pressure"],
+      "rejected_expression": ["franchise-specific energy and technique vocabulary", "copied school, clan, rank, costume, and territory mechanics"],
+      "original_inversion": "Arcanean Shadow is not darkness and is not automatically a monster species. It is Void stripped of Spirit. The highest form of response therefore restores agency and relation when possible instead of treating extermination as the default proof of strength.",
+      "canon_status": "research_only"
+    },
+    {
+      "id": "translation-academy-belonging",
+      "source_worlds": ["world-harry-potter"],
+      "source_patterns": ["pattern-school-belonging"],
+      "arcanea_anchors": ["the Seven Houses", "the Ten Gates", "Arcanean ranks", "the Five Elements"],
+      "retained_intents": ["school creates identity and durable peer relationships", "progress is visible across years and thresholds"],
+      "rejected_expression": ["copied sorting, point scoring, spells, sports, artifacts, architecture, and school governance"],
+      "original_inversion": "Arcanean Houses are not personality boxes. Students may belong through lineage, chosen practice, debt, political sponsorship, or refuge, and Gate progress can move a student toward a different community rather than confirming a childhood label.",
+      "canon_status": "research_only"
+    },
+    {
+      "id": "translation-sovereign-dragon-bond",
+      "source_worlds": ["world-inheritance-cycle"],
+      "source_patterns": ["pattern-reciprocal-dragon-bond"],
+      "arcanea_anchors": ["Bonded Origin Class", "Akamoto", "Fire", "Wind", "Godbeast ethics"],
+      "retained_intents": ["a dragon partnership changes identity and capability", "the bond creates intimacy, disagreement, and shared consequence"],
+      "rejected_expression": ["copied rider order, bond telepathy, language magic, artifacts, political history, and quest sequence"],
+      "original_inversion": "An Arcanean dragon bond never grants ownership or automatic obedience. A dragon may withhold power, leave a mission, reject an institution, or become the character whose moral judgment forces the human partner to change.",
+      "canon_status": "research_only"
+    }
+  ],
+  "naming_candidates": [
+    {
+      "id": "name-shadow-corrupted-resonance",
+      "label": "shadow-corrupted resonance",
+      "kind": "condition",
+      "register": "scholarly",
+      "canon_status": "research_only",
+      "decision": "reject",
+      "clearance": "unsearched",
+      "score": {
+        "mouthfeel": 1,
+        "semantic_charge": 2,
+        "role_clarity": 2,
+        "distinctiveness": 1,
+        "inflection_range": 1,
+        "derivative_distance": 4
+      },
+      "flags": ["modifier stack", "diagnosis mistaken for identity", "generic fantasy vocabulary", "weak spoken rhythm"],
+      "notes": "This can survive as an explanatory gloss in a technical note, but it should never be the public name of a person, class, threat, or discipline."
+    },
+    {
+      "id": "name-blackwake",
+      "label": "Blackwake",
+      "kind": "phenomenon",
+      "register": "field",
+      "canon_status": "research_only",
+      "decision": "review",
+      "clearance": "unsearched",
+      "score": {
+        "mouthfeel": 5,
+        "semantic_charge": 4,
+        "role_clarity": 3,
+        "distinctiveness": 3,
+        "inflection_range": 4,
+        "derivative_distance": 4
+      },
+      "flags": ["requires trademark, fiction, game, and search collision review", "must not imply that Nero or ordinary darkness is evil"],
+      "notes": "A compact field term for the residue left by a Shadow event, not a person-class name and not canon. Its value is the naming shape: one image-bearing word with a clean spoken rhythm."
+    },
+    {
+      "id": "name-blackwake-arcan",
+      "label": "Blackwake Arcan",
+      "kind": "person",
+      "register": "field",
+      "canon_status": "research_only",
+      "decision": "review",
+      "clearance": "unsearched",
+      "score": {
+        "mouthfeel": 5,
+        "semantic_charge": 4,
+        "role_clarity": 4,
+        "distinctiveness": 4,
+        "inflection_range": 3,
+        "derivative_distance": 5
+      },
+      "flags": ["requires clearance before public use", "must name a trained responder rather than an afflicted person"],
+      "notes": "A research candidate showing the same compact discipline-plus-profession grammar that makes strong modern class labels memorable. It is not Arcanea canon and should compete against other coined families in dialogue tests."
+    },
+    {
+      "id": "name-the-severance",
+      "label": "the Severance",
+      "kind": "condition",
+      "register": "formal",
+      "canon_status": "research_only",
+      "decision": "review",
+      "clearance": "unsearched",
+      "score": {
+        "mouthfeel": 4,
+        "semantic_charge": 4,
+        "role_clarity": 3,
+        "distinctiveness": 2,
+        "inflection_range": 3,
+        "derivative_distance": 4
+      },
+      "flags": ["broad existing usage likely", "formal process name only"],
+      "notes": "A possible formal term for Void losing Spirit. It is clearer than the diagnostic phrase but still needs collision research and should be paired with distinct field and spoken registers."
+    }
+  ]
+}

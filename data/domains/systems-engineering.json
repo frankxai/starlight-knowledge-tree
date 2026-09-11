@@ -1,0 +1,58 @@
+{
+  "id": "domain-systems-engineering",
+  "type": "domain",
+  "label": "Systems & Distributed Engineering",
+  "description": "Foundations and advanced practices of scalable software architecture, distributed data systems, event-driven pipelines, and cloud-native workflows.",
+  "tags": ["systems", "distributed-systems", "software-architecture", "databases", "event-driven", "performance"],
+  "status": "stable",
+  "created_at": "2026-08-23T00:00:00Z",
+  "updated_at": "2026-08-23T00:00:00Z",
+  "edges": [],
+  "root_problems": [
+    "problem-distributed-consensus",
+    "problem-data-consistency-at-scale",
+    "problem-eventual-consistency-tradeoffs"
+  ],
+  "paths": [
+    {
+      "id": "path-systems-data-intensive",
+      "label": "Data-Intensive Applications",
+      "description": "Storage engines, replication, partitioning, and distributed transactions.",
+      "nodes": [
+        "book-kleppmann-ddia",
+        "concept-distributed-consensus",
+        "concept-replication-partitioning",
+        "concept-acid-vs-base"
+      ]
+    },
+    {
+      "id": "path-systems-architecture-clean",
+      "label": "Clean Architecture & Domain Design",
+      "description": "Boundary separation, aggregate roots, dependency inversion.",
+      "nodes": [
+        "book-martin-clean-architecture",
+        "book-evans-ddd",
+        "concept-domain-driven-design",
+        "concept-dependency-inversion"
+      ]
+    },
+    {
+      "id": "path-systems-cloud-and-ephemeral",
+      "label": "Cloud-First & Transient Compute",
+      "description": "Single Dev Server (SDS), Vercel preview gates, ephemeral execution.",
+      "nodes": [
+        "swarm-pattern-sds-supervisor",
+        "workflow-vercel-preview-gate",
+        "tool-sds-supervisor"
+      ]
+    }
+  ],
+  "seed_nodes": [
+    "book-kleppmann-ddia",
+    "book-martin-clean-architecture",
+    "book-evans-ddd",
+    "concept-distributed-consensus",
+    "concept-replication-partitioning",
+    "swarm-pattern-sds-supervisor"
+  ]
+}

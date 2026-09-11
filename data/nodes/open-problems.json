@@ -5,15 +5,25 @@
     "label": "Alignment of Superhuman AI Systems",
     "description": "How do we ensure that AI systems that surpass human-level capability in a domain remain aligned with human values and intent, including in situations their designers did not anticipate?",
     "domain": "domain-ai-architect",
-    "tags": ["alignment", "safety", "superintelligence", "x-risk"],
+    "tags": [
+      "alignment",
+      "safety",
+      "superintelligence",
+      "x-risk"
+    ],
     "status": "stable",
     "difficulty": "unsolved",
     "prize_or_benchmark": null,
-    "related_papers": ["paper-attention-is-all-you-need"],
+    "related_papers": [
+      "paper-attention-is-all-you-need"
+    ],
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "part_of", "target": "domain-ai-architect" }
+      {
+        "type": "part_of",
+        "target": "domain-ai-architect"
+      }
     ]
   },
   {
@@ -22,7 +32,12 @@
     "label": "Reliable Multi-Step Reasoning in LLMs",
     "description": "Language models still fail in systematic ways on multi-step mathematical and logical reasoning. What architectural or training changes would produce reliably correct reasoning?",
     "domain": "domain-ai-architect",
-    "tags": ["reasoning", "llm", "reliability", "math"],
+    "tags": [
+      "reasoning",
+      "llm",
+      "reliability",
+      "math"
+    ],
     "status": "stable",
     "difficulty": "hard",
     "prize_or_benchmark": "GSM8K, MATH, ARC-Challenge",
@@ -30,7 +45,10 @@
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "part_of", "target": "domain-ai-architect" }
+      {
+        "type": "part_of",
+        "target": "domain-ai-architect"
+      }
     ]
   },
   {
@@ -39,7 +57,12 @@
     "label": "Safe Agentic AI in Open Environments",
     "description": "How do we build AI agents that act safely and reversibly in open-ended environments where mistakes have real-world consequences?",
     "domain": "domain-ai-architect",
-    "tags": ["agents", "safety", "alignment", "agentic-ai"],
+    "tags": [
+      "agents",
+      "safety",
+      "alignment",
+      "agentic-ai"
+    ],
     "status": "stable",
     "difficulty": "hard",
     "prize_or_benchmark": null,
@@ -47,7 +70,379 @@
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "part_of", "target": "domain-ai-architect" }
+      {
+        "type": "part_of",
+        "target": "domain-ai-architect"
+      }
+    ]
+  },
+  {
+    "id": "problem-distributed-consensus",
+    "type": "open_problem",
+    "label": "Zero-Overhead Distributed Consensus in Heterogeneous Agent Mesh",
+    "description": "How to achieve Byzantine fault-tolerant state agreement and memory consistency across independent local and cloud agents without latency bottlenecking.",
+    "domain": "domain-systems-engineering",
+    "tags": [
+      "distributed-systems",
+      "consensus",
+      "state-sync",
+      "agent-mesh"
+    ],
+    "status": "stable",
+    "difficulty": "hard",
+    "prize_or_benchmark": "Raft, Paxos, Multi-Agent Attestation",
+    "related_papers": [],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-systems-engineering"
+      }
+    ]
+  },
+  {
+    "id": "problem-data-consistency-at-scale",
+    "type": "open_problem",
+    "label": "Data Consistency Across Multi-Vault Storage",
+    "description": "Maintaining ACID-level integrity across Obsidian markdown, SQLite indices, and vector embeddings during high-frequency concurrent writes.",
+    "domain": "domain-systems-engineering",
+    "tags": [
+      "data-consistency",
+      "databases",
+      "storage",
+      "second-brain"
+    ],
+    "status": "stable",
+    "difficulty": "hard",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-systems-engineering"
+      }
+    ]
+  },
+  {
+    "id": "problem-eventual-consistency-tradeoffs",
+    "type": "open_problem",
+    "label": "Eventual Consistency Tradeoffs in Offline-First Swarms",
+    "description": "Designing CRDTs and merge strategies that resolve contradictory agent insights without human intervention.",
+    "domain": "domain-systems-engineering",
+    "tags": [
+      "eventual-consistency",
+      "crdt",
+      "offline-first",
+      "swarms"
+    ],
+    "status": "stable",
+    "difficulty": "hard",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-systems-engineering"
+      }
+    ]
+  },
+  {
+    "id": "problem-visual-slop-in-ai",
+    "type": "open_problem",
+    "label": "Elimination of AI Visual Slop & Generic Aesthetic Drift",
+    "description": "How to constrain generative models to strictly observe typographic grids, vector-first logos, exact aspect ratios, and bespoke brand taste without fallback to generic glossy 3D slop.",
+    "domain": "domain-impeccable-design",
+    "tags": [
+      "design",
+      "anti-slop",
+      "taste",
+      "visual-ai"
+    ],
+    "status": "stable",
+    "difficulty": "hard",
+    "prize_or_benchmark": "Awwwards SOTD / Godly standard",
+    "related_papers": [],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-impeccable-design"
+      }
+    ]
+  },
+  {
+    "id": "problem-typographic-hierarchy-failure",
+    "type": "open_problem",
+    "label": "Automated Typographic Hierarchy Verification",
+    "description": "Algorithmic detection of weak contrast, improper scale jumps, and ragged baseline alignment in AI-generated web layouts.",
+    "domain": "domain-impeccable-design",
+    "tags": [
+      "typography",
+      "visual-hierarchy",
+      "automated-qa"
+    ],
+    "status": "stable",
+    "difficulty": "accessible",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-impeccable-design"
+      }
+    ]
+  },
+  {
+    "id": "problem-accessible-spatial-interfaces",
+    "type": "open_problem",
+    "label": "Accessible High-Performance Spatial Canvases",
+    "description": "Bridging 3D WebGL / Three.js node graphs with complete keyboard accessibility, screen reader ARIA trees, and 60fps rendering on low-power mobile devices.",
+    "domain": "domain-impeccable-design",
+    "tags": [
+      "spatial-ui",
+      "webgl",
+      "accessibility",
+      "canvas"
+    ],
+    "status": "stable",
+    "difficulty": "hard",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-impeccable-design"
+      }
+    ]
+  },
+  {
+    "id": "problem-narrative-drift-across-agents",
+    "type": "open_problem",
+    "label": "Prevention of Mythic & Narrative Canon Drift",
+    "description": "Ensuring multiple independent authoring subagents preserve canonical lore, character voice, and world rules over multi-month fiction pipelines.",
+    "domain": "domain-arcanea-worldbuilding",
+    "tags": [
+      "worldbuilding",
+      "lore",
+      "canon",
+      "narrative-consistency"
+    ],
+    "status": "stable",
+    "difficulty": "hard",
+    "prize_or_benchmark": "CANON_LOCKED Attestation Suite",
+    "related_papers": [],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-arcanea-worldbuilding"
+      }
+    ]
+  },
+  {
+    "id": "problem-shallow-world-coherence",
+    "type": "open_problem",
+    "label": "Deep Alchemical & Secondary World Coherence",
+    "description": "Constructing secondary worlds whose magical, physical, social, and economic systems intertwine without breaking Tolkien's secondary belief.",
+    "domain": "domain-arcanea-worldbuilding",
+    "tags": [
+      "worldbuilding",
+      "sub-creation",
+      "tolkien",
+      "coherence"
+    ],
+    "status": "stable",
+    "difficulty": "hard",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-arcanea-worldbuilding"
+      }
+    ]
+  },
+  {
+    "id": "problem-archetypal-depth",
+    "type": "open_problem",
+    "label": "Mathematical Modeling of Mythic Archetypes",
+    "description": "Encoding Campbell's Monomyth and Jungian archetypes into computable character state machines and plot progression graphs.",
+    "domain": "domain-arcanea-worldbuilding",
+    "tags": [
+      "archetypes",
+      "campbell",
+      "story-engine"
+    ],
+    "status": "stable",
+    "difficulty": "hard",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-arcanea-worldbuilding"
+      }
+    ]
+  },
+  {
+    "id": "problem-deterministic-video-rendering",
+    "type": "open_problem",
+    "label": "Deterministic Frame-Accurate Generative Video Compilation",
+    "description": "Unifying probabilistic generative video clips with programmatic React Remotion layouts, transitions, and text overlays in headless CI.",
+    "domain": "domain-media-generative-cinema",
+    "tags": [
+      "remotion",
+      "video-generation",
+      "deterministic-rendering"
+    ],
+    "status": "stable",
+    "difficulty": "hard",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-media-generative-cinema"
+      }
+    ]
+  },
+  {
+    "id": "problem-audio-visual-sync-in-ai",
+    "type": "open_problem",
+    "label": "High-Precision Audio-Visual Beat Synchronization",
+    "description": "Real-time extraction of transient peaks, BPM changes, and musical stems to dynamically drive camera cuts, WebGL particle pulses, and typography bursts.",
+    "domain": "domain-media-generative-cinema",
+    "tags": [
+      "audio-visual",
+      "sync",
+      "suno",
+      "motion-graphics"
+    ],
+    "status": "stable",
+    "difficulty": "accessible",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-media-generative-cinema"
+      }
+    ]
+  },
+  {
+    "id": "problem-visual-character-consistency",
+    "type": "open_problem",
+    "label": "Multi-Angle Multi-Scene Character Consistency in Generative Video",
+    "description": "Retaining exact facial features, clothing, and proportions of Arcanean Guardians across multiple disparate scenes without expensive manual 3D rigging.",
+    "domain": "domain-media-generative-cinema",
+    "tags": [
+      "character-consistency",
+      "generative-video",
+      "animation"
+    ],
+    "status": "stable",
+    "difficulty": "hard",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-media-generative-cinema"
+      }
+    ]
+  },
+  {
+    "id": "problem-creator-platform-dependence",
+    "type": "open_problem",
+    "label": "Total Decoupling from Centralized Social Media Gatekeepers",
+    "description": "Building sovereign audience ownership architectures via RSS, open protocols, decentralized publishing, and direct email dispatch.",
+    "domain": "domain-creator-strategy-wealth",
+    "tags": [
+      "sovereign-creator",
+      "platform-risk",
+      "decentralization"
+    ],
+    "status": "stable",
+    "difficulty": "accessible",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-creator-strategy-wealth"
+      }
+    ]
+  },
+  {
+    "id": "problem-fragile-revenue-streams",
+    "type": "open_problem",
+    "label": "Antifragile Multi-Tiered Digital Product Portfolios",
+    "description": "Constructing revenue engines composed of low-ticket volume, recurring SaaS/membership, and high-ticket sovereign advisory that thrive in economic downturns.",
+    "domain": "domain-creator-strategy-wealth",
+    "tags": [
+      "revenue",
+      "antifragile",
+      "digital-products",
+      "cashflow"
+    ],
+    "status": "stable",
+    "difficulty": "accessible",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-creator-strategy-wealth"
+      }
+    ]
+  },
+  {
+    "id": "problem-unscalable-advisory",
+    "type": "open_problem",
+    "label": "Autonomous AI Advisory Transformation",
+    "description": "Productizing high-end architectural judgment into autonomous agent pipelines, yielding 100x human throughput while increasing quality of decisions.",
+    "domain": "domain-creator-strategy-wealth",
+    "tags": [
+      "ai-advisory",
+      "leverage",
+      "high-output"
+    ],
+    "status": "stable",
+    "difficulty": "hard",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-creator-strategy-wealth"
+      }
     ]
   },
   {
@@ -56,7 +451,12 @@
     "label": "Sub-$100/kg to LEO Launch Cost",
     "description": "What combination of reusability architecture, materials, and manufacturing innovation would reduce launch cost to LEO below $100/kg at scale?",
     "domain": "domain-space-builder",
-    "tags": ["launch", "reusability", "cost", "access-to-space"],
+    "tags": [
+      "launch",
+      "reusability",
+      "cost",
+      "access-to-space"
+    ],
     "status": "stable",
     "difficulty": "hard",
     "prize_or_benchmark": "Current best: ~$1500/kg (Falcon 9 reusable)",
@@ -64,7 +464,10 @@
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "part_of", "target": "domain-space-builder" }
+      {
+        "type": "part_of",
+        "target": "domain-space-builder"
+      }
     ]
   },
   {
@@ -73,7 +476,13 @@
     "label": "In-Situ Resource Utilization (ISRU) at Scale",
     "description": "What processing and manufacturing systems would allow a human settlement on the Moon or Mars to produce propellant, structural materials, and life support consumables from local resources?",
     "domain": "domain-space-builder",
-    "tags": ["isru", "moon", "mars", "resource-extraction", "settlement"],
+    "tags": [
+      "isru",
+      "moon",
+      "mars",
+      "resource-extraction",
+      "settlement"
+    ],
     "status": "stable",
     "difficulty": "hard",
     "prize_or_benchmark": null,
@@ -81,7 +490,10 @@
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "part_of", "target": "domain-space-builder" }
+      {
+        "type": "part_of",
+        "target": "domain-space-builder"
+      }
     ]
   },
   {
@@ -90,15 +502,25 @@
     "label": "Primary Causal Mechanism of Aging",
     "description": "Is aging driven primarily by information loss in epigenetics (Sinclair), accumulation of senescent cells, mitochondrial dysfunction, or another mechanism? What intervention best addresses the root cause?",
     "domain": "domain-bio-human-intelligence",
-    "tags": ["aging", "longevity", "mechanism", "biology"],
+    "tags": [
+      "aging",
+      "longevity",
+      "mechanism",
+      "biology"
+    ],
     "status": "stable",
     "difficulty": "unsolved",
     "prize_or_benchmark": null,
-    "related_papers": ["paper-hallmarks-of-aging-lopez-otin"],
+    "related_papers": [
+      "paper-hallmarks-of-aging-lopez-otin"
+    ],
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "part_of", "target": "domain-bio-human-intelligence" }
+      {
+        "type": "part_of",
+        "target": "domain-bio-human-intelligence"
+      }
     ]
   },
   {
@@ -107,7 +529,12 @@
     "label": "The Hard Problem of Consciousness",
     "description": "Why does subjective experience (qualia) exist at all? How does physical neural activity give rise to the felt quality of experience?",
     "domain": "domain-bio-human-intelligence",
-    "tags": ["consciousness", "qualia", "neuroscience", "philosophy-of-mind"],
+    "tags": [
+      "consciousness",
+      "qualia",
+      "neuroscience",
+      "philosophy-of-mind"
+    ],
     "status": "stable",
     "difficulty": "unsolved",
     "prize_or_benchmark": null,
@@ -115,7 +542,10 @@
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "part_of", "target": "domain-bio-human-intelligence" }
+      {
+        "type": "part_of",
+        "target": "domain-bio-human-intelligence"
+      }
     ]
   },
   {
@@ -124,7 +554,12 @@
     "label": "Distribution Cold-Start Problem",
     "description": "How does a new creator or product get its first 1000 genuine, engaged users in a world of algorithmic gatekeeping and attention scarcity?",
     "domain": "domain-creator-founder",
-    "tags": ["distribution", "growth", "audience", "cold-start"],
+    "tags": [
+      "distribution",
+      "growth",
+      "audience",
+      "cold-start"
+    ],
     "status": "stable",
     "difficulty": "accessible",
     "prize_or_benchmark": null,
@@ -132,7 +567,210 @@
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "part_of", "target": "domain-creator-founder" }
+      {
+        "type": "part_of",
+        "target": "domain-creator-founder"
+      }
+    ]
+  },
+  {
+    "id": "problem-ai-generated-search-dilution",
+    "type": "open_problem",
+    "label": "Search Dilution by AI-Generated Content Farms",
+    "description": "How high-signal publishers and domain authorities maintain search rank and reader trust when millions of low-effort AI articles flood index results.",
+    "domain": "domain-content-seo-publishing",
+    "tags": [
+      "seo",
+      "ai-search",
+      "information-gain",
+      "content-quality"
+    ],
+    "status": "stable",
+    "difficulty": "hard",
+    "prize_or_benchmark": "E-E-A-T and Information Gain patents",
+    "related_papers": [],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-content-seo-publishing"
+      }
+    ]
+  },
+  {
+    "id": "problem-content-monetization-decay",
+    "type": "open_problem",
+    "label": "Decay of Traditional Ad & Affiliate Monetization",
+    "description": "Addressing the rapid collapse of display ad CPMs and third-party affiliate cookies through direct sovereign software sales and high-ticket masterminds.",
+    "domain": "domain-content-seo-publishing",
+    "tags": [
+      "monetization",
+      "business-models",
+      "publishing",
+      "sovereignty"
+    ],
+    "status": "stable",
+    "difficulty": "accessible",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-content-seo-publishing"
+      }
+    ]
+  },
+  {
+    "id": "problem-funnel-conversion-friction",
+    "type": "open_problem",
+    "label": "Conversion Friction in Multi-Device Sales Funnels",
+    "description": "Minimizing checkout abandonment, wallet connection fatigue, and mobile checkout friction in high-ticket digital product sales.",
+    "domain": "domain-social-attraction-funnels",
+    "tags": [
+      "conversion-rate-optimization",
+      "funnels",
+      "checkout",
+      "ecommerce"
+    ],
+    "status": "stable",
+    "difficulty": "accessible",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-social-attraction-funnels"
+      }
+    ]
+  },
+  {
+    "id": "problem-inflationary-capital-decay",
+    "type": "open_problem",
+    "label": "Purchasing Power Decay in Fiat Capital Reserves",
+    "description": "Constructing treasury portfolios that reliably preserve real purchasing power across currency debasement and debt cycle transitions.",
+    "domain": "domain-investing-wealth-capital",
+    "tags": [
+      "inflation",
+      "treasury-management",
+      "capital-preservation",
+      "sovereign-wealth"
+    ],
+    "status": "stable",
+    "difficulty": "hard",
+    "prize_or_benchmark": "Dalio All-Weather / Barbell Index",
+    "related_papers": [],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-investing-wealth-capital"
+      }
+    ]
+  },
+  {
+    "id": "problem-asymmetric-risk-mispricing",
+    "type": "open_problem",
+    "label": "Mispricing of Tail Risks & AI Exponential Compounding",
+    "description": "Traditional financial models fail to price the non-linear returns of autonomous AI systems and the catastrophic tail risks of centralized platform dependencies.",
+    "domain": "domain-investing-wealth-capital",
+    "tags": [
+      "asymmetric-risk",
+      "tail-risk",
+      "venture-capital",
+      "ai-economics"
+    ],
+    "status": "stable",
+    "difficulty": "hard",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-investing-wealth-capital"
+      }
+    ]
+  },
+  {
+    "id": "problem-agent-concurrency-bottleneck",
+    "type": "open_problem",
+    "label": "Concurrent Agent Swarm Contention & State Race Conditions",
+    "description": "How to run 50+ autonomous coding and research agents simultaneously without triggering provider rate limits (429s), Git merge collisions, or machine OOM crashes.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "concurrency",
+      "swarm-scaling",
+      "race-conditions",
+      "rate-limiting"
+    ],
+    "status": "stable",
+    "difficulty": "hard",
+    "prize_or_benchmark": "benchmark-swarm-concurrency-throughput",
+    "related_papers": [],
+    "created_at": "2026-09-09T00:00:00Z",
+    "updated_at": "2026-09-09T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-scale-distributed-agentics"
+      }
+    ]
+  },
+  {
+    "id": "problem-context-window-cost-exhaustion",
+    "type": "open_problem",
+    "label": "Context Window Cost & Latency Explosion in Extended Autonomy",
+    "description": "Long-running multi-day swarms generate millions of tokens; without static KV cache alignment and prompt compaction, inference costs scale non-linearly.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "kv-cache",
+      "token-economics",
+      "context-compaction",
+      "cost-scaling"
+    ],
+    "status": "stable",
+    "difficulty": "hard",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2026-09-09T00:00:00Z",
+    "updated_at": "2026-09-09T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-scale-distributed-agentics"
+      }
+    ]
+  },
+  {
+    "id": "problem-graph-memory-scaling-limits",
+    "type": "open_problem",
+    "label": "In-Memory Knowledge Graph Scaling Thresholds",
+    "description": "Flat JSON AST trees become unwieldy past 2,000 entities, requiring transition to columnar disk-backed stores (LanceDB/Kùzu) and localized subgraph partitioning.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "graph-scaling",
+      "lancedb",
+      "kuzu",
+      "subgraph-partitioning"
+    ],
+    "status": "stable",
+    "difficulty": "medium",
+    "prize_or_benchmark": null,
+    "related_papers": [],
+    "created_at": "2026-09-09T00:00:00Z",
+    "updated_at": "2026-09-09T00:00:00Z",
+    "edges": [
+      {
+        "type": "part_of",
+        "target": "domain-scale-distributed-agentics"
+      }
     ]
   }
 ]

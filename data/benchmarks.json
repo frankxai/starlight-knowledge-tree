@@ -1,0 +1,72 @@
+[
+  {
+    "id": "benchmark-swe-bench-verified",
+    "name": "SWE-bench Verified",
+    "domain": "domain-ai-architect",
+    "description": "Gold standard evaluation benchmark for software engineering agents resolving real-world GitHub pull requests and issues in production repositories.",
+    "metric": "Resolve Rate (%)",
+    "sota_target": "70%+",
+    "source_url": "https://www.swebench.com",
+    "created_at": "2026-08-25T00:00:00Z"
+  },
+  {
+    "id": "benchmark-gaia",
+    "name": "GAIA (General AI Assistants)",
+    "domain": "domain-ai-architect",
+    "description": "Rigorous benchmark testing multi-modal reasoning, web browsing, code execution, and multi-step tool use for autonomous assistants.",
+    "metric": "Task Success Rate (%)",
+    "sota_target": "85%+",
+    "source_url": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
+    "created_at": "2026-08-25T00:00:00Z"
+  },
+  {
+    "id": "benchmark-webarena",
+    "name": "WebArena",
+    "domain": "domain-ai-architect",
+    "description": "Realistic and reproducible web environment benchmark for evaluating autonomous visual web agents across ecommerce, CMS, and coding tools.",
+    "metric": "End-to-End Task Completion (%)",
+    "sota_target": "60%+",
+    "source_url": "https://webarena.dev",
+    "created_at": "2026-08-25T00:00:00Z"
+  },
+  {
+    "id": "benchmark-humaneval",
+    "name": "HumanEval+",
+    "domain": "domain-ai-architect",
+    "description": "Standardized code synthesis benchmark testing Python docstring-to-code generation with rigorous unit test suites.",
+    "metric": "Pass@1 (%)",
+    "sota_target": "95%+",
+    "source_url": "https://github.com/openai/human-eval",
+    "created_at": "2026-08-25T00:00:00Z"
+  },
+  {
+    "id": "benchmark-niah",
+    "name": "Needle In A Haystack (NIAH)",
+    "domain": "domain-ai-architect",
+    "description": "Evaluation measuring an LLM's retrieval accuracy across 128k to 2M+ token contexts by placing hidden facts at varied depths.",
+    "metric": "Retrieval Accuracy (%)",
+    "sota_target": "99.9%+",
+    "source_url": "https://github.com/gkamradt/LLMTest_NeedleInAHaystack",
+    "created_at": "2026-08-25T00:00:00Z"
+  },
+  {
+    "id": "benchmark-agentbench",
+    "name": "AgentBench",
+    "domain": "domain-ai-architect",
+    "description": "Multi-dimensional benchmark evaluating LLM-as-Agent capabilities across OS terminal navigation, database querying, web browsing, and digital games.",
+    "metric": "Overall Agent Capability Score",
+    "sota_target": "80%+",
+    "source_url": "https://github.com/THUDM/AgentBench",
+    "created_at": "2026-08-25T00:00:00Z"
+  },
+  {
+    "id": "benchmark-swarm-concurrency-throughput",
+    "name": "Swarm Concurrency & Task Throughput Benchmark",
+    "domain": "domain-scale-distributed-agentics",
+    "description": "Measures task completion rate (tasks/min), 429 rate-limit avoidance, peak RAM consumption, and git conflict rate under concurrent loads of 10 to 100 parallel agent workers.",
+    "metric": "Sustained Concurrency (Agents) & Task Throughput (Tasks/Min)",
+    "sota_target": "50 concurrent agents @ >= 98% success rate",
+    "source_url": "https://github.com/frankxai/starlight-knowledge-tree",
+    "created_at": "2026-09-09T00:00:00Z"
+  }
+]

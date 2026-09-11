@@ -1,0 +1,58 @@
+{
+  "id": "domain-content-seo-publishing",
+  "type": "domain",
+  "label": "Content Architecture, SEO & Publishing",
+  "description": "Product-led SEO, topical authority clusters, information gain scoring, high-converting copywriting, and programmatic MDX publishing workflows.",
+  "tags": ["content-strategy", "seo", "publishing", "mdx", "copywriting", "topical-authority", "information-gain"],
+  "status": "stable",
+  "created_at": "2026-08-23T00:00:00Z",
+  "updated_at": "2026-08-23T00:00:00Z",
+  "edges": [],
+  "root_problems": [
+    "problem-distribution-cold-start",
+    "problem-ai-generated-search-dilution",
+    "problem-content-monetization-decay"
+  ],
+  "paths": [
+    {
+      "id": "path-seo-product-led-topical",
+      "label": "Product-Led SEO & Authority Graphs",
+      "description": "Information gain optimization, keyword clustering, and technical indexation.",
+      "nodes": [
+        "book-schwartz-product-led-seo",
+        "concept-topical-authority",
+        "concept-information-gain-score",
+        "concept-programmatic-seo"
+      ]
+    },
+    {
+      "id": "path-content-authority-writing",
+      "label": "Authority Blogging & Editorial Pipelines",
+      "description": "Pillar-cluster models, voice calibration, and headless MDX engines.",
+      "nodes": [
+        "book-handley-everybody-writes",
+        "concept-pillar-cluster-model",
+        "concept-mdx-publishing-pipeline"
+      ]
+    },
+    {
+      "id": "path-copywriting-direct-response",
+      "label": "Direct-Response Copywriting & Storyselling",
+      "description": "Eugene Schwartz market sophistication stages and persuasive narrative mechanics.",
+      "nodes": [
+        "book-schwartz-breakthrough-advertising",
+        "book-bly-copywriters-handbook",
+        "concept-market-sophistication-stages",
+        "concept-direct-response-copywriting"
+      ]
+    }
+  ],
+  "seed_nodes": [
+    "book-schwartz-product-led-seo",
+    "book-schwartz-breakthrough-advertising",
+    "book-handley-everybody-writes",
+    "concept-topical-authority",
+    "concept-information-gain-score",
+    "concept-market-sophistication-stages"
+  ]
+}

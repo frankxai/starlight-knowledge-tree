@@ -8,10 +8,18 @@
     "apps/*"
   ],
   "scripts": {
-    "validate": "cd packages/graph-utils && npm run validate",
+    "validate": "npm run build --workspace @starlight/graph-schema && npm run validate --workspace @starlight/graph-utils",
+    "validate:fiction": "npm run build --workspace @starlight/graph-schema && npm run validate:fiction --workspace @starlight/graph-utils",
+    "test:fiction": "npm run build --workspace @starlight/graph-schema && npm run test --workspace @starlight/graph-utils",
     "build": "npm run build --workspaces",
     "lint": "npm run lint --workspaces --if-present",
-    "dev": "cd apps/web && npm run dev"
+    "dev": "cd apps/web && npm run dev",
+    "scout": "npx tsx scripts/scout-intelligence.ts",
+    "ingest": "npx tsx scripts/ingest-scout.ts",
+    "benchmark": "npx tsx scripts/scale-graph-benchmark.ts",
+    "export:dist": "npx tsx scripts/export-community-distribution.ts",
+    "export:notebooklm": "npx tsx scripts/export-for-notebooklm.ts",
+    "mcp": "npx tsx scripts/starlight-knowledge-mcp.ts"
   },
   "engines": {
     "node": ">=20.0.0"

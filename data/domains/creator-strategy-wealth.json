@@ -1,0 +1,46 @@
+{
+  "id": "domain-creator-strategy-wealth",
+  "type": "domain",
+  "label": "Creator Strategy & High-Leverage Wealth",
+  "description": "Strategic moat building, 7 Powers economic engines, antifragile venture structures, digital product publishing, and sovereign cashflow architecture.",
+  "tags": ["strategy", "wealth", "7-powers", "antifragile", "high-output", "publishing", "monetization"],
+  "status": "stable",
+  "created_at": "2026-08-23T00:00:00Z",
+  "updated_at": "2026-08-23T00:00:00Z",
+  "edges": [],
+  "root_problems": [
+    "problem-creator-platform-dependence",
+    "problem-fragile-revenue-streams",
+    "problem-unscalable-advisory"
+  ],
+  "paths": [
+    {
+      "id": "path-strategy-economic-moats",
+      "label": "Economic Moats & Antifragility",
+      "description": "Hamilton Helmer 7 Powers and Nassim Taleb Antifragile systems.",
+      "nodes": [
+        "book-helmer-seven-powers",
+        "book-taleb-antifragile",
+        "book-grove-high-output-management",
+        "concept-economic-moat",
+        "concept-convexity-and-via-negativa"
+      ]
+    },
+    {
+      "id": "path-strategy-creator-publishing",
+      "label": "Productized Publishing & Digital Assets",
+      "description": "Book production pipelines, prompt books, and automated creator flywheels.",
+      "nodes": [
+        "concept-content-factory-flywheel",
+        "concept-prompt-engineering-monetization"
+      ]
+    }
+  ],
+  "seed_nodes": [
+    "book-helmer-seven-powers",
+    "book-taleb-antifragile",
+    "book-grove-high-output-management",
+    "concept-economic-moat",
+    "concept-convexity-and-via-negativa"
+  ]
+}

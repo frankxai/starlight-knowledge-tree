@@ -2,43 +2,45 @@ import { KnowledgeTreeNode, NodeSchema, EdgeSchema } from "@starlight/graph-sche
 import * as fs from "fs";
 import * as path from "path";
 
-// ── Load all nodes ────────────────────────────────────────────────────────────
-
-const NODE_FILES = [
-  "concepts.json",
-  "skills.json",
-  "tools.json",
-  "papers.json",
-  "experiments.json",
-  "artifacts.json",
-  "open-problems.json",
-  "contribution-tasks.json",
-];
-
-const DOMAIN_FILES = [
-  "ai-architect.json",
-  "space-builder.json",
-  "bio-human-intelligence.json",
-  "creator-founder.json",
-];
+// ── Load all nodes dynamically ────────────────────────────────────────────────
 
 export function loadAllNodes(dataDir: string): KnowledgeTreeNode[] {
   const nodes: KnowledgeTreeNode[] = [];
 
-  for (const file of NODE_FILES) {
-    const filePath = path.join(dataDir, "nodes", file);
-    if (!fs.existsSync(filePath)) continue;
-    const raw = JSON.parse(fs.readFileSync(filePath, "utf8"));
-    if (Array.isArray(raw)) {
-      nodes.push(...raw);
+  // Load from data/nodes/
+  const nodesDir = path.join(dataDir, "nodes");
+  if (fs.existsSync(nodesDir)) {
+    const files = fs.readdirSync(nodesDir).filter((f) => f.endsWith(".json"));
+    for (const file of files) {
+      const filePath = path.join(nodesDir, file);
+      try {
+        const raw = JSON.parse(fs.readFileSync(filePath, "utf8"));
+        if (Array.isArray(raw)) {
+          nodes.push(...raw);
+        } else if (raw && typeof raw === "object") {
+          nodes.push(raw);
+        }
+      } catch (err) {
+        console.error(`Error parsing node file: ${filePath}`, err);
+      }
     }
   }
 
-  for (const file of DOMAIN_FILES) {
-    const filePath = path.join(dataDir, "domains", file);
-    if (!fs.existsSync(filePath)) continue;
-    const raw = JSON.parse(fs.readFileSync(filePath, "utf8"));
-    nodes.push(raw);
+  // Load from data/domains/
+  const domainsDir = path.join(dataDir, "domains");
+  if (fs.existsSync(domainsDir)) {
+    const files = fs.readdirSync(domainsDir).filter((f) => f.endsWith(".json"));
+    for (const file of files) {
+      const filePath = path.join(domainsDir, file);
+      try {
+        const raw = JSON.parse(fs.readFileSync(filePath, "utf8"));
+        if (raw && typeof raw === "object") {
+          nodes.push(raw);
+        }
+      } catch (err) {
+        console.error(`Error parsing domain file: ${filePath}`, err);
+      }
+    }
   }
 
   return nodes;
@@ -117,7 +119,7 @@ export function validateGraph(dataDir: string): ValidationResult {
   };
 }
 
-// ── Graph traversal ────────────────────────────────────────────────────────────
+// ── Graph traversal & Query Helpers ───────────────────────────────────────────
 
 export function buildNodeIndex(nodes: KnowledgeTreeNode[]): Map<string, KnowledgeTreeNode> {
   return new Map(nodes.map((n) => [n.id, n]));
@@ -149,7 +151,9 @@ export function getNodesByDomain(
   domain: string,
   nodes: KnowledgeTreeNode[]
 ): KnowledgeTreeNode[] {
-  return nodes.filter((n) => n.domain === domain);
+  return nodes.filter((node) =>
+    "domain" in node ? node.domain === domain : node.type === "domain" && node.id === domain
+  );
 }
 
 export function getNodesByType(
@@ -158,3 +162,18 @@ export function getNodesByType(
 ): KnowledgeTreeNode[] {
   return nodes.filter((n) => n.type === type);
 }
+
+export function searchGraph(
+  query: string,
+  nodes: KnowledgeTreeNode[]
+): KnowledgeTreeNode[] {
+  const q = query.toLowerCase();
+  return nodes.filter(
+    (n) =>
+      n.label.toLowerCase().includes(q) ||
+      n.description.toLowerCase().includes(q) ||
+      n.tags.some((t) => t.toLowerCase().includes(q))
+  );
+}
+
+export * from "./fiction-world";
