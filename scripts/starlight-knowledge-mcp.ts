@@ -80,7 +80,7 @@ loadGraph();
 const TOOLS = [
   {
     name: "search_graph",
-    description: "Search the Starlight Knowledge Tree across 264+ canonical nodes (concepts, papers, tools, swarm patterns, benchmarks).",
+    description: `Search the Starlight Knowledge Tree across ${nodeMap.size} graph entries (canonical nodes plus domain definitions: concepts, papers, tools, swarm patterns, benchmarks).`,
     inputSchema: {
       type: "object",
       properties: {

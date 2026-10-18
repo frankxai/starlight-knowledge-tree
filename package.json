@@ -8,7 +8,8 @@
     "apps/*"
   ],
   "scripts": {
-    "validate": "npm run build --workspace @starlight/graph-schema && npm run validate --workspace @starlight/graph-utils",
+    "validate": "node scripts/verify-canon-counts.mjs && npm run build --workspace @starlight/graph-schema && npm run validate --workspace @starlight/graph-utils",
+    "verify:counts": "node scripts/verify-canon-counts.mjs",
     "validate:fiction": "npm run build --workspace @starlight/graph-schema && npm run validate:fiction --workspace @starlight/graph-utils",
     "test:fiction": "npm run build --workspace @starlight/graph-schema && npm run test --workspace @starlight/graph-utils",
     "build": "npm run build --workspaces",

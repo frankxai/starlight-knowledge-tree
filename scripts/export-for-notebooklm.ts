@@ -29,10 +29,21 @@ const tools: NodeItem[] = JSON.parse(fs.readFileSync(path.join(dataDir, "nodes/t
 const benchmarks = JSON.parse(fs.readFileSync(path.join(dataDir, "benchmarks.json"), "utf8"));
 const estateIndex = JSON.parse(fs.readFileSync(path.join(dataDir, "estate-index.json"), "utf8"));
 
+// Counts are computed from data/, never hard-coded (guard: scripts/verify-canon-counts.mjs).
+// Nodes live in data/nodes/*.json; domains are separate definition files, never summed into nodes.
+const allNodeFiles = fs.readdirSync(path.join(dataDir, "nodes")).filter((f) => f.endsWith(".json"));
+let totalNodes = 0;
+let totalEdges = 0;
+for (const f of allNodeFiles) {
+  const arr = JSON.parse(fs.readFileSync(path.join(dataDir, "nodes", f), "utf8"));
+  if (Array.isArray(arr)) for (const n of arr) { totalNodes += 1; totalEdges += Array.isArray(n.edges) ? n.edges.length : 0; }
+}
+const totalDomains = fs.readdirSync(path.join(dataDir, "domains")).filter((f) => f.endsWith(".json")).length;
+
 // 2. Dossier 01: Executive Briefing & Audio Overview Guide
 const doc01 = `# Starlight Intelligence System: Executive Briefing & Audio Overview Guide
 *Grounding Source for Google NotebookLM Deep Dive Podcast*
-*Version: 2.0 Frontier | 264 Verified Nodes | 304 Cross-Domain Edges*
+*Version: 2.0 Frontier | ${totalNodes} Verified Nodes + ${totalDomains} Domains | ${totalEdges} Cross-Domain Edges*
 
 ---
 
@@ -133,7 +144,7 @@ fs.writeFileSync(path.join(outputDir, "03-economic-roi-and-cost-optimization-bib
 
 // 5. Dossier 04: Canonical Knowledge Tree Master Index
 const doc04 = `# Canonical Knowledge Tree Master Index
-*Complete Verified Inventory | 264 Nodes | 14 Domains | 6 Benchmarks*
+*Complete Verified Inventory | ${totalNodes} Nodes | ${totalDomains} Domains | ${benchmarks.length} Benchmarks*
 
 ## Empirical Benchmarks
 ${benchmarks.map((b: any) => `
