@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Starlight Ancient Lexeme Seed Record",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "lemma",
+      "language",
+      "gloss",
+      "root",
+      "root_language",
+      "semantic_field",
+      "source_status",
+      "sources",
+      "brand_fit",
+      "name_status",
+      "notes"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9-]*$"
+      },
+      "lemma": {
+        "type": "string",
+        "minLength": 1
+      },
+      "language": {
+        "type": "string",
+        "minLength": 1
+      },
+      "gloss": {
+        "type": "string",
+        "minLength": 1
+      },
+      "root": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "root_language": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "semantic_field": {
+        "type": "string"
+      },
+      "source_status": {
+        "enum": [
+          "checked",
+          "provisional_needs_dictionary_review"
+        ]
+      },
+      "sources": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "brand_fit": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "name_status": {
+        "enum": [
+          "inspiration_only",
+          "reserved_in_arcanea"
+        ]
+      },
+      "notes": {
+        "type": "string"
+      }
+    }
+  }
+}
