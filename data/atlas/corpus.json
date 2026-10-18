@@ -1,0 +1,938 @@
+{
+  "schema_version": "starlight.atlas.v1",
+  "title": "Starlight Atlas",
+  "status": "editorial_draft",
+  "editorial_notice": "Public editorial drafts. Source inspection and claim standing describe the recorded evidence; they do not establish independent replication or scientific consensus.",
+  "created_on": "2026-10-13",
+  "license": "not_assigned_pending_owner_review",
+  "coverage": {
+    "search_completed_on": "2026-10-13",
+    "systematic_review": false,
+    "geographic_exhaustiveness": false,
+    "languages": [
+      "en"
+    ],
+    "areas_inspected": [
+      "selected planetary-science and cosmology reports",
+      "Bennu sugar paper analytical findings and limitations",
+      "DESI DR2 dark-energy paper relevant sections and distinct DR1 public release",
+      "Saguaro synthetic-redshift paper relevant sections",
+      "Pompeii institutional report and indexed primary excerpts/correction notice"
+    ],
+    "limits": [
+      "Five selected topics only; no claim to exhaustive or latest-per-field coverage.",
+      "Separate editorial agent re-inspected institutional reports and relevant sections of Bennu, DESI and Saguaro papers; Pompeii primary text/notice inspected through search indexing.",
+      "Webb paper full text, Pompeii live full text/supplements and IOP Saguaro journal version remain retrieval gaps.",
+      "Bennu Crossmark and selected arXiv version histories inspected; Pompeii affiliation correction recorded. No exhaustive global corrections/retraction or replication search occurred.",
+      "No raw-data reanalysis, computational/physical replication or independent scientific validation occurred."
+    ]
+  },
+  "domains": [
+    {
+      "id": "domain-mathematics",
+      "label": "Mathematics & logic",
+      "coverage": "unreviewed",
+      "proposed": true
+    },
+    {
+      "id": "domain-physics",
+      "label": "Physics & quantum systems",
+      "coverage": "unreviewed",
+      "proposed": true
+    },
+    {
+      "id": "domain-cosmos",
+      "label": "Stars, cosmology & space technology",
+      "coverage": "seed_drafts_only",
+      "proposed": true
+    },
+    {
+      "id": "domain-energy",
+      "label": "Energy & propulsion",
+      "coverage": "unreviewed",
+      "proposed": true
+    },
+    {
+      "id": "domain-materials",
+      "label": "Chemistry & materials",
+      "coverage": "unreviewed",
+      "proposed": true
+    },
+    {
+      "id": "domain-compute",
+      "label": "Computing & information",
+      "coverage": "unreviewed",
+      "proposed": true
+    },
+    {
+      "id": "domain-ai",
+      "label": "AI, agents & robotics",
+      "coverage": "unreviewed",
+      "proposed": true
+    },
+    {
+      "id": "domain-biology",
+      "label": "Biology & origins of life",
+      "coverage": "seed_drafts_only",
+      "proposed": true
+    },
+    {
+      "id": "domain-medicine",
+      "label": "Medicine & longevity",
+      "coverage": "unreviewed",
+      "proposed": true
+    },
+    {
+      "id": "domain-mind",
+      "label": "Mind, cognition & consciousness",
+      "coverage": "unreviewed",
+      "proposed": true
+    },
+    {
+      "id": "domain-earth",
+      "label": "Earth, climate & oceans",
+      "coverage": "unreviewed",
+      "proposed": true
+    },
+    {
+      "id": "domain-ecology",
+      "label": "Ecology & agriculture",
+      "coverage": "unreviewed",
+      "proposed": true
+    },
+    {
+      "id": "domain-engineering",
+      "label": "Engineering & manufacturing",
+      "coverage": "unreviewed",
+      "proposed": true
+    },
+    {
+      "id": "domain-history",
+      "label": "Archaeology & historical technologies",
+      "coverage": "seed_drafts_only",
+      "proposed": true
+    },
+    {
+      "id": "domain-language",
+      "label": "Languages, texts & knowledge transmission",
+      "coverage": "unreviewed",
+      "proposed": true
+    },
+    {
+      "id": "domain-culture",
+      "label": "Art, music & cultural traditions",
+      "coverage": "unreviewed",
+      "proposed": true
+    },
+    {
+      "id": "domain-society",
+      "label": "Economics, institutions & governance",
+      "coverage": "unreviewed",
+      "proposed": true
+    },
+    {
+      "id": "domain-philosophy",
+      "label": "Philosophy, ethics & theology",
+      "coverage": "unreviewed",
+      "proposed": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-webb-collisions",
+      "title": "Webb provides crash course on planet-shattering collisions",
+      "url": "https://esawebb.org/news/weic2618/",
+      "kind": "institutional_research_report",
+      "published_on": "2026-10-01",
+      "updated_on": null,
+      "issue_on": null,
+      "event_on": null,
+      "accessed_on": "2026-10-13",
+      "language": "en",
+      "lineage_id": "lineage-su-extreme-debris-discs",
+      "inspection": "relevant_sections",
+      "inspected_locators": [
+        "Dated release; sample paragraph (21 systems: 16 Webb, 5 archival Spitzer); mineralogy and collision interpretation; explicit age/sample limitation"
+      ],
+      "update_status": "not_independently_checked",
+      "rights": {
+        "full_text_redistribution": "not_granted",
+        "stored_content": "bibliographic_metadata_and_original_paraphrase",
+        "media_included": false
+      },
+      "retrieval_note": "ESA/Webb institutional release directly inspected. Full IOP paper retrieval failed."
+    },
+    {
+      "id": "source-bennu-sugars",
+      "title": "Bio-essential sugars in samples from asteroid Bennu",
+      "url": "https://doi.org/10.1038/s41561-025-01838-6",
+      "kind": "research_paper",
+      "published_on": "2025-12-02",
+      "updated_on": null,
+      "issue_on": "2026-01-01",
+      "event_on": null,
+      "accessed_on": "2026-10-13",
+      "language": "en",
+      "lineage_id": "lineage-furukawa-bennu-sugars",
+      "inspection": "relevant_sections",
+      "inspected_locators": [
+        "Abstract; Detection of Bennu sugars (sample OREX-800107-108, 603.4 mg, GC-MS/GC-MS/MS, Figs. 1–3); analytical blanks and contamination discussion; isotope/enantiomeric limitation; publication metadata; Crossmark"
+      ],
+      "update_status": "no_update_listed_in_inspected_crossmark",
+      "rights": {
+        "full_text_redistribution": "not_granted",
+        "stored_content": "bibliographic_metadata_and_original_paraphrase",
+        "media_included": false
+      },
+      "doi": "10.1038/s41561-025-01838-6",
+      "publication_stage": "peer_reviewed_version_of_record",
+      "issue_date_precision": "month",
+      "retrieval_note": "Relevant publisher full-text sections accessed through its cookie-error URL; subsequent canonical URL requests failed. Crossmark date/status page separately inspected.",
+      "update_check_scope": "Crossmark publisher record says future updates will be listed; this is a bounded status-page check, not an exhaustive corrections/retraction search.",
+      "issue_date_note": "January 2026 is the verified issue month. The day 01 in issue_on is a normalization, not a verified issue day.",
+      "update_check_url": "https://crossmark.crossref.org/dialog/?doi=10.1038/s41561-025-01838-6",
+      "update_checked_on": "2026-10-13",
+      "authors": [
+        "Yoshihiro Furukawa",
+        "Sako Sunami",
+        "Yoshinori Takano",
+        "Toshiki Koga",
+        "Yuta Hirakawa",
+        "Yasuhiro Oba",
+        "Hiroshi Naraoka",
+        "Daisuke Saigusa",
+        "Takaaki Yoshikawa",
+        "Satoru Tanaka",
+        "Daniel P. Glavin",
+        "Jason P. Dworkin",
+        "Harold C. Connolly Jr.",
+        "Dante S. Lauretta"
+      ]
+    },
+    {
+      "id": "source-pompeii-mit",
+      "title": "Pompeii offers insights into ancient Roman building technology",
+      "url": "https://news.mit.edu/2025/pompeii-offers-insights-ancient-roman-building-technology-1209",
+      "kind": "institutional_research_report",
+      "published_on": "2025-12-09",
+      "updated_on": null,
+      "issue_on": null,
+      "event_on": null,
+      "accessed_on": "2026-10-13",
+      "language": "en",
+      "lineage_id": "lineage-vaserman-weaver-pompeii-hot-mixing",
+      "inspection": "relevant_sections",
+      "inspected_locators": [
+        "Report date/author; Uncovering ancient secrets: site samples, dry quicklime mixture, stable-isotope interpretation; limits on generalizing the recipe"
+      ],
+      "update_status": "not_independently_checked",
+      "rights": {
+        "full_text_redistribution": "not_granted",
+        "stored_content": "bibliographic_metadata_and_original_paraphrase",
+        "media_included": false
+      },
+      "retrieval_note": "Institutional report directly inspected; source paper remains same research lineage.",
+      "report_author": "Zach Winn"
+    },
+    {
+      "id": "source-pompeii-paper",
+      "title": "An unfinished Pompeian construction site reveals ancient Roman building technology",
+      "url": "https://doi.org/10.1038/s41467-025-66634-7",
+      "kind": "research_paper",
+      "published_on": "2025-12-09",
+      "updated_on": "2026-01-30",
+      "issue_on": null,
+      "event_on": null,
+      "accessed_on": "2026-10-13",
+      "language": "en",
+      "lineage_id": "lineage-vaserman-weaver-pompeii-hot-mixing",
+      "inspection": "relevant_sections",
+      "inspected_locators": [
+        "Primary publisher search-index excerpts: Abstract; Results / Evidence of construction activities (room 14 dry material pile); hot-mixing analysis; Change history / 30 January 2026; About this article"
+      ],
+      "update_status": "affiliation_correction_recorded",
+      "rights": {
+        "full_text_redistribution": "not_granted",
+        "stored_content": "bibliographic_metadata_and_original_paraphrase",
+        "media_included": false
+      },
+      "doi": "10.1038/s41467-025-66634-7",
+      "publication_stage": "peer_reviewed_version_of_record",
+      "retrieval_limit": "Direct publisher HTML/PDF redirects and PMC bot challenge blocked live full-text access. Relevant primary full-text excerpts and dated correction notice were inspected through web search indexing; supplement, raw data and complete current text were not inspected.",
+      "retrieval_mode": "primary_site_search_index",
+      "update_check_scope": "Publisher and PMC search-index records expose a 30 January 2026 author-affiliation correction for Claire Hayhow and Kristin Bergmann. The retrieved notice reports affiliation changes; no change to the inspected scientific claim text is described.",
+      "source_license_reported": "CC BY-NC-ND 4.0; bibliographic records and original paraphrases only are included here.",
+      "update_check_url": "https://www.nature.com/articles/s41467-025-66634-7",
+      "update_checked_on": "2026-10-13",
+      "authors": [
+        "Ellie Vaserman",
+        "James C. Weaver",
+        "Claire Hayhow",
+        "Kristin Bergmann",
+        "Celestino Grifa",
+        "Roberto Scalesse",
+        "Valeria Amoretti",
+        "Antonino Russo",
+        "Gennaro Iovino",
+        "Gabriel Zuchtriegel",
+        "Admir Masic"
+      ]
+    },
+    {
+      "id": "source-desi-dr2",
+      "title": "More Than a Hint of Evolving Dark Energy — New Results and Data from DESI",
+      "url": "https://www.desi.lbl.gov/2025/03/19/more-than-a-hint-of-evolving-dark-energy-new-results-and-data-from-desi/",
+      "kind": "collaboration_research_report",
+      "published_on": "2025-03-19",
+      "updated_on": null,
+      "issue_on": null,
+      "event_on": null,
+      "accessed_on": "2026-10-13",
+      "language": "en",
+      "lineage_id": "lineage-desi-dr2-cosmology",
+      "inspection": "relevant_sections",
+      "inspected_locators": [
+        "Dated announcement; three-year dataset and qualified dark-energy conclusion"
+      ],
+      "update_status": "not_independently_checked",
+      "rights": {
+        "full_text_redistribution": "not_granted",
+        "stored_content": "bibliographic_metadata_and_original_paraphrase",
+        "media_included": false
+      }
+    },
+    {
+      "id": "source-lrd-nasa",
+      "title": "NASA Webb Explores Family Tree of Newly Discovered Distant Objects",
+      "url": "https://science.nasa.gov/missions/webb/nasa-webb-explores-family-tree-of-newly-discovered-distant-objects/",
+      "kind": "institutional_research_report",
+      "published_on": "2026-07-29",
+      "updated_on": "2026-09-21",
+      "issue_on": null,
+      "event_on": null,
+      "accessed_on": "2026-10-13",
+      "language": "en",
+      "lineage_id": "lineage-rinaldi-saguaro-lrds",
+      "inspection": "relevant_sections",
+      "inspected_locators": [
+        "Saguaro case study; synthetic redshifting; representativeness limitation; original publication and update dates"
+      ],
+      "update_status": "not_independently_checked",
+      "rights": {
+        "full_text_redistribution": "not_granted",
+        "stored_content": "bibliographic_metadata_and_original_paraphrase",
+        "media_included": false
+      },
+      "report_author": "NASA Webb Mission Team"
+    },
+    {
+      "id": "source-webb-paper",
+      "title": "Extreme Debris Disks: Insights into Violent Collisions in Planet Formation and Destruction",
+      "url": "https://doi.org/10.3847/1538-4357/ae88fe",
+      "kind": "research_paper",
+      "published_on": "2026-10-01",
+      "updated_on": null,
+      "issue_on": null,
+      "event_on": null,
+      "accessed_on": "2026-10-13",
+      "language": "en",
+      "lineage_id": "lineage-su-extreme-debris-discs",
+      "inspection": "abstract_only",
+      "inspected_locators": [
+        "Publisher title, authors and publication date via primary-site search index; abstract from arXiv record 2607.06684"
+      ],
+      "update_status": "not_independently_checked",
+      "rights": {
+        "full_text_redistribution": "not_granted",
+        "stored_content": "bibliographic_metadata_and_original_paraphrase",
+        "media_included": false
+      },
+      "doi": "10.3847/1538-4357/ae88fe",
+      "publication_stage": "peer_reviewed_version_of_record",
+      "retrieval_limit": "IOP full text and direct arXiv HTML/abstract retrieval failed. Only indexed abstract and metadata inspected; no new claim-support edge relies on uninspected full text.",
+      "preprint_url": "https://arxiv.org/abs/2607.06684",
+      "first_preprint_on": "2026-07-07"
+    },
+    {
+      "id": "source-desi-analysis-report",
+      "title": "New DESI Results Strengthen Hints That Dark Energy May Evolve",
+      "url": "https://newscenter.lbl.gov/2025/03/19/new-desi-results-strengthen-hints-that-dark-energy-may-evolve/",
+      "kind": "institutional_research_report",
+      "published_on": "2025-03-19",
+      "updated_on": null,
+      "issue_on": null,
+      "event_on": null,
+      "accessed_on": "2026-10-13",
+      "language": "en",
+      "lineage_id": "lineage-desi-dr2-cosmology",
+      "inspection": "relevant_sections",
+      "inspected_locators": [
+        "DESI-alone Lambda-CDM compatibility; combination with CMB/supernovae/lensing; 2.8–4.2 sigma qualification; distinct DR1 public release"
+      ],
+      "update_status": "not_independently_checked",
+      "rights": {
+        "full_text_redistribution": "not_granted",
+        "stored_content": "bibliographic_metadata_and_original_paraphrase",
+        "media_included": false
+      }
+    },
+    {
+      "id": "source-desi-analysis-paper",
+      "title": "DESI DR2 Results II: Measurements of Baryon Acoustic Oscillations and Cosmological Constraints",
+      "url": "https://arxiv.org/html/2503.14738v3",
+      "kind": "research_paper",
+      "published_on": "2025-03-18",
+      "updated_on": "2025-10-09",
+      "issue_on": null,
+      "event_on": null,
+      "accessed_on": "2026-10-13",
+      "language": "en",
+      "lineage_id": "lineage-desi-dr2-cosmology",
+      "inspection": "relevant_sections",
+      "inspected_locators": [
+        "Abstract; VII / Dark-energy constraints; Fig. 11, Table 6; summary; arXiv submission/version history"
+      ],
+      "update_status": "version_history_inspected",
+      "rights": {
+        "full_text_redistribution": "not_granted",
+        "stored_content": "bibliographic_metadata_and_original_paraphrase",
+        "media_included": false
+      },
+      "doi": "10.1103/tr6y-kpc6",
+      "publication_stage": "arxiv_version_matched_to_published_article",
+      "retrieval_limit": "Relevant arXiv v3 sections inspected; journal full text/status and data/code not independently reviewed.",
+      "update_check_scope": "arXiv v1 18 March 2025; v2 26 March 2025; v3 9 October 2025 states updated to match Physical Review D. Journal correction/retraction history was not independently checked.",
+      "arxiv_id": "2503.14738",
+      "inspected_version": "v3",
+      "date_note": "published_on is initial arXiv submission, not a verified journal publication date. DOI identifies the journal paper.",
+      "update_checked_on": "2026-10-13",
+      "authors": [
+        "DESI Collaboration"
+      ]
+    },
+    {
+      "id": "source-desi-public-release",
+      "title": "DESI Opens Access to the Largest 3D Map of the Universe Yet",
+      "url": "https://newscenter.lbl.gov/2025/03/19/desi-opens-access-to-the-largest-3d-map-of-the-universe-yet/",
+      "kind": "institutional_research_report",
+      "published_on": "2025-03-19",
+      "updated_on": null,
+      "issue_on": null,
+      "event_on": null,
+      "accessed_on": "2026-10-13",
+      "language": "en",
+      "lineage_id": "lineage-desi-dr1-public-release",
+      "inspection": "relevant_sections",
+      "inspected_locators": [
+        "18.7M object total and category counts; DR1 designation; first-13-month coverage; public access statement"
+      ],
+      "update_status": "not_independently_checked",
+      "rights": {
+        "full_text_redistribution": "not_granted",
+        "stored_content": "bibliographic_metadata_and_original_paraphrase",
+        "media_included": false
+      }
+    },
+    {
+      "id": "source-lrd-paper",
+      "title": "Beyond the Dot: an LRD-like nucleus at the Heart of an IR-Bright Galaxy and its implications for high-redshift LRDs",
+      "url": "https://arxiv.org/html/2507.17738v2",
+      "kind": "research_paper",
+      "published_on": "2025-07-23",
+      "updated_on": "2026-06-16",
+      "issue_on": null,
+      "event_on": null,
+      "accessed_on": "2026-10-13",
+      "language": "en",
+      "lineage_id": "lineage-rinaldi-saguaro-lrds",
+      "inspection": "relevant_sections",
+      "inspected_locators": [
+        "Abstract; synthetic redshifting / Fig. 6 and toy-experiment assumptions; heterogeneous-LRD/evolutionary-path limitations; arXiv history; institutional published-version metadata"
+      ],
+      "update_status": "version_history_inspected",
+      "rights": {
+        "full_text_redistribution": "not_granted",
+        "stored_content": "bibliographic_metadata_and_original_paraphrase",
+        "media_included": false
+      },
+      "doi": "10.3847/1538-4357/ae80cd",
+      "publication_stage": "arxiv_preprint_v2_with_published_version_metadata_cross_checked",
+      "retrieval_limit": "IOP journal version could not be retrieved directly. Relevant arXiv v2 sections inspected; data/code and journal correction history were not reviewed.",
+      "update_check_scope": "arXiv initial submission 23 July 2025 and v2 revision 16 June 2026 inspected; institutional record gives journal publication 29 July 2026. Journal correction/retraction history not independently checked.",
+      "arxiv_id": "2507.17738",
+      "inspected_version": "v2",
+      "date_note": "published_on is initial arXiv submission; journal_published_on is separately verified metadata.",
+      "published_version_metadata_url": "https://research-explorer.ista.ac.at/record/22950",
+      "journal_published_on": "2026-07-29",
+      "update_checked_on": "2026-10-13",
+      "authors": [
+        "Pierluigi Rinaldi",
+        "George H. Rieke",
+        "Zihao Wu",
+        "Carys J. E. Gilbert",
+        "Fabio Pacucci",
+        "Luigi Barchiesi",
+        "Stacey Alberts",
+        "Stefano Carniani",
+        "Andrew J. Bunker",
+        "Rachana Bhatawdekar",
+        "Francesco D'Eugenio",
+        "Zhiyuan Ji",
+        "Benjamin D. Johnson",
+        "Kevin Hainline",
+        "Vasily Kokorev",
+        "Nimisha Kumari",
+        "Edoardo Iani",
+        "Jianwei Lyu",
+        "Roberto Maiolino",
+        "Eleonora Parlanti",
+        "Brant E. Robertson",
+        "Yang Sun",
+        "Cristian Vignali",
+        "Christina C. Williams",
+        "Christopher N. A. Willmer",
+        "Yongda Zhu"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim-debris-sample",
+      "article_id": "article-planet-collisions",
+      "revision": 2,
+      "text": "The reported sample comprised 21 extreme debris-disc systems, combining observations of 16 systems with Webb and five from archival Spitzer data.",
+      "claim_kind": "observation",
+      "standing": "supported_within_scope",
+      "scope": "Reported sample and telescope allocation; not all young planetary systems.",
+      "limits": "Institutional release inspected; underlying paper abstract/metadata cross-checked but full text and raw spectra remain uninspected.",
+      "evidence": [
+        {
+          "source_id": "source-webb-collisions",
+          "relation": "supports",
+          "locator": "Science release: sample paragraph, beginning with rarity and the 21-disc sample",
+          "inspection_note": "Relevant source sections re-inspected by a separate editorial agent; no scientific replication performed."
+        }
+      ],
+      "canonical_claim_ref": null,
+      "review": {
+        "status": "draft",
+        "method": "separate_agent_scoped_source_cross_check",
+        "independent_review": false,
+        "scope": "Independent editorial pass within the same agent team; not independent scientific validation or replication.",
+        "receipt_ref": "docs/atlas/source-review-2026-10-13.md"
+      },
+      "first_recorded_on": "2026-10-13",
+      "last_source_checked_on": "2026-10-13",
+      "next_review_on": "2026-11-12"
+    },
+    {
+      "id": "claim-debris-interpretation",
+      "article_id": "article-planet-collisions",
+      "revision": 2,
+      "text": "The authors interpret silica-rich debris as evidence consistent with energetic collisions between large planetary bodies.",
+      "claim_kind": "inference",
+      "standing": "tentative",
+      "scope": "Authors' interpretation of silica-rich spectra in a selected sample.",
+      "limits": "Planetary impacts and impactor sizes are inferred from spectra and physical models. Collisions were not directly observed; mineralogy/age interpretation remains to be tested in larger samples.",
+      "evidence": [
+        {
+          "source_id": "source-webb-collisions",
+          "relation": "supports",
+          "locator": "Science release: mineralogical categories and approximately one-third silica-rich fraction",
+          "inspection_note": "Relevant source sections re-inspected by a separate editorial agent; no scientific replication performed."
+        }
+      ],
+      "canonical_claim_ref": null,
+      "review": {
+        "status": "draft",
+        "method": "separate_agent_scoped_source_cross_check",
+        "independent_review": false,
+        "scope": "Independent editorial pass within the same agent team; not independent scientific validation or replication.",
+        "receipt_ref": "docs/atlas/source-review-2026-10-13.md"
+      },
+      "first_recorded_on": "2026-10-13",
+      "last_source_checked_on": "2026-10-13",
+      "next_review_on": "2026-11-12"
+    },
+    {
+      "id": "claim-bennu-detection",
+      "article_id": "article-bennu-sugars",
+      "revision": 2,
+      "text": "GC-MS and GC-MS/MS analyses identified ribose and glucose, among other sugars, in extract from a 603.4-mg Bennu aliquot (OREX-800107-108).",
+      "claim_kind": "observation",
+      "standing": "supported_within_scope",
+      "scope": "One homogenized returned-sample aliquot; identification cross-checked with a second instrument/column within the same study.",
+      "limits": "This is a chemical identification, not evidence of organisms. Procedural blanks and contamination controls support the interpretation but do not replace sugar-specific isotope or chirality measurements.",
+      "evidence": [
+        {
+          "source_id": "source-bennu-sugars",
+          "relation": "supports",
+          "locator": "Detection of Bennu sugars: aliquot and analytical-identification paragraphs; Figs. 1–3",
+          "inspection_note": "Relevant source sections re-inspected by a separate editorial agent; no scientific replication performed."
+        },
+        {
+          "source_id": "source-bennu-sugars",
+          "relation": "qualifies",
+          "locator": "Detection of Bennu sugars: contamination discussion and paragraph beginning with total sugar abundance",
+          "inspection_note": "Relevant source sections re-inspected by a separate editorial agent; no scientific replication performed."
+        }
+      ],
+      "canonical_claim_ref": null,
+      "review": {
+        "status": "draft",
+        "method": "separate_agent_scoped_source_cross_check",
+        "independent_review": false,
+        "scope": "Independent editorial pass within the same agent team; not independent scientific validation or replication.",
+        "receipt_ref": "docs/atlas/source-review-2026-10-13.md"
+      },
+      "first_recorded_on": "2026-10-13",
+      "last_source_checked_on": "2026-10-13",
+      "next_review_on": "2026-11-12"
+    },
+    {
+      "id": "claim-bennu-isotope-limit",
+      "article_id": "article-bennu-sugars",
+      "revision": 2,
+      "text": "The authors report that low sugar abundance, interfering molecules and available sample mass prevented stable-isotope and enantiomeric measurements of the detected sugars.",
+      "claim_kind": "boundary_condition",
+      "standing": "supported_within_scope",
+      "scope": "Reported sugar measurements.",
+      "limits": "These measurements were not obtained for the sugars in this study; origin arguments rely on sample provenance, analytical controls and chemical context. Their absence neither establishes contamination nor proves an extraterrestrial origin.",
+      "evidence": [
+        {
+          "source_id": "source-bennu-sugars",
+          "relation": "supports",
+          "locator": "Detection of Bennu sugars: paragraph immediately before the hot-water-extract pH discussion",
+          "inspection_note": "Relevant source sections re-inspected by a separate editorial agent; no scientific replication performed."
+        }
+      ],
+      "canonical_claim_ref": null,
+      "review": {
+        "status": "draft",
+        "method": "separate_agent_scoped_source_cross_check",
+        "independent_review": false,
+        "scope": "Independent editorial pass within the same agent team; not independent scientific validation or replication.",
+        "receipt_ref": "docs/atlas/source-review-2026-10-13.md"
+      },
+      "first_recorded_on": "2026-10-13",
+      "last_source_checked_on": "2026-10-13",
+      "next_review_on": "2026-11-12"
+    },
+    {
+      "id": "claim-pompeii-quicklime",
+      "article_id": "article-roman-concrete",
+      "revision": 2,
+      "text": "The Pompeii investigation found quicklime granules dry-mixed with pozzolan in a preserved room-14 material pile at Regio IX, Insula 10.",
+      "claim_kind": "historical_evidence",
+      "standing": "supported_within_scope",
+      "scope": "Specific preserved construction site buried in 79 CE.",
+      "limits": "Relevant primary-paper excerpts and institutional report inspected. Live full-text retrieval remains blocked; supplements/raw data were not inspected. The January 2026 affiliation correction is recorded.",
+      "evidence": [
+        {
+          "source_id": "source-pompeii-paper",
+          "relation": "supports",
+          "locator": "Results / Evidence of construction activities: room 14 pre-mixed pile (primary publisher indexed excerpt)",
+          "inspection_note": "Relevant source sections re-inspected by a separate editorial agent; no scientific replication performed."
+        },
+        {
+          "source_id": "source-pompeii-mit",
+          "relation": "supports",
+          "locator": "Uncovering ancient secrets: intact quicklime fragments in dry material pile",
+          "inspection_note": "Relevant source sections re-inspected by a separate editorial agent; no scientific replication performed."
+        }
+      ],
+      "canonical_claim_ref": null,
+      "review": {
+        "status": "draft",
+        "method": "separate_agent_scoped_source_cross_check",
+        "independent_review": false,
+        "scope": "Independent editorial pass within the same agent team; not independent scientific validation or replication.",
+        "receipt_ref": "docs/atlas/source-review-2026-10-13.md"
+      },
+      "first_recorded_on": "2026-10-13",
+      "last_source_checked_on": "2026-10-13",
+      "next_review_on": "2026-11-12"
+    },
+    {
+      "id": "claim-pompeii-hotmix",
+      "article_id": "article-roman-concrete",
+      "revision": 2,
+      "text": "The investigators interpret the site evidence as supporting hot mixing during Roman construction.",
+      "claim_kind": "inference",
+      "standing": "supported_within_scope",
+      "scope": "Studied Pompeii site and materials; comparison of raw mix and wall/repair specimens.",
+      "limits": "The evidence supports this construction practice at this site; it does not establish a universal Roman recipe or prove that reconstructed mixes meet modern performance requirements. Full text/data remain retrieval gaps.",
+      "evidence": [
+        {
+          "source_id": "source-pompeii-paper",
+          "relation": "supports",
+          "locator": "Abstract and Results: dry quicklime/pozzolan mixture before water; raw pile and unfinished walls (primary publisher indexed excerpts)",
+          "inspection_note": "Relevant source sections re-inspected by a separate editorial agent; no scientific replication performed."
+        },
+        {
+          "source_id": "source-pompeii-mit",
+          "relation": "supports",
+          "locator": "Uncovering ancient secrets: stable-isotope interpretation and preparation sequence",
+          "inspection_note": "Relevant source sections re-inspected by a separate editorial agent; no scientific replication performed."
+        }
+      ],
+      "canonical_claim_ref": null,
+      "review": {
+        "status": "draft",
+        "method": "separate_agent_scoped_source_cross_check",
+        "independent_review": false,
+        "scope": "Independent editorial pass within the same agent team; not independent scientific validation or replication.",
+        "receipt_ref": "docs/atlas/source-review-2026-10-13.md"
+      },
+      "first_recorded_on": "2026-10-13",
+      "last_source_checked_on": "2026-10-13",
+      "next_review_on": "2026-11-12"
+    },
+    {
+      "id": "claim-desi-result",
+      "article_id": "article-dark-energy",
+      "revision": 2,
+      "text": "DESI DR2 analyses of the first three years, combined with CMB and supernova data under a two-parameter dark-energy model, strengthened the reported preference for evolving dark energy.",
+      "claim_kind": "inference",
+      "standing": "tentative",
+      "scope": "Specified dataset combinations and the w0–wa model; results depend on supernova sample and cosmological assumptions.",
+      "limits": "DESI BAO alone is consistent with Lambda-CDM and does not show a strong preference for evolution. Combined-data preferences are not a settled discovery; unknown systematics and modeling choices remain relevant. No data analysis was reproduced.",
+      "evidence": [
+        {
+          "source_id": "source-desi-analysis-paper",
+          "relation": "supports",
+          "locator": "Abstract; VII / Dark-energy constraints; Fig. 11 and Table 6; summary",
+          "inspection_note": "Relevant source sections re-inspected by a separate editorial agent; no scientific replication performed."
+        },
+        {
+          "source_id": "source-desi-analysis-report",
+          "relation": "qualifies",
+          "locator": "Paragraph beginning Taken alone and paragraph on differing dataset combinations",
+          "inspection_note": "Relevant source sections re-inspected by a separate editorial agent; no scientific replication performed."
+        }
+      ],
+      "canonical_claim_ref": null,
+      "review": {
+        "status": "draft",
+        "method": "separate_agent_scoped_source_cross_check",
+        "independent_review": false,
+        "scope": "Independent editorial pass within the same agent team; not independent scientific validation or replication.",
+        "receipt_ref": "docs/atlas/source-review-2026-10-13.md"
+      },
+      "first_recorded_on": "2026-10-13",
+      "last_source_checked_on": "2026-10-13",
+      "next_review_on": "2026-11-12"
+    },
+    {
+      "id": "claim-desi-public-data",
+      "article_id": "article-dark-energy",
+      "revision": 2,
+      "text": "The separate public DESI Data Release 1 announcement reported information on 18.7 million galaxies, quasars and stars, covering the first 13 months of the main survey plus survey-validation data.",
+      "claim_kind": "observation",
+      "standing": "supported_within_scope",
+      "scope": "DESI DR1 public release announced 19 March 2025; distinct from the three-year DR2 cosmology analysis.",
+      "limits": "This is a release-description claim; dataset download, completeness and downstream updates were not tested.",
+      "evidence": [
+        {
+          "source_id": "source-desi-public-release",
+          "relation": "supports",
+          "locator": "Key Takeaways; object-count paragraph; first-year/main-survey and validation coverage paragraphs",
+          "inspection_note": "Relevant source sections re-inspected by a separate editorial agent; no scientific replication performed."
+        }
+      ],
+      "canonical_claim_ref": null,
+      "review": {
+        "status": "draft",
+        "method": "separate_agent_scoped_source_cross_check",
+        "independent_review": false,
+        "scope": "Independent editorial pass within the same agent team; not independent scientific validation or replication.",
+        "receipt_ref": "docs/atlas/source-review-2026-10-13.md"
+      },
+      "first_recorded_on": "2026-10-13",
+      "last_source_checked_on": "2026-10-13",
+      "next_review_on": "2026-11-12"
+    },
+    {
+      "id": "claim-lrd-simulation",
+      "article_id": "article-little-red-dots",
+      "revision": 2,
+      "text": "The Saguaro study synthetically redshifted its z = 2.0145 galaxy to z = 7 to illustrate how surface-brightness dimming could hide its extended host while leaving a compact LRD-like nucleus visible.",
+      "claim_kind": "model_result",
+      "standing": "supported_within_scope",
+      "scope": "A visual toy experiment with fitted spectral templates, instrumental/background assumptions and a phenomenological brightening prescription.",
+      "limits": "This is a model illustration, not observation of that galaxy in the early universe or a fitted evolutionary history. The authors explicitly describe its brightening choice as visual-purpose only.",
+      "evidence": [
+        {
+          "source_id": "source-lrd-paper",
+          "relation": "supports",
+          "locator": "Synthetic-redshift experiment: pixel SED redshifting, FERENGI-like prescription and Fig. 6",
+          "inspection_note": "Relevant source sections re-inspected by a separate editorial agent; no scientific replication performed."
+        },
+        {
+          "source_id": "source-lrd-paper",
+          "relation": "qualifies",
+          "locator": "Paragraph beginning We stress that for this toy experiment",
+          "inspection_note": "Relevant source sections re-inspected by a separate editorial agent; no scientific replication performed."
+        }
+      ],
+      "canonical_claim_ref": null,
+      "review": {
+        "status": "draft",
+        "method": "separate_agent_scoped_source_cross_check",
+        "independent_review": false,
+        "scope": "Independent editorial pass within the same agent team; not independent scientific validation or replication.",
+        "receipt_ref": "docs/atlas/source-review-2026-10-13.md"
+      },
+      "first_recorded_on": "2026-10-13",
+      "last_source_checked_on": "2026-10-13",
+      "next_review_on": "2026-11-12"
+    },
+    {
+      "id": "claim-lrd-phase",
+      "article_id": "article-little-red-dots",
+      "revision": 2,
+      "text": "The team proposed that some little red dots could be visible nuclei of galaxies in a short-lived, perhaps AGN-dominated phase whose compact appearance is amplified by observational bias.",
+      "claim_kind": "inference",
+      "standing": "tentative",
+      "scope": "Proposed pathway motivated by Saguaro, other lower-redshift examples and the study's selected LRD analysis.",
+      "limits": "The physical nature and evolutionary pathways remain unresolved across the LRD population. Saguaro is not representative of all LRDs; the primary paper qualifies AGN dominance as a possibility.",
+      "evidence": [
+        {
+          "source_id": "source-lrd-paper",
+          "relation": "supports",
+          "locator": "Abstract: proposed short-lived, perhaps AGN-dominated evolutionary phase",
+          "inspection_note": "Relevant source sections re-inspected by a separate editorial agent; no scientific replication performed."
+        },
+        {
+          "source_id": "source-lrd-nasa",
+          "relation": "qualifies",
+          "locator": "Final scientific discussion: Saguaro not representative of all LRDs",
+          "inspection_note": "Relevant source sections re-inspected by a separate editorial agent; no scientific replication performed."
+        }
+      ],
+      "canonical_claim_ref": null,
+      "review": {
+        "status": "draft",
+        "method": "separate_agent_scoped_source_cross_check",
+        "independent_review": false,
+        "scope": "Independent editorial pass within the same agent team; not independent scientific validation or replication.",
+        "receipt_ref": "docs/atlas/source-review-2026-10-13.md"
+      },
+      "first_recorded_on": "2026-10-13",
+      "last_source_checked_on": "2026-10-13",
+      "next_review_on": "2026-11-12"
+    }
+  ],
+  "articles": [
+    {
+      "id": "article-planet-collisions",
+      "slug": "planet-shattering-collisions",
+      "title": "Reading planetary collisions in stardust",
+      "domain_id": "domain-cosmos",
+      "lens": "frontier",
+      "editorial_hook": "A path from spectroscopy to the history of rocky worlds.",
+      "claim_ids": [
+        "claim-debris-sample",
+        "claim-debris-interpretation"
+      ],
+      "related_source_ids": [
+        "source-webb-collisions",
+        "source-webb-paper"
+      ],
+      "question": "Which additional observations would discriminate collision mechanisms?",
+      "graph_mapping_proposal": [
+        "domain-space-builder"
+      ],
+      "publication_status": "editorial_draft",
+      "created_on": "2026-10-13"
+    },
+    {
+      "id": "article-bennu-sugars",
+      "slug": "bennu-sugars",
+      "title": "Bennu and the chemistry before life",
+      "domain_id": "domain-biology",
+      "lens": "frontier",
+      "editorial_hook": "An analytical result at the boundary between chemistry and life's origins.",
+      "claim_ids": [
+        "claim-bennu-detection",
+        "claim-bennu-isotope-limit"
+      ],
+      "related_source_ids": [
+        "source-bennu-sugars"
+      ],
+      "question": "How would independent aliquots and stronger origin diagnostics change the interpretation?",
+      "graph_mapping_proposal": [
+        "domain-bio-human-intelligence",
+        "domain-space-builder"
+      ],
+      "publication_status": "editorial_draft",
+      "created_on": "2026-10-13"
+    },
+    {
+      "id": "article-roman-concrete",
+      "slug": "roman-concrete-hot-mixing",
+      "title": "Recovering Roman material knowledge",
+      "domain_id": "domain-history",
+      "lens": "historical",
+      "editorial_hook": "Lost knowledge becomes useful when a surviving artifact can constrain its reconstruction.",
+      "claim_ids": [
+        "claim-pompeii-quicklime",
+        "claim-pompeii-hotmix"
+      ],
+      "related_source_ids": [
+        "source-pompeii-mit",
+        "source-pompeii-paper"
+      ],
+      "question": "How does a reconstructed mix perform against a matched modern material under specified conditions?",
+      "graph_mapping_proposal": [],
+      "publication_status": "editorial_draft",
+      "created_on": "2026-10-13"
+    },
+    {
+      "id": "article-dark-energy",
+      "slug": "desi-evolving-dark-energy",
+      "title": "Is dark energy changing?",
+      "domain_id": "domain-cosmos",
+      "lens": "frontier",
+      "editorial_hook": "A consequential question whose answer depends on observations and models.",
+      "claim_ids": [
+        "claim-desi-result",
+        "claim-desi-public-data"
+      ],
+      "related_source_ids": [
+        "source-desi-dr2",
+        "source-desi-analysis-report",
+        "source-desi-analysis-paper",
+        "source-desi-public-release"
+      ],
+      "question": "How sensitive is the result to model choices and independent datasets?",
+      "graph_mapping_proposal": [
+        "domain-space-builder"
+      ],
+      "publication_status": "editorial_draft",
+      "created_on": "2026-10-13"
+    },
+    {
+      "id": "article-little-red-dots",
+      "slug": "little-red-dots",
+      "title": "The unresolved identity of little red dots",
+      "domain_id": "domain-cosmos",
+      "lens": "frontier",
+      "editorial_hook": "Compact red sources make a useful case study in observation, simulation, and competing explanations.",
+      "claim_ids": [
+        "claim-lrd-simulation",
+        "claim-lrd-phase"
+      ],
+      "related_source_ids": [
+        "source-lrd-nasa",
+        "source-lrd-paper"
+      ],
+      "question": "Do other lower-redshift examples support the same proposed pathway?",
+      "graph_mapping_proposal": [
+        "domain-space-builder"
+      ],
+      "publication_status": "editorial_draft",
+      "created_on": "2026-10-13"
+    }
+  ]
+}

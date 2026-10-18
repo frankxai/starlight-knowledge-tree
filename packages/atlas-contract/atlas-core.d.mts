@@ -1,0 +1,38 @@
+export type AtlasLens = "foundation" | "frontier" | "historical" | "hypothesis";
+export type AtlasStanding = "supported_within_scope" | "tentative" | "unresolved" | "disputed" | "contradicted_within_scope";
+export type AtlasInspection = "metadata_only" | "abstract_only" | "relevant_sections" | "complete_text" | "data_and_code";
+export type AtlasClaimKind = "observation" | "inference" | "boundary_condition" | "historical_evidence" | "model_result" | "interpretation" | "theology" | "fiction";
+export type AtlasSourceUpdateStatus = "not_independently_checked" | "checked_no_known_notice" | "no_update_listed_in_inspected_crossmark" | "affiliation_correction_recorded" | "version_history_inspected" | "correction_recorded" | "expression_of_concern_recorded" | "retracted" | "withdrawn";
+export type AtlasEvidence = { source_id: string; relation: "supports" | "qualifies" | "contradicts"; locator: string; inspection_note: string };
+export type AtlasReview = { status: "draft" | "reviewed"; method: string; independent_review: false; receipt_ref?: string; reviewed_on?: string; reviewer?: string; scope?: string; limits?: string; rationale?: string };
+export type AtlasClaim = { id: string; article_id: string; revision: number; text: string; claim_kind: AtlasClaimKind; standing: AtlasStanding; scope: string; limits: string; evidence: AtlasEvidence[]; canonical_claim_ref: string | null; review: AtlasReview; first_recorded_on: string; last_source_checked_on: string; next_review_on: string };
+export type AtlasSource = {
+  id: string; title: string; url: string; kind: string; published_on: string; updated_on: string | null; issue_on: string | null; event_on: string | null; accessed_on: string; language: string; lineage_id: string; inspection: AtlasInspection; inspected_locators: string[]; update_status: AtlasSourceUpdateStatus;
+  rights: { full_text_redistribution: string; stored_content: "bibliographic_metadata_and_original_paraphrase"; media_included: false };
+  doi?: string; publication_stage?: string; issue_date_precision?: string; published_date_precision?: string; retrieval_limit?: string; retrieval_mode?: string; retrieval_note?: string; report_author?: string; publisher?: string; container_title?: string; volume?: string; issue?: string; pages?: string; isbn?: string; archive?: string; archive_location?: string; update_check_method?: string; update_check_limit?: string; update_check_scope?: string; update_checked_on?: string; inspection_note?: string; authors?: string[]; update_check_url?: string; issue_date_note?: string; source_license_reported?: string; first_preprint_on?: string; preprint_url?: string; arxiv_id?: string; inspected_version?: string; date_note?: string; journal_published_on?: string; published_version_metadata_url?: string;
+};
+export type AtlasArticle = { id: string; slug: string; title: string; domain_id: string; lens: AtlasLens; editorial_hook: string; claim_ids: string[]; related_source_ids: string[]; question: string; graph_mapping_proposal: string[]; publication_status: "editorial_draft"; created_on: string };
+export type AtlasDomain = { id: string; label: string; coverage: string; proposed: boolean };
+export type AtlasProjection = { source_repository: string; source_path: string; source_commit: string; content_sha256: string; compiled_on: string };
+export type Atlas = { schema_version: "starlight.atlas.v1"; title: string; status: "editorial_draft"; editorial_notice: string; created_on: string; license: string; coverage: { search_completed_on: string; systematic_review: boolean; geographic_exhaustiveness: boolean; languages: string[]; areas_inspected: string[]; limits: string[] }; domains: AtlasDomain[]; sources: AtlasSource[]; claims: AtlasClaim[]; articles: AtlasArticle[]; admission_receipt?: string; projection: AtlasProjection };
+export type AtlasSearchInput = { query?: string; domain?: string; lens?: string; limit?: number; offset?: number };
+export type AtlasSearchResult = { query: string; domain: string | null; lens: string | null; limit: number; offset: number; total: number; next_offset: number | null; truncated: boolean; articles: AtlasArticle[] };
+export type AtlasCSL = { id: string; type: string; title: string; URL: string; issued: { "date-parts": number[][] }; accessed: { "date-parts": number[][] }; language: string; note: string; DOI?: string; publisher?: string; "container-title"?: string; author?: { literal: string }[]; volume?: string; issue?: string; page?: string; ISBN?: string };
+export const ATLAS_SCHEMA: "starlight.atlas.v1";
+export const ATLAS_NOTICE: string;
+export const ATLAS_SOURCE_UPDATE_STATUSES: readonly AtlasSourceUpdateStatus[];
+export class AtlasValidationError extends Error { constructor(message: string); }
+export function safeSourceURL(value: unknown): string;
+export function normalizeAtlas(input: unknown): Omit<Atlas, "projection"> & { projection?: AtlasProjection };
+export function compileAtlas(input: unknown, projection: Omit<AtlasProjection, "content_sha256">): Atlas;
+export function validateAtlas(input: unknown): Atlas;
+export function validateClaimHistory(input: unknown, documents: unknown[]): { documents: number; previous_claim_revisions: number };
+export function stableJSON(value: unknown): string;
+export function hashAtlasContent(atlas: unknown): string;
+export function claimsForArticle(atlas: Atlas, article: AtlasArticle): AtlasClaim[];
+export function articleForSlug(atlas: Atlas, slug: string): AtlasArticle | undefined;
+export function sourcesForArticle(atlas: Atlas, article: AtlasArticle, citationsOnly?: boolean): AtlasSource[];
+export function searchAtlas(atlas: Atlas, input?: AtlasSearchInput): AtlasSearchResult;
+export function parseAtlasQuery(params: URLSearchParams): AtlasSearchInput;
+export function articleMarkdown(atlas: Atlas, article: AtlasArticle): string;
+export function citations(atlas: Atlas, article?: AtlasArticle): AtlasCSL[];

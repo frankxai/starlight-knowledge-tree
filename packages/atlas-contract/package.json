@@ -1,0 +1,12 @@
+{
+  "name": "@starlight/atlas-contract",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "exports": "./atlas-core.mjs",
+  "scripts": {
+    "build": "node --check atlas-core.mjs",
+    "validate": "node ../../scripts/validate-atlas.mjs"
+  }
+}

@@ -85,6 +85,15 @@ Each stage has a clear definition:
 
 ---
 
+## Operating Specifications
+
+- [Starlight Learner & Teacher OS](docs/learner-teacher-os/README.md) — evidence-first operating contract and source-of-truth boundaries
+- [Master Curriculum Map](docs/learner-teacher-os/CURRICULUM.md) — 18 connected capability constellations with projects and mastery tests
+- [Foundational Lexicon](docs/learner-teacher-os/LEXICON.md) — operational vocabulary with competence evidence
+- [Learner–Teacher Profile Specification](docs/learner-teacher-os/PROFILE-SPEC.md) — dual profiles, evidence quality, freshness, attribution, consent, and release policy
+
+---
+
 ## Ontology
 
 A **node** can be one of:

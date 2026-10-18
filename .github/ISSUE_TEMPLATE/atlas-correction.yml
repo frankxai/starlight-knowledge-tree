@@ -1,0 +1,38 @@
+name: Atlas source or claim correction
+description: Improve one scoped claim, source record, or evidence trail in Starlight Atlas.
+title: "[Atlas] "
+labels: []
+body:
+  - type: input
+    id: record
+    attributes:
+      label: Article, claim or source ID
+      placeholder: claim-bennu-detection
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Precise correction and affected scope
+      description: State what should change, why, and which uncertainty or limitation remains.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Original source and exact locator
+      description: Supply the public URL or identifier, version/date and relevant section. Distinguish inspected text from metadata.
+    validations:
+      required: true
+  - type: textarea
+    id: counterevidence
+    attributes:
+      label: Relevant counterevidence or alternative interpretation
+  - type: textarea
+    id: rights
+    attributes:
+      label: Rights and content included
+      description: Original paraphrases and bibliographic references only by default. Do not include private material or publisher full text.
+    validations:
+      required: true
+

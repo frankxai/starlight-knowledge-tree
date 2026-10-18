@@ -6,11 +6,19 @@ on:
     paths:
       - "data/**"
       - "packages/**"
+      - "scripts/validate-atlas.mjs"
+      - "scripts/tests/atlas-contract.test.mjs"
+      - "package.json"
+      - ".github/workflows/validate-graph.yml"
   pull_request:
     branches: [main]
     paths:
       - "data/**"
       - "packages/**"
+      - "scripts/validate-atlas.mjs"
+      - "scripts/tests/atlas-contract.test.mjs"
+      - "package.json"
+      - ".github/workflows/validate-graph.yml"
   workflow_dispatch:
 
 jobs:
@@ -28,22 +36,31 @@ jobs:
           node-version: "24"
 
       - name: Install dependencies
-        run: npm install --package-lock=false
+        run: npm install --workspaces --include-workspace-root
 
-      - name: Run Fiction Atlas regression tests
-        run: npm run test:fiction
+      - name: Build graph-schema
+        run: cd packages/graph-schema && npm run build
+
+      - name: Build graph-utils
+        run: cd packages/graph-utils && npm run build
 
       - name: Run graph validator
-        run: npm run validate
+        run: cd packages/graph-utils && npm run validate -- ../../data
         env:
           NODE_ENV: ci
+
+      - name: Validate Atlas evidence records
+        run: npm run validate:atlas
+
+      - name: Test Atlas evidence boundaries and portable exports
+        run: npm run test:atlas
 
       - name: Check for private data patterns
         run: |
           echo "Scanning for potential private data patterns..."
           # Check for patterns that suggest personal health/genetic data
           # These are heuristic checks — the Privacy Steward agent does full review
-          if grep -rEiw "(SSN|social[ ._-]?security|passport[ ._-]?number|medical[ ._-]?record|patient[ ._-]?id)" data/ --include="*.json"; then
+          if grep -rE "\\b(SSN|social[._ -]?security|passport[._ -]?number|medical[._ -]?record|patient[._ -]?id)\\b" data/ --include="*.json" -i; then
             echo "❌ Potential personal identifier pattern detected in data/"
             exit 1
           fi

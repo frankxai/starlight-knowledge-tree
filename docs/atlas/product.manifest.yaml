@@ -1,0 +1,67 @@
+schema_version: "1.0.0"
+product_id: product_starlight_atlas
+sku_id: sku_starlight_atlas_public_v1
+name: Starlight Atlas
+brand_id: brand_starlight_intelligence
+repository: frankxai/starlight-knowledge-tree
+owner: person_frank_riemer
+status: building
+format: public_encyclopedia_module
+buyer:
+  segment: curious_readers_builders_researchers_and_agent_communities
+  job: Assess a scoped science or technology claim, inspect its evidence and limits, and carry a citable record into further work.
+promise:
+  outcome: An inspectable claim-to-source trail with visible uncertainty, source inspection scope, revision provenance and portable exports.
+  boundary: Bounded public editorial drafts; declared coverage does not imply an exhaustive encyclopedia, maintained discovery feed, scientific consensus or independent replication.
+mechanism:
+  - Version authored entries, atomic claims, source metadata and exact locators in data/atlas/corpus.json.
+  - Compile a digest-checked projection into the existing Starlight website, retaining its immutable upstream source revision.
+  - Serve a responsive reader, bounded keyword discovery and read-only machine exports through existing application routes.
+  - Preserve distinct publication stage, claim kind, evidence standing and scientific review status.
+proof:
+  threshold: >-
+    The exact release passes reader-to-evidence and portable-export smoke checks on phone and desktop,
+    including missing/invalid input and unknown coverage. An independently inspected reader outcome
+    is recorded separately; successful deployment alone does not establish usefulness or adoption.
+  evidence: []
+activation_event: A reader follows one material claim to its exact source locator, identifies a stated limitation and reuses the exported record with its provenance intact.
+commercial:
+  price_state: free_public_access
+  experiment_band: null
+  merchant: not_applicable_no_sale
+  license: Existing repository MIT license only; no third-party source redistribution rights are granted.
+  refund_policy: not_applicable_no_sale
+rights:
+  state: source_specific_rights_required_metadata_and_original_paraphrase_only
+  record: data/atlas/corpus.json#sources
+channels:
+  - owned_public_web
+  - existing_github_repository
+  - read_only_json_markdown_and_csl_exports
+shared_platform:
+  reuse_target_percent: 80
+  dependencies:
+    - reviewed_agentic_ops_registry_and_artifact_placement
+    - existing_starlightintelligence_ai_nextjs_vercel_project
+    - existing_knowledge_tree_source_and_git_review
+    - existing_research_method_and_domain_pack_boundaries
+    - existing_starlight_design_authority
+support:
+  owner: person_frank_riemer
+  boundary: Source corrections and product defects use the existing GitHub issue and pull-request path; no personalized research service or scientific certification is promised.
+maintenance:
+  cadence: monthly_review_and_issue_driven_corrections
+  compatibility:
+    - starlight.atlas.v1
+    - existing_graph_ontology_unchanged
+    - public_editorial_draft_state_preserved_in_reader_and_exports
+    - reproducible_projection_bound_to_exact_source_sha
+stop_rule: Pause new entries when an existing claim cannot be traced, an export loses provenance, rights are unresolved, or review and correction work exceeds the maintainer's declared capacity.
+evidence:
+  release_receipt: null
+  reader_acceptance: null
+  community_reuse: null
+  total_cash_cost: null
+  total_human_hours: null
+  founder_hours: null
+  accepted_outcomes: null

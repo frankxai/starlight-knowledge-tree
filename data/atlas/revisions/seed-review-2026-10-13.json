@@ -1,0 +1,283 @@
+{
+  "schema_version": "starlight.atlas.claim_history.v1",
+  "created_on": "2026-10-13",
+  "history": {
+    "reviewed_on": "2026-10-13",
+    "reviewer": "atlas_science_review",
+    "predecessor_sha256": "4f2789f96aa95139d01595287401d672f0fb9bf8498729f0a3968af9e46ff3bd",
+    "previous_claim_revisions": [
+      {
+        "id": "claim-debris-sample",
+        "article_id": "article-planet-collisions",
+        "revision": 1,
+        "text": "The reported analysis combined Webb and archival Spitzer observations of 21 extreme debris-disc systems.",
+        "claim_kind": "observation",
+        "standing": "supported_within_scope",
+        "scope": "Reported sample only.",
+        "limits": "Source report inspected; underlying paper and raw spectra were not inspected.",
+        "evidence": [
+          {
+            "source_id": "source-webb-collisions",
+            "relation": "supports",
+            "locator": "Sample paragraph",
+            "inspection_note": "Original paraphrase of inspected sections; no independent replication performed."
+          }
+        ],
+        "canonical_claim_ref": null,
+        "review": {
+          "status": "draft",
+          "method": "single_agent_source_inspection",
+          "independent_review": false
+        },
+        "first_recorded_on": "2026-10-13",
+        "last_source_checked_on": "2026-10-13",
+        "next_review_on": "2026-11-12"
+      },
+      {
+        "id": "claim-debris-interpretation",
+        "article_id": "article-planet-collisions",
+        "revision": 1,
+        "text": "The authors interpret silica-rich debris as evidence consistent with energetic collisions between large planetary bodies.",
+        "claim_kind": "inference",
+        "standing": "tentative",
+        "scope": "Authors' model-based interpretation.",
+        "limits": "The collisions are inferred from debris properties, rather than directly filmed.",
+        "evidence": [
+          {
+            "source_id": "source-webb-collisions",
+            "relation": "supports",
+            "locator": "Mineralogy and collision interpretation",
+            "inspection_note": "Original paraphrase of inspected sections; no independent replication performed."
+          }
+        ],
+        "canonical_claim_ref": null,
+        "review": {
+          "status": "draft",
+          "method": "single_agent_source_inspection",
+          "independent_review": false
+        },
+        "first_recorded_on": "2026-10-13",
+        "last_source_checked_on": "2026-10-13",
+        "next_review_on": "2026-11-12"
+      },
+      {
+        "id": "claim-bennu-detection",
+        "article_id": "article-bennu-sugars",
+        "revision": 1,
+        "text": "Chemical analysis identified ribose and glucose in the inspected Bennu sample.",
+        "claim_kind": "observation",
+        "standing": "supported_within_scope",
+        "scope": "Returned Bennu sample analyzed in the study.",
+        "limits": "Analytical findings do not establish that living organisms existed on Bennu.",
+        "evidence": [
+          {
+            "source_id": "source-bennu-sugars",
+            "relation": "supports",
+            "locator": "Detection of Bennu sugars; Figs. 1–4",
+            "inspection_note": "Original paraphrase of inspected sections; no independent replication performed."
+          }
+        ],
+        "canonical_claim_ref": null,
+        "review": {
+          "status": "draft",
+          "method": "single_agent_source_inspection",
+          "independent_review": false
+        },
+        "first_recorded_on": "2026-10-13",
+        "last_source_checked_on": "2026-10-13",
+        "next_review_on": "2026-11-12"
+      },
+      {
+        "id": "claim-bennu-isotope-limit",
+        "article_id": "article-bennu-sugars",
+        "revision": 1,
+        "text": "Low sugar abundance and sample constraints prevented stable-isotope and enantiomeric measurements of the detected sugars.",
+        "claim_kind": "boundary_condition",
+        "standing": "supported_within_scope",
+        "scope": "Reported sugar measurements.",
+        "limits": "Contamination controls and this measurement limitation must be assessed together.",
+        "evidence": [
+          {
+            "source_id": "source-bennu-sugars",
+            "relation": "supports",
+            "locator": "Detection section, paragraph on measurement limitations",
+            "inspection_note": "Original paraphrase of inspected sections; no independent replication performed."
+          }
+        ],
+        "canonical_claim_ref": null,
+        "review": {
+          "status": "draft",
+          "method": "single_agent_source_inspection",
+          "independent_review": false
+        },
+        "first_recorded_on": "2026-10-13",
+        "last_source_checked_on": "2026-10-13",
+        "next_review_on": "2026-11-12"
+      },
+      {
+        "id": "claim-pompeii-quicklime",
+        "article_id": "article-roman-concrete",
+        "revision": 1,
+        "text": "The Pompeii investigation reported intact quicklime fragments mixed with dry ingredients in a preserved construction-site pile.",
+        "claim_kind": "historical_evidence",
+        "standing": "supported_within_scope",
+        "scope": "Specific preserved Pompeii construction site.",
+        "limits": "Institutional report inspected; linked paper full text remains a retrieval gap.",
+        "evidence": [
+          {
+            "source_id": "source-pompeii-mit",
+            "relation": "supports",
+            "locator": "Uncovering ancient secrets",
+            "inspection_note": "Original paraphrase of inspected sections; no independent replication performed."
+          }
+        ],
+        "canonical_claim_ref": null,
+        "review": {
+          "status": "draft",
+          "method": "single_agent_source_inspection",
+          "independent_review": false
+        },
+        "first_recorded_on": "2026-10-13",
+        "last_source_checked_on": "2026-10-13",
+        "next_review_on": "2026-11-12"
+      },
+      {
+        "id": "claim-pompeii-hotmix",
+        "article_id": "article-roman-concrete",
+        "revision": 1,
+        "text": "The investigators interpret the site evidence as supporting hot mixing during Roman construction.",
+        "claim_kind": "inference",
+        "standing": "supported_within_scope",
+        "scope": "Studied site and materials.",
+        "limits": "This does not establish a single recipe used throughout the Roman world.",
+        "evidence": [
+          {
+            "source_id": "source-pompeii-mit",
+            "relation": "supports",
+            "locator": "Uncovering ancient secrets; stable-isotope interpretation",
+            "inspection_note": "Original paraphrase of inspected sections; no independent replication performed."
+          }
+        ],
+        "canonical_claim_ref": null,
+        "review": {
+          "status": "draft",
+          "method": "single_agent_source_inspection",
+          "independent_review": false
+        },
+        "first_recorded_on": "2026-10-13",
+        "last_source_checked_on": "2026-10-13",
+        "next_review_on": "2026-11-12"
+      },
+      {
+        "id": "claim-desi-result",
+        "article_id": "article-dark-energy",
+        "revision": 1,
+        "text": "DESI reported that its first three years of observations strengthened hints of evolving dark energy.",
+        "claim_kind": "inference",
+        "standing": "tentative",
+        "scope": "Collaboration's summary of DR2 results.",
+        "limits": "This seed records the report; it does not resolve model dependence or independently analyze the data.",
+        "evidence": [
+          {
+            "source_id": "source-desi-dr2",
+            "relation": "supports",
+            "locator": "March 19, 2025 announcement",
+            "inspection_note": "Original paraphrase of inspected sections; no independent replication performed."
+          }
+        ],
+        "canonical_claim_ref": null,
+        "review": {
+          "status": "draft",
+          "method": "single_agent_source_inspection",
+          "independent_review": false
+        },
+        "first_recorded_on": "2026-10-13",
+        "last_source_checked_on": "2026-10-13",
+        "next_review_on": "2026-11-12"
+      },
+      {
+        "id": "claim-desi-public-data",
+        "article_id": "article-dark-energy",
+        "revision": 1,
+        "text": "The announcement described a public release containing information on 18.7 million galaxies, quasars, and stars.",
+        "claim_kind": "observation",
+        "standing": "supported_within_scope",
+        "scope": "Announced public data release.",
+        "limits": "Dataset accessibility, completeness, and downstream updates were not independently tested.",
+        "evidence": [
+          {
+            "source_id": "source-desi-dr2",
+            "relation": "supports",
+            "locator": "Data-release paragraph",
+            "inspection_note": "Original paraphrase of inspected sections; no independent replication performed."
+          }
+        ],
+        "canonical_claim_ref": null,
+        "review": {
+          "status": "draft",
+          "method": "single_agent_source_inspection",
+          "independent_review": false
+        },
+        "first_recorded_on": "2026-10-13",
+        "last_source_checked_on": "2026-10-13",
+        "next_review_on": "2026-11-12"
+      },
+      {
+        "id": "claim-lrd-simulation",
+        "article_id": "article-little-red-dots",
+        "revision": 1,
+        "text": "The Saguaro case study used synthetic redshifting to investigate how a lower-redshift galaxy could resemble a distant little red dot.",
+        "claim_kind": "model_result",
+        "standing": "supported_within_scope",
+        "scope": "Reported case study and model.",
+        "limits": "Synthetic appearance is a model result, not an observation of that galaxy at an earlier time.",
+        "evidence": [
+          {
+            "source_id": "source-lrd-nasa",
+            "relation": "supports",
+            "locator": "Synthetic redshift explanation",
+            "inspection_note": "Original paraphrase of inspected sections; no independent replication performed."
+          }
+        ],
+        "canonical_claim_ref": null,
+        "review": {
+          "status": "draft",
+          "method": "single_agent_source_inspection",
+          "independent_review": false
+        },
+        "first_recorded_on": "2026-10-13",
+        "last_source_checked_on": "2026-10-13",
+        "next_review_on": "2026-11-12"
+      },
+      {
+        "id": "claim-lrd-phase",
+        "article_id": "article-little-red-dots",
+        "revision": 1,
+        "text": "The team proposed that some little red dots could represent a temporary phase of highly active supermassive black holes.",
+        "claim_kind": "inference",
+        "standing": "tentative",
+        "scope": "Proposed pathway motivated by the Saguaro case.",
+        "limits": "The source states that Saguaro is not representative of all little red dots.",
+        "evidence": [
+          {
+            "source_id": "source-lrd-nasa",
+            "relation": "supports",
+            "locator": "Proposed pathway; Saguaro representativeness limitation",
+            "inspection_note": "Original paraphrase of inspected sections; no independent replication performed."
+          }
+        ],
+        "canonical_claim_ref": null,
+        "review": {
+          "status": "draft",
+          "method": "single_agent_source_inspection",
+          "independent_review": false
+        },
+        "first_recorded_on": "2026-10-13",
+        "last_source_checked_on": "2026-10-13",
+        "next_review_on": "2026-11-12"
+      }
+    ],
+    "review_status": "editorial_cross_check_research_drafts",
+    "public_release_condition": "Keep draft status, claim scopes, retrieval modes/gaps and correction/version notices visible; do not present as independently validated science."
+  }
+}
