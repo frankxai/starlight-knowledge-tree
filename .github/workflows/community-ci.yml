@@ -18,11 +18,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: '24'
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm install --package-lock=false
 
       - name: Validate Knowledge Graph Schemas & Edge Targets
         run: npm run validate
