@@ -24,15 +24,11 @@ const nodesByDomain = new Map<string, NodeItem[]>();
 const nodesByType = new Map<string, NodeItem[]>();
 
 function loadGraph() {
+  // Every file in data/nodes is canon; a hand-maintained list silently dropped
+  // skills, contribution tasks, and experiments (222 of 250 loaded). Dynamic by construction.
+  const nodesDir = path.join(dataDir, "nodes");
   const nodeFiles = [
-    "nodes/concepts.json",
-    "nodes/papers.json",
-    "nodes/tools.json",
-    "nodes/books.json",
-    "nodes/mcp.json",
-    "nodes/swarm-patterns.json",
-    "nodes/workflows.json",
-    "nodes/open-problems.json",
+    ...fs.readdirSync(nodesDir).filter((f) => f.endsWith(".json")).sort().map((f) => `nodes/${f}`),
     "benchmarks.json",
   ];
 
