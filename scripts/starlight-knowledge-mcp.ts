@@ -38,6 +38,9 @@ function loadGraph() {
     try {
       const items: NodeItem[] = JSON.parse(fs.readFileSync(p, "utf8"));
       for (const item of items) {
+        // data/benchmarks.json records carry no `type`; without this tag the
+        // query_benchmarks type filter can never match them (returned 0).
+        if (rel === "benchmarks.json" && !item.type) item.type = "benchmark";
         nodeMap.set(item.id, item);
 
         // Group by domain
@@ -313,6 +316,9 @@ rl.on("line", (line) => {
 
   const { id, method, params } = req;
 
+  // Notifications carry no id and must never receive a response.
+  if (id === undefined && typeof method === "string" && method.startsWith("notifications/")) return;
+
   switch (method) {
     case "initialize":
       sendResponse({
@@ -387,6 +393,45 @@ rl.on("line", (line) => {
         },
       });
       break;
+
+    case "resources/read": {
+      // resources/list advertises these URIs, so reads must resolve them.
+      const uri = params.uri;
+      if (uri === "starlight://master-canon") {
+        const canon = {
+          nodes: Array.from(nodeMap.values()),
+          domains: Array.from(new Set(Array.from(nodeMap.values()).map((n) => n.domain).filter(Boolean))),
+          counts: { entries: nodeMap.size },
+        };
+        sendResponse({
+          jsonrpc: "2.0",
+          id,
+          result: { contents: [{ uri, mimeType: "application/json", text: JSON.stringify(canon) }] },
+        });
+      } else if (uri === "starlight://canvas") {
+        const canvasPath = path.resolve(__dirname, "../dist/starlight-knowledge-tree.canvas");
+        if (fs.existsSync(canvasPath)) {
+          sendResponse({
+            jsonrpc: "2.0",
+            id,
+            result: { contents: [{ uri, mimeType: "application/json", text: fs.readFileSync(canvasPath, "utf8") }] },
+          });
+        } else {
+          sendResponse({
+            jsonrpc: "2.0",
+            id,
+            error: { code: -32002, message: "Canvas not generated yet. Run the community export to build dist/starlight-knowledge-tree.canvas." },
+          });
+        }
+      } else {
+        sendResponse({
+          jsonrpc: "2.0",
+          id,
+          error: { code: -32002, message: `Resource '${uri}' not found` },
+        });
+      }
+      break;
+    }
 
     default:
       sendResponse({

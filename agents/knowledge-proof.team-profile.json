@@ -1,0 +1,101 @@
+{
+  "schema_version": "starlight.team_profile.v2",
+  "team": {
+    "id": "knowledge-proof-team",
+    "display_name": "Knowledge Proof (Starlight Knowledge Tree)",
+    "operating_unit": "starlight-knowledge-tree",
+    "coordinator_role_id": "coordinator",
+    "verifier_role_id": "evidence-verifier",
+    "default_team_size": 4,
+    "description": "Proof unit for the estate team OS: take the knowledge tree canon live on main (graph, MCP, exports, web, honest waitlist) within 30 days, or dissolve. Serves contributors, learners, agents consuming the graph, and Frank as steward."
+  },
+  "roles": [
+    {
+      "id": "coordinator",
+      "profile_ref": "cartographer",
+      "capabilities": ["intake", "routing", "gap-detection", "ledger", "integration"],
+      "write_scopes": ["docs/**", ".agent/**"],
+      "tools": ["git", "gh"],
+      "stop_conditions": ["Conflicting ownership, missing authority, or a human gate is reached.", "Frank review queue median age over 7 days: stop staging new work."],
+      "expected_outputs": ["Bounded lane contract per work item", "Weekly proof numbers (merged nodes, queue age, gate pass rate)"]
+    },
+    {
+      "id": "canon-maker",
+      "profile_ref": "research-ingestion-agent",
+      "capabilities": ["canon-data", "exports", "mcp-server", "validation"],
+      "write_scopes": ["data/**", "scripts/**", "packages/**"],
+      "tools": ["git", "node", "npm"],
+      "stop_conditions": ["A change needs a schema migration or touches private data."],
+      "expected_outputs": ["Atomic PRs (one node or one fix per PR)", "Validate and export receipts with command output"]
+    },
+    {
+      "id": "web-maker",
+      "profile_ref": "frontend-experience-engineer",
+      "capabilities": ["frontend", "accessibility", "waitlist", "graph-ui"],
+      "write_scopes": ["apps/web/**"],
+      "tools": ["git", "node", "npm"],
+      "stop_conditions": ["A surface would claim counts or seats not read from real storage."],
+      "expected_outputs": ["Routes rendering canon-derived counts", "No CTA resolving to a 404"]
+    },
+    {
+      "id": "evidence-verifier",
+      "profile_ref": "evidence-reviewer",
+      "capabilities": ["independent-review", "recount", "mcp-conformance", "release-evidence"],
+      "write_scopes": ["docs/**"],
+      "tools": ["git", "gh", "node"],
+      "stop_conditions": ["Verifier authored or co-authored the target change: stop and hand to another harness."],
+      "expected_outputs": ["Exact-head verdict with reviewed file list", "Clean-clone recount receipt"]
+    },
+    {
+      "id": "privacy-steward",
+      "profile_ref": "privacy-steward",
+      "capabilities": ["privacy-scan", "path-scan", "consent-gates"],
+      "write_scopes": ["docs/**"],
+      "tools": ["git", "gh"],
+      "stop_conditions": ["Any private title, absolute local path, or personal identifier appears in public data."],
+      "expected_outputs": ["Privacy scan verdict per data PR", "Blocker list with file pointers"]
+    }
+  ],
+  "routing": {
+    "required_roles": ["coordinator", "canon-maker", "evidence-verifier"],
+    "optional_roles": ["web-maker", "privacy-steward"],
+    "handoff_rules": [
+      "Select only the smallest 3-5 role team needed for the bounded job.",
+      "The worker that changes a release surface cannot be its independent verifier. Verifier harness must differ from maker harness.",
+      "Stop and request named approval when any human-gated action is required.",
+      "Humans only promote a node to stable. Agents propose seed or draft.",
+      "One writer per worktree. Branch agent/harness/scope. WIP cap 3 open PRs for this team."
+    ]
+  },
+  "permissions": {
+    "allowed_actions": ["read", "edit-owned-paths", "test", "draft-pr"],
+    "human_gate_actions": ["production_high_risk", "dns_change", "secret_change", "billing_change", "spend", "data_migration", "destructive", "external_send", "legal_ip", "brand_identity", "permission_change", "stable_promotion", "publish"],
+    "default_write_scope": ["assigned-repo/**"]
+  },
+  "bindings": {
+    "skills": ["kt-canon", "kt-mcp", "kt-contribution-review", "team-evolution-ledger", "merge-landability"],
+    "plugins": [],
+    "tools": ["gh", "node", "npm"]
+  },
+  "eval_suite": ["canon-count-integrity", "mcp-conformance-smoke", "export-determinism"],
+  "ownership": { "owner": "frank-steward", "version": "1.0.0", "review_date": "2026-10-20" },
+  "extensions": {
+    "proactive_triggers": [
+      "validate-graph or community-ci failure on an open PR",
+      "new contribution issue from existing templates",
+      "review queue item older than 7 days",
+      "open team PR older than 7 days without a verifier verdict",
+      "canon count drift detected by verify-canon-counts"
+    ],
+    "proof_mission": {
+      "deadline_days": 30,
+      "definition_of_live": "Reviewed canon on main proven from a clean clone: validate green, counts equal manifest, exports deterministic, MCP benchmark query returns all benchmark records, web routes render canon-derived counts, waitlist persists real rows or stays visibly closed.",
+      "kill_criteria": "Not live on main within 30 days: team dissolves. No extension on reports, heartbeats, or proof logs."
+    },
+    "evolution": {
+      "weekly_numbers": ["merged PRs", "gate first-pass rate", "revert rate", "validated nodes merged", "review queue median age", "tokens per merged PR"],
+      "renewal_rule": "Profile expires after 45 days. Renewal needs at least one merged non-routine PR in the last 30 days and a re-signed named steward.",
+      "improvement_claim_floor": "No improvement claim below an L2 judge eval with absolute numbers (team-evolution-ledger ladder)."
+    }
+  }
+}

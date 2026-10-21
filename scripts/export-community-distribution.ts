@@ -61,15 +61,9 @@ if (fs.existsSync(canvasSrc)) {
 const mcpConfig = {
   mcpServers: {
     "starlight-knowledge": {
-      command: "node",
-      args: ["./node_modules/@starlight/knowledge-tree-mcp/dist/index.js"],
-      env: {
-        STARLIGHT_DATA_DIR: "./starlight-master-canon.json"
-      }
-    },
-    "starlight-memory": {
-      command: "node",
-      args: ["C:/Users/frank/starlight/repos/Starlight-Intelligence-System/mcp/dist/index.js"]
+      command: "npx",
+      args: ["tsx", "scripts/starlight-knowledge-mcp.ts"],
+      _note: "Run from a starlight-knowledge-tree checkout. No package install beyond the repo toolchain is required."
     }
   }
 };
@@ -81,14 +75,14 @@ console.log(`✅ [3/5] Packaged ready-to-use MCP Configuration -> ${mcpPath}`);
 const quickstartMarkdown = `# Starlight Community Knowledge Pack (v1.0)
 *The Sovereign Knowledge Tree & Multi-Agent Cognitive Framework*
 
-Welcome to the **Starlight Community Distribution**. This package delivers a battle-tested, verified ontology of 260+ nodes, landmark books, research papers, and multi-agent swarm patterns used across the Starlight & Arcanea ecosystems.
+Welcome to the **Starlight Community Distribution**. This package delivers a verified ontology of ${allNodes.length} nodes, landmark books, research papers, and multi-agent swarm patterns used across the Starlight & Arcanea ecosystems.
 
 ---
 
 ## 🚀 What's in this Package:
 
 1. \`starlight-knowledge-tree.canvas\`: Complete **JSON Canvas 1.0** spatial graph. Open directly in **Obsidian**, VS Code Canvas, or any spatial node viewer.
-2. \`starlight-master-canon.json\`: The single-file typed AST containing all 260+ entities, relationships, mental models, and code bindings.
+2. \`starlight-master-canon.json\`: The single-file typed AST containing all ${allNodes.length} entities, relationships, mental models, and code bindings.
 3. \`starlight-mcp-config.json\`: Plug-and-play **Model Context Protocol (MCP)** config for Claude Desktop, Cursor, and Codex CLI.
 4. \`COMMUNITY_EVOLUTION_PIPELINE.md\`: Guide on contributing new nodes, papers, and benchmarks.
 
