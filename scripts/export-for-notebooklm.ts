@@ -53,7 +53,7 @@ Modern AI development is paralyzed by two opposing extremes:
 2. **Brittle Enterprise Monoliths**: Rigid, overpriced agent frameworks requiring dedicated infrastructure, opaque daemon runtimes, and exponential compute overhead.
 
 **Starlight Knowledge Tree** solves this through a **Zero-Daemon Federated Graph AST**:
-- A single source of truth linking 240 estate repositories, 14 specialized domains, 10 verified swarm patterns, 10 MCP server integrations, and 6 empirical frontier benchmarks.
+- A single source of truth linking ${estateIndex.total_repos} estate repositories, ${totalDomains} specialized domains, ${swarmPatterns.length} catalogued swarm patterns, ${mcp.length} MCP server integrations, and ${benchmarks.length} empirical frontier benchmarks.
 - Decouples high-reasoning planning (Crown / Architect gates) from zero-marginal-cost execution (Shift / Worker gates).
 - Strict Maker-Checker separation (the Santa Loop) guaranteeing zero uninspected artifacts ever touch production.
 
@@ -87,7 +87,7 @@ fs.writeFileSync(path.join(outputDir, "01-executive-briefing-and-audio-overview-
 const doc02 = `# Frontier Multi-Agent Swarm Patterns & Cognitive Architecture
 *Starlight Master Canon | Grounding Source for NotebookLM*
 
-This dossier details the 10 production-tested swarm patterns operating across the Starlight multi-agent estate.
+This dossier details the ${swarmPatterns.length} catalogued swarm patterns operating across the Starlight multi-agent estate.
 
 ${swarmPatterns.map((s, i) => `
 ### Pattern ${i+1}: ${s.label} (\`${s.id}\`)
@@ -148,10 +148,10 @@ const doc04 = `# Canonical Knowledge Tree Master Index
 
 ## Empirical Benchmarks
 ${benchmarks.map((b: any) => `
-### ${b.label} (\`${b.id}\`)
+### ${b.name || b.label} (\`${b.id}\`)
 - **Metric**: ${b.metric}
-- **Dataset**: ${b.eval_dataset}
-- **Baseline vs Target**: Baseline \`${b.baseline_score}\` → Starlight Target \`${b.target_score}\`
+- **SOTA Target**: ${b.sota_target}
+- **Source**: ${b.source_url}
 - **Significance**: ${b.description}
 `).join("\n")}
 
@@ -221,7 +221,7 @@ Synthesize the entire Starlight Knowledge Tree source pack into an executive bri
 Highlight:
 - Strategic moat and IP assets.
 - Capital efficiency & ROI comparison table.
-- Estate topology (240 repositories unified under one ontology).
+- Estate topology (${estateIndex.total_repos} repositories unified under one ontology).
 - Community distribution & open-source governance.
 \`\`\`
 `;

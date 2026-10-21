@@ -28,9 +28,17 @@ for (const file of domainFiles) {
   allDomains.push(content);
 }
 
+// Deterministic exports: no wall-clock fields. generated_from is the newest
+// canon timestamp in the data itself, so identical data gives identical bytes.
+const generatedFrom = allNodes.reduce(
+  (max, n) => (typeof n.updated_at === "string" && n.updated_at > max ? n.updated_at : max),
+  ""
+);
+const packaged: string[] = [];
+
 const masterBundle = {
   version: "1.0.0",
-  generated_at: new Date().toISOString(),
+  generated_from: generatedFrom || "canon",
   license: "MIT",
   stats: {
     total_nodes: allNodes.length,
@@ -47,58 +55,57 @@ const masterBundle = {
 
 const jsonPath = path.join(outputDir, "starlight-master-canon.json");
 fs.writeFileSync(jsonPath, JSON.stringify(masterBundle, null, 2), "utf8");
-console.log(`✅ [1/5] Compiled master canon JSON (${allNodes.length} nodes) -> ${jsonPath}`);
+packaged.push("starlight-master-canon.json");
+console.log(`✅ Compiled master canon JSON (${allNodes.length} nodes) -> ${jsonPath}`);
 
-// 2. Copy the JSON Canvas 1.0 file
+// 2. Copy the JSON Canvas 1.0 file. The canvas is built by
+// scripts/export-json-canvas.ts; absent input is reported, never silent.
 const canvasSrc = path.join(distDir, "starlight-knowledge-tree.canvas");
 const canvasDst = path.join(outputDir, "starlight-knowledge-tree.canvas");
-if (fs.existsSync(canvasSrc)) {
+const hasCanvas = fs.existsSync(canvasSrc);
+if (hasCanvas) {
   fs.copyFileSync(canvasSrc, canvasDst);
-  console.log(`✅ [2/5] Packaged JSON Canvas 1.0 visual map -> ${canvasDst}`);
+  packaged.push("starlight-knowledge-tree.canvas");
+  console.log(`✅ Packaged JSON Canvas 1.0 visual map -> ${canvasDst}`);
+} else {
+  console.log(`⚠️ Canvas absent, skipped. Build it first: npx tsx scripts/export-json-canvas.ts`);
 }
 
 // 3. Generate Community MCP Server Configuration (claude_desktop_config / cursor / codex)
 const mcpConfig = {
   mcpServers: {
     "starlight-knowledge": {
-      command: "node",
-      args: ["./node_modules/@starlight/knowledge-tree-mcp/dist/index.js"],
-      env: {
-        STARLIGHT_DATA_DIR: "./starlight-master-canon.json"
-      }
-    },
-    "starlight-memory": {
-      command: "node",
-      args: ["C:/Users/frank/starlight/repos/Starlight-Intelligence-System/mcp/dist/index.js"]
+      command: "npx",
+      args: ["tsx", "scripts/starlight-knowledge-mcp.ts"],
+      _note: "Run from a starlight-knowledge-tree checkout. No package install beyond the repo toolchain is required."
     }
   }
 };
 const mcpPath = path.join(outputDir, "starlight-mcp-config.json");
 fs.writeFileSync(mcpPath, JSON.stringify(mcpConfig, null, 2), "utf8");
-console.log(`✅ [3/5] Packaged ready-to-use MCP Configuration -> ${mcpPath}`);
+packaged.push("starlight-mcp-config.json");
+console.log(`✅ Packaged ready-to-use MCP Configuration -> ${mcpPath}`);
 
 // 4. Generate Community Quickstart Guide
 const quickstartMarkdown = `# Starlight Community Knowledge Pack (v1.0)
 *The Sovereign Knowledge Tree & Multi-Agent Cognitive Framework*
 
-Welcome to the **Starlight Community Distribution**. This package delivers a battle-tested, verified ontology of 260+ nodes, landmark books, research papers, and multi-agent swarm patterns used across the Starlight & Arcanea ecosystems.
+Welcome to the **Starlight Community Distribution**. This package delivers a verified ontology of ${allNodes.length} nodes, landmark books, research papers, and multi-agent swarm patterns used across the Starlight & Arcanea ecosystems.
 
 ---
 
 ## 🚀 What's in this Package:
 
-1. \`starlight-knowledge-tree.canvas\`: Complete **JSON Canvas 1.0** spatial graph. Open directly in **Obsidian**, VS Code Canvas, or any spatial node viewer.
-2. \`starlight-master-canon.json\`: The single-file typed AST containing all 260+ entities, relationships, mental models, and code bindings.
-3. \`starlight-mcp-config.json\`: Plug-and-play **Model Context Protocol (MCP)** config for Claude Desktop, Cursor, and Codex CLI.
-4. \`COMMUNITY_EVOLUTION_PIPELINE.md\`: Guide on contributing new nodes, papers, and benchmarks.
+${hasCanvas ? "1. `starlight-knowledge-tree.canvas`: Complete **JSON Canvas 1.0** spatial graph. Open directly in **Obsidian**, VS Code Canvas, or any spatial node viewer.\n" : ""}1. \`starlight-master-canon.json\`: The single-file typed AST containing all ${allNodes.length} entities, relationships, mental models, and code bindings.
+2. \`starlight-mcp-config.json\`: Plug-and-play **Model Context Protocol (MCP)** config for Claude Desktop, Cursor, and Codex CLI.
+3. \`COMMUNITY_EVOLUTION_PIPELINE.md\`: Guide on contributing new nodes, papers, and benchmarks.
 
 ---
 
 ## ⚡ Quickstart in 3 Steps:
 
 ### Step 1: Spatial Exploration in Obsidian
-1. Copy \`starlight-knowledge-tree.canvas\` into your Obsidian vault.
-2. Open the file to explore the interactive visual graph: zoom into the **7 Pillars of Scale**, traverse **Web Design & Typography**, or inspect **Autonomous Agent Swarms**.
+${hasCanvas ? "1. Copy `starlight-knowledge-tree.canvas` into your Obsidian vault.\n2. Open the file to explore the interactive visual graph." : "This bundle was packaged without the canvas. Build it in a repo checkout with `npx tsx scripts/export-json-canvas.ts`, then rerun this export."}
 
 ### Step 2: Audio Podcasts via Google NotebookLM
 1. Open [Google NotebookLM](https://notebooklm.google.com).
@@ -115,7 +122,8 @@ Add the entries from \`starlight-mcp-config.json\` to your \`claude_desktop_conf
 MIT Licensed. Maintained by the Starlight Intelligence System and FrankX community.
 `;
 fs.writeFileSync(path.join(outputDir, "README.md"), quickstartMarkdown, "utf8");
-console.log(`✅ [4/5] Generated Community Quickstart README -> ${path.join(outputDir, "README.md")}`);
+packaged.push("README.md");
+console.log(`✅ Generated Community Quickstart README -> ${path.join(outputDir, "README.md")}`);
 
 // 5. Generate Community Evolution & RFC Pipeline Blueprint
 const evolutionMarkdown = `# Starlight Continuous Knowledge Evolution Protocol
@@ -171,9 +179,10 @@ The Starlight Knowledge Tree is not a static documentation dump; it is a living,
    - On merge, the GitHub Action automatically regenerates the Canvas, NotebookLM dossiers, and Vercel edge deployment!
 `;
 fs.writeFileSync(path.join(outputDir, "COMMUNITY_EVOLUTION_PIPELINE.md"), evolutionMarkdown, "utf8");
-console.log(`✅ [5/5] Generated Community Evolution Pipeline Doc -> ${path.join(outputDir, "COMMUNITY_EVOLUTION_PIPELINE.md")}`);
+packaged.push("COMMUNITY_EVOLUTION_PIPELINE.md");
+console.log(`✅ Generated Community Evolution Pipeline Doc -> ${path.join(outputDir, "COMMUNITY_EVOLUTION_PIPELINE.md")}`);
 
 console.log(`\n======================================================`);
-console.log(`🎉 ALL 5 COMMUNITY ARTIFACTS PACKAGED IN:`);
+console.log(`🎉 ${packaged.length} COMMUNITY ARTIFACTS PACKAGED IN:`);
 console.log(`   ${outputDir}`);
 console.log(`======================================================\n`);

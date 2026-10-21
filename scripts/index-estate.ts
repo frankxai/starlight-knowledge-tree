@@ -32,7 +32,13 @@ export interface EstateIndex {
   repos: RepoIndexEntry[];
 }
 
-const REPOS_ROOT = path.resolve("C:/Users/frank/starlight/repos");
+// No hard-coded machine path: the estate root is an operator input, and
+// stored paths stay portable labels, never absolute local paths.
+const reposRootInput = process.env.KT_ESTATE_ROOT || process.argv[2];
+if (!reposRootInput) {
+  throw new Error("Set KT_ESTATE_ROOT (or pass the estate repos root as argv[2]) before running the estate indexer.");
+}
+const REPOS_ROOT = path.resolve(reposRootInput);
 
 function determineConstellation(slug: string, pkgJson: any, readmeText: string): string {
   const lower = slug.toLowerCase();
@@ -244,7 +250,7 @@ export function indexEstate(): EstateIndex {
       slug: entry.name,
       name: pkgJson?.name || entry.name,
       constellation,
-      path: repoPath.replace(/\\/g, "/"),
+      path: `starlight/repos/${entry.name}`,
       description,
       has_git: hasGit,
       has_agents_md: hasAgentsMd,
@@ -269,7 +275,7 @@ export function indexEstate(): EstateIndex {
 
   const result: EstateIndex = {
     generated_at: new Date().toISOString(),
-    estate_root: REPOS_ROOT.replace(/\\/g, "/"),
+    estate_root: "starlight/repos",
     total_repos: repos.length,
     constellation_counts: constellationCounts,
     framework_counts: frameworkCounts,
@@ -324,10 +330,9 @@ function generateAuditMarkdown(index: EstateIndex): string {
 // Run if main
 const indexData = indexEstate();
 const outJsonPath = path.resolve(__dirname, "../data/estate-index.json");
-const outMdPath = path.resolve(__dirname, "../docs/ESTATE_KNOWLEDGE_AUDIT.md");
 
 fs.writeFileSync(outJsonPath, JSON.stringify(indexData, null, 2), "utf8");
 console.log(`✅ Written ${indexData.total_repos} indexed repos to ${outJsonPath}`);
-
-fs.writeFileSync(outMdPath, generateAuditMarkdown(indexData), "utf8");
-console.log(`✅ Written markdown estate audit to ${outMdPath}`);
+// The markdown estate audit is intentionally no longer generated: it listed
+// names, local paths, and purposes of private repositories in a public repo.
+// generateAuditMarkdown stays for local operator use only; do not commit output.

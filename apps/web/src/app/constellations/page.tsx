@@ -50,7 +50,7 @@ export default function ConstellationsPage() {
   if (!estate) {
     return (
       <div className="min-h-screen pt-24 pb-16 text-center text-white">
-        Estate index not generated. Run `npx tsx scripts/index-estate.ts`.
+        Estate index not generated. Run with KT_ESTATE_ROOT set: `npx tsx scripts/index-estate.ts`.
       </div>
     );
   }

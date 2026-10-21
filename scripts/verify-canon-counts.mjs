@@ -26,16 +26,22 @@ export function countCanon(data = dataDir) {
   }
   const domains = fs.readdirSync(path.join(data, 'domains')).filter((x) => x.endsWith('.json')).length;
   const benchmarks = JSON.parse(fs.readFileSync(path.join(data, 'benchmarks.json'), 'utf8')).length;
-  return { nodes, uniqueIds: ids.size, domains, edges, benchmarks };
+  const swarmPatterns = JSON.parse(fs.readFileSync(path.join(data, 'nodes', 'swarm-patterns.json'), 'utf8')).length;
+  const mcpIntegrations = JSON.parse(fs.readFileSync(path.join(data, 'nodes', 'mcp.json'), 'utf8')).length;
+  return { nodes, uniqueIds: ids.size, domains, edges, benchmarks, swarmPatterns, mcpIntegrations };
 }
 
 export function findCountViolations(text, counts, file) {
   const violations = [];
+  // Up to three words may sit between the number and the noun ("6 empirical
+  // frontier benchmarks"). The immediate-adjacency form missed that sentence.
   const patterns = [
-    { re: /(\d+)\+?\s+(?:Verified\s+|canonical\s+)?nodes?\b/gi, actual: counts.nodes, label: 'nodes' },
-    { re: /(\d+)\s+Domains?\b/g, actual: counts.domains, label: 'domains' },
-    { re: /(\d+)\s+Benchmarks?\b/g, actual: counts.benchmarks, label: 'benchmarks' },
-    { re: /(\d+)\s+(?:Cross-Domain\s+)?Edges?\b/g, actual: counts.edges, label: 'edges' },
+    { re: /(\d+)\+?\s+(?:[\w-]+\s+){0,3}nodes?\b/gi, actual: counts.nodes, label: 'nodes' },
+    { re: /(\d+)\s+(?:[\w-]+\s+){0,3}domains?\b/gi, actual: counts.domains, label: 'domains' },
+    { re: /(\d+)\s+(?:[\w-]+\s+){0,3}benchmarks?\b/gi, actual: counts.benchmarks, label: 'benchmarks' },
+    { re: /(\d+)\s+(?:[\w-]+\s+){0,3}edges?\b/gi, actual: counts.edges, label: 'edges' },
+    { re: /(\d+)\s+(?:[\w-]+\s+){0,3}swarm patterns?\b/gi, actual: counts.swarmPatterns, label: 'swarm patterns' },
+    { re: /(\d+)\s+(?:[\w-]+\s+){0,3}MCP (?:server )?integrations?\b/gi, actual: counts.mcpIntegrations, label: 'MCP integrations' },
   ];
   for (const { re, actual, label } of patterns) {
     for (const m of text.matchAll(re)) {
@@ -47,7 +53,7 @@ export function findCountViolations(text, counts, file) {
 
 function main() {
   const counts = countCanon();
-  const files = ['scripts/export-for-notebooklm.ts', 'scripts/starlight-knowledge-mcp.ts', 'README.md'];
+  const files = ['scripts/export-for-notebooklm.ts', 'scripts/starlight-knowledge-mcp.ts', 'scripts/export-community-distribution.ts', 'README.md'];
   const violations = [];
   for (const f of files) {
     const p = path.join(root, f);
