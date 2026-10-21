@@ -1,7 +1,9 @@
 # Knowledge Tree Production System
 
 Status: design and operating contract, authored by Muse Code, 2026-10-20.
-Proof mission owner: knowledge-proof team (`agents/knowledge-proof.team-profile.json`).
+Proof mission owner: knowledge-proof team. Canonical profile lives in
+starlight-agent-config at `core/teams/knowledge-proof-team.team-profile.json`
+(one team identity estate-wide; this repo carries no duplicate profile).
 Review state: unreviewed draft. Merges and public claims stay human-gated.
 
 ## What "live" means
