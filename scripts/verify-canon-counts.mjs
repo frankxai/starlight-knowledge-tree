@@ -41,7 +41,7 @@ export function findCountViolations(text, counts, file) {
     { re: /(\d+)\s+(?:[\w-]+\s+){0,3}benchmarks?\b/gi, actual: counts.benchmarks, label: 'benchmarks' },
     { re: /(\d+)\s+(?:[\w-]+\s+){0,3}edges?\b/gi, actual: counts.edges, label: 'edges' },
     { re: /(\d+)\s+(?:[\w-]+\s+){0,3}swarm patterns?\b/gi, actual: counts.swarmPatterns, label: 'swarm patterns' },
-    { re: /(\d+)\s+MCP (?:server )?integrations?\b/gi, actual: counts.mcpIntegrations, label: 'MCP integrations' },
+    { re: /(\d+)\s+(?:[\w-]+\s+){0,3}MCP (?:server )?integrations?\b/gi, actual: counts.mcpIntegrations, label: 'MCP integrations' },
   ];
   for (const { re, actual, label } of patterns) {
     for (const m of text.matchAll(re)) {

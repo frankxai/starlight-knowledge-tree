@@ -12,7 +12,7 @@ interface DemandCaptureWaitlistProps {
 export function DemandCaptureWaitlist({
   productId = "starlight-knowledge-tree",
   productName = "Starlight Knowledge Tree Pro & Swarm Canon",
-  foundingBenefit = "Founding waitlist members are first in line for canon updates, MCP endpoints, and RFC curation when access opens.",
+  foundingBenefit = "Founding waitlist members hear about canon updates, MCP endpoints, and RFC curation when access opens.",
   className = "",
 }: DemandCaptureWaitlistProps) {
   const [step, setStep] = useState<1 | 2 | 3>(1);

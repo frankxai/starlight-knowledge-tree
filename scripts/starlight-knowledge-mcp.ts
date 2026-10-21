@@ -314,7 +314,8 @@ rl.on("line", (line) => {
     return;
   }
 
-  const { id, method, params = {} } = req;
+  const { id, method } = req;
+  const params = req.params ?? {};
 
   // Notifications carry no id and must never receive a response.
   if (id === undefined && typeof method === "string" && method.startsWith("notifications/")) return;
