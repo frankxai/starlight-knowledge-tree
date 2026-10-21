@@ -314,7 +314,7 @@ rl.on("line", (line) => {
     return;
   }
 
-  const { id, method, params } = req;
+  const { id, method, params = {} } = req;
 
   // Notifications carry no id and must never receive a response.
   if (id === undefined && typeof method === "string" && method.startsWith("notifications/")) return;
@@ -420,7 +420,7 @@ rl.on("line", (line) => {
           sendResponse({
             jsonrpc: "2.0",
             id,
-            error: { code: -32002, message: "Canvas not generated yet. Run the community export to build dist/starlight-knowledge-tree.canvas." },
+            error: { code: -32002, message: "Canvas not generated yet. Run: npx tsx scripts/export-json-canvas.ts (writes dist/starlight-knowledge-tree.canvas)." },
           });
         }
       } else {

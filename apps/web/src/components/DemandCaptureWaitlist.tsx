@@ -12,7 +12,7 @@ interface DemandCaptureWaitlistProps {
 export function DemandCaptureWaitlist({
   productId = "starlight-knowledge-tree",
   productName = "Starlight Knowledge Tree Pro & Swarm Canon",
-  foundingBenefit = "First 50 founding members receive lifetime canon updates, MCP endpoints, and RFC curation voting rights.",
+  foundingBenefit = "Founding waitlist members are first in line for canon updates, MCP endpoints, and RFC curation when access opens.",
   className = "",
 }: DemandCaptureWaitlistProps) {
   const [step, setStep] = useState<1 | 2 | 3>(1);
@@ -218,7 +218,7 @@ export function DemandCaptureWaitlist({
           </div>
           <h4 className="text-xl font-bold text-white mb-2">You are on the Priority Ledger</h4>
           <p className="text-sm text-white/60 max-w-md mx-auto mb-6">
-            Your founding seat is confirmed. We will reach out directly to <strong>{email}</strong> when the next batch of MCP streaming tokens opens.
+            Your signup is recorded. We will reach out directly to <strong>{email}</strong> when access opens.
           </p>
           <div className="inline-block p-4 rounded-xl bg-white/[0.03] border border-white/10 text-xs font-mono text-left text-white/70">
             <div>Product: {productId}</div>

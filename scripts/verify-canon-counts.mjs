@@ -36,11 +36,11 @@ export function findCountViolations(text, counts, file) {
   // Up to three words may sit between the number and the noun ("6 empirical
   // frontier benchmarks"). The immediate-adjacency form missed that sentence.
   const patterns = [
-    { re: /(\d+)\+?\s+(?:[\w-]+\s+){0,2}nodes?\b/gi, actual: counts.nodes, label: 'nodes' },
-    { re: /(\d+)\s+(?:[\w-]+\s+){0,2}domains?\b/gi, actual: counts.domains, label: 'domains' },
+    { re: /(\d+)\+?\s+(?:[\w-]+\s+){0,3}nodes?\b/gi, actual: counts.nodes, label: 'nodes' },
+    { re: /(\d+)\s+(?:[\w-]+\s+){0,3}domains?\b/gi, actual: counts.domains, label: 'domains' },
     { re: /(\d+)\s+(?:[\w-]+\s+){0,3}benchmarks?\b/gi, actual: counts.benchmarks, label: 'benchmarks' },
-    { re: /(\d+)\s+(?:[\w-]+\s+){0,2}edges?\b/gi, actual: counts.edges, label: 'edges' },
-    { re: /(\d+)\s+(?:[\w-]+\s+){0,2}swarm patterns?\b/gi, actual: counts.swarmPatterns, label: 'swarm patterns' },
+    { re: /(\d+)\s+(?:[\w-]+\s+){0,3}edges?\b/gi, actual: counts.edges, label: 'edges' },
+    { re: /(\d+)\s+(?:[\w-]+\s+){0,3}swarm patterns?\b/gi, actual: counts.swarmPatterns, label: 'swarm patterns' },
     { re: /(\d+)\s+MCP (?:server )?integrations?\b/gi, actual: counts.mcpIntegrations, label: 'MCP integrations' },
   ];
   for (const { re, actual, label } of patterns) {

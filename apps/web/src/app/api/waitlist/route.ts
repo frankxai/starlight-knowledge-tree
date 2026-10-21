@@ -51,10 +51,9 @@ export async function POST(req: Request) {
     }
     const now = new Date().toISOString();
     const score = Date.now();
-    const [added, rank, count] = (await kvPipeline([
+    const [added, rank] = (await kvPipeline([
       ["zadd", setKey(productId), "NX", score, email.toLowerCase()],
       ["zrank", setKey(productId), email.toLowerCase()],
-      ["zcard", setKey(productId)],
       [
         "hset",
         rowKey(productId, email),
@@ -73,12 +72,13 @@ export async function POST(req: Request) {
         "updatedAt",
         now,
       ],
-    ])) as [number, number | null, number, number];
+    ])) as [number, number | null, number];
+    // Position is the caller's own rank. The raw total is never returned
+    // below the public threshold; GET exposes publicCount only.
     return NextResponse.json({
       success: true,
       duplicate: added === 0,
       position: rank === null ? null : rank + 1,
-      count,
       productId,
     });
   } catch (err: any) {
@@ -90,13 +90,12 @@ export async function GET(req: Request) {
   const url = new URL(req.url);
   const productId = url.searchParams.get("productId") || "starlight-knowledge-tree";
   if (!kvConfig()) {
-    return NextResponse.json({ productId, count: null, publicCount: null, stage: "building", storage: "not-configured" });
+    return NextResponse.json({ productId, publicCount: null, stage: "building", storage: "not-configured" });
   }
   try {
     const [count] = (await kvPipeline([["zcard", setKey(productId)]])) as [number];
     return NextResponse.json({
       productId,
-      count,
       publicCount: count >= PUBLIC_COUNT_THRESHOLD ? count : null,
       stage: "building",
     });
