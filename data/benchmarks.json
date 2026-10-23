@@ -7,7 +7,12 @@
     "metric": "Resolve Rate (%)",
     "sota_target": "70%+",
     "source_url": "https://www.swebench.com",
-    "created_at": "2026-08-25T00:00:00Z"
+    "created_at": "2026-08-25T00:00:00Z",
+    "type": "benchmark",
+    "label": "SWE-bench Verified",
+    "eval_dataset": "SWE-bench Verified",
+    "target_score": "70%+",
+    "verified_date": "2026-08-25"
   },
   {
     "id": "benchmark-gaia",
@@ -17,7 +22,12 @@
     "metric": "Task Success Rate (%)",
     "sota_target": "85%+",
     "source_url": "https://huggingface.co/spaces/gaia-benchmark/leaderboard",
-    "created_at": "2026-08-25T00:00:00Z"
+    "created_at": "2026-08-25T00:00:00Z",
+    "type": "benchmark",
+    "label": "GAIA (General AI Assistants)",
+    "eval_dataset": "GAIA (General AI Assistants)",
+    "target_score": "85%+",
+    "verified_date": "2026-08-25"
   },
   {
     "id": "benchmark-webarena",
@@ -27,7 +37,12 @@
     "metric": "End-to-End Task Completion (%)",
     "sota_target": "60%+",
     "source_url": "https://webarena.dev",
-    "created_at": "2026-08-25T00:00:00Z"
+    "created_at": "2026-08-25T00:00:00Z",
+    "type": "benchmark",
+    "label": "WebArena",
+    "eval_dataset": "WebArena",
+    "target_score": "60%+",
+    "verified_date": "2026-08-25"
   },
   {
     "id": "benchmark-humaneval",
@@ -37,7 +52,12 @@
     "metric": "Pass@1 (%)",
     "sota_target": "95%+",
     "source_url": "https://github.com/openai/human-eval",
-    "created_at": "2026-08-25T00:00:00Z"
+    "created_at": "2026-08-25T00:00:00Z",
+    "type": "benchmark",
+    "label": "HumanEval+",
+    "eval_dataset": "HumanEval+",
+    "target_score": "95%+",
+    "verified_date": "2026-08-25"
   },
   {
     "id": "benchmark-niah",
@@ -47,7 +67,12 @@
     "metric": "Retrieval Accuracy (%)",
     "sota_target": "99.9%+",
     "source_url": "https://github.com/gkamradt/LLMTest_NeedleInAHaystack",
-    "created_at": "2026-08-25T00:00:00Z"
+    "created_at": "2026-08-25T00:00:00Z",
+    "type": "benchmark",
+    "label": "Needle In A Haystack (NIAH)",
+    "eval_dataset": "Needle In A Haystack (NIAH)",
+    "target_score": "99.9%+",
+    "verified_date": "2026-08-25"
   },
   {
     "id": "benchmark-agentbench",
@@ -57,7 +82,12 @@
     "metric": "Overall Agent Capability Score",
     "sota_target": "80%+",
     "source_url": "https://github.com/THUDM/AgentBench",
-    "created_at": "2026-08-25T00:00:00Z"
+    "created_at": "2026-08-25T00:00:00Z",
+    "type": "benchmark",
+    "label": "AgentBench",
+    "eval_dataset": "AgentBench",
+    "target_score": "80%+",
+    "verified_date": "2026-08-25"
   },
   {
     "id": "benchmark-swarm-concurrency-throughput",
@@ -67,6 +97,11 @@
     "metric": "Sustained Concurrency (Agents) & Task Throughput (Tasks/Min)",
     "sota_target": "50 concurrent agents @ >= 98% success rate",
     "source_url": "https://github.com/frankxai/starlight-knowledge-tree",
-    "created_at": "2026-09-09T00:00:00Z"
+    "created_at": "2026-09-09T00:00:00Z",
+    "type": "benchmark",
+    "label": "Swarm Concurrency & Task Throughput Benchmark",
+    "eval_dataset": "Swarm Concurrency & Task Throughput Benchmark",
+    "target_score": "50 concurrent agents @ >= 98% success rate",
+    "verified_date": "2026-09-09"
   }
 ]

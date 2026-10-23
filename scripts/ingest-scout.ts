@@ -1,6 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import { execSync } from "child_process";
+import { NodeSchema } from "@starlight/graph-schema";
 
 interface CandidateNode {
   id: string;
@@ -150,6 +151,15 @@ export function runIngest() {
     c.edges = c.edges || [];
     if (!c.url) {
       c.url = c.source && c.source.startsWith("http") ? c.source : "https://starlightintelligence.ai";
+    }
+
+    // Real schema gate: a candidate that cannot parse as a canon node never
+    // reaches a canonical data file.
+    const parsed = NodeSchema.safeParse(c);
+    if (!parsed.success) {
+      const issues = parsed.error.issues.slice(0, 4).map((i) => `${i.path.join(".")}: ${i.message}`).join("; ");
+      rejected.push({ candidate: c, reason: `Schema validation failed (${issues})` });
+      continue;
     }
 
     accepted.push(c);

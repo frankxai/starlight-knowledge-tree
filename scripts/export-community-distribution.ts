@@ -20,6 +20,9 @@ for (const file of nodeFiles) {
   const content = JSON.parse(fs.readFileSync(path.join(dataDir, "nodes", file), "utf8"));
   if (Array.isArray(content)) allNodes.push(...content);
 }
+// Benchmarks are canon too; the bundled MCP's query_benchmarks reads them
+// from this file, so omitting them ships a bundle that answers 0.
+allNodes.push(...JSON.parse(fs.readFileSync(path.join(dataDir, "benchmarks.json"), "utf8")));
 
 const domainFiles = fs.readdirSync(path.join(dataDir, "domains")).filter(f => f.endsWith(".json"));
 const allDomains: any[] = [];
@@ -39,7 +42,8 @@ const masterBundle = {
     seminal_papers: allNodes.filter(n => n.type === "paper").length,
     swarm_patterns: allNodes.filter(n => n.type === "swarm_pattern").length,
     cognitive_concepts: allNodes.filter(n => n.type === "concept").length,
-    verified_tools: allNodes.filter(n => n.type === "tool" || n.type === "mcp_server").length
+    verified_tools: allNodes.filter(n => n.type === "tool" || n.type === "mcp_server" || n.type === "mcp").length,
+    benchmarks: allNodes.filter(n => n.type === "benchmark").length
   },
   domains: allDomains,
   nodes: allNodes
@@ -57,39 +61,41 @@ if (fs.existsSync(canvasSrc)) {
   console.log(`✅ [2/5] Packaged JSON Canvas 1.0 visual map -> ${canvasDst}`);
 }
 
-// 3. Generate Community MCP Server Configuration (claude_desktop_config / cursor / codex)
+// 3. Bundle the MCP server itself and point the config at the shipped file.
+// The config must never reference an unpublished package or a local path.
+const mcpServerSrc = path.resolve(__dirname, "starlight-knowledge-mcp.ts");
+const mcpServerDst = path.join(outputDir, "starlight-knowledge-mcp.ts");
+fs.copyFileSync(mcpServerSrc, mcpServerDst);
+console.log(`✅ [3/6] Bundled MCP server source -> ${mcpServerDst}`);
+
 const mcpConfig = {
   mcpServers: {
     "starlight-knowledge": {
-      command: "node",
-      args: ["./node_modules/@starlight/knowledge-tree-mcp/dist/index.js"],
+      command: "npx",
+      args: ["tsx", "./starlight-knowledge-mcp.ts"],
       env: {
         STARLIGHT_DATA_DIR: "./starlight-master-canon.json"
       }
-    },
-    "starlight-memory": {
-      command: "node",
-      args: ["C:/Users/frank/starlight/repos/Starlight-Intelligence-System/mcp/dist/index.js"]
     }
   }
 };
 const mcpPath = path.join(outputDir, "starlight-mcp-config.json");
 fs.writeFileSync(mcpPath, JSON.stringify(mcpConfig, null, 2), "utf8");
-console.log(`✅ [3/5] Packaged ready-to-use MCP Configuration -> ${mcpPath}`);
+console.log(`✅ [3/5] Packaged ready-to-use MCP Configuration -> ${mcpPath} (requires npx/tsx on PATH)`);
 
 // 4. Generate Community Quickstart Guide
 const quickstartMarkdown = `# Starlight Community Knowledge Pack (v1.0)
 *The Sovereign Knowledge Tree & Multi-Agent Cognitive Framework*
 
-Welcome to the **Starlight Community Distribution**. This package delivers a battle-tested, verified ontology of 260+ nodes, landmark books, research papers, and multi-agent swarm patterns used across the Starlight & Arcanea ecosystems.
+Welcome to the **Starlight Community Distribution**. This package delivers a verified ontology of ${allNodes.length} nodes, landmark books, research papers, and multi-agent swarm patterns used across the Starlight & Arcanea ecosystems.
 
 ---
 
 ## 🚀 What's in this Package:
 
 1. \`starlight-knowledge-tree.canvas\`: Complete **JSON Canvas 1.0** spatial graph. Open directly in **Obsidian**, VS Code Canvas, or any spatial node viewer.
-2. \`starlight-master-canon.json\`: The single-file typed AST containing all 260+ entities, relationships, mental models, and code bindings.
-3. \`starlight-mcp-config.json\`: Plug-and-play **Model Context Protocol (MCP)** config for Claude Desktop, Cursor, and Codex CLI.
+2. \`starlight-master-canon.json\`: The single-file typed AST containing all ${allNodes.length} entities, relationships, mental models, and code bindings.
+3. \`starlight-mcp-config.json\` + \`starlight-knowledge-mcp.ts\`: **Model Context Protocol (MCP)** config and the bundled server it launches (needs \`npx\`/\`tsx\` on PATH) for Claude Desktop, Cursor, and Codex CLI.
 4. \`COMMUNITY_EVOLUTION_PIPELINE.md\`: Guide on contributing new nodes, papers, and benchmarks.
 
 ---

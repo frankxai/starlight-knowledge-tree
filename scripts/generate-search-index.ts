@@ -18,76 +18,45 @@ interface SearchItem {
   href: string;
 }
 
+// Every canonical node file feeds the index. A hand-maintained file list
+// silently capped the explorer at 166 of 250 nodes; dynamic by construction.
+const HREF_BY_TYPE: Record<string, string> = {
+  book: "/library",
+  paper: "/papers",
+  mcp: "/mcp-tools",
+  swarm_pattern: "/mcp-tools",
+};
+
 const items: SearchItem[] = [];
+const seen = new Set<string>();
 
-// Books
-const books = JSON.parse(fs.readFileSync(path.join(dataDir, "nodes/books.json"), "utf8"));
-for (const b of books) {
+function pushItem(raw: any) {
+  if (!raw || typeof raw !== "object" || !raw.id || seen.has(raw.id)) return;
+  seen.add(raw.id);
   items.push({
-    id: b.id,
-    type: "book",
-    label: b.title || b.label,
-    description: b.summary || b.description,
-    domain: b.domain,
-    tags: b.tags,
-    href: "/library"
+    id: raw.id,
+    type: raw.type === "mcp" ? "mcp_server" : raw.type,
+    label: raw.title || raw.label || raw.name || raw.id,
+    description: raw.summary || raw.abstract || raw.description || "",
+    domain: raw.domain,
+    tags: raw.tags,
+    href: HREF_BY_TYPE[raw.type] || "/tree",
   });
 }
 
-// Papers
-const papers = JSON.parse(fs.readFileSync(path.join(dataDir, "nodes/papers.json"), "utf8"));
-for (const p of papers) {
-  items.push({
-    id: p.id,
-    type: "paper",
-    label: p.title || p.label,
-    description: p.abstract || p.description,
-    domain: p.domain,
-    tags: p.tags,
-    href: "/papers"
-  });
+for (const file of fs.readdirSync(path.join(dataDir, "nodes")).filter((f) => f.endsWith(".json")).sort()) {
+  const content = JSON.parse(fs.readFileSync(path.join(dataDir, "nodes", file), "utf8"));
+  if (Array.isArray(content)) for (const n of content) pushItem(n);
 }
 
-// MCP
-const mcp = JSON.parse(fs.readFileSync(path.join(dataDir, "nodes/mcp.json"), "utf8"));
-for (const m of mcp) {
-  items.push({
-    id: m.id,
-    type: "mcp_server",
-    label: m.label,
-    description: m.description,
-    tags: m.tags,
-    href: "/mcp-tools"
-  });
+for (const file of fs.readdirSync(path.join(dataDir, "domains")).filter((f) => f.endsWith(".json")).sort()) {
+  pushItem(JSON.parse(fs.readFileSync(path.join(dataDir, "domains", file), "utf8")));
 }
 
-// Swarms
-const swarms = JSON.parse(fs.readFileSync(path.join(dataDir, "nodes/swarm-patterns.json"), "utf8"));
-for (const s of swarms) {
-  items.push({
-    id: s.id,
-    type: "swarm_pattern",
-    label: s.label,
-    description: s.description,
-    tags: s.tags,
-    href: "/mcp-tools"
-  });
-}
-
-// Concepts
-const concepts = JSON.parse(fs.readFileSync(path.join(dataDir, "nodes/concepts.json"), "utf8"));
-for (const c of concepts) {
-  items.push({
-    id: c.id,
-    type: "concept",
-    label: c.label,
-    description: c.description,
-    domain: c.domain,
-    tags: c.tags,
-    href: "/tree"
-  });
+for (const b of JSON.parse(fs.readFileSync(path.join(dataDir, "benchmarks.json"), "utf8"))) {
+  pushItem({ ...b, label: b.label || b.name });
 }
 
 const outputPath = path.join(webDataDir, "search-index.json");
 fs.writeFileSync(outputPath, JSON.stringify(items, null, 2), "utf8");
-console.log(`✅ Successfully generated search index with ${items.length} searchable items at ${outputPath}`);
+console.log(`✅ Generated search index with ${items.length} searchable items at ${outputPath}`);

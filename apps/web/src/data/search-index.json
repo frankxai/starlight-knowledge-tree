@@ -440,490 +440,6 @@
     "href": "/library"
   },
   {
-    "id": "paper-attention-is-all-you-need",
-    "type": "paper",
-    "label": "Attention Is All You Need",
-    "description": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.",
-    "domain": "domain-ai-architect",
-    "tags": [
-      "transformers",
-      "attention",
-      "nlp",
-      "deep-learning"
-    ],
-    "href": "/papers"
-  },
-  {
-    "id": "paper-gpt3",
-    "type": "paper",
-    "label": "Language Models are Few-Shot Learners (GPT-3)",
-    "description": "We train GPT-3, an autoregressive language model with 175 billion parameters, and test its few-shot performance across NLP tasks. GPT-3 achieves strong performance on many benchmarks, often matching or exceeding the performance of fine-tuned models.",
-    "domain": "domain-ai-architect",
-    "tags": [
-      "llm",
-      "gpt",
-      "few-shot",
-      "scaling",
-      "pretraining",
-      "in-context-learning"
-    ],
-    "href": "/papers"
-  },
-  {
-    "id": "paper-generative-agents-stanford",
-    "type": "paper",
-    "label": "Generative Agents: Interactive Simulacra of Human Behavior",
-    "description": "We introduce generative agents—computational software agents that simulate believable human behavior. Generative agents draw on an architecture that extends a large language model to store a complete record of the agent's experiences using natural language, synthesize those memories over time into higher-level reflections, and retrieve them dynamically to plan behavior.",
-    "domain": "domain-ai-architect",
-    "tags": [
-      "agents",
-      "memory-stream",
-      "reflection",
-      "planning",
-      "simulacra",
-      "generative-agents"
-    ],
-    "href": "/papers"
-  },
-  {
-    "id": "paper-reflexion-shinn",
-    "type": "paper",
-    "label": "Reflexion: Language Agents with Verbal Reinforcement Learning",
-    "description": "We present Reflexion, an approach that endows an agent with dynamic memory and self-reflection capabilities for reasoning, decision-making, and programming tasks. Reflexion agents verbally reflect on task feedback signals, then maintain their own reflective text in an episodic memory buffer to induce better decision-making in subsequent trials.",
-    "domain": "domain-ai-architect",
-    "tags": [
-      "reflexion",
-      "verbal-rl",
-      "self-correction",
-      "error-recalibration",
-      "adversarial-check"
-    ],
-    "href": "/papers"
-  },
-  {
-    "id": "paper-react-reasoning-acting",
-    "type": "paper",
-    "label": "ReAct: Synergizing Reasoning and Acting in Language Models",
-    "description": "We explore the use of LLMs to generate both reasoning traces and task-specific actions in an interleaved manner, allowing for greater synergy between the two: reasoning traces help the model induce, track, and update action plans as well as handle exceptions, while actions allow it to interface with and gather additional information from external sources.",
-    "domain": "domain-ai-architect",
-    "tags": [
-      "react",
-      "reasoning",
-      "tool-use",
-      "agent-trajectory",
-      "interleaved-loop"
-    ],
-    "href": "/papers"
-  },
-  {
-    "id": "paper-dspy-khattab",
-    "type": "paper",
-    "label": "DSPy: Compiling Declarative Language Model Calls",
-    "description": "We present DSPy, a framework for programming with foundation models that separates the flow of your program (modules) from the parameters (prompts and weights) of each step. DSPy synthesizes and optimizes prompts based on a pipeline specification and training examples.",
-    "domain": "domain-ai-architect",
-    "tags": [
-      "dspy",
-      "declarative-ai",
-      "compilation",
-      "teleprompter",
-      "prompt-optimization"
-    ],
-    "href": "/papers"
-  },
-  {
-    "id": "paper-voyager-wang",
-    "type": "paper",
-    "label": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
-    "description": "We introduce Voyager, the first LLM-powered embodied lifelong learning agent in Minecraft that continuously explores the world, acquires diverse skills, and makes novel discoveries without human intervention. Voyager consists of an automatic curriculum, a skill library of executable code, and an iterative prompting mechanism.",
-    "domain": "domain-ai-architect",
-    "tags": [
-      "voyager",
-      "skill-library",
-      "lifelong-learning",
-      "embodied-ai",
-      "open-ended-exploration"
-    ],
-    "href": "/papers"
-  },
-  {
-    "id": "paper-toolformer-schick",
-    "type": "paper",
-    "label": "Toolformer: Language Models Can Teach Themselves to Use Tools",
-    "description": "We introduce Toolformer, a model trained to decide which APIs to call, when to call them, what arguments to pass, and how to best incorporate the results into future token prediction. This is done in a self-supervised way, requiring only a handful of human demonstrations.",
-    "domain": "domain-ai-architect",
-    "tags": [
-      "toolformer",
-      "tool-use",
-      "function-calling",
-      "self-supervised-learning"
-    ],
-    "href": "/papers"
-  },
-  {
-    "id": "paper-memgpt-packer",
-    "type": "paper",
-    "label": "MemGPT: Towards LLMs as Operating Systems",
-    "description": "Large language models are constrained by finite context windows. We present MemGPT (Memory-GPT), a system that intelligently manages different memory tiers in LLMs to effectively provide extended context within the LLM's limited context window, drawing inspiration from hierarchical memory management in operating systems.",
-    "domain": "domain-ai-architect",
-    "tags": [
-      "memgpt",
-      "hierarchical-memory",
-      "virtual-context",
-      "sleep-compute",
-      "long-term-memory"
-    ],
-    "href": "/papers"
-  },
-  {
-    "id": "paper-deepseek-r1",
-    "type": "paper",
-    "label": "DeepSeek-R1: Incentivizing Reasoning via Reinforcement Learning",
-    "description": "We introduce our first-generation reasoning models, DeepSeek-R1-Zero and DeepSeek-R1. DeepSeek-R1-Zero, a model trained via large-scale reinforcement learning without supervised fine-tuning (SFT) as a preliminary step, demonstrates remarkable reasoning capabilities. Through RL, DeepSeek-R1-Zero naturally emerges with numerous powerful and intriguing reasoning behaviors.",
-    "domain": "domain-ai-architect",
-    "tags": [
-      "deepseek-r1",
-      "reasoning",
-      "reinforcement-learning",
-      "grpo",
-      "self-verification",
-      "chain-of-thought"
-    ],
-    "href": "/papers"
-  },
-  {
-    "id": "paper-constitutional-ai-anthropic",
-    "type": "paper",
-    "label": "Constitutional AI: A Framework for Machine Learning with Principles",
-    "description": "We introduce Constitutional AI (CAI), a method for training a harmless AI assistant through self-improvement, without human feedback labels for harmfulness. The only human oversight is provided through a list of rules or principles, forming a constitution.",
-    "domain": "domain-ai-architect",
-    "tags": [
-      "constitutional-ai",
-      "alignment",
-      "rlaif",
-      "self-critique",
-      "safety-principles"
-    ],
-    "href": "/papers"
-  },
-  {
-    "id": "paper-hallmarks-of-aging-lopez-otin",
-    "type": "paper",
-    "label": "The Hallmarks of Aging",
-    "description": "Aging is characterized by a progressive loss of physiological integrity, leading to impaired function and increased vulnerability to death. We enumerate and describe the hallmarks of aging.",
-    "domain": "domain-bio-human-intelligence",
-    "tags": [
-      "aging",
-      "longevity",
-      "biology",
-      "hallmarks"
-    ],
-    "href": "/papers"
-  },
-  {
-    "id": "paper-sleep-performance-walker",
-    "type": "paper",
-    "label": "Sleep and Cognitive Performance Research",
-    "description": "Sleep plays a critical role in cognitive performance, memory consolidation, and health. This body of work establishes the mechanisms and consequences of sleep insufficiency.",
-    "domain": "domain-bio-human-intelligence",
-    "tags": [
-      "sleep",
-      "cognition",
-      "performance",
-      "neuroscience"
-    ],
-    "href": "/papers"
-  },
-  {
-    "id": "paper-fundamentals-astrodynamics",
-    "type": "paper",
-    "label": "Fundamentals of Astrodynamics (Bate, Mueller, White)",
-    "description": "A classic introduction to astrodynamics covering the two-body problem, orbital elements, orbital maneuvers, and preliminary orbit determination.",
-    "domain": "domain-space-builder",
-    "tags": [
-      "orbital-mechanics",
-      "astrodynamics",
-      "textbook",
-      "space-foundation"
-    ],
-    "href": "/papers"
-  },
-  {
-    "id": "paper-tree-of-thoughts",
-    "type": "paper",
-    "label": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
-    "description": "Yao et al. paradigm enabling language models to explore multiple reasoning paths, self-evaluate intermediate choices, and perform lookahead or backtracking when problem solving.",
-    "domain": "domain-ai-architect",
-    "tags": [
-      "tree-of-thoughts",
-      "deliberate-reasoning",
-      "search-algorithms",
-      "lookahead"
-    ],
-    "href": "/papers"
-  },
-  {
-    "id": "mcp-starlight-memory",
-    "type": "mcp_server",
-    "label": "Starlight Memory MCP Server",
-    "description": "The sovereign long-term memory server for Starlight swarms, providing semantic recall, vault reading, reflection retrieval, and episodic indexing.",
-    "tags": [
-      "mcp",
-      "memory",
-      "starlight-memory",
-      "semantic-search",
-      "vault-access",
-      "privacy-guardian"
-    ],
-    "href": "/mcp-tools"
-  },
-  {
-    "id": "mcp-starlight-v0",
-    "type": "mcp_server",
-    "label": "Starlight V0 MCP Server",
-    "description": "Interface for generating, branding, iterating, and pulling production-grade V0 UI components directly into Starlight repositories.",
-    "tags": [
-      "mcp",
-      "v0",
-      "ui-generation",
-      "design-systems",
-      "tailwind",
-      "shadcn"
-    ],
-    "href": "/mcp-tools"
-  },
-  {
-    "id": "mcp-context7",
-    "type": "mcp_server",
-    "label": "Context7 MCP Server",
-    "description": "Universal live retrieval MCP for frontier framework documentation, library APIs, and latest release specs without prompt bloat.",
-    "tags": [
-      "mcp",
-      "context7",
-      "live-docs",
-      "api-retrieval",
-      "auto-hook"
-    ],
-    "href": "/mcp-tools"
-  },
-  {
-    "id": "mcp-browser-hub",
-    "type": "mcp_server",
-    "label": "CDP Multiplexer Browser Hub MCP",
-    "description": "Centralized Chrome DevTools Protocol multiplexer (:9223) that routes all agent web automation through an observable shared hub.",
-    "tags": [
-      "mcp",
-      "browser-hub",
-      "cdp",
-      "web-automation",
-      "ram-safety",
-      "observability"
-    ],
-    "href": "/mcp-tools"
-  },
-  {
-    "id": "mcp-suno-server",
-    "type": "mcp_server",
-    "label": "Suno Music Generation MCP Server",
-    "description": "Automates Suno v4.5 audio generation, prompt compilation, stem extraction, and catalog ingestion for Starlight audio engines.",
-    "tags": [
-      "mcp",
-      "suno",
-      "audio-generation",
-      "music-production",
-      "stems"
-    ],
-    "href": "/mcp-tools"
-  },
-  {
-    "id": "swarm-pattern-santa-loop",
-    "type": "swarm_pattern",
-    "label": "The Santa Method (Adversarial Maker ≠ Checker)",
-    "description": "A dual-agent convergence loop where a generator subagent (Fire Gate) creates the initial artifact, and an independent adversarial reviewer subagent (Crown Gate) ruthlessly audits against taste and canon until strict consensus is reached.",
-    "tags": [
-      "swarm-pattern",
-      "santa-loop",
-      "adversarial-review",
-      "maker-checker",
-      "convergence"
-    ],
-    "href": "/mcp-tools"
-  },
-  {
-    "id": "swarm-pattern-dreaming-engine",
-    "type": "swarm_pattern",
-    "label": "The Dreaming Reflection Engine",
-    "description": "Scheduled sleep-time background agent (Letta pattern) that scans delta modifications in the vault, formulates higher-order epistemic questions, retrieves cited evidence, and generates verified reflection nodes.",
-    "tags": [
-      "swarm-pattern",
-      "dreaming",
-      "sleep-compute",
-      "generative-agents",
-      "reflection-tree",
-      "second-brain"
-    ],
-    "href": "/mcp-tools"
-  },
-  {
-    "id": "swarm-pattern-sds-supervisor",
-    "type": "swarm_pattern",
-    "label": "Single Dev Server (SDS) Transient Compute",
-    "description": "Policy and supervisor tool ensuring local dev servers are treated as ephemeral compute with idle TTL, keeping memory free and directing persistent reviews to Vercel previews.",
-    "tags": [
-      "swarm-pattern",
-      "sds",
-      "dev-server",
-      "ephemeral-compute",
-      "vercel-gate"
-    ],
-    "href": "/mcp-tools"
-  },
-  {
-    "id": "swarm-pattern-cross-model-shootout",
-    "type": "swarm_pattern",
-    "label": "Cross-Model Verification Shootout",
-    "description": "Maker and Checker must run on different model architectures/providers to eliminate shared blindspots (e.g., Kilo free-tier generates, Codex GPT-5.6 Sol or Claude Opus audits).",
-    "tags": [
-      "swarm-pattern",
-      "model-diversity",
-      "shootout",
-      "verification-gate"
-    ],
-    "href": "/mcp-tools"
-  },
-  {
-    "id": "pattern-queen-conductor-worker",
-    "type": "swarm_pattern",
-    "label": "Hierarchical Queen-Conductor-Worker Swarm",
-    "description": "Decouples meta-strategic planning from task decomposition and task execution. The Queen manages the global objective, Conductor orchestrates worktrees, and Workers execute bounded tasks in parallel isolated branches.",
-    "tags": [
-      "orchestration",
-      "hierarchical-swarm",
-      "queen",
-      "conductor",
-      "worktree-isolation"
-    ],
-    "href": "/mcp-tools"
-  },
-  {
-    "id": "pattern-semantic-model-router",
-    "type": "swarm_pattern",
-    "label": "Dynamic Semantic Dispatch & Model Routing",
-    "description": "Routes agent tasks dynamically based on cognitive load and cost tier: fast lightweight models for mechanical lookups and scans (Shift/Flow gates); high-reasoning frontier models for architecture, judgment, and adversarial reviews (Crown/Unity gates).",
-    "tags": [
-      "model-routing",
-      "cost-optimization",
-      "semantic-dispatch",
-      "latency-tuning"
-    ],
-    "href": "/mcp-tools"
-  },
-  {
-    "id": "pattern-evaluator-optimizer",
-    "type": "swarm_pattern",
-    "label": "Evaluator-Optimizer & Self-Refining Teleprompters",
-    "description": "Iterative feedback loop where an Optimizer agent generates candidate prompts or code, an Evaluator agent scores against a suite of assertion tests, and teleprompter algorithms compile few-shot examples into optimized execution weights.",
-    "tags": [
-      "dspy",
-      "evaluator-optimizer",
-      "prompt-compilation",
-      "self-refinement"
-    ],
-    "href": "/mcp-tools"
-  },
-  {
-    "id": "pattern-blackboard-workspace",
-    "type": "swarm_pattern",
-    "label": "Blackboard Architecture & Shared Observable Workspace",
-    "description": "A centralized, observable state repository where autonomous specialist agents read shared problem states, post intermediate discoveries, and react to changes asynchronously without tight peer-to-peer coupling.",
-    "tags": [
-      "blackboard-architecture",
-      "shared-state",
-      "decoupled-swarms",
-      "observability"
-    ],
-    "href": "/mcp-tools"
-  },
-  {
-    "id": "pattern-map-reduce-scanner",
-    "type": "swarm_pattern",
-    "label": "Map-Reduce Parallel Swarm Scanner",
-    "description": "Fan-out of dozens of lightweight scout agents to inspect distinct files, repositories, or API endpoints in parallel (Map), followed by a synthesis agent that aggregates, deduplicates, and condenses findings into a single coherent dossier (Reduce).",
-    "tags": [
-      "map-reduce",
-      "parallel-scouts",
-      "fan-out",
-      "estate-audit"
-    ],
-    "href": "/mcp-tools"
-  },
-  {
-    "id": "pattern-adversarial-debate",
-    "type": "swarm_pattern",
-    "label": "Multi-Agent Adversarial Debate & Red-Teaming",
-    "description": "Two or more frontier models debate an architectural, security, or strategic proposition from opposing stances (Thesis vs Antithesis), moderated by an impartial Judge model that extracts synthesized truth (Synthesis).",
-    "tags": [
-      "adversarial-debate",
-      "red-team",
-      "dialectic-synthesis",
-      "cross-model"
-    ],
-    "href": "/mcp-tools"
-  },
-  {
-    "id": "pattern-queue-backed-agent-workers",
-    "type": "swarm_pattern",
-    "label": "Queue-Backed Durable Agent Worker Swarm",
-    "description": "A distributed job queue (BullMQ/Redis or SQLite durable queue) decouples user request dispatch from execution. Workers pull tasks from priority queues with token rate-limit sharding, exponential backoff with jitter, and dead-letter queues for failed trajectories.",
-    "tags": [
-      "queue-workers",
-      "concurrency",
-      "bullmq",
-      "backoff",
-      "resilience"
-    ],
-    "href": "/mcp-tools"
-  },
-  {
-    "id": "pattern-kv-cache-prefix-compaction",
-    "type": "swarm_pattern",
-    "label": "KV-Cache Prefix Alignment & Context Compaction",
-    "description": "Maximizes provider prompt caching (Anthropic 90% discount, Gemini context caching) by structuring agent prompts with an immutable static prefix (System contract, tools schema, core lore) followed by dynamic turn deltas, reducing inference latency by 80% and token cost by 75%.",
-    "tags": [
-      "kv-cache",
-      "prompt-caching",
-      "cost-reduction",
-      "token-economics"
-    ],
-    "href": "/mcp-tools"
-  },
-  {
-    "id": "pattern-hierarchical-graph-partitioning",
-    "type": "swarm_pattern",
-    "label": "Hierarchical Graph Partitioning & 2-Hop Neighborhoods",
-    "description": "When the knowledge graph scales past thousands of entities, agents do not ingest the whole tree. The graph is sharded into domain clusters, and agents query only the 2-hop radius around target concepts via topological traversal or semantic vector filtering.",
-    "tags": [
-      "graph-partitioning",
-      "subgraph-retrieval",
-      "scale",
-      "topological-query"
-    ],
-    "href": "/mcp-tools"
-  },
-  {
-    "id": "pattern-agent-sandbox-isolation",
-    "type": "swarm_pattern",
-    "label": "Agent Sandbox Isolation & Blast Radius Containment",
-    "description": "Executes untrusted code, web scraping, and third-party dependencies inside isolated lightweight containers or WASM sandboxes with restricted network access, virtualized filesystems, and strict Phone Link / root directory search bans.",
-    "tags": [
-      "sandbox",
-      "isolation",
-      "security",
-      "blast-radius",
-      "safety-gate"
-    ],
-    "href": "/mcp-tools"
-  },
-  {
     "id": "concept-linear-algebra",
     "type": "concept",
     "label": "Linear Algebra",
@@ -2359,6 +1875,1976 @@
       "zero-daemon",
       "scale"
     ],
+    "href": "/tree"
+  },
+  {
+    "id": "task-add-concept-node",
+    "type": "contribution_task",
+    "label": "Add a Missing Concept Node",
+    "description": "Identify a concept that is referenced as a prerequisite or edge target but has no node definition. Create the node with all required fields.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "contribution",
+      "beginner",
+      "nodes",
+      "data"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "task-add-paper-node",
+    "type": "contribution_task",
+    "label": "Add a Key Paper Node",
+    "description": "Add a foundational research paper to data/nodes/papers.json with verified DOI/arXiv URL, authors, year, and edge connections to relevant concept or skill nodes.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "contribution",
+      "beginner",
+      "papers",
+      "research"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "task-design-skill-path",
+    "type": "contribution_task",
+    "label": "Design a New Skill Path",
+    "description": "Define a complete skill path within a domain: an ordered sequence of concept and skill nodes from beginner to advanced, with branching options.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "contribution",
+      "intermediate",
+      "paths",
+      "curriculum"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "task-write-experiment-protocol",
+    "type": "contribution_task",
+    "label": "Write a Reproducible Experiment Protocol",
+    "description": "Write a fully specified experiment protocol for a skill node in the graph — hypothesis, setup, steps, expected outputs, and failure modes.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "contribution",
+      "intermediate",
+      "experiments",
+      "research"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "task-add-space-builder-nodes",
+    "type": "contribution_task",
+    "label": "Expand the Space Builder Domain",
+    "description": "The space-builder domain needs more concept nodes (chemical propulsion, electric propulsion, thermal control, link budget). Add at least three interconnected nodes.",
+    "domain": "domain-space-builder",
+    "tags": [
+      "contribution",
+      "intermediate",
+      "space",
+      "expansion"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "experiment-implement-minigpt",
+    "type": "experiment",
+    "label": "Implement miniGPT from Scratch",
+    "description": "Build a character-level GPT implementation from scratch in PyTorch, train on a text corpus, and analyze what the model learns.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "transformers",
+      "implementation",
+      "training",
+      "experiment"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "experiment-lora-finetune",
+    "type": "experiment",
+    "label": "LoRA Fine-tuning on Custom Dataset",
+    "description": "Fine-tune a 7B LLM using LoRA on a custom instruction-following dataset and evaluate against a baseline.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "fine-tuning",
+      "lora",
+      "llm",
+      "experiment"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "experiment-hohmann-transfer-simulation",
+    "type": "experiment",
+    "label": "Hohmann Transfer Simulation in GMAT",
+    "description": "Simulate a Hohmann transfer from LEO to GEO in GMAT. Compute delta-v requirements and validate against analytical solution.",
+    "domain": "domain-space-builder",
+    "tags": [
+      "orbital-mechanics",
+      "hohmann",
+      "gmat",
+      "simulation"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "mcp-starlight-memory",
+    "type": "mcp_server",
+    "label": "Starlight Memory MCP Server",
+    "description": "The sovereign long-term memory server for Starlight swarms, providing semantic recall, vault reading, reflection retrieval, and episodic indexing.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "mcp",
+      "memory",
+      "starlight-memory",
+      "semantic-search",
+      "vault-access",
+      "privacy-guardian"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "mcp-starlight-v0",
+    "type": "mcp_server",
+    "label": "Starlight V0 MCP Server",
+    "description": "Interface for generating, branding, iterating, and pulling production-grade V0 UI components directly into Starlight repositories.",
+    "domain": "domain-impeccable-design",
+    "tags": [
+      "mcp",
+      "v0",
+      "ui-generation",
+      "design-systems",
+      "tailwind",
+      "shadcn"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "mcp-context7",
+    "type": "mcp_server",
+    "label": "Context7 MCP Server",
+    "description": "Universal live retrieval MCP for frontier framework documentation, library APIs, and latest release specs without prompt bloat.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "mcp",
+      "context7",
+      "live-docs",
+      "api-retrieval",
+      "auto-hook"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "mcp-browser-hub",
+    "type": "mcp_server",
+    "label": "CDP Multiplexer Browser Hub MCP",
+    "description": "Centralized Chrome DevTools Protocol multiplexer (:9223) that routes all agent web automation through an observable shared hub.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "mcp",
+      "browser-hub",
+      "cdp",
+      "web-automation",
+      "ram-safety",
+      "observability"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "mcp-suno-server",
+    "type": "mcp_server",
+    "label": "Suno Music Generation MCP Server",
+    "description": "Automates Suno v4.5 audio generation, prompt compilation, stem extraction, and catalog ingestion for Starlight audio engines.",
+    "domain": "domain-media-generative-cinema",
+    "tags": [
+      "mcp",
+      "suno",
+      "audio-generation",
+      "music-production",
+      "stems"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "problem-alignment-superhumanai",
+    "type": "open_problem",
+    "label": "Alignment of Superhuman AI Systems",
+    "description": "How do we ensure that AI systems that surpass human-level capability in a domain remain aligned with human values and intent, including in situations their designers did not anticipate?",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "alignment",
+      "safety",
+      "superintelligence",
+      "x-risk"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-reasoning-reliability",
+    "type": "open_problem",
+    "label": "Reliable Multi-Step Reasoning in LLMs",
+    "description": "Language models still fail in systematic ways on multi-step mathematical and logical reasoning. What architectural or training changes would produce reliably correct reasoning?",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "reasoning",
+      "llm",
+      "reliability",
+      "math"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-agent-safety",
+    "type": "open_problem",
+    "label": "Safe Agentic AI in Open Environments",
+    "description": "How do we build AI agents that act safely and reversibly in open-ended environments where mistakes have real-world consequences?",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "agents",
+      "safety",
+      "alignment",
+      "agentic-ai"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-distributed-consensus",
+    "type": "open_problem",
+    "label": "Zero-Overhead Distributed Consensus in Heterogeneous Agent Mesh",
+    "description": "How to achieve Byzantine fault-tolerant state agreement and memory consistency across independent local and cloud agents without latency bottlenecking.",
+    "domain": "domain-systems-engineering",
+    "tags": [
+      "distributed-systems",
+      "consensus",
+      "state-sync",
+      "agent-mesh"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-data-consistency-at-scale",
+    "type": "open_problem",
+    "label": "Data Consistency Across Multi-Vault Storage",
+    "description": "Maintaining ACID-level integrity across Obsidian markdown, SQLite indices, and vector embeddings during high-frequency concurrent writes.",
+    "domain": "domain-systems-engineering",
+    "tags": [
+      "data-consistency",
+      "databases",
+      "storage",
+      "second-brain"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-eventual-consistency-tradeoffs",
+    "type": "open_problem",
+    "label": "Eventual Consistency Tradeoffs in Offline-First Swarms",
+    "description": "Designing CRDTs and merge strategies that resolve contradictory agent insights without human intervention.",
+    "domain": "domain-systems-engineering",
+    "tags": [
+      "eventual-consistency",
+      "crdt",
+      "offline-first",
+      "swarms"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-visual-slop-in-ai",
+    "type": "open_problem",
+    "label": "Elimination of AI Visual Slop & Generic Aesthetic Drift",
+    "description": "How to constrain generative models to strictly observe typographic grids, vector-first logos, exact aspect ratios, and bespoke brand taste without fallback to generic glossy 3D slop.",
+    "domain": "domain-impeccable-design",
+    "tags": [
+      "design",
+      "anti-slop",
+      "taste",
+      "visual-ai"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-typographic-hierarchy-failure",
+    "type": "open_problem",
+    "label": "Automated Typographic Hierarchy Verification",
+    "description": "Algorithmic detection of weak contrast, improper scale jumps, and ragged baseline alignment in AI-generated web layouts.",
+    "domain": "domain-impeccable-design",
+    "tags": [
+      "typography",
+      "visual-hierarchy",
+      "automated-qa"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-accessible-spatial-interfaces",
+    "type": "open_problem",
+    "label": "Accessible High-Performance Spatial Canvases",
+    "description": "Bridging 3D WebGL / Three.js node graphs with complete keyboard accessibility, screen reader ARIA trees, and 60fps rendering on low-power mobile devices.",
+    "domain": "domain-impeccable-design",
+    "tags": [
+      "spatial-ui",
+      "webgl",
+      "accessibility",
+      "canvas"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-narrative-drift-across-agents",
+    "type": "open_problem",
+    "label": "Prevention of Mythic & Narrative Canon Drift",
+    "description": "Ensuring multiple independent authoring subagents preserve canonical lore, character voice, and world rules over multi-month fiction pipelines.",
+    "domain": "domain-arcanea-worldbuilding",
+    "tags": [
+      "worldbuilding",
+      "lore",
+      "canon",
+      "narrative-consistency"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-shallow-world-coherence",
+    "type": "open_problem",
+    "label": "Deep Alchemical & Secondary World Coherence",
+    "description": "Constructing secondary worlds whose magical, physical, social, and economic systems intertwine without breaking Tolkien's secondary belief.",
+    "domain": "domain-arcanea-worldbuilding",
+    "tags": [
+      "worldbuilding",
+      "sub-creation",
+      "tolkien",
+      "coherence"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-archetypal-depth",
+    "type": "open_problem",
+    "label": "Mathematical Modeling of Mythic Archetypes",
+    "description": "Encoding Campbell's Monomyth and Jungian archetypes into computable character state machines and plot progression graphs.",
+    "domain": "domain-arcanea-worldbuilding",
+    "tags": [
+      "archetypes",
+      "campbell",
+      "story-engine"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-deterministic-video-rendering",
+    "type": "open_problem",
+    "label": "Deterministic Frame-Accurate Generative Video Compilation",
+    "description": "Unifying probabilistic generative video clips with programmatic React Remotion layouts, transitions, and text overlays in headless CI.",
+    "domain": "domain-media-generative-cinema",
+    "tags": [
+      "remotion",
+      "video-generation",
+      "deterministic-rendering"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-audio-visual-sync-in-ai",
+    "type": "open_problem",
+    "label": "High-Precision Audio-Visual Beat Synchronization",
+    "description": "Real-time extraction of transient peaks, BPM changes, and musical stems to dynamically drive camera cuts, WebGL particle pulses, and typography bursts.",
+    "domain": "domain-media-generative-cinema",
+    "tags": [
+      "audio-visual",
+      "sync",
+      "suno",
+      "motion-graphics"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-visual-character-consistency",
+    "type": "open_problem",
+    "label": "Multi-Angle Multi-Scene Character Consistency in Generative Video",
+    "description": "Retaining exact facial features, clothing, and proportions of Arcanean Guardians across multiple disparate scenes without expensive manual 3D rigging.",
+    "domain": "domain-media-generative-cinema",
+    "tags": [
+      "character-consistency",
+      "generative-video",
+      "animation"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-creator-platform-dependence",
+    "type": "open_problem",
+    "label": "Total Decoupling from Centralized Social Media Gatekeepers",
+    "description": "Building sovereign audience ownership architectures via RSS, open protocols, decentralized publishing, and direct email dispatch.",
+    "domain": "domain-creator-strategy-wealth",
+    "tags": [
+      "sovereign-creator",
+      "platform-risk",
+      "decentralization"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-fragile-revenue-streams",
+    "type": "open_problem",
+    "label": "Antifragile Multi-Tiered Digital Product Portfolios",
+    "description": "Constructing revenue engines composed of low-ticket volume, recurring SaaS/membership, and high-ticket sovereign advisory that thrive in economic downturns.",
+    "domain": "domain-creator-strategy-wealth",
+    "tags": [
+      "revenue",
+      "antifragile",
+      "digital-products",
+      "cashflow"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-unscalable-advisory",
+    "type": "open_problem",
+    "label": "Autonomous AI Advisory Transformation",
+    "description": "Productizing high-end architectural judgment into autonomous agent pipelines, yielding 100x human throughput while increasing quality of decisions.",
+    "domain": "domain-creator-strategy-wealth",
+    "tags": [
+      "ai-advisory",
+      "leverage",
+      "high-output"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-reusable-launch-cost",
+    "type": "open_problem",
+    "label": "Sub-$100/kg to LEO Launch Cost",
+    "description": "What combination of reusability architecture, materials, and manufacturing innovation would reduce launch cost to LEO below $100/kg at scale?",
+    "domain": "domain-space-builder",
+    "tags": [
+      "launch",
+      "reusability",
+      "cost",
+      "access-to-space"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-in-situ-resource-utilization",
+    "type": "open_problem",
+    "label": "In-Situ Resource Utilization (ISRU) at Scale",
+    "description": "What processing and manufacturing systems would allow a human settlement on the Moon or Mars to produce propellant, structural materials, and life support consumables from local resources?",
+    "domain": "domain-space-builder",
+    "tags": [
+      "isru",
+      "moon",
+      "mars",
+      "resource-extraction",
+      "settlement"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-aging-mechanism",
+    "type": "open_problem",
+    "label": "Primary Causal Mechanism of Aging",
+    "description": "Is aging driven primarily by information loss in epigenetics (Sinclair), accumulation of senescent cells, mitochondrial dysfunction, or another mechanism? What intervention best addresses the root cause?",
+    "domain": "domain-bio-human-intelligence",
+    "tags": [
+      "aging",
+      "longevity",
+      "mechanism",
+      "biology"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-consciousness-hard-problem",
+    "type": "open_problem",
+    "label": "The Hard Problem of Consciousness",
+    "description": "Why does subjective experience (qualia) exist at all? How does physical neural activity give rise to the felt quality of experience?",
+    "domain": "domain-bio-human-intelligence",
+    "tags": [
+      "consciousness",
+      "qualia",
+      "neuroscience",
+      "philosophy-of-mind"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-distribution-cold-start",
+    "type": "open_problem",
+    "label": "Distribution Cold-Start Problem",
+    "description": "How does a new creator or product get its first 1000 genuine, engaged users in a world of algorithmic gatekeeping and attention scarcity?",
+    "domain": "domain-creator-founder",
+    "tags": [
+      "distribution",
+      "growth",
+      "audience",
+      "cold-start"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-ai-generated-search-dilution",
+    "type": "open_problem",
+    "label": "Search Dilution by AI-Generated Content Farms",
+    "description": "How high-signal publishers and domain authorities maintain search rank and reader trust when millions of low-effort AI articles flood index results.",
+    "domain": "domain-content-seo-publishing",
+    "tags": [
+      "seo",
+      "ai-search",
+      "information-gain",
+      "content-quality"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-content-monetization-decay",
+    "type": "open_problem",
+    "label": "Decay of Traditional Ad & Affiliate Monetization",
+    "description": "Addressing the rapid collapse of display ad CPMs and third-party affiliate cookies through direct sovereign software sales and high-ticket masterminds.",
+    "domain": "domain-content-seo-publishing",
+    "tags": [
+      "monetization",
+      "business-models",
+      "publishing",
+      "sovereignty"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-funnel-conversion-friction",
+    "type": "open_problem",
+    "label": "Conversion Friction in Multi-Device Sales Funnels",
+    "description": "Minimizing checkout abandonment, wallet connection fatigue, and mobile checkout friction in high-ticket digital product sales.",
+    "domain": "domain-social-attraction-funnels",
+    "tags": [
+      "conversion-rate-optimization",
+      "funnels",
+      "checkout",
+      "ecommerce"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-inflationary-capital-decay",
+    "type": "open_problem",
+    "label": "Purchasing Power Decay in Fiat Capital Reserves",
+    "description": "Constructing treasury portfolios that reliably preserve real purchasing power across currency debasement and debt cycle transitions.",
+    "domain": "domain-investing-wealth-capital",
+    "tags": [
+      "inflation",
+      "treasury-management",
+      "capital-preservation",
+      "sovereign-wealth"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-asymmetric-risk-mispricing",
+    "type": "open_problem",
+    "label": "Mispricing of Tail Risks & AI Exponential Compounding",
+    "description": "Traditional financial models fail to price the non-linear returns of autonomous AI systems and the catastrophic tail risks of centralized platform dependencies.",
+    "domain": "domain-investing-wealth-capital",
+    "tags": [
+      "asymmetric-risk",
+      "tail-risk",
+      "venture-capital",
+      "ai-economics"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-agent-concurrency-bottleneck",
+    "type": "open_problem",
+    "label": "Concurrent Agent Swarm Contention & State Race Conditions",
+    "description": "How to run 50+ autonomous coding and research agents simultaneously without triggering provider rate limits (429s), Git merge collisions, or machine OOM crashes.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "concurrency",
+      "swarm-scaling",
+      "race-conditions",
+      "rate-limiting"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-context-window-cost-exhaustion",
+    "type": "open_problem",
+    "label": "Context Window Cost & Latency Explosion in Extended Autonomy",
+    "description": "Long-running multi-day swarms generate millions of tokens; without static KV cache alignment and prompt compaction, inference costs scale non-linearly.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "kv-cache",
+      "token-economics",
+      "context-compaction",
+      "cost-scaling"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "problem-graph-memory-scaling-limits",
+    "type": "open_problem",
+    "label": "In-Memory Knowledge Graph Scaling Thresholds",
+    "description": "Flat JSON AST trees become unwieldy past 2,000 entities, requiring transition to columnar disk-backed stores (LanceDB/Kùzu) and localized subgraph partitioning.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "graph-scaling",
+      "lancedb",
+      "kuzu",
+      "subgraph-partitioning"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "paper-attention-is-all-you-need",
+    "type": "paper",
+    "label": "Attention Is All You Need",
+    "description": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "transformers",
+      "attention",
+      "nlp",
+      "deep-learning"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-gpt3",
+    "type": "paper",
+    "label": "Language Models are Few-Shot Learners (GPT-3)",
+    "description": "We train GPT-3, an autoregressive language model with 175 billion parameters, and test its few-shot performance across NLP tasks. GPT-3 achieves strong performance on many benchmarks, often matching or exceeding the performance of fine-tuned models.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "llm",
+      "gpt",
+      "few-shot",
+      "scaling",
+      "pretraining",
+      "in-context-learning"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-generative-agents-stanford",
+    "type": "paper",
+    "label": "Generative Agents: Interactive Simulacra of Human Behavior",
+    "description": "We introduce generative agents—computational software agents that simulate believable human behavior. Generative agents draw on an architecture that extends a large language model to store a complete record of the agent's experiences using natural language, synthesize those memories over time into higher-level reflections, and retrieve them dynamically to plan behavior.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "agents",
+      "memory-stream",
+      "reflection",
+      "planning",
+      "simulacra",
+      "generative-agents"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-reflexion-shinn",
+    "type": "paper",
+    "label": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+    "description": "We present Reflexion, an approach that endows an agent with dynamic memory and self-reflection capabilities for reasoning, decision-making, and programming tasks. Reflexion agents verbally reflect on task feedback signals, then maintain their own reflective text in an episodic memory buffer to induce better decision-making in subsequent trials.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "reflexion",
+      "verbal-rl",
+      "self-correction",
+      "error-recalibration",
+      "adversarial-check"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-react-reasoning-acting",
+    "type": "paper",
+    "label": "ReAct: Synergizing Reasoning and Acting in Language Models",
+    "description": "We explore the use of LLMs to generate both reasoning traces and task-specific actions in an interleaved manner, allowing for greater synergy between the two: reasoning traces help the model induce, track, and update action plans as well as handle exceptions, while actions allow it to interface with and gather additional information from external sources.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "react",
+      "reasoning",
+      "tool-use",
+      "agent-trajectory",
+      "interleaved-loop"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-dspy-khattab",
+    "type": "paper",
+    "label": "DSPy: Compiling Declarative Language Model Calls",
+    "description": "We present DSPy, a framework for programming with foundation models that separates the flow of your program (modules) from the parameters (prompts and weights) of each step. DSPy synthesizes and optimizes prompts based on a pipeline specification and training examples.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "dspy",
+      "declarative-ai",
+      "compilation",
+      "teleprompter",
+      "prompt-optimization"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-voyager-wang",
+    "type": "paper",
+    "label": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
+    "description": "We introduce Voyager, the first LLM-powered embodied lifelong learning agent in Minecraft that continuously explores the world, acquires diverse skills, and makes novel discoveries without human intervention. Voyager consists of an automatic curriculum, a skill library of executable code, and an iterative prompting mechanism.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "voyager",
+      "skill-library",
+      "lifelong-learning",
+      "embodied-ai",
+      "open-ended-exploration"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-toolformer-schick",
+    "type": "paper",
+    "label": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+    "description": "We introduce Toolformer, a model trained to decide which APIs to call, when to call them, what arguments to pass, and how to best incorporate the results into future token prediction. This is done in a self-supervised way, requiring only a handful of human demonstrations.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "toolformer",
+      "tool-use",
+      "function-calling",
+      "self-supervised-learning"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-memgpt-packer",
+    "type": "paper",
+    "label": "MemGPT: Towards LLMs as Operating Systems",
+    "description": "Large language models are constrained by finite context windows. We present MemGPT (Memory-GPT), a system that intelligently manages different memory tiers in LLMs to effectively provide extended context within the LLM's limited context window, drawing inspiration from hierarchical memory management in operating systems.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "memgpt",
+      "hierarchical-memory",
+      "virtual-context",
+      "sleep-compute",
+      "long-term-memory"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-deepseek-r1",
+    "type": "paper",
+    "label": "DeepSeek-R1: Incentivizing Reasoning via Reinforcement Learning",
+    "description": "We introduce our first-generation reasoning models, DeepSeek-R1-Zero and DeepSeek-R1. DeepSeek-R1-Zero, a model trained via large-scale reinforcement learning without supervised fine-tuning (SFT) as a preliminary step, demonstrates remarkable reasoning capabilities. Through RL, DeepSeek-R1-Zero naturally emerges with numerous powerful and intriguing reasoning behaviors.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "deepseek-r1",
+      "reasoning",
+      "reinforcement-learning",
+      "grpo",
+      "self-verification",
+      "chain-of-thought"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-constitutional-ai-anthropic",
+    "type": "paper",
+    "label": "Constitutional AI: A Framework for Machine Learning with Principles",
+    "description": "We introduce Constitutional AI (CAI), a method for training a harmless AI assistant through self-improvement, without human feedback labels for harmfulness. The only human oversight is provided through a list of rules or principles, forming a constitution.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "constitutional-ai",
+      "alignment",
+      "rlaif",
+      "self-critique",
+      "safety-principles"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-hallmarks-of-aging-lopez-otin",
+    "type": "paper",
+    "label": "The Hallmarks of Aging",
+    "description": "Aging is characterized by a progressive loss of physiological integrity, leading to impaired function and increased vulnerability to death. We enumerate and describe the hallmarks of aging.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": [
+      "aging",
+      "longevity",
+      "biology",
+      "hallmarks"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-sleep-performance-walker",
+    "type": "paper",
+    "label": "Sleep and Cognitive Performance Research",
+    "description": "Sleep plays a critical role in cognitive performance, memory consolidation, and health. This body of work establishes the mechanisms and consequences of sleep insufficiency.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": [
+      "sleep",
+      "cognition",
+      "performance",
+      "neuroscience"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-fundamentals-astrodynamics",
+    "type": "paper",
+    "label": "Fundamentals of Astrodynamics (Bate, Mueller, White)",
+    "description": "A classic introduction to astrodynamics covering the two-body problem, orbital elements, orbital maneuvers, and preliminary orbit determination.",
+    "domain": "domain-space-builder",
+    "tags": [
+      "orbital-mechanics",
+      "astrodynamics",
+      "textbook",
+      "space-foundation"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "paper-tree-of-thoughts",
+    "type": "paper",
+    "label": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+    "description": "Yao et al. paradigm enabling language models to explore multiple reasoning paths, self-evaluate intermediate choices, and perform lookahead or backtracking when problem solving.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "tree-of-thoughts",
+      "deliberate-reasoning",
+      "search-algorithms",
+      "lookahead"
+    ],
+    "href": "/papers"
+  },
+  {
+    "id": "skill-train-basic-nn",
+    "type": "skill",
+    "label": "Train a Basic Neural Network",
+    "description": "Implement, train, and evaluate a feedforward neural network from scratch using a modern deep learning framework.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "deep-learning",
+      "pytorch",
+      "training"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "skill-implement-transformer",
+    "type": "skill",
+    "label": "Implement a Transformer",
+    "description": "Build a transformer architecture from scratch: multi-head attention, positional encoding, feed-forward layers, and training loop.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "transformers",
+      "implementation",
+      "deep-learning"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "skill-finetune-llm",
+    "type": "skill",
+    "label": "Fine-tune an LLM",
+    "description": "Adapt a pretrained language model to a new task or domain using supervised fine-tuning (SFT), LoRA, or PEFT methods.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "fine-tuning",
+      "llm",
+      "lora",
+      "peft"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "skill-evaluate-llm",
+    "type": "skill",
+    "label": "Evaluate an LLM",
+    "description": "Design and run evaluations for language models: benchmark selection, prompt design, metric choice, and failure mode analysis.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "evaluation",
+      "llm",
+      "benchmarks",
+      "evals"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "skill-build-agent",
+    "type": "skill",
+    "label": "Build an AI Agent",
+    "description": "Design and implement an LLM-based agent with tool use, a memory strategy, and a multi-step task loop.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "agents",
+      "tool-use",
+      "llm",
+      "agentic-ai"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "skill-multi-agent-coordination",
+    "type": "skill",
+    "label": "Multi-Agent Coordination",
+    "description": "Design systems where multiple AI agents coordinate to complete complex tasks: orchestrators, subagents, handoffs, and shared memory.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "multi-agent",
+      "agents",
+      "orchestration",
+      "coordination"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "skill-red-team-llm",
+    "type": "skill",
+    "label": "Red-Team an LLM",
+    "description": "Systematically probe a language model for safety failures, jailbreaks, hallucinations, and misuse vectors.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "safety",
+      "red-teaming",
+      "alignment",
+      "evaluation"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "skill-evaluate-alignment",
+    "type": "skill",
+    "label": "Evaluate Alignment",
+    "description": "Design and run alignment-specific evaluations: helpfulness, harmlessness, honesty, and refusal calibration.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "alignment",
+      "evaluation",
+      "safety",
+      "hhh"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "skill-calculate-orbit",
+    "type": "skill",
+    "label": "Calculate an Orbit",
+    "description": "Compute orbital elements from state vectors, propagate an orbit, and analyze coverage or ground track.",
+    "domain": "domain-space-builder",
+    "tags": [
+      "orbital-mechanics",
+      "astrodynamics",
+      "computation"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "skill-plan-trajectory",
+    "type": "skill",
+    "label": "Plan a Mission Trajectory",
+    "description": "Design a mission trajectory from launch to destination, including delta-v budget, maneuver sequencing, and margin analysis.",
+    "domain": "domain-space-builder",
+    "tags": [
+      "trajectory",
+      "mission-design",
+      "delta-v",
+      "astrodynamics"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "skill-size-propulsion-system",
+    "type": "skill",
+    "label": "Size a Propulsion System",
+    "description": "Select and size a propulsion system for a given mission delta-v, spacecraft mass, and thrust requirement.",
+    "domain": "domain-space-builder",
+    "tags": [
+      "propulsion",
+      "mission-design",
+      "sizing",
+      "spacecraft"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "skill-design-cubesat-mission",
+    "type": "skill",
+    "label": "Design a CubeSat Mission",
+    "description": "Define requirements, concept of operations, subsystem sizing, and launch vehicle selection for a 1U–12U CubeSat mission.",
+    "domain": "domain-space-builder",
+    "tags": [
+      "cubesat",
+      "mission-design",
+      "smallsat",
+      "systems-engineering"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "skill-evaluate-longevity-intervention",
+    "type": "skill",
+    "label": "Evaluate a Longevity Intervention",
+    "description": "Critically assess the evidence quality, mechanism, and translational relevance of a proposed longevity intervention.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": [
+      "longevity",
+      "evidence-evaluation",
+      "aging",
+      "research"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "skill-design-cognitive-experiment",
+    "type": "skill",
+    "label": "Design a Cognitive Experiment",
+    "description": "Design a well-controlled behavioral or cognitive experiment with defined hypotheses, measures, controls, and analysis plan.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": [
+      "cognition",
+      "experimental-design",
+      "psychology",
+      "research"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "skill-conduct-user-interview",
+    "type": "skill",
+    "label": "Conduct a User Interview",
+    "description": "Plan, conduct, and synthesize user interviews to surface jobs-to-be-done, pain points, and existing behaviors.",
+    "domain": "domain-creator-founder",
+    "tags": [
+      "user-research",
+      "jtbd",
+      "product",
+      "discovery"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "skill-write-product-spec",
+    "type": "skill",
+    "label": "Write a Product Spec",
+    "description": "Define a product or feature through a written spec: problem statement, user stories, success criteria, and non-goals.",
+    "domain": "domain-creator-founder",
+    "tags": [
+      "product",
+      "spec",
+      "writing",
+      "pm"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "skill-ship-mvp",
+    "type": "skill",
+    "label": "Ship an MVP",
+    "description": "Define, build, and launch a minimum viable product. Get it in front of real users and collect feedback.",
+    "domain": "domain-creator-founder",
+    "tags": [
+      "mvp",
+      "product",
+      "launch",
+      "startup"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "skill-write-high-signal-post",
+    "type": "skill",
+    "label": "Write a High-Signal Post",
+    "description": "Produce a written piece that clearly communicates a non-obvious insight, earns attention from a target audience, and drives action.",
+    "domain": "domain-creator-founder",
+    "tags": [
+      "writing",
+      "distribution",
+      "content",
+      "leverage"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "skill-grow-audience",
+    "type": "skill",
+    "label": "Grow an Audience",
+    "description": "Build a consistent, engaged audience through repeated high-signal content across one or more channels.",
+    "domain": "domain-creator-founder",
+    "tags": [
+      "audience",
+      "distribution",
+      "content",
+      "growth"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "skill-build-financial-model",
+    "type": "skill",
+    "label": "Build a Financial Model",
+    "description": "Create a bottom-up financial model with unit economics, revenue drivers, cost structure, and scenario analysis.",
+    "domain": "domain-creator-founder",
+    "tags": [
+      "finance",
+      "modeling",
+      "unit-economics",
+      "startup"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "swarm-pattern-santa-loop",
+    "type": "swarm_pattern",
+    "label": "The Santa Method (Adversarial Maker ≠ Checker)",
+    "description": "A dual-agent convergence loop where a generator subagent (Fire Gate) creates the initial artifact, and an independent adversarial reviewer subagent (Crown Gate) ruthlessly audits against taste and canon until strict consensus is reached.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "swarm-pattern",
+      "santa-loop",
+      "adversarial-review",
+      "maker-checker",
+      "convergence"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "swarm-pattern-dreaming-engine",
+    "type": "swarm_pattern",
+    "label": "The Dreaming Reflection Engine",
+    "description": "Scheduled sleep-time background agent (Letta pattern) that scans delta modifications in the vault, formulates higher-order epistemic questions, retrieves cited evidence, and generates verified reflection nodes.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "swarm-pattern",
+      "dreaming",
+      "sleep-compute",
+      "generative-agents",
+      "reflection-tree",
+      "second-brain"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "swarm-pattern-sds-supervisor",
+    "type": "swarm_pattern",
+    "label": "Single Dev Server (SDS) Transient Compute",
+    "description": "Policy and supervisor tool ensuring local dev servers are treated as ephemeral compute with idle TTL, keeping memory free and directing persistent reviews to Vercel previews.",
+    "domain": "domain-systems-engineering",
+    "tags": [
+      "swarm-pattern",
+      "sds",
+      "dev-server",
+      "ephemeral-compute",
+      "vercel-gate"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "swarm-pattern-cross-model-shootout",
+    "type": "swarm_pattern",
+    "label": "Cross-Model Verification Shootout",
+    "description": "Maker and Checker must run on different model architectures/providers to eliminate shared blindspots (e.g., Kilo free-tier generates, Codex GPT-5.6 Sol or Claude Opus audits).",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "swarm-pattern",
+      "model-diversity",
+      "shootout",
+      "verification-gate"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "pattern-queen-conductor-worker",
+    "type": "swarm_pattern",
+    "label": "Hierarchical Queen-Conductor-Worker Swarm",
+    "description": "Decouples meta-strategic planning from task decomposition and task execution. The Queen manages the global objective, Conductor orchestrates worktrees, and Workers execute bounded tasks in parallel isolated branches.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "orchestration",
+      "hierarchical-swarm",
+      "queen",
+      "conductor",
+      "worktree-isolation"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "pattern-semantic-model-router",
+    "type": "swarm_pattern",
+    "label": "Dynamic Semantic Dispatch & Model Routing",
+    "description": "Routes agent tasks dynamically based on cognitive load and cost tier: fast lightweight models for mechanical lookups and scans (Shift/Flow gates); high-reasoning frontier models for architecture, judgment, and adversarial reviews (Crown/Unity gates).",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "model-routing",
+      "cost-optimization",
+      "semantic-dispatch",
+      "latency-tuning"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "pattern-evaluator-optimizer",
+    "type": "swarm_pattern",
+    "label": "Evaluator-Optimizer & Self-Refining Teleprompters",
+    "description": "Iterative feedback loop where an Optimizer agent generates candidate prompts or code, an Evaluator agent scores against a suite of assertion tests, and teleprompter algorithms compile few-shot examples into optimized execution weights.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "dspy",
+      "evaluator-optimizer",
+      "prompt-compilation",
+      "self-refinement"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "pattern-blackboard-workspace",
+    "type": "swarm_pattern",
+    "label": "Blackboard Architecture & Shared Observable Workspace",
+    "description": "A centralized, observable state repository where autonomous specialist agents read shared problem states, post intermediate discoveries, and react to changes asynchronously without tight peer-to-peer coupling.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "blackboard-architecture",
+      "shared-state",
+      "decoupled-swarms",
+      "observability"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "pattern-map-reduce-scanner",
+    "type": "swarm_pattern",
+    "label": "Map-Reduce Parallel Swarm Scanner",
+    "description": "Fan-out of dozens of lightweight scout agents to inspect distinct files, repositories, or API endpoints in parallel (Map), followed by a synthesis agent that aggregates, deduplicates, and condenses findings into a single coherent dossier (Reduce).",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "map-reduce",
+      "parallel-scouts",
+      "fan-out",
+      "estate-audit"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "pattern-adversarial-debate",
+    "type": "swarm_pattern",
+    "label": "Multi-Agent Adversarial Debate & Red-Teaming",
+    "description": "Two or more frontier models debate an architectural, security, or strategic proposition from opposing stances (Thesis vs Antithesis), moderated by an impartial Judge model that extracts synthesized truth (Synthesis).",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "adversarial-debate",
+      "red-team",
+      "dialectic-synthesis",
+      "cross-model"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "pattern-queue-backed-agent-workers",
+    "type": "swarm_pattern",
+    "label": "Queue-Backed Durable Agent Worker Swarm",
+    "description": "A distributed job queue (BullMQ/Redis or SQLite durable queue) decouples user request dispatch from execution. Workers pull tasks from priority queues with token rate-limit sharding, exponential backoff with jitter, and dead-letter queues for failed trajectories.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "queue-workers",
+      "concurrency",
+      "bullmq",
+      "backoff",
+      "resilience"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "pattern-kv-cache-prefix-compaction",
+    "type": "swarm_pattern",
+    "label": "KV-Cache Prefix Alignment & Context Compaction",
+    "description": "Maximizes provider prompt caching (Anthropic 90% discount, Gemini context caching) by structuring agent prompts with an immutable static prefix (System contract, tools schema, core lore) followed by dynamic turn deltas, reducing inference latency by 80% and token cost by 75%.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "kv-cache",
+      "prompt-caching",
+      "cost-reduction",
+      "token-economics"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "pattern-hierarchical-graph-partitioning",
+    "type": "swarm_pattern",
+    "label": "Hierarchical Graph Partitioning & 2-Hop Neighborhoods",
+    "description": "When the knowledge graph scales past thousands of entities, agents do not ingest the whole tree. The graph is sharded into domain clusters, and agents query only the 2-hop radius around target concepts via topological traversal or semantic vector filtering.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "graph-partitioning",
+      "subgraph-retrieval",
+      "scale",
+      "topological-query"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "pattern-agent-sandbox-isolation",
+    "type": "swarm_pattern",
+    "label": "Agent Sandbox Isolation & Blast Radius Containment",
+    "description": "Executes untrusted code, web scraping, and third-party dependencies inside isolated lightweight containers or WASM sandboxes with restricted network access, virtualized filesystems, and strict Phone Link / root directory search bans.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "sandbox",
+      "isolation",
+      "security",
+      "blast-radius",
+      "safety-gate"
+    ],
+    "href": "/mcp-tools"
+  },
+  {
+    "id": "tool-pytorch",
+    "type": "tool",
+    "label": "PyTorch",
+    "description": "An open-source deep learning framework for research and production. The primary tool for implementing neural networks.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "deep-learning",
+      "python",
+      "framework",
+      "ai"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-huggingface-transformers",
+    "type": "tool",
+    "label": "Hugging Face Transformers",
+    "description": "A library of pretrained transformer models and fine-tuning utilities. The standard toolkit for LLM practitioners.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "transformers",
+      "llm",
+      "fine-tuning",
+      "python"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-threejs",
+    "type": "tool",
+    "label": "Three.js & React Three Fiber",
+    "description": "3D WebGL library for rendering spatial canvases, constellations, and interactive shader environments.",
+    "domain": "domain-impeccable-design",
+    "tags": [
+      "threejs",
+      "webgl",
+      "3d",
+      "spatial-ui",
+      "shaders"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-gsap",
+    "type": "tool",
+    "label": "GSAP (GreenSock Animation Platform)",
+    "description": "High-performance JavaScript animation library for timeline orchestration, scroll-driven visual narratives, and UI spring dynamics.",
+    "domain": "domain-impeccable-design",
+    "tags": [
+      "gsap",
+      "animation",
+      "motion",
+      "ui-ux",
+      "timelines"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-remotion",
+    "type": "tool",
+    "label": "Remotion",
+    "description": "Framework for creating programmatic, frame-accurate MP4/WebM videos in React using web standards.",
+    "domain": "domain-media-generative-cinema",
+    "tags": [
+      "remotion",
+      "video-as-code",
+      "react",
+      "motion-graphics"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-suno-ai",
+    "type": "tool",
+    "label": "Suno AI Platform",
+    "description": "Generative audio system producing broadcast-grade music arrangements, vocal stems, and harmonic compositions.",
+    "domain": "domain-media-generative-cinema",
+    "tags": [
+      "suno",
+      "audio",
+      "generative-music",
+      "stems"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-sds-supervisor",
+    "type": "tool",
+    "label": "SDS (Single Dev Server Supervisor)",
+    "description": "CLI supervisor managing transient local development ports with idle TTL and automatic cleanup.",
+    "domain": "domain-systems-engineering",
+    "tags": [
+      "sds",
+      "cli",
+      "dev-server",
+      "process-manager"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-gmat",
+    "type": "tool",
+    "label": "GMAT (General Mission Analysis Tool)",
+    "description": "NASA open-source space mission design and navigation tool for trajectory analysis, orbit determination, and optimization.",
+    "domain": "domain-space-builder",
+    "tags": [
+      "astrodynamics",
+      "trajectory",
+      "mission-design",
+      "nasa"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-openrocket",
+    "type": "tool",
+    "label": "OpenRocket",
+    "description": "An open-source rocket simulation software for designing and simulating model rockets.",
+    "domain": "domain-space-builder",
+    "tags": [
+      "rockets",
+      "simulation",
+      "propulsion",
+      "open-source"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-jupyter-notebook",
+    "type": "tool",
+    "label": "Jupyter Notebook",
+    "description": "An interactive computing environment for creating reproducible research notebooks combining code, text, and visualizations.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": [
+      "notebook",
+      "python",
+      "research",
+      "data-science"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-notion",
+    "type": "tool",
+    "label": "Notion",
+    "description": "A connected workspace for documentation, product specs, databases, and company knowledge management.",
+    "domain": "domain-creator-founder",
+    "tags": [
+      "productivity",
+      "docs",
+      "pm",
+      "knowledge-management"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-linear",
+    "type": "tool",
+    "label": "Linear",
+    "description": "A project management tool designed for software teams with fast issue tracking, cycles, and roadmaps.",
+    "domain": "domain-creator-founder",
+    "tags": [
+      "pm",
+      "project-management",
+      "engineering",
+      "startup"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-figma",
+    "type": "tool",
+    "label": "Figma",
+    "description": "Collaborative interface design and prototyping tool for design systems, vector assets, and token handoffs.",
+    "domain": "domain-web-graphic-design",
+    "tags": [
+      "figma",
+      "ui-ux",
+      "design-system",
+      "prototyping",
+      "vector"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-framer",
+    "type": "tool",
+    "label": "Framer",
+    "description": "Interactive canvas and CMS publishing platform that turns design layouts directly into production React websites with fluid animations.",
+    "domain": "domain-web-graphic-design",
+    "tags": [
+      "framer",
+      "web-design",
+      "react",
+      "motion",
+      "cms"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-ahrefs",
+    "type": "tool",
+    "label": "Ahrefs",
+    "description": "SEO intelligence platform for backlink analysis, keyword clustering, search volume estimation, and competitor gap auditing.",
+    "domain": "domain-content-seo-publishing",
+    "tags": [
+      "seo",
+      "ahrefs",
+      "keyword-research",
+      "backlinks",
+      "analytics"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-beehiiv",
+    "type": "tool",
+    "label": "Beehiiv",
+    "description": "Newsletter platform built for sovereign creators with audience analytics, referral programs, and custom domains.",
+    "domain": "domain-content-seo-publishing",
+    "tags": [
+      "newsletter",
+      "beehiiv",
+      "email",
+      "publishing",
+      "monetization"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-stripe",
+    "type": "tool",
+    "label": "Stripe",
+    "description": "Financial infrastructure and checkout APIs powering global subscription billing, one-click payments, and creator revenue settlement.",
+    "domain": "domain-social-attraction-funnels",
+    "tags": [
+      "stripe",
+      "payments",
+      "checkout",
+      "billing",
+      "fintech"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-tradingview",
+    "type": "tool",
+    "label": "TradingView",
+    "description": "Financial charting platform providing real-time market data, technical indicators, and macroeconomic asset ratio tracking.",
+    "domain": "domain-investing-wealth-capital",
+    "tags": [
+      "tradingview",
+      "charting",
+      "markets",
+      "technical-analysis",
+      "macro"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-lancedb",
+    "type": "tool",
+    "label": "LanceDB",
+    "description": "Developer-friendly, serverless vector database for AI applications, written in Rust with native Node.js and Python bindings. Stores vectors and relational metadata in columnar Lance files.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "lancedb",
+      "vector-db",
+      "serverless",
+      "rust",
+      "columnar"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-langfuse",
+    "type": "tool",
+    "label": "Langfuse",
+    "description": "Open source LLM engineering platform providing observability, trace visualization, prompt management, and automated evaluation metrics for multi-agent swarms.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "langfuse",
+      "observability",
+      "tracing",
+      "evals",
+      "telemetry"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-redis-bullmq",
+    "type": "tool",
+    "label": "BullMQ & Redis",
+    "description": "High-performance, message-based distributed task queue for Node.js and TypeScript. Supports delayed jobs, parent-child task flows, rate limiting, and failure retries.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "bullmq",
+      "redis",
+      "task-queue",
+      "distributed-jobs",
+      "concurrency"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "tool-litellm-proxy",
+    "type": "tool",
+    "label": "LiteLLM Proxy & Universal Gateway",
+    "description": "High-throughput proxy server allowing 100+ LLMs in OpenAI-compatible format with built-in load balancing, fallbacks, spend tracking, and rate-limit sharding.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "litellm",
+      "proxy",
+      "load-balancing",
+      "gateway",
+      "cost-tracking"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "workflow-daily-ops",
+    "type": "workflow",
+    "label": "Daily Operations & Estate Sync",
+    "description": "Morning synchronization workflow checking git worktree states, Linear issues, Notion Dev Hub status, storage health, and daily priority alignment.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "workflow",
+      "daily-ops",
+      "estate-sync",
+      "operations",
+      "health-check"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "workflow-content-factory",
+    "type": "workflow",
+    "label": "ACOS Content Factory Pipeline",
+    "description": "Six-stage publishing lifecycle transforming raw concepts into peer-reviewed, visually attested articles deployed to Vercel.",
+    "domain": "domain-creator-strategy-wealth",
+    "tags": [
+      "workflow",
+      "content-factory",
+      "publishing",
+      "mdx",
+      "vercel-deploy"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "workflow-vercel-preview-gate",
+    "type": "workflow",
+    "label": "Vercel Preview Promotion Gate",
+    "description": "Cloud-first workflow that enforces draft-first PRs, prevents local dev server clutter, and gates production deployment on automated Santa verification.",
+    "domain": "domain-systems-engineering",
+    "tags": [
+      "workflow",
+      "vercel",
+      "cloud-first",
+      "preview-gate",
+      "ci-cd"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "domain-ai-architect",
+    "type": "domain",
+    "label": "AI Architect",
+    "description": "The domain of understanding, designing, and building AI systems — from mathematical foundations through large language models, agents, reasoning systems, and alignment.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "ai",
+      "machine-learning",
+      "deep-learning",
+      "llm",
+      "agents",
+      "alignment"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "domain-arcanea-worldbuilding",
+    "type": "domain",
+    "label": "Arcanea Worldbuilding & Mythos",
+    "description": "The art and architectural doctrine of secondary creation, mythic structures, the Ten Gates, alchemical resonance frequencies, and living narrative universes.",
+    "tags": [
+      "worldbuilding",
+      "mythology",
+      "arcanea",
+      "ten-gates",
+      "guardians",
+      "storytelling",
+      "campbell",
+      "tolkien"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "domain-bio-human-intelligence",
+    "type": "domain",
+    "label": "Bio / Human Intelligence",
+    "description": "The domain of understanding human cognition, neuroscience, longevity, performance, and biosystems — grounded in peer-reviewed science and evidence-based practice. No personal health data.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": [
+      "neuroscience",
+      "cognition",
+      "longevity",
+      "biology",
+      "performance",
+      "health-science"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "domain-content-seo-publishing",
+    "type": "domain",
+    "label": "Content Architecture, SEO & Publishing",
+    "description": "Product-led SEO, topical authority clusters, information gain scoring, high-converting copywriting, and programmatic MDX publishing workflows.",
+    "tags": [
+      "content-strategy",
+      "seo",
+      "publishing",
+      "mdx",
+      "copywriting",
+      "topical-authority",
+      "information-gain"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "domain-creator-founder",
+    "type": "domain",
+    "label": "Creator-Founder",
+    "description": "The domain of building products, companies, creative systems, and audiences — combining leverage, distribution, execution, and taste into compounding creative and commercial output.",
+    "domain": "domain-creator-founder",
+    "tags": [
+      "startups",
+      "products",
+      "distribution",
+      "creative-systems",
+      "leverage",
+      "founders"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "domain-creator-strategy-wealth",
+    "type": "domain",
+    "label": "Creator Strategy & High-Leverage Wealth",
+    "description": "Strategic moat building, 7 Powers economic engines, antifragile venture structures, digital product publishing, and sovereign cashflow architecture.",
+    "tags": [
+      "strategy",
+      "wealth",
+      "7-powers",
+      "antifragile",
+      "high-output",
+      "publishing",
+      "monetization"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "domain-impeccable-design",
+    "type": "domain",
+    "label": "Impeccable Design & Spatial Canvas",
+    "description": "Design systems of the highest aesthetic standard, typographic precision, micro-interactions, quantitative data display, and spatial WebGL environments.",
+    "tags": [
+      "design",
+      "ui-ux",
+      "design-tokens",
+      "typography",
+      "tufte",
+      "rams",
+      "webgl",
+      "spatial-ui"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "domain-investing-wealth-capital",
+    "type": "domain",
+    "label": "Investing, Sovereign Wealth & Capital Allocation",
+    "description": "Value investing fundamentals, margin of safety, second-level thinking, macro debt cycles, barbell portfolio allocation, and permissionless compounding engines.",
+    "tags": [
+      "investing",
+      "wealth",
+      "capital-allocation",
+      "value-investing",
+      "macroeconomics",
+      "barbell-strategy",
+      "compounding"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "domain-media-generative-cinema",
+    "type": "domain",
+    "label": "Generative Cinema, Audio & Media",
+    "description": "Programmatic video rendering in React/Remotion, generative audio composition with Suno v4.5, prompt visual synthesis with Nano Banana, and camera grammar.",
+    "tags": [
+      "media",
+      "video-as-code",
+      "remotion",
+      "suno",
+      "nano-banana",
+      "cinematography",
+      "audio-engineering"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "domain-scale-distributed-agentics",
+    "type": "domain",
+    "label": "Distributed Agentics, Concurrency & Scale Architecture",
+    "description": "Architectural principles, queue-backed concurrency, KV-cache economics, memory guardian protection, and graph partitioning required to scale autonomous agent swarms and knowledge trees to millions of entities and high-throughput execution.",
+    "tags": [
+      "scale",
+      "distributed-systems",
+      "agent-concurrency",
+      "memory-guardian",
+      "kv-cache",
+      "graph-partitioning",
+      "lancedb",
+      "rate-limiting"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "domain-social-attraction-funnels",
+    "type": "domain",
+    "label": "Social Attraction, Funnels & Monetization",
+    "description": "Organic social distribution loops, viral hook design, Grand Slam Offer creation, value ladder architecture, VSL sales funnels, and lifecycle email automation.",
+    "tags": [
+      "social-media",
+      "attraction",
+      "funnels",
+      "lead-generation",
+      "offers",
+      "vsl",
+      "email-marketing",
+      "monetization"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "domain-space-builder",
+    "type": "domain",
+    "label": "Space Builder",
+    "description": "The domain of understanding, designing, and building space systems — from orbital mechanics and propulsion through mission design, spacecraft engineering, and space economy.",
+    "domain": "domain-space-builder",
+    "tags": [
+      "space",
+      "orbital-mechanics",
+      "propulsion",
+      "spacecraft",
+      "missions",
+      "astro"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "domain-systems-engineering",
+    "type": "domain",
+    "label": "Systems & Distributed Engineering",
+    "description": "Foundations and advanced practices of scalable software architecture, distributed data systems, event-driven pipelines, and cloud-native workflows.",
+    "tags": [
+      "systems",
+      "distributed-systems",
+      "software-architecture",
+      "databases",
+      "event-driven",
+      "performance"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "domain-web-graphic-design",
+    "type": "domain",
+    "label": "Web Design, Graphic Design & Spatial UI",
+    "description": "The canon of visual aesthetics, Swiss grid systems, typographic rhythm, emotional UI/UX, responsive interaction design, and brand identity architecture.",
+    "tags": [
+      "web-design",
+      "graphic-design",
+      "typography",
+      "grid-systems",
+      "ui-ux",
+      "swiss-design",
+      "visual-hierarchy",
+      "brand-identity"
+    ],
+    "href": "/tree"
+  },
+  {
+    "id": "benchmark-swe-bench-verified",
+    "type": "benchmark",
+    "label": "SWE-bench Verified",
+    "description": "Gold standard evaluation benchmark for software engineering agents resolving real-world GitHub pull requests and issues in production repositories.",
+    "domain": "domain-ai-architect",
+    "href": "/tree"
+  },
+  {
+    "id": "benchmark-gaia",
+    "type": "benchmark",
+    "label": "GAIA (General AI Assistants)",
+    "description": "Rigorous benchmark testing multi-modal reasoning, web browsing, code execution, and multi-step tool use for autonomous assistants.",
+    "domain": "domain-ai-architect",
+    "href": "/tree"
+  },
+  {
+    "id": "benchmark-webarena",
+    "type": "benchmark",
+    "label": "WebArena",
+    "description": "Realistic and reproducible web environment benchmark for evaluating autonomous visual web agents across ecommerce, CMS, and coding tools.",
+    "domain": "domain-ai-architect",
+    "href": "/tree"
+  },
+  {
+    "id": "benchmark-humaneval",
+    "type": "benchmark",
+    "label": "HumanEval+",
+    "description": "Standardized code synthesis benchmark testing Python docstring-to-code generation with rigorous unit test suites.",
+    "domain": "domain-ai-architect",
+    "href": "/tree"
+  },
+  {
+    "id": "benchmark-niah",
+    "type": "benchmark",
+    "label": "Needle In A Haystack (NIAH)",
+    "description": "Evaluation measuring an LLM's retrieval accuracy across 128k to 2M+ token contexts by placing hidden facts at varied depths.",
+    "domain": "domain-ai-architect",
+    "href": "/tree"
+  },
+  {
+    "id": "benchmark-agentbench",
+    "type": "benchmark",
+    "label": "AgentBench",
+    "description": "Multi-dimensional benchmark evaluating LLM-as-Agent capabilities across OS terminal navigation, database querying, web browsing, and digital games.",
+    "domain": "domain-ai-architect",
+    "href": "/tree"
+  },
+  {
+    "id": "benchmark-swarm-concurrency-throughput",
+    "type": "benchmark",
+    "label": "Swarm Concurrency & Task Throughput Benchmark",
+    "description": "Measures task completion rate (tasks/min), 429 rate-limit avoidance, peak RAM consumption, and git conflict rate under concurrent loads of 10 to 100 parallel agent workers.",
+    "domain": "domain-scale-distributed-agentics",
     "href": "/tree"
   }
 ]

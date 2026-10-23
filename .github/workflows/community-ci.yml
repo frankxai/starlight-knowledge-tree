@@ -29,6 +29,9 @@ jobs:
       - name: Run Scale Benchmark Stress-Test
         run: npx tsx scripts/scale-graph-benchmark.ts
 
+      - name: Generate JSON Canvas (packaged by the next step)
+        run: npx tsx scripts/export-json-canvas.ts
+
       - name: Package Community Distribution Bundle
         run: npx tsx scripts/export-community-distribution.ts
 

@@ -199,6 +199,18 @@
         "type": "unlocks",
         "target": "pattern-blackboard-workspace"
       }
+    ],
+    "pattern_name": "Hierarchical Queen-Conductor-Worker Swarm",
+    "maker_roles": [
+      "Worker Agent (Execution / Code Generation / File Edits)"
+    ],
+    "checker_roles": [
+      "Queen / Conductor (Goal Verification & Integration Gate)"
+    ],
+    "failure_modes": [
+      "Context drift in long execution loops",
+      "Conflicting parallel file writes across worktrees",
+      "Premature goal termination before complete verification"
     ]
   },
   {
@@ -240,6 +252,18 @@
         "type": "unlocks",
         "target": "concept-permissionless-agent-economy"
       }
+    ],
+    "pattern_name": "Dynamic Semantic Dispatch & Model Routing",
+    "maker_roles": [
+      "Semantic Dispatcher (Task Classifier)"
+    ],
+    "checker_roles": [
+      "Quality Sentinel (Performance & Hallucination Auditor)"
+    ],
+    "failure_modes": [
+      "Overspending on trivial text formatting tasks",
+      "Under-reasoning on complex architectural decisions",
+      "Single-provider outage vulnerabilities"
     ]
   },
   {
@@ -277,6 +301,18 @@
         "type": "unlocks",
         "target": "swarm-pattern-santa-loop"
       }
+    ],
+    "pattern_name": "Evaluator-Optimizer & Self-Refining Teleprompters",
+    "maker_roles": [
+      "Optimizer / Generator"
+    ],
+    "checker_roles": [
+      "Evaluator / Test Suite Runner"
+    ],
+    "failure_modes": [
+      "Superficial prompt tuning without ground-truth metrics",
+      "Regression errors in multi-turn tool calling",
+      "Model drift across provider updates"
     ]
   },
   {
@@ -318,6 +354,18 @@
         "type": "unlocks",
         "target": "concept-hierarchical-memory-paging"
       }
+    ],
+    "pattern_name": "Blackboard Architecture & Shared Observable Workspace",
+    "maker_roles": [
+      "Specialist Contributor Agents"
+    ],
+    "checker_roles": [
+      "Blackboard Controller / Arbiter"
+    ],
+    "failure_modes": [
+      "N-squared communication explosion in large swarms",
+      "State desynchronization across parallel subagents",
+      "Lost intermediate discoveries during agent restarts"
     ]
   },
   {
@@ -350,7 +398,19 @@
     ],
     "created_at": "2026-08-25T00:00:00Z",
     "updated_at": "2026-08-25T00:00:00Z",
-    "edges": []
+    "edges": [],
+    "pattern_name": "Map-Reduce Parallel Swarm Scanner",
+    "maker_roles": [
+      "Scout Agents (Parallel Readers)"
+    ],
+    "checker_roles": [
+      "Synthesizer / Reducer Agent"
+    ],
+    "failure_modes": [
+      "Sequential bottleneck in multi-repo scanning",
+      "Context window overflow from massive code dumps",
+      "Incomplete estate discovery"
+    ]
   },
   {
     "id": "pattern-adversarial-debate",
@@ -382,7 +442,19 @@
     ],
     "created_at": "2026-08-25T00:00:00Z",
     "updated_at": "2026-08-25T00:00:00Z",
-    "edges": []
+    "edges": [],
+    "pattern_name": "Multi-Agent Adversarial Debate & Red-Teaming",
+    "maker_roles": [
+      "Advocate & Red-Team Challenger"
+    ],
+    "checker_roles": [
+      "Judge / Synthesis Model"
+    ],
+    "failure_modes": [
+      "Model confirmation bias and sycophancy",
+      "Overlooking subtle security vulnerabilities",
+      "Premature consensus on suboptimal architectures"
+    ]
   },
   {
     "id": "pattern-queue-backed-agent-workers",
@@ -428,6 +500,18 @@
         "type": "unlocks",
         "target": "concept-memory-guardian-oom-prevention"
       }
+    ],
+    "pattern_name": "Queue-Backed Durable Agent Worker Swarm",
+    "maker_roles": [
+      "Queue Worker Agent (Isolated Task Runner)"
+    ],
+    "checker_roles": [
+      "Dead-Letter Sentinel & Supervisor"
+    ],
+    "failure_modes": [
+      "Provider 429 rate limit cascades",
+      "Process crash losing in-memory agent state",
+      "Uncontrolled memory spikes from simultaneous unthrottled spawns"
     ]
   },
   {
@@ -469,6 +553,18 @@
         "type": "unlocks",
         "target": "concept-hierarchical-memory-paging"
       }
+    ],
+    "pattern_name": "KV-Cache Prefix Alignment & Context Compaction",
+    "maker_roles": [
+      "Context Compactor / Prompt Assembler"
+    ],
+    "checker_roles": [
+      "Cache Hit Telemetry Monitor"
+    ],
+    "failure_modes": [
+      "Compounding API billing from repeated full-history reinjection",
+      "Context processing latency spikes in multi-turn loops",
+      "Context truncation shedding critical rules"
     ]
   },
   {
@@ -510,6 +606,18 @@
         "type": "unlocks",
         "target": "concept-lancedb-columnar-vector-scale"
       }
+    ],
+    "pattern_name": "Hierarchical Graph Partitioning & 2-Hop Neighborhoods",
+    "maker_roles": [
+      "Subgraph Extractor (Query Router)"
+    ],
+    "checker_roles": [
+      "Partition Boundary Validator"
+    ],
+    "failure_modes": [
+      "Context window exhaustion from loading whole-estate schemas",
+      "Irrelevant distractors degrading agent reasoning accuracy",
+      "Client-side bundle bloat on the web visualizer"
     ]
   },
   {
@@ -543,6 +651,18 @@
     ],
     "created_at": "2026-09-09T00:00:00Z",
     "updated_at": "2026-09-09T00:00:00Z",
-    "edges": []
+    "edges": [],
+    "pattern_name": "Agent Sandbox Isolation & Blast Radius Containment",
+    "maker_roles": [
+      "Sandboxed Worker"
+    ],
+    "checker_roles": [
+      "Security Sentinel & Egress Auditor"
+    ],
+    "failure_modes": [
+      "Accidental deletion or corruption of host files",
+      "Malicious code execution from third-party repositories",
+      "Phone Link recursive sync triggering infinite mobile file downloads"
+    ]
   }
 ]

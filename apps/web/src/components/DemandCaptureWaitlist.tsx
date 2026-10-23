@@ -21,15 +21,16 @@ export function DemandCaptureWaitlist({
   const [priceBand, setPriceBand] = useState("");
   const [pain, setPain] = useState("");
   const [loading, setLoading] = useState(false);
-  const [position, setPosition] = useState<number>(14);
+  const [position, setPosition] = useState<number | null>(null);
+  const [error, setError] = useState<string>("");
 
   const handleStep1Submit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !email.includes("@")) return;
 
     setLoading(true);
+    setError("");
     try {
-      // Attempt API call if available
       const res = await fetch("/api/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -40,22 +41,17 @@ export function DemandCaptureWaitlist({
           createdAt: new Date().toISOString(),
         }),
       });
-      if (res.ok) {
-        const data = await res.json();
-        if (data.position) setPosition(data.position);
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.position) {
+        setError(data.error || "Signup could not be stored. Please try again later.");
+        return;
       }
+      setPosition(data.position);
+      setStep(2);
     } catch {
-      // Fallback in static SSG mode
-      if (typeof window !== "undefined") {
-        const key = `waitlist_${productId}`;
-        const existing = JSON.parse(localStorage.getItem(key) || "[]");
-        existing.push({ email, at: new Date().toISOString() });
-        localStorage.setItem(key, JSON.stringify(existing));
-        setPosition(14 + existing.length);
-      }
+      setError("Signup could not reach the server. Nothing was saved; please try again later.");
     } finally {
       setLoading(false);
-      setStep(2);
     }
   };
 
@@ -130,9 +126,13 @@ export function DemandCaptureWaitlist({
                 {loading ? "Joining..." : "Join Waitlist →"}
               </button>
             </div>
-            <p className="text-[11px] text-white/40 font-mono">
-              Honest counter: 14 architects claimed · No spam, zero rented lists.
-            </p>
+            {error ? (
+              <p className="text-[11px] text-red-400 font-mono">{error}</p>
+            ) : (
+              <p className="text-[11px] text-white/40 font-mono">
+                No spam, zero rented lists. Counts are shown only from the live ledger.
+              </p>
+            )}
           </form>
         </div>
       )}
@@ -140,7 +140,7 @@ export function DemandCaptureWaitlist({
       {step === 2 && (
         <div className="relative z-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-3">
-            ✓ Position #{position} Reserved
+            ✓ Position #{position ?? "—"} Reserved
           </div>
 
           <h4 className="text-xl font-bold text-white mb-1">Help Us Calibrate Your Access</h4>
@@ -229,7 +229,7 @@ export function DemandCaptureWaitlist({
           <div className="inline-block p-4 rounded-xl bg-white/[0.03] border border-white/10 text-xs font-mono text-left text-white/70">
             <div>Product: {productId}</div>
             <div>Cohort: Founding 50</div>
-            <div>Position: #{position}</div>
+            <div>Position: #{position ?? "—"}</div>
             <div>Status: Priority Access Locked</div>
           </div>
         </div>

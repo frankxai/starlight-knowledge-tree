@@ -27,7 +27,6 @@ const swarmPatterns: NodeItem[] = JSON.parse(fs.readFileSync(path.join(dataDir, 
 const concepts: NodeItem[] = JSON.parse(fs.readFileSync(path.join(dataDir, "nodes/concepts.json"), "utf8"));
 const tools: NodeItem[] = JSON.parse(fs.readFileSync(path.join(dataDir, "nodes/tools.json"), "utf8"));
 const benchmarks = JSON.parse(fs.readFileSync(path.join(dataDir, "benchmarks.json"), "utf8"));
-const estateIndex = JSON.parse(fs.readFileSync(path.join(dataDir, "estate-index.json"), "utf8"));
 
 // Counts are computed from data/, never hard-coded (guard: scripts/verify-canon-counts.mjs).
 // Nodes live in data/nodes/*.json; domains are separate definition files, never summed into nodes.
@@ -53,7 +52,7 @@ Modern AI development is paralyzed by two opposing extremes:
 2. **Brittle Enterprise Monoliths**: Rigid, overpriced agent frameworks requiring dedicated infrastructure, opaque daemon runtimes, and exponential compute overhead.
 
 **Starlight Knowledge Tree** solves this through a **Zero-Daemon Federated Graph AST**:
-- A single source of truth linking 240 estate repositories, 14 specialized domains, 10 verified swarm patterns, 10 MCP server integrations, and 6 empirical frontier benchmarks.
+- A single source of truth linking ${totalDomains} specialized domains, ${swarmPatterns.length} swarm patterns, ${mcp.length} MCP server integrations, and ${benchmarks.length} empirical frontier benchmarks.
 - Decouples high-reasoning planning (Crown / Architect gates) from zero-marginal-cost execution (Shift / Worker gates).
 - Strict Maker-Checker separation (the Santa Loop) guaranteeing zero uninspected artifacts ever touch production.
 
@@ -87,7 +86,7 @@ fs.writeFileSync(path.join(outputDir, "01-executive-briefing-and-audio-overview-
 const doc02 = `# Frontier Multi-Agent Swarm Patterns & Cognitive Architecture
 *Starlight Master Canon | Grounding Source for NotebookLM*
 
-This dossier details the 10 production-tested swarm patterns operating across the Starlight multi-agent estate.
+This dossier details the ${swarmPatterns.length} swarm patterns operating across the Starlight multi-agent estate.
 
 ${swarmPatterns.map((s, i) => `
 ### Pattern ${i+1}: ${s.label} (\`${s.id}\`)
@@ -148,10 +147,10 @@ const doc04 = `# Canonical Knowledge Tree Master Index
 
 ## Empirical Benchmarks
 ${benchmarks.map((b: any) => `
-### ${b.label} (\`${b.id}\`)
+### ${b.label ?? b.name} (\`${b.id}\`)
 - **Metric**: ${b.metric}
-- **Dataset**: ${b.eval_dataset}
-- **Baseline vs Target**: Baseline \`${b.baseline_score}\` → Starlight Target \`${b.target_score}\`
+- **Dataset**: ${b.eval_dataset ?? b.name}
+- **Baseline vs Target**: Baseline \`${b.baseline_score ?? "not recorded"}\` → Starlight Target \`${b.target_score ?? b.sota_target}\`
 - **Significance**: ${b.description}
 `).join("\n")}
 

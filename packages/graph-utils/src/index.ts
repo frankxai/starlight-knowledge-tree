@@ -21,7 +21,7 @@ export function loadAllNodes(dataDir: string): KnowledgeTreeNode[] {
           nodes.push(raw);
         }
       } catch (err) {
-        console.error(`Error parsing node file: ${filePath}`, err);
+        throw new Error(`Error parsing node file: ${filePath}: ${(err as Error).message}`);
       }
     }
   }
@@ -38,7 +38,7 @@ export function loadAllNodes(dataDir: string): KnowledgeTreeNode[] {
           nodes.push(raw);
         }
       } catch (err) {
-        console.error(`Error parsing domain file: ${filePath}`, err);
+        throw new Error(`Error parsing domain file: ${filePath}: ${(err as Error).message}`);
       }
     }
   }

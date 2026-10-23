@@ -129,7 +129,7 @@ export default function LibraryPage() {
             {/* Quote */}
             {book.quotes && book.quotes.length > 0 && (
               <blockquote className="border-l-2 border-cyan-primary/50 pl-4 py-1 text-sm italic text-white/70">
-                "{book.quotes[0].quote}"
+                &ldquo;{book.quotes[0].quote}&rdquo;
                 <span className="text-xs not-italic text-white/40 ml-2 font-mono">— {book.quotes[0].source}</span>
               </blockquote>
             )}

@@ -63,10 +63,11 @@ const domains = [
   "domain-investing-wealth-capital"
 ];
 
-for (let i = realNodes.length; i < 5000; i++) {
+const syntheticCount = 5000 - realNodes.length;
+for (let i = 0; i < syntheticCount; i++) {
   const randDomain = domains[i % domains.length];
-  const target1 = `node-synth-${(i * 7) % 5000}`;
-  const target2 = `node-synth-${(i * 13) % 5000}`;
+  const target1 = `node-synth-${(i * 7 + 3) % syntheticCount}`;
+  const target2 = `node-synth-${(i * 13 + 7) % syntheticCount}`;
   
   syntheticNodes.push({
     id: `node-synth-${i}`,

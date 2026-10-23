@@ -5,7 +5,11 @@ import * as readline from "readline";
 // Starlight Knowledge Tree MCP 2.0 Server
 // Zero-daemon, in-memory AST provider over JSON-RPC 2.0 stdio
 
-const dataDir = path.resolve(__dirname, "../data");
+// STARLIGHT_DATA_DIR may point at a data/ directory or at a single
+// starlight-master-canon.json bundle file (community distribution).
+const dataDir = process.env.STARLIGHT_DATA_DIR
+  ? path.resolve(process.env.STARLIGHT_DATA_DIR)
+  : path.resolve(__dirname, "../data");
 
 // In-memory cache
 interface NodeItem {
@@ -23,7 +27,27 @@ const nodeMap = new Map<string, NodeItem>();
 const nodesByDomain = new Map<string, NodeItem[]>();
 const nodesByType = new Map<string, NodeItem[]>();
 
+function indexItem(item: NodeItem) {
+  nodeMap.set(item.id, item);
+  const dom = item.domain || "generic";
+  if (!nodesByDomain.has(dom)) nodesByDomain.set(dom, []);
+  nodesByDomain.get(dom)!.push(item);
+  if (!nodesByType.has(item.type)) nodesByType.set(item.type, []);
+  nodesByType.get(item.type)!.push(item);
+}
+
 function loadGraph() {
+  // Bundle-file mode: STARLIGHT_DATA_DIR points at starlight-master-canon.json.
+  if (fs.existsSync(dataDir) && fs.statSync(dataDir).isFile()) {
+    const bundle = JSON.parse(fs.readFileSync(dataDir, "utf8"));
+    for (const n of bundle.nodes || []) indexItem(n);
+    for (const d of bundle.domains || []) {
+      nodeMap.set(d.id, d);
+      if (!nodesByType.has("domain")) nodesByType.set("domain", []);
+      nodesByType.get("domain")!.push(d);
+    }
+    return;
+  }
   // Every file in data/nodes is canon; a hand-maintained list silently dropped
   // skills, contribution tasks, and experiments (222 of 250 loaded). Dynamic by construction.
   const nodesDir = path.join(dataDir, "nodes");
@@ -37,18 +61,7 @@ function loadGraph() {
     if (!fs.existsSync(p)) continue;
     try {
       const items: NodeItem[] = JSON.parse(fs.readFileSync(p, "utf8"));
-      for (const item of items) {
-        nodeMap.set(item.id, item);
-
-        // Group by domain
-        const dom = item.domain || "generic";
-        if (!nodesByDomain.has(dom)) nodesByDomain.set(dom, []);
-        nodesByDomain.get(dom)!.push(item);
-
-        // Group by type
-        if (!nodesByType.has(item.type)) nodesByType.set(item.type, []);
-        nodesByType.get(item.type)!.push(item);
-      }
+      for (const item of items) indexItem(item);
     } catch (e) {
       // ignore
     }
@@ -216,6 +229,27 @@ function handleToolCall(name: string, args: any): any {
       const nodes: any[] = [{ id: root.id, label: root.label || root.title, type: root.type, domain: root.domain }];
       const edges: any[] = [];
 
+      // Traverse both directions: a neighborhood includes who points at the
+      // center, not only where the center points.
+      const incoming = new Map<string, Array<{ from: string; type: string }>>();
+      for (const n of nodeMap.values()) {
+        if (Array.isArray(n.edges)) {
+          for (const e of n.edges) {
+            if (!incoming.has(e.target)) incoming.set(e.target, []);
+            incoming.get(e.target)!.push({ from: n.id, type: e.type });
+          }
+        }
+      }
+      const pushNode = (id: string, bucket: string[]) => {
+        if (visited.has(id)) return;
+        visited.add(id);
+        const tn = nodeMap.get(id);
+        if (tn) {
+          nodes.push({ id: tn.id, label: tn.label || tn.title, type: tn.type, domain: tn.domain });
+          bucket.push(id);
+        }
+      };
+
       let currentHop = [startId];
       for (let hop = 1; hop <= maxHops; hop++) {
         const nextHop: string[] = [];
@@ -223,21 +257,13 @@ function handleToolCall(name: string, args: any): any {
           const curr = nodeMap.get(currId);
           if (curr && Array.isArray(curr.edges)) {
             for (const e of curr.edges) {
-              edges.push({ from: currId, to: e.target, type: e.type });
-              if (!visited.has(e.target)) {
-                visited.add(e.target);
-                const targetNode = nodeMap.get(e.target);
-                if (targetNode) {
-                  nodes.push({
-                    id: targetNode.id,
-                    label: targetNode.label || targetNode.title,
-                    type: targetNode.type,
-                    domain: targetNode.domain,
-                  });
-                  nextHop.push(e.target);
-                }
-              }
+              edges.push({ from: currId, to: e.target, type: e.type, direction: "outgoing" });
+              pushNode(e.target, nextHop);
             }
+          }
+          for (const inc of incoming.get(currId) || []) {
+            edges.push({ from: inc.from, to: currId, type: inc.type, direction: "incoming" });
+            pushNode(inc.from, nextHop);
           }
         }
         currentHop = nextHop;
@@ -366,6 +392,53 @@ rl.on("line", (line) => {
         });
       }
       break;
+
+    case "resources/read": {
+      const uri = params?.uri;
+      if (uri === "starlight://master-canon") {
+        const all = Array.from(nodeMap.values());
+        sendResponse({
+          jsonrpc: "2.0",
+          id,
+          result: {
+            contents: [{
+              uri,
+              mimeType: "application/json",
+              text: JSON.stringify({
+                generated_from: "starlight-knowledge-mcp in-memory AST",
+                total_entries: all.length,
+                nodes: all.filter((n) => n.type !== "domain"),
+                domains: all.filter((n) => n.type === "domain"),
+              }),
+            }],
+          },
+        });
+      } else if (uri === "starlight://canvas") {
+        const canvasPath = process.env.STARLIGHT_CANVAS_PATH
+          ? path.resolve(process.env.STARLIGHT_CANVAS_PATH)
+          : path.resolve(__dirname, "../dist/starlight-knowledge-tree.canvas");
+        if (fs.existsSync(canvasPath)) {
+          sendResponse({
+            jsonrpc: "2.0",
+            id,
+            result: { contents: [{ uri, mimeType: "application/json", text: fs.readFileSync(canvasPath, "utf8") }] },
+          });
+        } else {
+          sendResponse({
+            jsonrpc: "2.0",
+            id,
+            error: { code: -32002, message: `Canvas not generated at ${canvasPath}; run: npx tsx scripts/export-json-canvas.ts` },
+          });
+        }
+      } else {
+        sendResponse({
+          jsonrpc: "2.0",
+          id,
+          error: { code: -32002, message: `Unknown resource: ${uri}` },
+        });
+      }
+      break;
+    }
 
     case "resources/list":
       sendResponse({

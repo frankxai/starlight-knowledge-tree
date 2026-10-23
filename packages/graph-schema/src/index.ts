@@ -246,7 +246,7 @@ export const SwarmPatternNodeSchema = BaseNodeSchema.extend({
   checker_roles: z.array(z.string()).min(1),
   convergence_rule: z.string(),
   failure_modes: z.array(z.string()),
-  token_budget_profile: z.enum(["light", "standard", "heavy", "frontier_intensive"]),
+  token_budget_profile: z.enum(["light", "standard", "heavy", "frontier_intensive"]).optional(),
   code_example: z.string().optional(),
   live_reference_file: z.string().optional(),
 });
@@ -279,7 +279,7 @@ export const BenchmarkNodeSchema = BaseNodeSchema.extend({
   type: z.literal("benchmark"),
   metric: z.string(),
   eval_dataset: z.string(),
-  baseline_score: z.string(),
+  baseline_score: z.string().optional(),
   target_score: z.string(),
   verified_date: z.string(),
   evaluator_script: z.string().optional(),
@@ -291,7 +291,7 @@ export type BenchmarkNode = z.infer<typeof BenchmarkNodeSchema>;
 
 export const OpenProblemNodeSchema = BaseNodeSchema.extend({
   type: z.literal("open_problem"),
-  difficulty: z.enum(["accessible", "hard", "unsolved"]),
+  difficulty: z.enum(["accessible", "medium", "hard", "unsolved"]),
   prize_or_benchmark: z.string().nullable(),
   related_papers: z.array(z.string()),
 });
@@ -311,6 +311,12 @@ export const ContributionTaskNodeSchema = BaseNodeSchema.extend({
 export type ContributionTaskNode = z.infer<typeof ContributionTaskNodeSchema>;
 
 // ── Generic node ──────────────────────────────────────────────────────────────
+// Only node types without a dedicated subtype schema may use the generic
+// shape. A subtyped node that fails its subtype schema must fail validation,
+// never fall through to the generic one.
+const GenericNodeSchema = BaseNodeSchema.extend({
+  type: z.enum(["concept", "tool", "dataset", "experiment", "artifact", "credential"]),
+});
 
 export const NodeSchema = z.union([
   DomainNodeSchema,
@@ -323,7 +329,7 @@ export const NodeSchema = z.union([
   BenchmarkNodeSchema,
   OpenProblemNodeSchema,
   ContributionTaskNodeSchema,
-  BaseNodeSchema,
+  GenericNodeSchema,
 ]);
 
 export type KnowledgeTreeNode = z.infer<typeof NodeSchema>;
