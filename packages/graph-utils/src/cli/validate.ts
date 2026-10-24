@@ -23,7 +23,7 @@ console.log(`   Nodes loaded:   ${result.nodeCount}`);
 console.log(`   Edges counted:  ${result.edgeCount}`);
 console.log(`   Fiction worlds: ${fictionResult.atlas?.worlds.length ?? 0}`);
 console.log(`   Story patterns: ${fictionResult.atlas?.patterns.length ?? 0}`);
-console.log(`   Benchmarks:     ${fictionResult.atlas?.benchmark_dimensions.length ?? 0}`);
+console.log(`   Fiction benchmark dimensions: ${fictionResult.atlas?.benchmark_dimensions.length ?? 0}`);
 console.log(`   Translations:   ${fictionResult.atlas?.translations.length ?? 0}`);
 console.log(`   Name candidates: ${fictionResult.atlas?.naming_candidates.length ?? 0}`);
 

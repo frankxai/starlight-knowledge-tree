@@ -157,9 +157,11 @@ fs.writeFileSync(outputPath, JSON.stringify(canvasPayload, null, 2), "utf8");
 console.log(`✅ Successfully generated JSON Canvas with ${canvasNodes.length} nodes and ${canvasEdges.length} edges!`);
 console.log(`   Saved to: ${outputPath}`);
 
-// Copy to second-brain-vault if available
-const vaultCanvasDir = path.resolve("C:/Users/frank/starlight/repos/second-brain-vault/Canvases");
-if (fs.existsSync(vaultCanvasDir)) {
+// Optional vault mirror: only when the operator configures a target dir.
+const vaultCanvasDir = process.env.STARLIGHT_VAULT_CANVAS_DIR
+  ? path.resolve(process.env.STARLIGHT_VAULT_CANVAS_DIR)
+  : null;
+if (vaultCanvasDir && fs.existsSync(vaultCanvasDir)) {
   fs.writeFileSync(path.join(vaultCanvasDir, "starlight-knowledge-tree.canvas"), JSON.stringify(canvasPayload, null, 2), "utf8");
   console.log(`✅ Mirrored canvas to Obsidian Second Brain: ${path.join(vaultCanvasDir, "starlight-knowledge-tree.canvas")}`);
 }

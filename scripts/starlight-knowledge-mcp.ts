@@ -414,10 +414,13 @@ rl.on("line", (line) => {
           },
         });
       } else if (uri === "starlight://canvas") {
-        const canvasPath = process.env.STARLIGHT_CANVAS_PATH
-          ? path.resolve(process.env.STARLIGHT_CANVAS_PATH)
-          : path.resolve(__dirname, "../dist/starlight-knowledge-tree.canvas");
-        if (fs.existsSync(canvasPath)) {
+        const candidates = [
+          process.env.STARLIGHT_CANVAS_PATH ? path.resolve(process.env.STARLIGHT_CANVAS_PATH) : null,
+          path.resolve(__dirname, "starlight-knowledge-tree.canvas"),
+          path.resolve(__dirname, "../dist/starlight-knowledge-tree.canvas"),
+        ].filter(Boolean) as string[];
+        const canvasPath = candidates.find((p) => fs.existsSync(p));
+        if (canvasPath) {
           sendResponse({
             jsonrpc: "2.0",
             id,
@@ -427,7 +430,7 @@ rl.on("line", (line) => {
           sendResponse({
             jsonrpc: "2.0",
             id,
-            error: { code: -32002, message: `Canvas not generated at ${canvasPath}; run: npx tsx scripts/export-json-canvas.ts` },
+            error: { code: -32002, message: `Canvas not found (looked in: ${candidates.join(", ")}); run: npx tsx scripts/export-json-canvas.ts` },
           });
         }
       } else {

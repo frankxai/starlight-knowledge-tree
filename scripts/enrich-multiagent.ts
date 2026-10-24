@@ -24,10 +24,10 @@ const hardenedSwarms = [
       "Conflicting parallel file writes across worktrees",
       "Premature goal termination before complete verification"
     ],
-    live_reference_file: "C:/Users/frank/starlight/repos/Starlight-Intelligence-System/skills/sis-activate/SKILL.md",
+    live_reference_file: "Starlight-Intelligence-System/skills/sis-activate/SKILL.md",
     cross_repo_applications: [
-      { repo: "C:/Users/frank/starlight/repos/Starlight-Intelligence-System", context: "Queen meta-orchestration for estate-wide maintenance." },
-      { repo: "C:/Users/frank/starlight/repos/starlight-agent-canvas", context: "Visual task tree execution and worker telemetry." }
+      { repo: "Starlight-Intelligence-System", context: "Queen meta-orchestration for estate-wide maintenance." },
+      { repo: "starlight-agent-canvas", context: "Visual task tree execution and worker telemetry." }
     ],
     created_at: "2026-08-25T00:00:00Z",
     updated_at: "2026-08-25T00:00:00Z",
@@ -52,10 +52,10 @@ const hardenedSwarms = [
       "Under-reasoning on complex architectural decisions",
       "Single-provider outage vulnerabilities"
     ],
-    live_reference_file: "C:/Users/frank/kilo.json",
+    live_reference_file: "~/kilo.json",
     cross_repo_applications: [
-      { repo: "C:/Users/frank/kilo.json", context: "Default free auto-router mapped to frontier escalation." },
-      { repo: "C:/Users/frank/starlight/repos/ai-capability-registry", context: "Universal provider capability matrix and fallback routes." }
+      { repo: "~/kilo.json", context: "Default free auto-router mapped to frontier escalation." },
+      { repo: "ai-capability-registry", context: "Universal provider capability matrix and fallback routes." }
     ],
     created_at: "2026-08-25T00:00:00Z",
     updated_at: "2026-08-25T00:00:00Z",
@@ -79,9 +79,9 @@ const hardenedSwarms = [
       "Regression errors in multi-turn tool calling",
       "Model drift across provider updates"
     ],
-    live_reference_file: "C:/Users/frank/starlight/repos/prompt-library/README.md",
+    live_reference_file: "prompt-library/README.md",
     cross_repo_applications: [
-      { repo: "C:/Users/frank/starlight/repos/prompt-library", context: "Automated evaluation and ranking of system prompts." }
+      { repo: "prompt-library", context: "Automated evaluation and ranking of system prompts." }
     ],
     created_at: "2026-08-25T00:00:00Z",
     updated_at: "2026-08-25T00:00:00Z",
@@ -105,10 +105,10 @@ const hardenedSwarms = [
       "State desynchronization across parallel subagents",
       "Lost intermediate discoveries during agent restarts"
     ],
-    live_reference_file: "C:/Users/frank/starlight/repos/starlight-agent-canvas/README.md",
+    live_reference_file: "starlight-agent-canvas/README.md",
     cross_repo_applications: [
-      { repo: "C:/Users/frank/starlight/repos/starlight-agent-canvas", context: "Visual blackboard surface for human and agent interaction." },
-      { repo: "C:/Users/frank/starlight/repos/second-brain-vault", context: "Persistent markdown blackboard for daily knowledge logs." }
+      { repo: "starlight-agent-canvas", context: "Visual blackboard surface for human and agent interaction." },
+      { repo: "second-brain-vault", context: "Persistent markdown blackboard for daily knowledge logs." }
     ],
     created_at: "2026-08-25T00:00:00Z",
     updated_at: "2026-08-25T00:00:00Z",
@@ -132,9 +132,9 @@ const hardenedSwarms = [
       "Context window overflow from massive code dumps",
       "Incomplete estate discovery"
     ],
-    live_reference_file: "C:/Users/frank/starlight/repos/starlight-knowledge-tree/scripts/index-estate.ts",
+    live_reference_file: "starlight-knowledge-tree/scripts/index-estate.ts",
     cross_repo_applications: [
-      { repo: "C:/Users/frank/starlight/repos/starlight-knowledge-tree", context: "Estate indexing script scanning 221 repositories in parallel." }
+      { repo: "starlight-knowledge-tree", context: "Estate indexing script scanning 221 repositories in parallel." }
     ],
     created_at: "2026-08-25T00:00:00Z",
     updated_at: "2026-08-25T00:00:00Z",
@@ -156,9 +156,9 @@ const hardenedSwarms = [
       "Overlooking subtle security vulnerabilities",
       "Premature consensus on suboptimal architectures"
     ],
-    live_reference_file: "C:/Users/frank/starlight/repos/Starlight-Intelligence-System/skills/thesis-debate/SKILL.md",
+    live_reference_file: "Starlight-Intelligence-System/skills/thesis-debate/SKILL.md",
     cross_repo_applications: [
-      { repo: "C:/Users/frank/starlight/repos/Starlight-Intelligence-System", context: "Thesis debate protocol for strategic investments and architecture." }
+      { repo: "Starlight-Intelligence-System", context: "Thesis debate protocol for strategic investments and architecture." }
     ],
     created_at: "2026-08-25T00:00:00Z",
     updated_at: "2026-08-25T00:00:00Z",

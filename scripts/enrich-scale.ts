@@ -80,10 +80,10 @@ const scaleSwarms = [
       "Process crash losing in-memory agent state",
       "Uncontrolled memory spikes from simultaneous unthrottled spawns"
     ],
-    live_reference_file: "C:/Users/frank/starlight/repos/Starlight-Intelligence-System/skills/queen/COORDINATION.md",
+    live_reference_file: "Starlight-Intelligence-System/skills/queen/COORDINATION.md",
     cross_repo_applications: [
-      { repo: "C:/Users/frank/starlight/repos/Starlight-Intelligence-System", context: "Coordinates multi-agent task queue and state handoffs." },
-      { repo: "C:/Users/frank/starlight/repos/starlight-agent-canvas", context: "Visualizes job status, worker slots, and throughput telemetry." }
+      { repo: "Starlight-Intelligence-System", context: "Coordinates multi-agent task queue and state handoffs." },
+      { repo: "starlight-agent-canvas", context: "Visualizes job status, worker slots, and throughput telemetry." }
     ],
     created_at: "2026-09-09T00:00:00Z",
     updated_at: "2026-09-09T00:00:00Z",
@@ -108,10 +108,10 @@ const scaleSwarms = [
       "Context processing latency spikes in multi-turn loops",
       "Context truncation shedding critical rules"
     ],
-    live_reference_file: "C:/Users/frank/starlight/AGENTS.md",
+    live_reference_file: "starlight/AGENTS.md",
     cross_repo_applications: [
-      { repo: "C:/Users/frank/starlight", context: "Static prefix contract enforced across all harness adapters." },
-      { repo: "C:/Users/frank/starlight/repos/prompt-library", context: "Prompt templates compiled with deterministic static-header blocks." }
+      { repo: "starlight", context: "Static prefix contract enforced across all harness adapters." },
+      { repo: "prompt-library", context: "Prompt templates compiled with deterministic static-header blocks." }
     ],
     created_at: "2026-09-09T00:00:00Z",
     updated_at: "2026-09-09T00:00:00Z",
@@ -135,10 +135,10 @@ const scaleSwarms = [
       "Irrelevant distractors degrading agent reasoning accuracy",
       "Client-side bundle bloat on the web visualizer"
     ],
-    live_reference_file: "C:/Users/frank/starlight/repos/starlight-knowledge-tree/packages/graph-utils/src/index.ts",
+    live_reference_file: "starlight-knowledge-tree/packages/graph-utils/src/index.ts",
     cross_repo_applications: [
-      { repo: "C:/Users/frank/starlight/repos/starlight-knowledge-tree", context: "Dynamic domain loader sharding data files." },
-      { repo: "C:/Users/frank/starlight/repos/second-brain-vault", context: "Obsidian folder and tag partitioning." }
+      { repo: "starlight-knowledge-tree", context: "Dynamic domain loader sharding data files." },
+      { repo: "second-brain-vault", context: "Obsidian folder and tag partitioning." }
     ],
     created_at: "2026-09-09T00:00:00Z",
     updated_at: "2026-09-09T00:00:00Z",
@@ -162,9 +162,9 @@ const scaleSwarms = [
       "Malicious code execution from third-party repositories",
       "Phone Link recursive sync triggering infinite mobile file downloads"
     ],
-    live_reference_file: "C:/Users/frank/starlight/repos/Starlight-Intelligence-System/skills/safety-guard/SKILL.md",
+    live_reference_file: "Starlight-Intelligence-System/skills/safety-guard/SKILL.md",
     cross_repo_applications: [
-      { repo: "C:/Users/frank/starlight/repos/Starlight-Intelligence-System", context: "Enforces execution safety gates and mutation permissions." }
+      { repo: "Starlight-Intelligence-System", context: "Enforces execution safety gates and mutation permissions." }
     ],
     created_at: "2026-09-09T00:00:00Z",
     updated_at: "2026-09-09T00:00:00Z",

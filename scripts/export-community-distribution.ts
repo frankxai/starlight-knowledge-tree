@@ -1,5 +1,6 @@
 import * as fs from "fs";
 import * as path from "path";
+import { execSync } from "child_process";
 
 const dataDir = path.resolve(__dirname, "../data");
 const distDir = path.resolve(__dirname, "../dist");
@@ -53,13 +54,19 @@ const jsonPath = path.join(outputDir, "starlight-master-canon.json");
 fs.writeFileSync(jsonPath, JSON.stringify(masterBundle, null, 2), "utf8");
 console.log(`✅ [1/5] Compiled master canon JSON (${allNodes.length} nodes) -> ${jsonPath}`);
 
-// 2. Copy the JSON Canvas 1.0 file
+// 2. Generate (if needed) and copy the JSON Canvas 1.0 file. The canvas is
+// artifact 1 in the README; packaging without it must fail, never skip.
 const canvasSrc = path.join(distDir, "starlight-knowledge-tree.canvas");
 const canvasDst = path.join(outputDir, "starlight-knowledge-tree.canvas");
-if (fs.existsSync(canvasSrc)) {
-  fs.copyFileSync(canvasSrc, canvasDst);
-  console.log(`✅ [2/5] Packaged JSON Canvas 1.0 visual map -> ${canvasDst}`);
+if (!fs.existsSync(canvasSrc)) {
+  console.log(`Canvas missing; generating via export-json-canvas...`);
+  execSync("npx tsx scripts/export-json-canvas.ts", { stdio: "inherit", cwd: path.resolve(__dirname, "..") });
 }
+if (!fs.existsSync(canvasSrc)) {
+  throw new Error(`Canvas still missing at ${canvasSrc} after generation; refusing to package an incomplete bundle`);
+}
+fs.copyFileSync(canvasSrc, canvasDst);
+console.log(`✅ [2/5] Packaged JSON Canvas 1.0 visual map -> ${canvasDst}`);
 
 // 3. Bundle the MCP server itself and point the config at the shipped file.
 // The config must never reference an unpublished package or a local path.

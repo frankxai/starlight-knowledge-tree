@@ -11,7 +11,7 @@
     "protocol_version": "2024-11-05",
     "transport": "stdio",
     "auth_model": "local_process",
-    "install_command": "node C:/Users/frank/starlight/repos/starlight-memory/dist/index.js",
+    "install_command": "node starlight-memory/dist/index.js",
     "verified_in_repos": ["Starlight-Intelligence-System", "second-brain-vault", "agentic-creator-os"],
     "latency_tier": "low",
     "tools": [
@@ -69,7 +69,7 @@
     "protocol_version": "2024-11-05",
     "transport": "stdio",
     "auth_model": "api_key_env",
-    "install_command": "node C:/Users/frank/starlight/repos/v0-template-os/dist/mcp.js",
+    "install_command": "node v0-template-os/dist/mcp.js",
     "verified_in_repos": ["frankx.ai-vercel-website", "arcanea-studio", "starlight-agent-canvas"],
     "latency_tier": "medium",
     "tools": [
@@ -173,7 +173,7 @@
     "protocol_version": "2024-11-05",
     "transport": "stdio",
     "auth_model": "api_key_env",
-    "install_command": "node C:/Users/frank/starlight/repos/suno-mcp-server/dist/index.js",
+    "install_command": "node suno-mcp-server/dist/index.js",
     "verified_in_repos": ["music-intelligence-os", "arcanea-ai-app"],
     "latency_tier": "high",
     "tools": [

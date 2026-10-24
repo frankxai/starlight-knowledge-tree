@@ -31,7 +31,7 @@
     ],
     "token_budget_profile": "standard",
     "code_example": "1. Dispatch Fire Gate Generator -> Draft.\n2. Dispatch Crown Gate Reviewer -> Critique & Score.\n3. If Score < 90, Generator refines addressing exact feedback.\n4. If Score >= 90, emit SIP Attestation and merge.",
-    "live_reference_file": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System/skills/adversarial-review/SKILL.md",
+    "live_reference_file": "Starlight-Intelligence-System/skills/adversarial-review/SKILL.md",
     "created_at": "2026-08-23T00:00:00Z",
     "updated_at": "2026-08-23T00:00:00Z",
     "edges": [
@@ -71,7 +71,7 @@
     ],
     "token_budget_profile": "light",
     "code_example": "1. Delta scan at 04:00 daily.\n2. Pose 3-5 salient questions about recent decisions and patterns.\n3. Retrieve notes by Relevance x Recency x Importance.\n4. Synthesize Lens framed insights with SIP attestation.\n5. Log reflection delta to calibrate next week's generator.",
-    "live_reference_file": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System/src/dreaming.ts",
+    "live_reference_file": "Starlight-Intelligence-System/src/dreaming.ts",
     "created_at": "2026-08-23T00:00:00Z",
     "updated_at": "2026-08-23T00:00:00Z",
     "edges": [
@@ -107,7 +107,7 @@
       "Orphaned background node processes consuming RAM (mitigated by sds doctor and process tree reaping)"
     ],
     "token_budget_profile": "light",
-    "live_reference_file": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System/skills/sds/SKILL.md",
+    "live_reference_file": "Starlight-Intelligence-System/skills/sds/SKILL.md",
     "created_at": "2026-08-23T00:00:00Z",
     "updated_at": "2026-08-23T00:00:00Z",
     "edges": [
@@ -145,7 +145,7 @@
       "Single-model blindspot reinforcement (eliminated by architecture diversity)"
     ],
     "token_budget_profile": "standard",
-    "live_reference_file": "C:/Users/frank/starlight/repos/starlight-agent-config/CROSS-MODEL-GATE.md",
+    "live_reference_file": "starlight-agent-config/CROSS-MODEL-GATE.md",
     "created_at": "2026-08-23T00:00:00Z",
     "updated_at": "2026-08-23T00:00:00Z",
     "edges": [
@@ -177,14 +177,14 @@
       "Conflicting parallel file writes across worktrees",
       "Premature goal termination before complete verification"
     ],
-    "live_reference_file": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System/skills/sis-activate/SKILL.md",
+    "live_reference_file": "Starlight-Intelligence-System/skills/sis-activate/SKILL.md",
     "cross_repo_applications": [
       {
-        "repo": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System",
+        "repo": "Starlight-Intelligence-System",
         "context": "Queen meta-orchestration for estate-wide maintenance."
       },
       {
-        "repo": "C:/Users/frank/starlight/repos/starlight-agent-canvas",
+        "repo": "starlight-agent-canvas",
         "context": "Visual task tree execution and worker telemetry."
       }
     ],
@@ -234,14 +234,14 @@
       "Under-reasoning on complex architectural decisions",
       "Single-provider outage vulnerabilities"
     ],
-    "live_reference_file": "C:/Users/frank/kilo.json",
+    "live_reference_file": "~/kilo.json",
     "cross_repo_applications": [
       {
-        "repo": "C:/Users/frank/kilo.json",
+        "repo": "~/kilo.json",
         "context": "Default free auto-router mapped to frontier escalation."
       },
       {
-        "repo": "C:/Users/frank/starlight/repos/ai-capability-registry",
+        "repo": "ai-capability-registry",
         "context": "Universal provider capability matrix and fallback routes."
       }
     ],
@@ -287,10 +287,10 @@
       "Regression errors in multi-turn tool calling",
       "Model drift across provider updates"
     ],
-    "live_reference_file": "C:/Users/frank/starlight/repos/prompt-library/README.md",
+    "live_reference_file": "prompt-library/README.md",
     "cross_repo_applications": [
       {
-        "repo": "C:/Users/frank/starlight/repos/prompt-library",
+        "repo": "prompt-library",
         "context": "Automated evaluation and ranking of system prompts."
       }
     ],
@@ -336,14 +336,14 @@
       "State desynchronization across parallel subagents",
       "Lost intermediate discoveries during agent restarts"
     ],
-    "live_reference_file": "C:/Users/frank/starlight/repos/starlight-agent-canvas/README.md",
+    "live_reference_file": "starlight-agent-canvas/README.md",
     "cross_repo_applications": [
       {
-        "repo": "C:/Users/frank/starlight/repos/starlight-agent-canvas",
+        "repo": "starlight-agent-canvas",
         "context": "Visual blackboard surface for human and agent interaction."
       },
       {
-        "repo": "C:/Users/frank/starlight/repos/second-brain-vault",
+        "repo": "second-brain-vault",
         "context": "Persistent markdown blackboard for daily knowledge logs."
       }
     ],
@@ -389,10 +389,10 @@
       "Context window overflow from massive code dumps",
       "Incomplete estate discovery"
     ],
-    "live_reference_file": "C:/Users/frank/starlight/repos/starlight-knowledge-tree/scripts/index-estate.ts",
+    "live_reference_file": "starlight-knowledge-tree/scripts/index-estate.ts",
     "cross_repo_applications": [
       {
-        "repo": "C:/Users/frank/starlight/repos/starlight-knowledge-tree",
+        "repo": "starlight-knowledge-tree",
         "context": "Estate indexing script scanning 221 repositories in parallel."
       }
     ],
@@ -433,10 +433,10 @@
       "Overlooking subtle security vulnerabilities",
       "Premature consensus on suboptimal architectures"
     ],
-    "live_reference_file": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System/skills/thesis-debate/SKILL.md",
+    "live_reference_file": "Starlight-Intelligence-System/skills/thesis-debate/SKILL.md",
     "cross_repo_applications": [
       {
-        "repo": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System",
+        "repo": "Starlight-Intelligence-System",
         "context": "Thesis debate protocol for strategic investments and architecture."
       }
     ],
@@ -478,14 +478,14 @@
       "Process crash losing in-memory agent state",
       "Uncontrolled memory spikes from simultaneous unthrottled spawns"
     ],
-    "live_reference_file": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System/skills/queen/COORDINATION.md",
+    "live_reference_file": "Starlight-Intelligence-System/skills/queen/COORDINATION.md",
     "cross_repo_applications": [
       {
-        "repo": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System",
+        "repo": "Starlight-Intelligence-System",
         "context": "Coordinates multi-agent task queue and state handoffs."
       },
       {
-        "repo": "C:/Users/frank/starlight/repos/starlight-agent-canvas",
+        "repo": "starlight-agent-canvas",
         "context": "Visualizes job status, worker slots, and throughput telemetry."
       }
     ],
@@ -535,14 +535,14 @@
       "Context processing latency spikes in multi-turn loops",
       "Context truncation shedding critical rules"
     ],
-    "live_reference_file": "C:/Users/frank/starlight/AGENTS.md",
+    "live_reference_file": "starlight/AGENTS.md",
     "cross_repo_applications": [
       {
-        "repo": "C:/Users/frank/starlight",
+        "repo": "starlight",
         "context": "Static prefix contract enforced across all harness adapters."
       },
       {
-        "repo": "C:/Users/frank/starlight/repos/prompt-library",
+        "repo": "prompt-library",
         "context": "Prompt templates compiled with deterministic static-header blocks."
       }
     ],
@@ -588,14 +588,14 @@
       "Irrelevant distractors degrading agent reasoning accuracy",
       "Client-side bundle bloat on the web visualizer"
     ],
-    "live_reference_file": "C:/Users/frank/starlight/repos/starlight-knowledge-tree/packages/graph-utils/src/index.ts",
+    "live_reference_file": "starlight-knowledge-tree/packages/graph-utils/src/index.ts",
     "cross_repo_applications": [
       {
-        "repo": "C:/Users/frank/starlight/repos/starlight-knowledge-tree",
+        "repo": "starlight-knowledge-tree",
         "context": "Dynamic domain loader sharding data files."
       },
       {
-        "repo": "C:/Users/frank/starlight/repos/second-brain-vault",
+        "repo": "second-brain-vault",
         "context": "Obsidian folder and tag partitioning."
       }
     ],
@@ -642,10 +642,10 @@
       "Malicious code execution from third-party repositories",
       "Phone Link recursive sync triggering infinite mobile file downloads"
     ],
-    "live_reference_file": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System/skills/safety-guard/SKILL.md",
+    "live_reference_file": "Starlight-Intelligence-System/skills/safety-guard/SKILL.md",
     "cross_repo_applications": [
       {
-        "repo": "C:/Users/frank/starlight/repos/Starlight-Intelligence-System",
+        "repo": "Starlight-Intelligence-System",
         "context": "Enforces execution safety gates and mutation permissions."
       }
     ],
