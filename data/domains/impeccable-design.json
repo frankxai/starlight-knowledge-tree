@@ -1,0 +1,48 @@
+{
+  "id": "domain-impeccable-design",
+  "type": "domain",
+  "label": "Impeccable Design & Spatial Canvas",
+  "description": "Design systems of the highest aesthetic standard, typographic precision, micro-interactions, quantitative data display, and spatial WebGL environments.",
+  "tags": ["design", "ui-ux", "design-tokens", "typography", "tufte", "rams", "webgl", "spatial-ui"],
+  "status": "stable",
+  "created_at": "2026-08-23T00:00:00Z",
+  "updated_at": "2026-08-23T00:00:00Z",
+  "edges": [],
+  "root_problems": [
+    "problem-visual-slop-in-ai",
+    "problem-typographic-hierarchy-failure",
+    "problem-accessible-spatial-interfaces"
+  ],
+  "paths": [
+    {
+      "id": "path-design-foundations-taste",
+      "label": "Design Foundations & Taste Standards",
+      "description": "Visual hierarchy, spacing grids, typographic scale, and Rams/Tufte principles.",
+      "nodes": [
+        "book-wathan-refactoring-ui",
+        "book-tufte-visual-display",
+        "book-norman-design-everyday-things",
+        "concept-design-token-system",
+        "concept-anti-slop-rules"
+      ]
+    },
+    {
+      "id": "path-design-spatial-and-webgl",
+      "label": "Spatial UI & Dynamic Animation",
+      "description": "Three.js, WebGL shaders, GSAP timelines, and canvas orchestration.",
+      "nodes": [
+        "concept-shader-materials",
+        "concept-physics-spring-motion",
+        "tool-threejs",
+        "tool-gsap"
+      ]
+    }
+  ],
+  "seed_nodes": [
+    "book-wathan-refactoring-ui",
+    "book-tufte-visual-display",
+    "book-norman-design-everyday-things",
+    "concept-design-token-system",
+    "concept-anti-slop-rules"
+  ]
+}

@@ -98,7 +98,7 @@ export default function AboutPage() {
               The Core Rule
             </p>
             <blockquote className="text-xl text-white/80 leading-relaxed font-light italic mb-4">
-              "A skill is not complete because someone watched a video, read a thread, or finished a course."
+              &ldquo;A skill is not complete because someone watched a video, read a thread, or finished a course.&rdquo;
             </blockquote>
             <p className="text-white/50">
               A skill becomes real when there is{" "}

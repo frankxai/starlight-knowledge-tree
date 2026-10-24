@@ -1,0 +1,47 @@
+{
+  "id": "domain-arcanea-worldbuilding",
+  "type": "domain",
+  "label": "Arcanea Worldbuilding & Mythos",
+  "description": "The art and architectural doctrine of secondary creation, mythic structures, the Ten Gates, alchemical resonance frequencies, and living narrative universes.",
+  "tags": ["worldbuilding", "mythology", "arcanea", "ten-gates", "guardians", "storytelling", "campbell", "tolkien"],
+  "status": "stable",
+  "created_at": "2026-08-23T00:00:00Z",
+  "updated_at": "2026-08-23T00:00:00Z",
+  "edges": [],
+  "root_problems": [
+    "problem-narrative-drift-across-agents",
+    "problem-shallow-world-coherence",
+    "problem-archetypal-depth"
+  ],
+  "paths": [
+    {
+      "id": "path-worldbuilding-mythic-foundations",
+      "label": "Mythic Narrative Foundations",
+      "description": "Comparative mythology, the monomyth, sub-creation, and dramatic structure.",
+      "nodes": [
+        "book-campbell-hero-thousand-faces",
+        "book-tolkien-on-fairy-stories",
+        "book-mckee-story",
+        "concept-monomyth-journey",
+        "concept-secondary-belief"
+      ]
+    },
+    {
+      "id": "path-worldbuilding-ten-gates",
+      "label": "The Ten Gates & Guardian Architecture",
+      "description": "The canon framework of Arcanea from Foundation to Source.",
+      "nodes": [
+        "concept-ten-gates-progression",
+        "concept-alchemical-frequencies",
+        "concept-origin-classes"
+      ]
+    }
+  ],
+  "seed_nodes": [
+    "book-campbell-hero-thousand-faces",
+    "book-tolkien-on-fairy-stories",
+    "book-mckee-story",
+    "concept-ten-gates-progression",
+    "concept-alchemical-frequencies"
+  ]
+}

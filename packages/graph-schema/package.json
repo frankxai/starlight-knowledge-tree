@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "lint": "eslint src"
+    "lint": "tsc --noEmit"
   },
   "dependencies": {
     "zod": "^3.22.0"

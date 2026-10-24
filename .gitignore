@@ -48,3 +48,9 @@ link-checker-report.txt
 # Starlight/ACOS temporary files
 .starlight/
 .gemini/
+
+# Local estate scan output: names and purposes of private repositories and
+# machine-local inventory never belong in this public repo. Regenerate with
+# `npx tsx scripts/index-estate.ts --root <repos-dir>`.
+data/estate-index.json
+docs/ESTATE_KNOWLEDGE_AUDIT.md

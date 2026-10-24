@@ -1,0 +1,163 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://starlightintelligence.org/knowledge-tree/schemas/fiction-world.schema.json",
+  "title": "FictionWorldAtlas",
+  "description": "Rights-aware comparative-fiction records, abstract narrative patterns, Arcanea translations, and prestige naming candidates.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "generated_at", "worlds", "patterns", "benchmark_dimensions", "translations", "naming_candidates"],
+  "properties": {
+    "schema_version": { "const": "0.1.0" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "worlds": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/world" }
+    },
+    "patterns": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/pattern" }
+    },
+    "benchmark_dimensions": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/benchmark" }
+    },
+    "translations": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/translation" }
+    },
+    "naming_candidates": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/namingCandidate" }
+    }
+  },
+  "definitions": {
+    "worldId": { "type": "string", "pattern": "^world-[a-z0-9]+(-[a-z0-9]+)*$" },
+    "patternId": { "type": "string", "pattern": "^pattern-[a-z0-9]+(-[a-z0-9]+)*$" },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "source_title", "publisher", "evidence_type", "accessed_at", "verification_status", "license_scope", "rights_reviewed_at", "review_reference"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "source_title": { "type": "string", "minLength": 2, "maxLength": 240 },
+        "publisher": { "type": "string", "minLength": 2, "maxLength": 200 },
+        "evidence_type": { "enum": ["official_publisher", "official_creator", "library_catalog", "public_registry", "open_knowledge", "licensed_archive", "secondary_analysis"] },
+        "accessed_at": { "type": "string", "format": "date-time" },
+        "verification_status": { "enum": ["metadata_only", "url_resolved", "content_reviewed", "rights_reviewed"] },
+        "license_scope": { "type": "string", "minLength": 2, "maxLength": 300 },
+        "rights_reviewed_at": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "review_reference": { "type": "string", "minLength": 3, "maxLength": 240 }
+      }
+    },
+    "rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tier", "allowed_uses", "blocked_uses", "notes"],
+      "properties": {
+        "tier": {
+          "enum": ["arcanea_original", "public_domain", "cc0_metadata", "open_licensed", "editorial_reference", "partner_licensed", "restricted"]
+        },
+        "allowed_uses": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 3, "maxLength": 200 }
+        },
+        "blocked_uses": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 3, "maxLength": 200 }
+        },
+        "notes": { "type": "string", "minLength": 10, "maxLength": 500 }
+      }
+    },
+    "world": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "work_title", "creator", "medium", "original_summary", "sources", "rights"],
+      "properties": {
+        "id": { "$ref": "#/definitions/worldId" },
+        "label": { "type": "string", "minLength": 2, "maxLength": 200 },
+        "work_title": { "type": "string", "minLength": 2, "maxLength": 200 },
+        "creator": { "type": "string", "minLength": 2, "maxLength": 200 },
+        "medium": { "enum": ["novel", "manga", "comic", "film", "television", "game", "audio", "mixed"] },
+        "first_publication_year": { "type": "integer", "minimum": 1000, "maximum": 2100 },
+        "original_summary": { "type": "string", "minLength": 20, "maxLength": 600 },
+        "sources": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/source" } },
+        "rights": { "$ref": "#/definitions/rights" }
+      }
+    },
+    "pattern": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "kind", "definition", "human_appeal", "mechanics", "example_worlds", "expression_exclusions"],
+      "properties": {
+        "id": { "$ref": "#/definitions/patternId" },
+        "label": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "kind": { "enum": ["power_ecology", "institution", "character_engine", "bond", "progression", "social_role", "narrative_pressure"] },
+        "definition": { "type": "string", "minLength": 20, "maxLength": 700 },
+        "human_appeal": { "type": "string", "minLength": 10, "maxLength": 400 },
+        "mechanics": { "type": "array", "minItems": 1, "maxItems": 12, "items": { "type": "string", "minLength": 3, "maxLength": 200 } },
+        "example_worlds": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/worldId" } },
+        "expression_exclusions": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 3, "maxLength": 240 } }
+      }
+    },
+    "benchmark": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "layer", "evaluation_question", "failure_signals", "evidence_required"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^benchmark-[a-z0-9]+(-[a-z0-9]+)*$" },
+        "label": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "layer": { "enum": ["language", "character", "power", "institution", "narrative", "world", "transmedia"] },
+        "evaluation_question": { "type": "string", "minLength": 20, "maxLength": 400 },
+        "failure_signals": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 3, "maxLength": 200 } },
+        "evidence_required": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 3, "maxLength": 200 } }
+      }
+    },
+    "translation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "source_worlds", "source_patterns", "arcanea_anchors", "retained_intents", "rejected_expression", "original_inversion", "canon_status"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^translation-[a-z0-9]+(-[a-z0-9]+)*$" },
+        "source_worlds": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/worldId" } },
+        "source_patterns": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/patternId" } },
+        "arcanea_anchors": { "type": "array", "minItems": 3, "items": { "type": "string", "minLength": 2, "maxLength": 120 } },
+        "retained_intents": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 3, "maxLength": 240 } },
+        "rejected_expression": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 3, "maxLength": 240 } },
+        "original_inversion": { "type": "string", "minLength": 20, "maxLength": 600 },
+        "canon_status": { "enum": ["research_only", "staging", "locked"] }
+      }
+    },
+    "nameScore": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mouthfeel", "semantic_charge", "role_clarity", "distinctiveness", "inflection_range", "derivative_distance"],
+      "properties": {
+        "mouthfeel": { "type": "integer", "minimum": 0, "maximum": 5 },
+        "semantic_charge": { "type": "integer", "minimum": 0, "maximum": 5 },
+        "role_clarity": { "type": "integer", "minimum": 0, "maximum": 5 },
+        "distinctiveness": { "type": "integer", "minimum": 0, "maximum": 5 },
+        "inflection_range": { "type": "integer", "minimum": 0, "maximum": 5 },
+        "derivative_distance": { "type": "integer", "minimum": 0, "maximum": 5 }
+      }
+    },
+    "namingCandidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "kind", "register", "canon_status", "decision", "clearance", "score", "flags", "notes"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^name-[a-z0-9]+(-[a-z0-9]+)*$" },
+        "label": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "kind": { "enum": ["phenomenon", "condition", "person", "discipline", "institution", "rank", "artifact", "place"] },
+        "register": { "enum": ["formal", "spoken", "field", "scholarly", "interface"] },
+        "canon_status": { "enum": ["research_only", "staging", "locked"] },
+        "decision": { "enum": ["keep", "review", "reject"] },
+        "clearance": { "enum": ["unsearched", "preliminary", "cleared", "rejected"] },
+        "score": { "$ref": "#/definitions/nameScore" },
+        "flags": { "type": "array", "items": { "type": "string", "minLength": 2, "maxLength": 200 } },
+        "notes": { "type": "string", "minLength": 10, "maxLength": 500 }
+      }
+    }
+  }
+}
