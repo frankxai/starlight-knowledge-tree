@@ -13,7 +13,7 @@
     "lint": "npm run lint --workspaces --if-present",
     "dev": "cd apps/web && npm run dev",
     "validate:atlas": "node scripts/validate-atlas.mjs",
-    "test:atlas": "node --test scripts/tests/atlas-contract.test.mjs scripts/tests/graph-utils.test.mjs"
+    "test:atlas": "node --test scripts/tests/atlas-contract.test.mjs scripts/tests/graph-utils.test.mjs scripts/tests/graph-schema.test.mjs"
   },
   "engines": {
     "node": ">=20.0.0"
