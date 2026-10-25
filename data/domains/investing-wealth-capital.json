@@ -1,0 +1,62 @@
+{
+  "id": "domain-investing-wealth-capital",
+  "type": "domain",
+  "label": "Investing, Sovereign Wealth & Capital Allocation",
+  "description": "Value investing fundamentals, margin of safety, second-level thinking, macro debt cycles, barbell portfolio allocation, and permissionless compounding engines.",
+  "tags": ["investing", "wealth", "capital-allocation", "value-investing", "macroeconomics", "barbell-strategy", "compounding"],
+  "status": "stable",
+  "created_at": "2026-08-23T00:00:00Z",
+  "updated_at": "2026-08-23T00:00:00Z",
+  "edges": [],
+  "root_problems": [
+    "problem-fragile-revenue-streams",
+    "problem-inflationary-capital-decay",
+    "problem-asymmetric-risk-mispricing"
+  ],
+  "paths": [
+    {
+      "id": "path-investing-value-safety",
+      "label": "Value Investing & Margin of Safety",
+      "description": "Benjamin Graham & Charlie Munger principles of intrinsic value, circle of competence, and mental models.",
+      "nodes": [
+        "book-graham-intelligent-investor",
+        "book-munger-poor-charlies-almanack",
+        "concept-margin-of-safety",
+        "concept-circle-of-competence",
+        "concept-intrinsic-value-dcf"
+      ]
+    },
+    {
+      "id": "path-investing-cycles-second-level",
+      "label": "Market Cycles & Second-Level Thinking",
+      "description": "Howard Marks cycle mechanics and Ray Dalio macro credit frameworks.",
+      "nodes": [
+        "book-marks-most-important-thing",
+        "book-dalio-principles-debt-crises",
+        "concept-second-level-thinking",
+        "concept-macro-credit-cycles"
+      ]
+    },
+    {
+      "id": "path-investing-sovereign-barbell",
+      "label": "Barbell Allocation & Sovereign Compounding",
+      "description": "Naval Ravikant permissionless leverage and Taleb asymmetric convex allocation.",
+      "nodes": [
+        "book-naval-almanack",
+        "concept-barbell-capital-allocation",
+        "concept-permissionless-leverage",
+        "concept-sovereign-wealth-engine"
+      ]
+    }
+  ],
+  "seed_nodes": [
+    "book-graham-intelligent-investor",
+    "book-munger-poor-charlies-almanack",
+    "book-marks-most-important-thing",
+    "book-dalio-principles-debt-crises",
+    "book-naval-almanack",
+    "concept-margin-of-safety",
+    "concept-second-level-thinking",
+    "concept-barbell-capital-allocation"
+  ]
+}

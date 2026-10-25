@@ -1,0 +1,66 @@
+{
+  "id": "domain-scale-distributed-agentics",
+  "type": "domain",
+  "label": "Distributed Agentics, Concurrency & Scale Architecture",
+  "description": "Architectural principles, queue-backed concurrency, KV-cache economics, memory guardian protection, and graph partitioning required to scale autonomous agent swarms and knowledge trees to millions of entities and high-throughput execution.",
+  "tags": [
+    "scale",
+    "distributed-systems",
+    "agent-concurrency",
+    "memory-guardian",
+    "kv-cache",
+    "graph-partitioning",
+    "lancedb",
+    "rate-limiting"
+  ],
+  "status": "stable",
+  "created_at": "2026-09-09T00:00:00Z",
+  "updated_at": "2026-09-09T00:00:00Z",
+  "edges": [],
+  "root_problems": [
+    "problem-agent-concurrency-bottleneck",
+    "problem-context-window-cost-exhaustion",
+    "problem-graph-memory-scaling-limits"
+  ],
+  "paths": [
+    {
+      "id": "path-scale-concurrency-queues",
+      "label": "Swarm Concurrency & Queue Architecture",
+      "description": "Durable task dispatch, token rate-limit sharding, and worktree isolation for massive parallel swarms.",
+      "nodes": [
+        "pattern-queue-backed-agent-workers",
+        "pattern-semantic-model-router",
+        "concept-token-rate-limit-sharding",
+        "concept-memory-guardian-oom-prevention"
+      ]
+    },
+    {
+      "id": "path-scale-memory-vector-sharding",
+      "label": "Storage, LanceDB & Subgraph Partitioning",
+      "description": "Scaling beyond in-memory JSON to columnar disk-backed vector storage and localized 2-hop neighborhood retrieval.",
+      "nodes": [
+        "pattern-hierarchical-graph-partitioning",
+        "concept-lancedb-columnar-vector-scale",
+        "concept-entity-resolution-deduplication",
+        "concept-reciprocal-rank-fusion"
+      ]
+    },
+    {
+      "id": "path-scale-kv-cache-economics",
+      "label": "Prompt Caching & KV Cache Economics",
+      "description": "Minimizing latency and token spend through static prefix alignment, context compaction, and ISR edge delivery.",
+      "nodes": [
+        "pattern-kv-cache-prefix-compaction",
+        "concept-hierarchical-memory-paging",
+        "concept-incremental-static-regeneration-isr"
+      ]
+    }
+  ],
+  "seed_nodes": [
+    "pattern-queue-backed-agent-workers",
+    "pattern-hierarchical-graph-partitioning",
+    "pattern-kv-cache-prefix-compaction",
+    "concept-token-rate-limit-sharding",
+    "concept-lancedb-columnar-vector-scale"
+  ]
+}

@@ -5,13 +5,24 @@
     "label": "Linear Algebra",
     "description": "Vectors, matrices, eigenvalues, and linear transformations — the mathematical substrate of neural networks and AI.",
     "domain": "domain-ai-architect",
-    "tags": ["mathematics", "ai-foundation", "vectors", "matrices"],
+    "tags": [
+      "mathematics",
+      "ai-foundation",
+      "vectors",
+      "matrices"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "unlocks", "target": "concept-gradient-descent" },
-      { "type": "unlocks", "target": "concept-attention-mechanism" }
+      {
+        "type": "unlocks",
+        "target": "concept-gradient-descent"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-attention-mechanism"
+      }
     ]
   },
   {
@@ -20,13 +31,24 @@
     "label": "Probability and Statistics",
     "description": "Distributions, inference, Bayes' theorem, and statistical reasoning — required for understanding model training and evaluation.",
     "domain": "domain-ai-architect",
-    "tags": ["mathematics", "statistics", "probability", "ai-foundation"],
+    "tags": [
+      "mathematics",
+      "statistics",
+      "probability",
+      "ai-foundation"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "unlocks", "target": "concept-gradient-descent" },
-      { "type": "unlocks", "target": "concept-pretraining-objectives" }
+      {
+        "type": "unlocks",
+        "target": "concept-gradient-descent"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-pretraining-objectives"
+      }
     ]
   },
   {
@@ -35,13 +57,24 @@
     "label": "Calculus and Optimization",
     "description": "Derivatives, gradients, chain rule, and optimization landscapes — the foundation of learning algorithms.",
     "domain": "domain-ai-architect",
-    "tags": ["mathematics", "calculus", "optimization", "ai-foundation"],
+    "tags": [
+      "mathematics",
+      "calculus",
+      "optimization",
+      "ai-foundation"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "unlocks", "target": "concept-gradient-descent" },
-      { "type": "unlocks", "target": "concept-backpropagation" }
+      {
+        "type": "unlocks",
+        "target": "concept-gradient-descent"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-backpropagation"
+      }
     ]
   },
   {
@@ -50,14 +83,27 @@
     "label": "Gradient Descent",
     "description": "Iterative optimization via first-order gradients. The core learning algorithm behind neural networks.",
     "domain": "domain-ai-architect",
-    "tags": ["optimization", "training", "deep-learning"],
+    "tags": [
+      "optimization",
+      "training",
+      "deep-learning"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-calculus-optimization" },
-      { "type": "unlocks", "target": "concept-backpropagation" },
-      { "type": "unlocks", "target": "skill-train-basic-nn" }
+      {
+        "type": "requires",
+        "target": "concept-calculus-optimization"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-backpropagation"
+      },
+      {
+        "type": "unlocks",
+        "target": "skill-train-basic-nn"
+      }
     ]
   },
   {
@@ -66,13 +112,23 @@
     "label": "Backpropagation",
     "description": "Efficient computation of gradients through a neural network using the chain rule. Required to understand how networks learn.",
     "domain": "domain-ai-architect",
-    "tags": ["training", "deep-learning", "gradients"],
+    "tags": [
+      "training",
+      "deep-learning",
+      "gradients"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-gradient-descent" },
-      { "type": "unlocks", "target": "concept-neural-network-basics" }
+      {
+        "type": "requires",
+        "target": "concept-gradient-descent"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-neural-network-basics"
+      }
     ]
   },
   {
@@ -81,13 +137,23 @@
     "label": "Neural Network Basics",
     "description": "Layers, activations, loss functions, and forward/backward passes in a feedforward network.",
     "domain": "domain-ai-architect",
-    "tags": ["deep-learning", "neural-networks", "architecture"],
+    "tags": [
+      "deep-learning",
+      "neural-networks",
+      "architecture"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-backpropagation" },
-      { "type": "unlocks", "target": "concept-sequence-modeling" }
+      {
+        "type": "requires",
+        "target": "concept-backpropagation"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-sequence-modeling"
+      }
     ]
   },
   {
@@ -96,13 +162,25 @@
     "label": "Sequence Modeling",
     "description": "Modeling ordered data — text, time series, code. From RNNs and LSTMs through the transformer revolution.",
     "domain": "domain-ai-architect",
-    "tags": ["nlp", "sequences", "rnn", "lstm", "transformers"],
+    "tags": [
+      "nlp",
+      "sequences",
+      "rnn",
+      "lstm",
+      "transformers"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-neural-network-basics" },
-      { "type": "unlocks", "target": "concept-attention-mechanism" }
+      {
+        "type": "requires",
+        "target": "concept-neural-network-basics"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-attention-mechanism"
+      }
     ]
   },
   {
@@ -111,15 +189,32 @@
     "label": "Attention Mechanism",
     "description": "Scaled dot-product attention: how a model learns to weigh different positions in a sequence when producing each output.",
     "domain": "domain-ai-architect",
-    "tags": ["transformers", "attention", "deep-learning", "nlp"],
+    "tags": [
+      "transformers",
+      "attention",
+      "deep-learning",
+      "nlp"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-linear-algebra" },
-      { "type": "requires", "target": "concept-sequence-modeling" },
-      { "type": "unlocks", "target": "concept-transformer-architecture" },
-      { "type": "evidenced_by", "target": "paper-attention-is-all-you-need" }
+      {
+        "type": "requires",
+        "target": "concept-linear-algebra"
+      },
+      {
+        "type": "requires",
+        "target": "concept-sequence-modeling"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-transformer-architecture"
+      },
+      {
+        "type": "evidenced_by",
+        "target": "paper-attention-is-all-you-need"
+      }
     ]
   },
   {
@@ -128,15 +223,32 @@
     "label": "Transformer Architecture",
     "description": "The encoder-decoder architecture based on multi-head self-attention. The dominant paradigm for language, vision, and multimodal models.",
     "domain": "domain-ai-architect",
-    "tags": ["transformers", "architecture", "nlp", "foundation-models"],
+    "tags": [
+      "transformers",
+      "architecture",
+      "nlp",
+      "foundation-models"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-attention-mechanism" },
-      { "type": "unlocks", "target": "concept-pretraining-objectives" },
-      { "type": "unlocks", "target": "skill-implement-transformer" },
-      { "type": "evidenced_by", "target": "paper-attention-is-all-you-need" }
+      {
+        "type": "requires",
+        "target": "concept-attention-mechanism"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-pretraining-objectives"
+      },
+      {
+        "type": "unlocks",
+        "target": "skill-implement-transformer"
+      },
+      {
+        "type": "evidenced_by",
+        "target": "paper-attention-is-all-you-need"
+      }
     ]
   },
   {
@@ -145,14 +257,28 @@
     "label": "Pretraining Objectives",
     "description": "Self-supervised objectives for training language models: next-token prediction, masked language modeling, contrastive learning.",
     "domain": "domain-ai-architect",
-    "tags": ["pretraining", "self-supervised", "llm", "training"],
+    "tags": [
+      "pretraining",
+      "self-supervised",
+      "llm",
+      "training"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-transformer-architecture" },
-      { "type": "requires", "target": "concept-probability-statistics" },
-      { "type": "unlocks", "target": "skill-finetune-llm" }
+      {
+        "type": "requires",
+        "target": "concept-transformer-architecture"
+      },
+      {
+        "type": "requires",
+        "target": "concept-probability-statistics"
+      },
+      {
+        "type": "unlocks",
+        "target": "skill-finetune-llm"
+      }
     ]
   },
   {
@@ -161,14 +287,28 @@
     "label": "Reinforcement Learning from Human Feedback (RLHF)",
     "description": "The process of aligning a language model to human preferences using a reward model trained on human comparisons.",
     "domain": "domain-ai-architect",
-    "tags": ["alignment", "rlhf", "fine-tuning", "llm"],
+    "tags": [
+      "alignment",
+      "rlhf",
+      "fine-tuning",
+      "llm"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-pretraining-objectives" },
-      { "type": "unlocks", "target": "skill-evaluate-alignment" },
-      { "type": "unlocks", "target": "concept-constitutional-ai" }
+      {
+        "type": "requires",
+        "target": "concept-pretraining-objectives"
+      },
+      {
+        "type": "unlocks",
+        "target": "skill-evaluate-alignment"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-constitutional-ai"
+      }
     ]
   },
   {
@@ -177,13 +317,24 @@
     "label": "Constitutional AI",
     "description": "Anthropic's technique for training AI systems to be helpful, harmless, and honest using a set of principles (a 'constitution') without solely relying on human feedback.",
     "domain": "domain-ai-architect",
-    "tags": ["alignment", "constitutional-ai", "anthropic", "safety"],
+    "tags": [
+      "alignment",
+      "constitutional-ai",
+      "anthropic",
+      "safety"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-rlhf" },
-      { "type": "unlocks", "target": "concept-interpretability" }
+      {
+        "type": "requires",
+        "target": "concept-rlhf"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-interpretability"
+      }
     ]
   },
   {
@@ -192,12 +343,20 @@
     "label": "Interpretability",
     "description": "Methods for understanding what a neural network has learned — from saliency maps to circuit analysis.",
     "domain": "domain-ai-architect",
-    "tags": ["interpretability", "safety", "alignment", "xai"],
+    "tags": [
+      "interpretability",
+      "safety",
+      "alignment",
+      "xai"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "unlocks", "target": "concept-mechanistic-interpretability" }
+      {
+        "type": "unlocks",
+        "target": "concept-mechanistic-interpretability"
+      }
     ]
   },
   {
@@ -206,13 +365,25 @@
     "label": "Mechanistic Interpretability",
     "description": "Reverse-engineering neural networks at the level of circuits and features to understand how specific computations are implemented.",
     "domain": "domain-ai-architect",
-    "tags": ["interpretability", "circuits", "features", "alignment", "safety"],
+    "tags": [
+      "interpretability",
+      "circuits",
+      "features",
+      "alignment",
+      "safety"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-interpretability" },
-      { "type": "requires", "target": "concept-transformer-architecture" }
+      {
+        "type": "requires",
+        "target": "concept-interpretability"
+      },
+      {
+        "type": "requires",
+        "target": "concept-transformer-architecture"
+      }
     ]
   },
   {
@@ -221,14 +392,28 @@
     "label": "LLM Prompting",
     "description": "Techniques for eliciting desired behavior from language models: zero-shot, few-shot, chain-of-thought, and structured prompting.",
     "domain": "domain-ai-architect",
-    "tags": ["prompting", "llm", "few-shot", "chain-of-thought"],
+    "tags": [
+      "prompting",
+      "llm",
+      "few-shot",
+      "chain-of-thought"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-transformer-architecture" },
-      { "type": "unlocks", "target": "concept-tool-use" },
-      { "type": "unlocks", "target": "concept-agent-loop" }
+      {
+        "type": "requires",
+        "target": "concept-transformer-architecture"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-tool-use"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-agent-loop"
+      }
     ]
   },
   {
@@ -237,13 +422,24 @@
     "label": "Tool Use in LLMs",
     "description": "Function calling, tool schemas, and structured output — enabling language models to invoke external APIs and code.",
     "domain": "domain-ai-architect",
-    "tags": ["agents", "tool-use", "function-calling", "llm"],
+    "tags": [
+      "agents",
+      "tool-use",
+      "function-calling",
+      "llm"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-llm-prompting" },
-      { "type": "unlocks", "target": "concept-agent-loop" }
+      {
+        "type": "requires",
+        "target": "concept-llm-prompting"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-agent-loop"
+      }
     ]
   },
   {
@@ -252,13 +448,24 @@
     "label": "Agent Loop",
     "description": "The perceive-think-act-observe loop that enables autonomous multi-step task completion by an LLM-based agent.",
     "domain": "domain-ai-architect",
-    "tags": ["agents", "agentic-ai", "planning", "tool-use"],
+    "tags": [
+      "agents",
+      "agentic-ai",
+      "planning",
+      "tool-use"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-tool-use" },
-      { "type": "unlocks", "target": "skill-build-agent" }
+      {
+        "type": "requires",
+        "target": "concept-tool-use"
+      },
+      {
+        "type": "unlocks",
+        "target": "skill-build-agent"
+      }
     ]
   },
   {
@@ -267,13 +474,24 @@
     "label": "Memory and Context in Agents",
     "description": "Short-term context window, long-term memory stores, retrieval-augmented generation, and episodic memory in AI agents.",
     "domain": "domain-ai-architect",
-    "tags": ["agents", "memory", "rag", "context"],
+    "tags": [
+      "agents",
+      "memory",
+      "rag",
+      "context"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-agent-loop" },
-      { "type": "unlocks", "target": "skill-multi-agent-coordination" }
+      {
+        "type": "requires",
+        "target": "concept-agent-loop"
+      },
+      {
+        "type": "unlocks",
+        "target": "skill-multi-agent-coordination"
+      }
     ]
   },
   {
@@ -282,13 +500,23 @@
     "label": "Kepler's Laws of Planetary Motion",
     "description": "The three empirical laws describing the motion of planets: elliptical orbits, equal areas in equal times, and the orbital period relationship.",
     "domain": "domain-space-builder",
-    "tags": ["orbital-mechanics", "physics", "space-foundation"],
+    "tags": [
+      "orbital-mechanics",
+      "physics",
+      "space-foundation"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-newtonian-gravity" },
-      { "type": "unlocks", "target": "concept-orbital-elements" }
+      {
+        "type": "requires",
+        "target": "concept-newtonian-gravity"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-orbital-elements"
+      }
     ]
   },
   {
@@ -297,12 +525,19 @@
     "label": "Newtonian Gravity and Two-Body Problem",
     "description": "Newton's law of universal gravitation and the analytical solution to the gravitational two-body problem.",
     "domain": "domain-space-builder",
-    "tags": ["physics", "orbital-mechanics", "space-foundation"],
+    "tags": [
+      "physics",
+      "orbital-mechanics",
+      "space-foundation"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "unlocks", "target": "concept-keplers-laws" }
+      {
+        "type": "unlocks",
+        "target": "concept-keplers-laws"
+      }
     ]
   },
   {
@@ -311,13 +546,23 @@
     "label": "Orbital Elements",
     "description": "The six Keplerian orbital elements (semi-major axis, eccentricity, inclination, RAAN, argument of perigee, true anomaly) used to uniquely define an orbit.",
     "domain": "domain-space-builder",
-    "tags": ["orbital-mechanics", "space-foundation", "navigation"],
+    "tags": [
+      "orbital-mechanics",
+      "space-foundation",
+      "navigation"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-keplers-laws" },
-      { "type": "unlocks", "target": "concept-hohmann-transfer" }
+      {
+        "type": "requires",
+        "target": "concept-keplers-laws"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-hohmann-transfer"
+      }
     ]
   },
   {
@@ -326,14 +571,27 @@
     "label": "Delta-v Budget",
     "description": "The total velocity change required for a mission profile. The fundamental currency of spaceflight planning.",
     "domain": "domain-space-builder",
-    "tags": ["orbital-mechanics", "propulsion", "mission-design"],
+    "tags": [
+      "orbital-mechanics",
+      "propulsion",
+      "mission-design"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-hohmann-transfer" },
-      { "type": "requires", "target": "concept-tsiolkovsky-rocket-equation" },
-      { "type": "unlocks", "target": "skill-plan-trajectory" }
+      {
+        "type": "requires",
+        "target": "concept-hohmann-transfer"
+      },
+      {
+        "type": "requires",
+        "target": "concept-tsiolkovsky-rocket-equation"
+      },
+      {
+        "type": "unlocks",
+        "target": "skill-plan-trajectory"
+      }
     ]
   },
   {
@@ -342,13 +600,23 @@
     "label": "Tsiolkovsky Rocket Equation",
     "description": "The fundamental equation relating delta-v, exhaust velocity, and mass ratio. Defines the limits of chemical propulsion.",
     "domain": "domain-space-builder",
-    "tags": ["propulsion", "rocket-equation", "space-foundation"],
+    "tags": [
+      "propulsion",
+      "rocket-equation",
+      "space-foundation"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "unlocks", "target": "concept-delta-v-budget" },
-      { "type": "unlocks", "target": "concept-specific-impulse" }
+      {
+        "type": "unlocks",
+        "target": "concept-delta-v-budget"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-specific-impulse"
+      }
     ]
   },
   {
@@ -357,13 +625,23 @@
     "label": "Specific Impulse (Isp)",
     "description": "A measure of propellant efficiency — the thrust produced per unit of propellant consumed per second.",
     "domain": "domain-space-builder",
-    "tags": ["propulsion", "efficiency", "space-foundation"],
+    "tags": [
+      "propulsion",
+      "efficiency",
+      "space-foundation"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-tsiolkovsky-rocket-equation" },
-      { "type": "unlocks", "target": "skill-size-propulsion-system" }
+      {
+        "type": "requires",
+        "target": "concept-tsiolkovsky-rocket-equation"
+      },
+      {
+        "type": "unlocks",
+        "target": "skill-size-propulsion-system"
+      }
     ]
   },
   {
@@ -372,13 +650,23 @@
     "label": "Hohmann Transfer Orbit",
     "description": "A two-impulse elliptical maneuver used to transfer between two circular orbits with minimum delta-v.",
     "domain": "domain-space-builder",
-    "tags": ["orbital-mechanics", "maneuvers", "delta-v"],
+    "tags": [
+      "orbital-mechanics",
+      "maneuvers",
+      "delta-v"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-orbital-elements" },
-      { "type": "unlocks", "target": "concept-delta-v-budget" }
+      {
+        "type": "requires",
+        "target": "concept-orbital-elements"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-delta-v-budget"
+      }
     ]
   },
   {
@@ -387,12 +675,19 @@
     "label": "Systems Engineering",
     "description": "The discipline of designing and managing complex systems across their lifecycle, including requirements, interfaces, verification, and validation.",
     "domain": "domain-space-builder",
-    "tags": ["systems-engineering", "mission-design", "spacecraft"],
+    "tags": [
+      "systems-engineering",
+      "mission-design",
+      "spacecraft"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "unlocks", "target": "skill-design-cubesat-mission" }
+      {
+        "type": "unlocks",
+        "target": "skill-design-cubesat-mission"
+      }
     ]
   },
   {
@@ -401,14 +696,28 @@
     "label": "Hallmarks of Aging",
     "description": "The molecular and cellular mechanisms underlying biological aging, as defined by Lopez-Otin et al. (2013, 2023): genomic instability, telomere attrition, epigenetic alterations, etc.",
     "domain": "domain-bio-human-intelligence",
-    "tags": ["aging", "longevity", "biology", "molecular-biology"],
+    "tags": [
+      "aging",
+      "longevity",
+      "biology",
+      "molecular-biology"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "evidenced_by", "target": "paper-hallmarks-of-aging-lopez-otin" },
-      { "type": "unlocks", "target": "concept-epigenetic-clocks" },
-      { "type": "unlocks", "target": "concept-senescence" }
+      {
+        "type": "evidenced_by",
+        "target": "paper-hallmarks-of-aging-lopez-otin"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-epigenetic-clocks"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-senescence"
+      }
     ]
   },
   {
@@ -417,13 +726,24 @@
     "label": "Epigenetic Clocks",
     "description": "Biological age estimators based on DNA methylation patterns (Horvath, GrimAge, DunedinPACE). Used to measure biological aging rate.",
     "domain": "domain-bio-human-intelligence",
-    "tags": ["aging", "epigenetics", "biomarkers", "longevity"],
+    "tags": [
+      "aging",
+      "epigenetics",
+      "biomarkers",
+      "longevity"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-hallmarks-of-aging" },
-      { "type": "unlocks", "target": "skill-evaluate-longevity-intervention" }
+      {
+        "type": "requires",
+        "target": "concept-hallmarks-of-aging"
+      },
+      {
+        "type": "unlocks",
+        "target": "skill-evaluate-longevity-intervention"
+      }
     ]
   },
   {
@@ -432,13 +752,24 @@
     "label": "Neuroplasticity",
     "description": "The ability of the nervous system to reorganize its structure, function, and connections in response to experience.",
     "domain": "domain-bio-human-intelligence",
-    "tags": ["neuroscience", "learning", "cognition", "plasticity"],
+    "tags": [
+      "neuroscience",
+      "learning",
+      "cognition",
+      "plasticity"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-neuron-anatomy" },
-      { "type": "unlocks", "target": "concept-learning-and-memory-consolidation" }
+      {
+        "type": "requires",
+        "target": "concept-neuron-anatomy"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-learning-and-memory-consolidation"
+      }
     ]
   },
   {
@@ -447,13 +778,23 @@
     "label": "Neuron Anatomy and Physiology",
     "description": "Structure and function of neurons: dendrites, soma, axon, myelin sheath, and synaptic terminals.",
     "domain": "domain-bio-human-intelligence",
-    "tags": ["neuroscience", "biology", "foundation"],
+    "tags": [
+      "neuroscience",
+      "biology",
+      "foundation"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "unlocks", "target": "concept-action-potential" },
-      { "type": "unlocks", "target": "concept-plasticity" }
+      {
+        "type": "unlocks",
+        "target": "concept-action-potential"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-plasticity"
+      }
     ]
   },
   {
@@ -462,13 +803,23 @@
     "label": "Action Potential",
     "description": "The electrical impulse generated by a neuron when it fires: depolarization, repolarization, and refractory period.",
     "domain": "domain-bio-human-intelligence",
-    "tags": ["neuroscience", "electrophysiology", "biology"],
+    "tags": [
+      "neuroscience",
+      "electrophysiology",
+      "biology"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-neuron-anatomy" },
-      { "type": "unlocks", "target": "concept-synaptic-transmission" }
+      {
+        "type": "requires",
+        "target": "concept-neuron-anatomy"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-synaptic-transmission"
+      }
     ]
   },
   {
@@ -477,12 +828,19 @@
     "label": "Working Memory",
     "description": "The cognitive system responsible for temporarily holding and manipulating information for use in ongoing tasks.",
     "domain": "domain-bio-human-intelligence",
-    "tags": ["cognition", "memory", "psychology"],
+    "tags": [
+      "cognition",
+      "memory",
+      "psychology"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "unlocks", "target": "skill-design-cognitive-experiment" }
+      {
+        "type": "unlocks",
+        "target": "skill-design-cognitive-experiment"
+      }
     ]
   },
   {
@@ -491,13 +849,24 @@
     "label": "Jobs to Be Done (JTBD)",
     "description": "A theory of innovation: customers hire products to fulfill a job — a functional, social, or emotional progress they seek to make.",
     "domain": "domain-creator-founder",
-    "tags": ["product", "jtbd", "user-research", "innovation"],
+    "tags": [
+      "product",
+      "jtbd",
+      "user-research",
+      "innovation"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "unlocks", "target": "concept-product-market-fit" },
-      { "type": "unlocks", "target": "skill-conduct-user-interview" }
+      {
+        "type": "unlocks",
+        "target": "concept-product-market-fit"
+      },
+      {
+        "type": "unlocks",
+        "target": "skill-conduct-user-interview"
+      }
     ]
   },
   {
@@ -506,13 +875,24 @@
     "label": "Product-Market Fit",
     "description": "The degree to which a product satisfies a strong market demand. The critical threshold between searching and scaling.",
     "domain": "domain-creator-founder",
-    "tags": ["product", "pmf", "startup", "growth"],
+    "tags": [
+      "product",
+      "pmf",
+      "startup",
+      "growth"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "requires", "target": "concept-jobs-to-be-done" },
-      { "type": "unlocks", "target": "skill-ship-mvp" }
+      {
+        "type": "requires",
+        "target": "concept-jobs-to-be-done"
+      },
+      {
+        "type": "unlocks",
+        "target": "skill-ship-mvp"
+      }
     ]
   },
   {
@@ -521,13 +901,24 @@
     "label": "Content Leverage",
     "description": "The mechanism by which written, audio, or visual content creates compounding distribution and audience at near-zero marginal cost.",
     "domain": "domain-creator-founder",
-    "tags": ["distribution", "content", "leverage", "media"],
+    "tags": [
+      "distribution",
+      "content",
+      "leverage",
+      "media"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "unlocks", "target": "skill-write-high-signal-post" },
-      { "type": "unlocks", "target": "skill-grow-audience" }
+      {
+        "type": "unlocks",
+        "target": "skill-write-high-signal-post"
+      },
+      {
+        "type": "unlocks",
+        "target": "skill-grow-audience"
+      }
     ]
   },
   {
@@ -536,12 +927,20 @@
     "label": "Network Effects",
     "description": "The phenomenon where a product or service becomes more valuable as more people use it. A primary driver of startup moats.",
     "domain": "domain-creator-founder",
-    "tags": ["network-effects", "growth", "moats", "startup"],
+    "tags": [
+      "network-effects",
+      "growth",
+      "moats",
+      "startup"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "unlocks", "target": "concept-unit-economics" }
+      {
+        "type": "unlocks",
+        "target": "concept-unit-economics"
+      }
     ]
   },
   {
@@ -550,12 +949,1348 @@
     "label": "Unit Economics",
     "description": "The revenue and costs attributable to a single unit of business (LTV, CAC, gross margin, payback period).",
     "domain": "domain-creator-founder",
-    "tags": ["finance", "business-model", "startup", "metrics"],
+    "tags": [
+      "finance",
+      "business-model",
+      "startup",
+      "metrics"
+    ],
     "status": "stable",
     "created_at": "2025-01-01T00:00:00Z",
     "updated_at": "2025-01-01T00:00:00Z",
     "edges": [
-      { "type": "unlocks", "target": "skill-build-financial-model" }
+      {
+        "type": "unlocks",
+        "target": "skill-build-financial-model"
+      }
     ]
+  },
+  {
+    "id": "concept-distributed-consensus",
+    "type": "concept",
+    "label": "Distributed Consensus & State Machine Replication",
+    "description": "Algorithms and protocols (Raft, Paxos, Multi-Paxos) that allow multiple nodes to agree on state and transition history in the presence of network partitions and failures.",
+    "domain": "domain-systems-engineering",
+    "tags": [
+      "distributed-systems",
+      "consensus",
+      "raft",
+      "paxos"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-replication-partitioning"
+      }
+    ]
+  },
+  {
+    "id": "concept-replication-partitioning",
+    "type": "concept",
+    "label": "Replication, Sharding & Partitioning",
+    "description": "Techniques for distributing data across multiple storage nodes for fault tolerance, high read/write throughput, and horizontal scalability.",
+    "domain": "domain-systems-engineering",
+    "tags": [
+      "replication",
+      "partitioning",
+      "sharding",
+      "databases"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-acid-vs-base"
+      }
+    ]
+  },
+  {
+    "id": "concept-acid-vs-base",
+    "type": "concept",
+    "label": "ACID vs BASE & Consistency Models",
+    "description": "Comparison between strict ACID transactional consistency and BASE (Basically Available, Soft state, Eventual consistency) distributed models.",
+    "domain": "domain-systems-engineering",
+    "tags": [
+      "acid",
+      "base",
+      "transactions",
+      "consistency"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-domain-driven-design",
+    "type": "concept",
+    "label": "Domain-Driven Design & Bounded Contexts",
+    "description": "Architectural methodology that models software directly after domain logic, isolating models inside Bounded Contexts with explicit Ubiquitous Language.",
+    "domain": "domain-systems-engineering",
+    "tags": [
+      "ddd",
+      "domain-modeling",
+      "bounded-context",
+      "architecture"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-dependency-inversion"
+      }
+    ]
+  },
+  {
+    "id": "concept-dependency-inversion",
+    "type": "concept",
+    "label": "Dependency Inversion & Clean Architecture",
+    "description": "High-level business policies and protocols must never depend on low-level UI, database, or framework implementation details; both must depend on abstractions.",
+    "domain": "domain-systems-engineering",
+    "tags": [
+      "solid",
+      "clean-architecture",
+      "dependency-inversion"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-design-token-system",
+    "type": "concept",
+    "label": "Design Token Systems & Aesthetic DNA",
+    "description": "Centralized semantic variables representing colors, spacing, typography scales, shadows, and animation curves that synchronize across all code surfaces.",
+    "domain": "domain-impeccable-design",
+    "tags": [
+      "design-tokens",
+      "design-system",
+      "tailwind",
+      "typography"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-anti-slop-rules"
+      }
+    ]
+  },
+  {
+    "id": "concept-anti-slop-rules",
+    "type": "concept",
+    "label": "Anti-Slop Design Standards & Visual QA",
+    "description": "The strict enforcement of high data-ink ratio, typographic elegance, real vector assets, and authentic UI layouts to prevent AI visual degradation.",
+    "domain": "domain-impeccable-design",
+    "tags": [
+      "anti-slop",
+      "taste",
+      "design-standards",
+      "visual-qa"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-shader-materials",
+    "type": "concept",
+    "label": "Custom WebGL Shader Materials & Liquid Glass",
+    "description": "GLSL vertex and fragment shaders that create dynamic refractive glass, volumetric lighting, and organic particle fluid dynamics.",
+    "domain": "domain-impeccable-design",
+    "tags": [
+      "shaders",
+      "glsl",
+      "webgl",
+      "threejs",
+      "liquid-glass"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-physics-spring-motion"
+      }
+    ]
+  },
+  {
+    "id": "concept-physics-spring-motion",
+    "type": "concept",
+    "label": "Physics-Based Spring Motion & Micro-Interactions",
+    "description": "Fluid user interface animations driven by stiffness, damping, and mass curves rather than linear durations.",
+    "domain": "domain-impeccable-design",
+    "tags": [
+      "physics-motion",
+      "springs",
+      "gsap",
+      "animation",
+      "micro-interactions"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-monomyth-journey",
+    "type": "concept",
+    "label": "The Monomyth & The Hero Journey",
+    "description": "The universal 17-stage archetypal story pattern of Departure, Initiation, and Return foundational to human storytelling.",
+    "domain": "domain-arcanea-worldbuilding",
+    "tags": [
+      "monomyth",
+      "campbell",
+      "hero-journey",
+      "archetypes"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-ten-gates-progression"
+      }
+    ]
+  },
+  {
+    "id": "concept-secondary-belief",
+    "type": "concept",
+    "label": "Secondary Belief & Sub-creation",
+    "description": "Tolkien doctrine where worldbuilders construct internally consistent Secondary Worlds that command genuine reader belief and emotional truth.",
+    "domain": "domain-arcanea-worldbuilding",
+    "tags": [
+      "sub-creation",
+      "tolkien",
+      "worldbuilding",
+      "secondary-belief"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-ten-gates-progression"
+      }
+    ]
+  },
+  {
+    "id": "concept-ten-gates-progression",
+    "type": "concept",
+    "label": "The Ten Gates Progression & Guardian Hierarchy",
+    "description": "The canon initiation path of Arcanea, ascending through Foundation, Flow, Fire, Heart, Voice, Sight, Crown, Star, Cosmic, and Source.",
+    "domain": "domain-arcanea-worldbuilding",
+    "tags": [
+      "ten-gates",
+      "arcanea",
+      "guardians",
+      "initiation",
+      "alchemical-progression"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-alchemical-frequencies"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-origin-classes"
+      }
+    ]
+  },
+  {
+    "id": "concept-alchemical-frequencies",
+    "type": "concept",
+    "label": "Alchemical Frequencies & Element Resonances",
+    "description": "The sonic, chromatic, and elemental correspondences assigned to each Gate (396Hz Earth through 963Hz Celestial Light).",
+    "domain": "domain-arcanea-worldbuilding",
+    "tags": [
+      "solfeggio",
+      "frequencies",
+      "elements",
+      "sound",
+      "alchemy"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-origin-classes",
+    "type": "concept",
+    "label": "Arcanean Origin Classes & Character Archetypes",
+    "description": "Character archetypes defining innate elemental affinity, resonance paths, and capability trees in the Arcanea universe.",
+    "domain": "domain-arcanea-worldbuilding",
+    "tags": [
+      "origin-classes",
+      "archetypes",
+      "character-forge",
+      "rpg-systems"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-video-as-code-remotion",
+    "type": "concept",
+    "label": "Video-as-Code & Programmatic Motion",
+    "description": "Composing deterministic video sequences, dynamic overlays, subtitles, and transitions using React components and frame-accurate timeline state.",
+    "domain": "domain-media-generative-cinema",
+    "tags": [
+      "remotion",
+      "video-as-code",
+      "react",
+      "programmatic-rendering"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-spring-animation-curves"
+      }
+    ]
+  },
+  {
+    "id": "concept-spring-animation-curves",
+    "type": "concept",
+    "label": "Parametric Spring Physics in Video Composition",
+    "description": "Using spring physics to drive dynamic title cards, particle explosions, and layout shifts inside Remotion frames.",
+    "domain": "domain-media-generative-cinema",
+    "tags": [
+      "spring-curves",
+      "physics",
+      "remotion",
+      "motion-design"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-audio-arrangement-curves",
+    "type": "concept",
+    "label": "Generative Audio Arrangement & Dynamic Stem Progression",
+    "description": "Structuring musical compositions through intro, buildup, drop, chorus, and atmospheric outro with harmonic frequency separation.",
+    "domain": "domain-media-generative-cinema",
+    "tags": [
+      "audio-arrangement",
+      "suno",
+      "music-theory",
+      "mixing"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-economic-moat",
+    "type": "concept",
+    "label": "7 Powers Economic Moats & Durability",
+    "description": "Creating durable business defenses through scale economies, network effects, counter-positioning, switching costs, brand power, cornered resources, and process power.",
+    "domain": "domain-creator-strategy-wealth",
+    "tags": [
+      "7-powers",
+      "moats",
+      "strategy",
+      "pricing-power"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-convexity-and-via-negativa"
+      }
+    ]
+  },
+  {
+    "id": "concept-convexity-and-via-negativa",
+    "type": "concept",
+    "label": "Convexity, Barbell Strategy & Via Negativa",
+    "description": "System design that removes fragility and downside risks while maintaining uncapped upside exposure across autonomous agent ventures.",
+    "domain": "domain-creator-strategy-wealth",
+    "tags": [
+      "antifragile",
+      "taleb",
+      "convexity",
+      "via-negativa"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-content-factory-flywheel"
+      }
+    ]
+  },
+  {
+    "id": "concept-content-factory-flywheel",
+    "type": "concept",
+    "label": "The Closed-Loop Content Factory Flywheel",
+    "description": "Autonomous publishing pipeline where deep research compiles into articles, prompt books, social clips, and digital products, with learning loops improving quality weekly.",
+    "domain": "domain-creator-strategy-wealth",
+    "tags": [
+      "content-factory",
+      "flywheel",
+      "publishing",
+      "high-output"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-prompt-engineering-monetization"
+      }
+    ]
+  },
+  {
+    "id": "concept-prompt-engineering-monetization",
+    "type": "concept",
+    "label": "Prompt Architecture & Knowledge Monetization",
+    "description": "Transforming battle-tested prompt systems, evaluated playbooks, and agent skills into high-ticket enterprise products and prompt books.",
+    "domain": "domain-creator-strategy-wealth",
+    "tags": [
+      "prompt-engineering",
+      "prompt-books",
+      "monetization",
+      "digital-products"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-senescence",
+    "type": "concept",
+    "label": "Cellular Senescence & Senolytics",
+    "description": "The irreversible growth arrest of cells accompanied by a senescence-associated secretory phenotype (SASP), a primary hallmark of biological aging.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": [
+      "aging",
+      "senescence",
+      "biology",
+      "longevity"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-learning-and-memory-consolidation",
+    "type": "concept",
+    "label": "Synaptic Plasticity & Memory Consolidation",
+    "description": "The biochemical and structural strengthening of synaptic connections through LTP and sleep-mediated replay in the hippocampus and neocortex.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": [
+      "neuroscience",
+      "plasticity",
+      "memory-consolidation",
+      "learning"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-synaptic-transmission",
+    "type": "concept",
+    "label": "Synaptic Transmission & Neurotransmitters",
+    "description": "The process by which neurotransmitters are released by the presynaptic neuron and bind to receptors on the postsynaptic cell to propagate electrical signals.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": [
+      "neuroscience",
+      "synapse",
+      "neurotransmitters",
+      "biology"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-sleep-and-cognition",
+    "type": "concept",
+    "label": "Sleep Architecture & Cognitive Function",
+    "description": "The alternating cycle of NREM (slow-wave sleep) and REM sleep that enables metabolic waste clearance via the glymphatic system and emotional calibration.",
+    "domain": "domain-bio-human-intelligence",
+    "tags": [
+      "sleep",
+      "cognition",
+      "neuroscience",
+      "health"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-modular-scale",
+    "type": "concept",
+    "label": "Modular Typographic Scales & Mathematical Harmony",
+    "description": "Deriving font sizes from a fixed base size and geometric ratio (Major Third 1.25, Perfect Fourth 1.333, Golden Ratio 1.618) to ensure harmonic proportional hierarchy across screen sizes.",
+    "domain": "domain-web-graphic-design",
+    "tags": [
+      "typography",
+      "modular-scale",
+      "font-sizes",
+      "design-system"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-baseline-grid"
+      }
+    ]
+  },
+  {
+    "id": "concept-baseline-grid",
+    "type": "concept",
+    "label": "Baseline Grids & Vertical Rhythm",
+    "description": "Aligning text baselines to a regular vertical increment (typically 4px or 8px) so paragraphs, headings, blockquotes, and images conform to a continuous rhythmic cadence.",
+    "domain": "domain-web-graphic-design",
+    "tags": [
+      "typography",
+      "vertical-rhythm",
+      "baseline-grid",
+      "layout"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-aesthetic-usability-effect",
+    "type": "concept",
+    "label": "The Aesthetic-Usability Effect",
+    "description": "Users perceive aesthetically pleasing designs as more usable, forgiving minor usability hurdles and experiencing higher emotional trust and task satisfaction.",
+    "domain": "domain-web-graphic-design",
+    "tags": [
+      "ui-ux",
+      "cognitive-psychology",
+      "usability",
+      "visual-design"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-micro-interactions"
+      }
+    ]
+  },
+  {
+    "id": "concept-micro-interactions",
+    "type": "concept",
+    "label": "Micro-Interactions & State Feedback",
+    "description": "Subtle single-purpose animations, hover states, button compressions, and loading pulses that acknowledge user intent and provide immediate kinetic feedback.",
+    "domain": "domain-web-graphic-design",
+    "tags": [
+      "micro-interactions",
+      "ui-ux",
+      "feedback",
+      "animation"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-brand-dna-matrix",
+    "type": "concept",
+    "label": "Brand DNA Matrix & Modernist Restraint",
+    "description": "The core semantic guidelines defining typography, palette ratios, geometry, voice, and negative space that keep all sub-products visually locked to brand identity.",
+    "domain": "domain-web-graphic-design",
+    "tags": [
+      "brand-dna",
+      "vignelli",
+      "identity",
+      "design-tokens"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-vector-first-assets"
+      }
+    ]
+  },
+  {
+    "id": "concept-vector-first-assets",
+    "type": "concept",
+    "label": "Vector-First Asset Architecture",
+    "description": "Building all icons, badges, logos, and UI decorations as clean resolution-independent SVGs with direct CSS stroke and fill controls, eliminating bitmap pixelation.",
+    "domain": "domain-web-graphic-design",
+    "tags": [
+      "svg",
+      "vector-graphics",
+      "asset-pipeline",
+      "crisp-rendering"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-topical-authority",
+    "type": "concept",
+    "label": "Topical Authority & Semantic Entity Graphs",
+    "description": "Structuring content to exhaustively cover a domain through interrelated entity nodes, demonstrating subject-matter depth to search engines and ranking algorithms.",
+    "domain": "domain-content-seo-publishing",
+    "tags": [
+      "seo",
+      "topical-authority",
+      "semantic-search",
+      "entity-graphs"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-information-gain-score"
+      }
+    ]
+  },
+  {
+    "id": "concept-information-gain-score",
+    "type": "concept",
+    "label": "Information Gain Scoring & Original Research",
+    "description": "Maximizing the net-new data, proprietary benchmarks, and primary evidence provided in content relative to what already exists in search engine indexes.",
+    "domain": "domain-content-seo-publishing",
+    "tags": [
+      "information-gain",
+      "google-patents",
+      "seo",
+      "original-research"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-programmatic-seo"
+      }
+    ]
+  },
+  {
+    "id": "concept-programmatic-seo",
+    "type": "concept",
+    "label": "Programmatic SEO & Template Scalability",
+    "description": "Generating thousands of indexable, high-utility landing pages dynamically from structured databases (e.g. tool registries, prompt libraries, comparison matrices).",
+    "domain": "domain-content-seo-publishing",
+    "tags": [
+      "programmatic-seo",
+      "nextjs",
+      "dynamic-routes",
+      "database-driven"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-pillar-cluster-model",
+    "type": "concept",
+    "label": "Pillar-Cluster Content Architecture",
+    "description": "Organizing website content around comprehensive high-level pillar guides that bidirectionally link to specialized sub-topic cluster articles.",
+    "domain": "domain-content-seo-publishing",
+    "tags": [
+      "content-architecture",
+      "pillar-pages",
+      "topic-clusters",
+      "internal-linking"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-mdx-publishing-pipeline"
+      }
+    ]
+  },
+  {
+    "id": "concept-mdx-publishing-pipeline",
+    "type": "concept",
+    "label": "Headless MDX Publishing & Code-First Content",
+    "description": "Authoring articles in Markdown with embedded interactive React components, syntax-highlighted code blocks, KaTeX math rendering, and automated RSS/Sitemap generation.",
+    "domain": "domain-content-seo-publishing",
+    "tags": [
+      "mdx",
+      "nextjs",
+      "publishing",
+      "content-layer"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-market-sophistication-stages",
+    "type": "concept",
+    "label": "Eugene Schwartz Market Sophistication Stages",
+    "description": "The 5 evolutionary stages of market awareness and skepticism that determine whether copy must focus on simple claims, expanded claims, unique mechanisms, or brand identification.",
+    "domain": "domain-content-seo-publishing",
+    "tags": [
+      "copywriting",
+      "market-sophistication",
+      "positioning",
+      "eugene-schwartz"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-direct-response-copywriting"
+      }
+    ]
+  },
+  {
+    "id": "concept-direct-response-copywriting",
+    "type": "concept",
+    "label": "Direct-Response Copywriting & The 4 U's",
+    "description": "Persuasive sales writing focused on measurable response and immediate conversion using the 4 U's formula (Urgent, Unique, Ultra-specific, Useful) and proof stacking.",
+    "domain": "domain-content-seo-publishing",
+    "tags": [
+      "copywriting",
+      "direct-response",
+      "conversion",
+      "headlines"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-organic-distribution-loops",
+    "type": "concept",
+    "label": "Organic Social Distribution Loops",
+    "description": "Designing self-reinforcing content mechanisms where social posts drive newsletter subscribers, who share insights, triggering algorithmic amplification without paid ad spend.",
+    "domain": "domain-social-attraction-funnels",
+    "tags": [
+      "distribution",
+      "social-media",
+      "organic-growth",
+      "viral-loops"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-scroll-stopping-hooks"
+      }
+    ]
+  },
+  {
+    "id": "concept-scroll-stopping-hooks",
+    "type": "concept",
+    "label": "Scroll-Stopping Visual & Textual Hooks",
+    "description": "Opening 3 seconds or headline frames designed to disrupt timeline complacency through cognitive dissonance, counter-intuitive data, or high-contrast imagery.",
+    "domain": "domain-social-attraction-funnels",
+    "tags": [
+      "hooks",
+      "social-media",
+      "retention",
+      "attention-capture"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-social-flywheel"
+      }
+    ]
+  },
+  {
+    "id": "concept-social-flywheel",
+    "type": "concept",
+    "label": "The Cross-Platform Social Flywheel",
+    "description": "Repurposing deep-dive long-form essays into X threads, LinkedIn carousel decks, YouTube shorts, and newsletter digests to maximize content ROI across algorithms.",
+    "domain": "domain-social-attraction-funnels",
+    "tags": [
+      "flywheel",
+      "content-repurposing",
+      "multi-channel",
+      "growth"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-grand-slam-offers",
+    "type": "concept",
+    "label": "Hormozi Grand Slam Offers & Value Equations",
+    "description": "Constructing unbeatable product offers that combine high dream outcomes, proven guarantees, effortless speed, and unmatchable bonuses to eliminate price competition.",
+    "domain": "domain-social-attraction-funnels",
+    "tags": [
+      "offers",
+      "hormozi",
+      "pricing",
+      "value-equation",
+      "monetization"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-value-ladder-architecture"
+      }
+    ]
+  },
+  {
+    "id": "concept-value-ladder-architecture",
+    "type": "concept",
+    "label": "Value Ladder Architecture & Customer Ascension",
+    "description": "Structuring digital products across price tiers: Lead Magnet (Free) -> Tripwire ($27-$97) -> Core Course ($497-$997) -> Sovereign Advisory ($5k-$25k).",
+    "domain": "domain-social-attraction-funnels",
+    "tags": [
+      "value-ladder",
+      "funnels",
+      "ascension",
+      "customer-ltv"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-vsl-funnel-architecture"
+      }
+    ]
+  },
+  {
+    "id": "concept-vsl-funnel-architecture",
+    "type": "concept",
+    "label": "Video Sales Letter (VSL) Funnels",
+    "description": "High-converting single-page sales funnels driven by an 8-15 minute structured video narrative using the Epiphany Bridge and one-click checkout.",
+    "domain": "domain-social-attraction-funnels",
+    "tags": [
+      "vsl",
+      "sales-page",
+      "conversion",
+      "funnel-optimization"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-lifecycle-email-automation"
+      }
+    ]
+  },
+  {
+    "id": "concept-lifecycle-email-automation",
+    "type": "concept",
+    "label": "Lifecycle Email Sequences & Soap Opera Dramas",
+    "description": "Automated trigger-based email flows (Welcome Soap Opera, Abandoned Cart, Post-Purchase Onboarding, Evergreen Re-engagement) that nurture leads on autopilot.",
+    "domain": "domain-social-attraction-funnels",
+    "tags": [
+      "email-marketing",
+      "automation",
+      "drip-campaigns",
+      "nurturing"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-margin-of-safety",
+    "type": "concept",
+    "label": "Margin of Safety & Downside Protection",
+    "description": "The fundamental principle of investing: demanding an entry price significantly below conservative intrinsic value to insulate against forecasting errors and unexpected panics.",
+    "domain": "domain-investing-wealth-capital",
+    "tags": [
+      "margin-of-safety",
+      "value-investing",
+      "risk-management",
+      "capital-preservation"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-circle-of-competence"
+      },
+      {
+        "type": "unlocks",
+        "target": "concept-intrinsic-value-dcf"
+      }
+    ]
+  },
+  {
+    "id": "concept-circle-of-competence",
+    "type": "concept",
+    "label": "Circle of Competence & Mental Latticework",
+    "description": "Charlie Munger doctrine of operating strictly within the boundaries of businesses and technologies you understand intimately, ignoring opportunities outside your circle.",
+    "domain": "domain-investing-wealth-capital",
+    "tags": [
+      "circle-of-competence",
+      "munger",
+      "mental-models",
+      "decision-making"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-intrinsic-value-dcf",
+    "type": "concept",
+    "label": "Intrinsic Value & Discounted Cash Flows",
+    "description": "Calculating the true underlying value of a business by estimating its future owner earnings and discounting them back to the present with an appropriate risk rate.",
+    "domain": "domain-investing-wealth-capital",
+    "tags": [
+      "intrinsic-value",
+      "dcf",
+      "valuation",
+      "cash-flow"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-second-level-thinking",
+    "type": "concept",
+    "label": "Second-Level Thinking & Contrarian Edge",
+    "description": "Howard Marks framework of evaluating not just the immediate consensus view, but what the consensus has already priced in, identifying mispriced asymmetries.",
+    "domain": "domain-investing-wealth-capital",
+    "tags": [
+      "second-level-thinking",
+      "howard-marks",
+      "contrarian",
+      "alpha"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-macro-credit-cycles"
+      }
+    ]
+  },
+  {
+    "id": "concept-macro-credit-cycles",
+    "type": "concept",
+    "label": "Macro Credit Cycles & Deleveraging Mechanics",
+    "description": "Ray Dalio template of tracking central bank interest rates, debt-to-income ratios, liquidity expansions, and beautiful deleveragings to navigate asset bubbles.",
+    "domain": "domain-investing-wealth-capital",
+    "tags": [
+      "macroeconomics",
+      "credit-cycles",
+      "ray-dalio",
+      "liquidity"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-barbell-capital-allocation",
+    "type": "concept",
+    "label": "The Sovereign Barbell Capital Allocation",
+    "description": "Allocating 80-90% of assets into hyper-safe, liquid, inflation-resistant sovereign stores of value, and 10-20% into asymmetric, convex, highly scalable venture bets.",
+    "domain": "domain-investing-wealth-capital",
+    "tags": [
+      "barbell-strategy",
+      "taleb",
+      "portfolio-allocation",
+      "sovereign-wealth"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-permissionless-leverage"
+      }
+    ]
+  },
+  {
+    "id": "concept-permissionless-leverage",
+    "type": "concept",
+    "label": "Permissionless Leverage (Code, Media & Swarms)",
+    "description": "Naval Ravikant framework of building non-linear wealth by deploying software algorithms, digital media content, and autonomous AI agents that work 24/7 without permission.",
+    "domain": "domain-investing-wealth-capital",
+    "tags": [
+      "permissionless-leverage",
+      "naval",
+      "automation",
+      "swarms"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-sovereign-wealth-engine"
+      }
+    ]
+  },
+  {
+    "id": "concept-sovereign-wealth-engine",
+    "type": "concept",
+    "label": "The Autonomous Sovereign Wealth Engine",
+    "description": "A self-sustaining loop where cashflow from agentic digital products is automatically swept into hard assets, research grants, and compute capacity, compounding sovereign freedom.",
+    "domain": "domain-investing-wealth-capital",
+    "tags": [
+      "sovereign-wealth",
+      "cashflow-engine",
+      "compounding",
+      "financial-sovereignty"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-23T00:00:00Z",
+    "updated_at": "2026-08-23T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-hierarchical-memory-paging",
+    "type": "concept",
+    "label": "Hierarchical OS-Style Agent Memory Paging",
+    "description": "Treating the LLM context window as RAM and external stores (SQLite/Vector DB) as virtual memory disk, paging context in and out via explicit OS-style memory operations (MemGPT paradigm).",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "memory",
+      "memgpt",
+      "context-paging",
+      "virtual-memory",
+      "long-term-state"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-25T00:00:00Z",
+    "updated_at": "2026-08-25T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-bi-temporal-knowledge-graph"
+      }
+    ]
+  },
+  {
+    "id": "concept-bi-temporal-knowledge-graph",
+    "type": "concept",
+    "label": "Bi-Temporal Knowledge Graphs & Fact Lifecycles",
+    "description": "Tracking both the Valid Time (when a fact was true in reality) and the Transaction Time (when the knowledgebase recorded the fact) to prevent historical contradictions and model hallucinations.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "knowledge-graph",
+      "bi-temporal",
+      "fact-verification",
+      "temporal-reasoning"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-25T00:00:00Z",
+    "updated_at": "2026-08-25T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-reciprocal-rank-fusion"
+      }
+    ]
+  },
+  {
+    "id": "concept-reciprocal-rank-fusion",
+    "type": "concept",
+    "label": "Reciprocal Rank Fusion (RRF) Hybrid Search",
+    "description": "Combining BM25 keyword search ranks with dense vector cosine similarity ranks using the formula RRF_Score = sum(1 / (k + rank_i)) to achieve superior retrieval accuracy across code symbols and conceptual queries.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "rrf",
+      "hybrid-search",
+      "bm25",
+      "vector-search",
+      "retrieval-engineering"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-25T00:00:00Z",
+    "updated_at": "2026-08-25T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-episodic-reflection-buffer"
+      }
+    ]
+  },
+  {
+    "id": "concept-episodic-reflection-buffer",
+    "type": "concept",
+    "label": "Episodic Reflection & Verbal Reinforcement Buffers",
+    "description": "Storing detailed execution trajectories and self-reflective post-mortems in an episodic buffer, allowing agents to learn from past errors across sessions without retraining model weights (Reflexion paper).",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "reflexion",
+      "episodic-memory",
+      "verbal-rl",
+      "trajectory-learning"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-25T00:00:00Z",
+    "updated_at": "2026-08-25T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-sleep-time-consolidation"
+      }
+    ]
+  },
+  {
+    "id": "concept-sleep-time-consolidation",
+    "type": "concept",
+    "label": "Sleep-Time Dreaming & Memory Consolidation",
+    "description": "An automated nocturnal background process that replays recent agent interaction traces, extracts durable heuristics, prunes stale working memory, and compiles new knowledge graph nodes (The Starlight Dreaming Engine).",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "dreaming-engine",
+      "memory-consolidation",
+      "nightly-cron",
+      "knowledge-distillation"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-25T00:00:00Z",
+    "updated_at": "2026-08-25T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-mcp-resource-grounding"
+      }
+    ]
+  },
+  {
+    "id": "concept-mcp-resource-grounding",
+    "type": "concept",
+    "label": "MCP 2.0 Resource URI Grounding & Zero-Bloat Hydration",
+    "description": "Exposing knowledge graph nodes as standard Model Context Protocol Resource URIs (starlight://books/{id}, starlight://nodes/{id}) allowing agents to pull exact citation passages on demand rather than bloating system prompts.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "mcp",
+      "resource-uris",
+      "context-hydration",
+      "citation-grounding"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-25T00:00:00Z",
+    "updated_at": "2026-08-25T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-maker-checker-convergence"
+      }
+    ]
+  },
+  {
+    "id": "concept-maker-checker-convergence",
+    "type": "concept",
+    "label": "Maker ≠ Checker Adversarial Convergence",
+    "description": "The strict governance principle that an agent which produces code or strategy can never be the sole verifier of its own output; an independent adversarial model from a different family must critique and reach consensus before ship.",
+    "domain": "domain-ai-architect",
+    "tags": [
+      "maker-checker",
+      "santa-loop",
+      "verification-gate",
+      "cross-model-eval"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-25T00:00:00Z",
+    "updated_at": "2026-08-25T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-permissionless-agent-economy",
+    "type": "concept",
+    "label": "Permissionless Agent Services & Micro-Settlement",
+    "description": "Autonomous agents executing specialized micro-tasks (SEO audit, image rendering, code review, newsletter compilation) and settling value autonomously via programmable payment rails.",
+    "domain": "domain-creator-strategy-wealth",
+    "tags": [
+      "agentic-economy",
+      "micro-settlement",
+      "autonomous-services",
+      "monetization"
+    ],
+    "status": "stable",
+    "created_at": "2026-08-25T00:00:00Z",
+    "updated_at": "2026-08-25T00:00:00Z",
+    "edges": []
+  },
+  {
+    "id": "concept-token-rate-limit-sharding",
+    "type": "concept",
+    "label": "Token Rate-Limit Sharding & Key Pools",
+    "description": "Distributing high-concurrency swarm calls across multiple API keys, service tiers, and regional endpoints using token-bucket rate limiting to prevent 429 throttles during peak swarm bursts.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "rate-limiting",
+      "token-bucket",
+      "sharding",
+      "high-availability"
+    ],
+    "status": "stable",
+    "created_at": "2026-09-09T00:00:00Z",
+    "updated_at": "2026-09-09T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-memory-guardian-oom-prevention"
+      }
+    ]
+  },
+  {
+    "id": "concept-memory-guardian-oom-prevention",
+    "type": "concept",
+    "label": "Memory Guardian & WSL2 OOM Prevention",
+    "description": "Standing telemetry process that continuously samples system RAM, VRAM, and swap usage. When free memory drops below critical threshold (50GB free / 15% RAM), it throttles parallel agent worktrees and enforces text-only modes to prevent OS lockups.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "memory-guardian",
+      "wsl2",
+      "oom-prevention",
+      "resource-governance"
+    ],
+    "status": "stable",
+    "created_at": "2026-09-09T00:00:00Z",
+    "updated_at": "2026-09-09T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-incremental-static-regeneration-isr"
+      }
+    ]
+  },
+  {
+    "id": "concept-incremental-static-regeneration-isr",
+    "type": "concept",
+    "label": "Incremental Static Regeneration (ISR) at Scale",
+    "description": "Next.js architecture pattern that pre-renders key hub routes at build time while lazily generating and caching long-tail pages (10,000+ domain/concept paths) on first request, background revalidating stale caches without full site rebuilds.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "isr",
+      "nextjs",
+      "edge-caching",
+      "web-scale",
+      "on-demand-revalidation"
+    ],
+    "status": "stable",
+    "created_at": "2026-09-09T00:00:00Z",
+    "updated_at": "2026-09-09T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-entity-resolution-deduplication"
+      }
+    ]
+  },
+  {
+    "id": "concept-entity-resolution-deduplication",
+    "type": "concept",
+    "label": "Entity Resolution & Automated Graph Deduplication",
+    "description": "Automated identity resolution using normalized string distance (Levenshtein/Jaro-Winkler) combined with dense embedding cosine similarity (>0.92) to detect duplicate authors, papers, or tools ingested from divergent sources and merge them into canonical SSOT nodes.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "entity-resolution",
+      "deduplication",
+      "data-quality",
+      "knowledge-graph"
+    ],
+    "status": "stable",
+    "created_at": "2026-09-09T00:00:00Z",
+    "updated_at": "2026-09-09T00:00:00Z",
+    "edges": [
+      {
+        "type": "unlocks",
+        "target": "concept-lancedb-columnar-vector-scale"
+      }
+    ]
+  },
+  {
+    "id": "concept-lancedb-columnar-vector-scale",
+    "type": "concept",
+    "label": "Columnar Disk-Backed Vector Storage (LanceDB)",
+    "description": "Serverless, embedded vector search engine built on the Lance columnar data format. Allows zero-daemon, sub-millisecond similarity search over millions of vector embeddings directly on local disk or S3/cloud storage without running heavy database servers.",
+    "domain": "domain-scale-distributed-agentics",
+    "tags": [
+      "lancedb",
+      "vector-database",
+      "columnar",
+      "zero-daemon",
+      "scale"
+    ],
+    "status": "stable",
+    "created_at": "2026-09-09T00:00:00Z",
+    "updated_at": "2026-09-09T00:00:00Z",
+    "edges": []
   }
 ]

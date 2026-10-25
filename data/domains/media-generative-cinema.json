@@ -1,0 +1,44 @@
+{
+  "id": "domain-media-generative-cinema",
+  "type": "domain",
+  "label": "Generative Cinema, Audio & Media",
+  "description": "Programmatic video rendering in React/Remotion, generative audio composition with Suno v4.5, prompt visual synthesis with Nano Banana, and camera grammar.",
+  "tags": ["media", "video-as-code", "remotion", "suno", "nano-banana", "cinematography", "audio-engineering"],
+  "status": "stable",
+  "created_at": "2026-08-23T00:00:00Z",
+  "updated_at": "2026-08-23T00:00:00Z",
+  "edges": [],
+  "root_problems": [
+    "problem-deterministic-video-rendering",
+    "problem-audio-visual-sync-in-ai",
+    "problem-visual-character-consistency"
+  ],
+  "paths": [
+    {
+      "id": "path-media-video-as-code",
+      "label": "Programmatic Video & Motion",
+      "description": "Remotion compositions, spring physics, dynamic audio wave React integrations.",
+      "nodes": [
+        "concept-video-as-code-remotion",
+        "concept-spring-animation-curves",
+        "tool-remotion"
+      ]
+    },
+    {
+      "id": "path-media-audio-architecture",
+      "label": "Generative Audio & Sound Design",
+      "description": "Stem separation, arrangement structure, melodic motifs.",
+      "nodes": [
+        "concept-audio-arrangement-curves",
+        "tool-suno-ai",
+        "mcp-suno-server"
+      ]
+    }
+  ],
+  "seed_nodes": [
+    "concept-video-as-code-remotion",
+    "concept-audio-arrangement-curves",
+    "tool-remotion",
+    "tool-suno-ai"
+  ]
+}
