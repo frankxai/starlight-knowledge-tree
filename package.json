@@ -13,7 +13,7 @@
     "validate:fiction": "npm run build --workspace @starlight/graph-schema && npm run validate:fiction --workspace @starlight/graph-utils",
     "validate:atlas": "node scripts/validate-atlas.mjs",
     "test:fiction": "npm run build --workspace @starlight/graph-schema && npm run test --workspace @starlight/graph-utils",
-    "test:atlas": "node --test scripts/tests/atlas-contract.test.mjs",
+    "test:atlas": "node --test scripts/tests/atlas-contract.test.mjs scripts/tests/graph-utils.test.mjs scripts/tests/graph-schema.test.mjs",
     "build": "npm run build --workspaces",
     "lint": "npm run lint --workspaces --if-present",
     "dev": "cd apps/web && npm run dev",

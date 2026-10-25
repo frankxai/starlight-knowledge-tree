@@ -1,0 +1,722 @@
+[
+  {
+    "id": "sol",
+    "lemma": "Sol",
+    "language": "Latin",
+    "gloss": "sun; sunlight",
+    "root": "*sawel-",
+    "root_language": "Proto-Indo-European",
+    "semantic_field": "light-cosmos",
+    "source_status": "checked",
+    "sources": [
+      "https://www.etymonline.com/word/sol"
+    ],
+    "brand_fit": [
+      "Starlight Intelligence",
+      "Arcanea"
+    ],
+    "name_status": "reserved_in_arcanea",
+    "notes": "Ancient solar root; also an existing LOCKED Arcanea Godbeast name."
+  },
+  {
+    "id": "argon",
+    "lemma": "Argon",
+    "language": "Modern Latin, from Ancient Greek",
+    "gloss": "inert; idle; without work",
+    "root": "a- + ergon; *werg-",
+    "root_language": "Greek; Proto-Indo-European",
+    "semantic_field": "matter-science",
+    "source_status": "checked",
+    "sources": [
+      "https://www.etymonline.com/word/argon"
+    ],
+    "brand_fit": [
+      "Starlight Intelligence"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "1894 coined name of chemical element, NOT an ancient personal name. Semantics of inactivity may be undesirable for an active agent."
+  },
+  {
+    "id": "opus",
+    "lemma": "Opus",
+    "language": "Latin",
+    "gloss": "work; labor; composition",
+    "root": "*op-",
+    "root_language": "Proto-Indo-European",
+    "semantic_field": "creation-craft",
+    "source_status": "checked",
+    "sources": [
+      "https://www.etymonline.com/word/opus"
+    ],
+    "brand_fit": [
+      "GenCreator",
+      "FrankX"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Distinct from Greek ergon: these do not share the same proposed PIE root."
+  },
+  {
+    "id": "lumen",
+    "lemma": "Lumen",
+    "language": "Latin",
+    "gloss": "light",
+    "root": "*leuk-",
+    "root_language": "Proto-Indo-European",
+    "semantic_field": "light-cosmos",
+    "source_status": "checked",
+    "sources": [
+      "https://www.etymonline.com/word/lumen"
+    ],
+    "brand_fit": [
+      "Starlight Intelligence",
+      "Arcanea"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Strong conceptual seed; already common in names."
+  },
+  {
+    "id": "aether",
+    "lemma": "Aether",
+    "language": "Greek via Latin",
+    "gloss": "upper sky; ether; philosophical celestial element",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "light-cosmos",
+    "source_status": "checked",
+    "sources": [
+      "https://en.wiktionary.org/wiki/aether"
+    ],
+    "brand_fit": [
+      "Starlight Intelligence",
+      "Arcanea"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Meaning varies by ancient philosophical framework; not a modern physical substance."
+  },
+  {
+    "id": "noema",
+    "lemma": "Noema",
+    "language": "Ancient Greek",
+    "gloss": "thought; concept; perception",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "mind-meaning",
+    "source_status": "checked",
+    "sources": [
+      "https://en.wiktionary.org/wiki/noema"
+    ],
+    "brand_fit": [
+      "FrankX",
+      "Starlight Intelligence"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Philosophical concept; distinguish the noun from branding extrapolations."
+  },
+  {
+    "id": "kairos",
+    "lemma": "Kairos",
+    "language": "Ancient Greek",
+    "gloss": "opportune or decisive moment",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "time-purpose",
+    "source_status": "checked",
+    "sources": [
+      "https://en.wiktionary.org/wiki/kairos"
+    ],
+    "brand_fit": [
+      "Starlight Intelligence",
+      "FrankX"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Contrasts usefully with chronos; not simply clock time."
+  },
+  {
+    "id": "cosmos",
+    "lemma": "Cosmos",
+    "language": "Ancient Greek via Latin",
+    "gloss": "order; orderly arrangement; universe",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "light-cosmos",
+    "source_status": "checked",
+    "sources": [
+      "https://www.etymonline.com/word/cosmos"
+    ],
+    "brand_fit": [
+      "Starlight Intelligence",
+      "Arcanea"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "The early sense of ordering is distinct from the later cosmological extension."
+  },
+  {
+    "id": "logos",
+    "lemma": "Logos",
+    "language": "Ancient Greek",
+    "gloss": "word; discourse; reason; account",
+    "root": "*leg-",
+    "root_language": "Proto-Indo-European",
+    "semantic_field": "mind-meaning",
+    "source_status": "checked",
+    "sources": [
+      "https://www.etymonline.com/word/Logos"
+    ],
+    "brand_fit": [
+      "FrankX",
+      "Starlight Intelligence"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Carries philosophical and Christian theological associations."
+  },
+  {
+    "id": "ethos",
+    "lemma": "Ethos",
+    "language": "Ancient Greek",
+    "gloss": "habitual character; disposition; custom",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "mind-meaning",
+    "source_status": "checked",
+    "sources": [
+      "https://www.etymonline.com/word/ethos"
+    ],
+    "brand_fit": [
+      "FrankX",
+      "Starlight Intelligence"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "More precise than generic brand personality."
+  },
+  {
+    "id": "praxis",
+    "lemma": "Praxis",
+    "language": "Ancient Greek",
+    "gloss": "practice; action; doing",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "creation-craft",
+    "source_status": "checked",
+    "sources": [
+      "https://www.etymonline.com/word/praxis"
+    ],
+    "brand_fit": [
+      "GenCreator",
+      "FrankX"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Concrete action rather than theory."
+  },
+  {
+    "id": "lux",
+    "lemma": "Lux",
+    "language": "Latin",
+    "gloss": "light",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "light-cosmos",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "Starlight Intelligence",
+      "Arcanea"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "aurora",
+    "lemma": "Aurora",
+    "language": "Latin",
+    "gloss": "dawn",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "light-cosmos",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "Starlight Intelligence",
+      "Arcanea"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "caelum",
+    "lemma": "Caelum",
+    "language": "Latin",
+    "gloss": "sky; heaven",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "light-cosmos",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "Starlight Intelligence",
+      "Arcanea"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "astra",
+    "lemma": "Astra",
+    "language": "Latin",
+    "gloss": "stars (plural of astrum)",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "light-cosmos",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "Starlight Intelligence",
+      "Arcanea"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "stella",
+    "lemma": "Stella",
+    "language": "Latin",
+    "gloss": "star",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "light-cosmos",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "Starlight Intelligence",
+      "Arcanea"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "nox",
+    "lemma": "Nox",
+    "language": "Latin",
+    "gloss": "night",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "light-cosmos",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "Starlight Intelligence",
+      "Arcanea"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "umbra",
+    "lemma": "Umbra",
+    "language": "Latin",
+    "gloss": "shade; shadow",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "light-cosmos",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "Starlight Intelligence",
+      "Arcanea"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "ignis",
+    "lemma": "Ignis",
+    "language": "Latin",
+    "gloss": "fire",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "light-cosmos",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "Starlight Intelligence",
+      "Arcanea"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "origo",
+    "lemma": "Origo",
+    "language": "Latin",
+    "gloss": "origin; beginning",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "origin-becoming",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "Arcanea",
+      "FrankX"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "nexus",
+    "lemma": "Nexus",
+    "language": "Latin",
+    "gloss": "binding; connection",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "systems-connection",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "Starlight Intelligence",
+      "GenCreator"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "veritas",
+    "lemma": "Veritas",
+    "language": "Latin",
+    "gloss": "truth",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "mind-meaning",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "FrankX",
+      "Starlight Intelligence"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "sonus",
+    "lemma": "Sonus",
+    "language": "Latin",
+    "gloss": "sound",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "sound-expression",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "FrankX",
+      "GenCreator",
+      "Arcanea"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "vox",
+    "lemma": "Vox",
+    "language": "Latin",
+    "gloss": "voice",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "sound-expression",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "FrankX",
+      "GenCreator",
+      "Arcanea"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "ars",
+    "lemma": "Ars",
+    "language": "Latin",
+    "gloss": "skill; art",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "creation-craft",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "GenCreator",
+      "FrankX"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "animus",
+    "lemma": "Animus",
+    "language": "Latin",
+    "gloss": "mind; spirit; intention",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "mind-meaning",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "FrankX",
+      "Starlight Intelligence"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "sophia",
+    "lemma": "Sophia",
+    "language": "Ancient Greek",
+    "gloss": "wisdom",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "mind-meaning",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "FrankX",
+      "Starlight Intelligence"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "nous",
+    "lemma": "Nous",
+    "language": "Ancient Greek",
+    "gloss": "mind; intellect",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "mind-meaning",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "FrankX",
+      "Starlight Intelligence"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "eidos",
+    "lemma": "Eidos",
+    "language": "Ancient Greek",
+    "gloss": "form; appearance",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "mind-meaning",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "FrankX",
+      "Starlight Intelligence"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "telos",
+    "lemma": "Telos",
+    "language": "Ancient Greek",
+    "gloss": "end; goal; completion",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "time-purpose",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "Starlight Intelligence",
+      "FrankX"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "chronos",
+    "lemma": "Chronos",
+    "language": "Ancient Greek",
+    "gloss": "time",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "time-purpose",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "Starlight Intelligence",
+      "FrankX"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "poiesis",
+    "lemma": "Poiesis",
+    "language": "Ancient Greek",
+    "gloss": "making; creation",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "creation-craft",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "GenCreator",
+      "FrankX"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "techne",
+    "lemma": "Technē",
+    "language": "Ancient Greek",
+    "gloss": "art; skill; craft",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "creation-craft",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "GenCreator",
+      "FrankX"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "ergon",
+    "lemma": "Ergon",
+    "language": "Ancient Greek",
+    "gloss": "work; deed",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "creation-craft",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "GenCreator",
+      "FrankX"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "mythos",
+    "lemma": "Mythos",
+    "language": "Ancient Greek",
+    "gloss": "story; speech",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "story-worlds",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "Arcanea"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "harmonia",
+    "lemma": "Harmonia",
+    "language": "Ancient Greek",
+    "gloss": "joining; concord; harmony",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "sound-expression",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "FrankX",
+      "GenCreator",
+      "Arcanea"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "arete",
+    "lemma": "Aretē",
+    "language": "Ancient Greek",
+    "gloss": "excellence; virtue",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "mind-meaning",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "FrankX",
+      "Starlight Intelligence"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "physis",
+    "lemma": "Physis",
+    "language": "Ancient Greek",
+    "gloss": "nature; growth",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "origin-becoming",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "Arcanea",
+      "FrankX"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "ananke",
+    "lemma": "Anankē",
+    "language": "Ancient Greek",
+    "gloss": "necessity; constraint",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "time-purpose",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "Starlight Intelligence",
+      "FrankX"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "aion",
+    "lemma": "Aiōn",
+    "language": "Ancient Greek",
+    "gloss": "age; lifetime",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "time-purpose",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "Starlight Intelligence",
+      "FrankX"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  },
+  {
+    "id": "nova",
+    "lemma": "Nova",
+    "language": "Latin",
+    "gloss": "new (feminine adjective)",
+    "root": null,
+    "root_language": null,
+    "semantic_field": "origin-becoming",
+    "source_status": "provisional_needs_dictionary_review",
+    "sources": [],
+    "brand_fit": [
+      "Arcanea",
+      "FrankX"
+    ],
+    "name_status": "inspiration_only",
+    "notes": "Research candidate only. Verify original script, morphology, semantic scope, historical attestation, and authoritative source before use."
+  }
+]
