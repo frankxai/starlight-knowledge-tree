@@ -4,7 +4,7 @@ import * as path from "path";
 
 export const metadata: Metadata = {
   title: "Estate Constellations & Repos — Starlight Knowledge Tree",
-  description: "Comprehensive map of all 213 repositories across the 5 core constellations and sovereign verticals.",
+  description: "Map of the estate repositories by constellation, generated from a local estate scan when available.",
 };
 
 interface RepoEntry {

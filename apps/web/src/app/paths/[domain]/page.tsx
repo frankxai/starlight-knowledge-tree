@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { canonDomains, canonIds, canonItems, domainSlug } from "@/lib/canon-stats";
 
 const DOMAIN_META: Record<
   string,
@@ -233,7 +234,7 @@ const DOMAIN_META: Record<
 type Props = { params: { domain: string } };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const meta = DOMAIN_META[params.domain];
+  const meta = resolveMeta(params.domain);
   if (!meta) return { title: "Not Found" };
   return {
     title: `${meta.label} Path — Starlight Knowledge Tree`,
@@ -242,17 +243,51 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export function generateStaticParams() {
-  return Object.keys(DOMAIN_META).map((domain) => ({ domain }));
+  return canonDomains.map((d) => ({ domain: domainSlug(d.id) }));
 }
 
 const DIFFICULTY_COLORS: Record<string, string> = {
   accessible: "text-green-400",
+  medium: "text-yellow-300",
   hard: "text-amber-authority",
   unsolved: "text-red-400",
 };
 
+// Curated path copy may only reference nodes that exist in canon; phantom
+// IDs are dropped at render instead of being displayed as real graph nodes.
+function resolveMeta(slug: string) {
+  const curated = DOMAIN_META[slug];
+  if (curated) {
+    return {
+      ...curated,
+      paths: curated.paths
+        .map((p) => ({ ...p, nodes: p.nodes.filter((id) => canonIds.has(id)) }))
+        .filter((p) => p.nodes.length > 0),
+      rootProblems: curated.rootProblems.filter((p) => canonIds.has(p.id)),
+    };
+  }
+  const domain = canonDomains.find((d) => domainSlug(d.id) === slug);
+  if (!domain) return null;
+  const inDomain = canonItems.filter((i) => i.domain === domain.id);
+  const sequence = inDomain
+    .filter((i) => i.type === "concept" || i.type === "skill")
+    .slice(0, 12)
+    .map((i) => i.id);
+  return {
+    label: domain.label,
+    tagline: domain.description,
+    description: domain.description,
+    paths: sequence.length
+      ? [{ id: `path-${slug}-canon`, label: "Canon sequence", description: "Concepts and skills in this domain, in canon order.", nodes: sequence }]
+      : [],
+    rootProblems: inDomain
+      .filter((i) => i.type === "open_problem")
+      .map((i) => ({ id: i.id, label: i.label, difficulty: i.difficulty || "hard" })),
+  };
+}
+
 export default function PathPage({ params }: Props) {
-  const meta = DOMAIN_META[params.domain];
+  const meta = resolveMeta(params.domain);
   if (!meta) notFound();
 
   return (

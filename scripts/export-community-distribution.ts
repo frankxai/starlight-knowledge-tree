@@ -37,7 +37,8 @@ const masterBundle = {
   generated_at: new Date().toISOString(),
   license: "MIT",
   stats: {
-    total_nodes: allNodes.length,
+    total_nodes: allNodes.filter(n => n.type !== "benchmark").length,
+    total_entries: allNodes.length + allDomains.length,
     total_domains: allDomains.length,
     canonical_books: allNodes.filter(n => n.type === "book").length,
     seminal_papers: allNodes.filter(n => n.type === "paper").length,
@@ -116,7 +117,7 @@ Welcome to the **Starlight Community Distribution**. This package delivers a ver
 ### Step 2: Audio Podcasts via Google NotebookLM
 1. Open [Google NotebookLM](https://notebooklm.google.com).
 2. Create a new notebook (e.g. "Starlight Multi-Agent Masterclass").
-3. Upload any domain file from \`dist/notebooklm-sources/\` (or paste \`starlight-master-canon.json\`).
+3. Paste \`starlight-master-canon.json\` from this bundle as a source (the per-domain NotebookLM dossiers are generated in the source repo via \`npm run export:notebooklm\` and are not part of this bundle).
 4. Click **Audio Overview (Deep Dive)** to generate a 15-minute, two-host conversational podcast!
 
 ### Step 3: Grounding Your AI Agents (MCP 2.0)
@@ -187,6 +188,6 @@ fs.writeFileSync(path.join(outputDir, "COMMUNITY_EVOLUTION_PIPELINE.md"), evolut
 console.log(`✅ [5/5] Generated Community Evolution Pipeline Doc -> ${path.join(outputDir, "COMMUNITY_EVOLUTION_PIPELINE.md")}`);
 
 console.log(`\n======================================================`);
-console.log(`🎉 ALL 5 COMMUNITY ARTIFACTS PACKAGED IN:`);
+console.log(`🎉 ${fs.readdirSync(outputDir).length} COMMUNITY ARTIFACTS PACKAGED IN:`);
 console.log(`   ${outputDir}`);
 console.log(`======================================================\n`);

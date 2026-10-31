@@ -18,8 +18,8 @@ const PILLARS = [
   {
     number: "02",
     title: "KV-Cache Prefix Economics",
-    subtitle: "80% Latency & 75% Cost Reduction",
-    description: "Structures prompts with immutable static prefixes (system lore, contracts, tool schemas) so models reuse cached attention states, unlocking 80-90% prompt discounts.",
+    subtitle: "Cached Prefix Reuse",
+    description: "Structures prompts with immutable static prefixes (system lore, contracts, tool schemas) so models reuse cached attention states instead of re-encoding them every turn.",
     tech: "Static Prefix Alignment • Anthropic / Gemini Cache",
     badge: "Cost Reduction"
   },
@@ -27,15 +27,15 @@ const PILLARS = [
     number: "03",
     title: "Hierarchical Graph Partitioning",
     subtitle: "2-Hop Neighborhood Loading",
-    description: "Shards the knowledge graph by domain clusters. Agents query only the 2-hop radius of their specific problem, fitting rich graph context into <8,000 tokens.",
+    description: "Shards the knowledge graph by domain clusters. Agents query only the 2-hop radius of their specific problem instead of loading the whole graph.",
     tech: "Topological Traversal • Subgraph Extraction",
     badge: "Context Scaling"
   },
   {
     number: "04",
     title: "Memory Guardian & OOM Protection",
-    subtitle: "Host Stability Under 50+ Workers",
-    description: "Standing telemetry process monitoring WSL2 RAM, VRAM, and swap. Throttles concurrent worktrees and enforces text-only fallbacks when free memory drops below 50GB.",
+    subtitle: "Host Stability Under Parallel Workers",
+    description: "Standing telemetry process monitoring host RAM and swap. Throttles concurrent worktrees and enforces text-only fallbacks when free memory runs low.",
     tech: "Dynamic Throttling • Swap Prevention",
     badge: "Stability"
   },
@@ -43,95 +43,93 @@ const PILLARS = [
     number: "05",
     title: "Entity Resolution & Deduplication",
     subtitle: "Automated Graph SSOT Unification",
-    description: "Merges overlapping papers, tools, and author nodes from automated scrapers using normalized string distance and dense vector cosine similarity (>0.92).",
+    description: "Merges overlapping papers, tools, and author nodes from automated scrapers using normalized string distance and dense vector cosine similarity.",
     tech: "Jaro-Winkler • Vector Cosine Disambiguation",
     badge: "Data Quality"
   },
   {
     number: "06",
     title: "Columnar Disk Vectors (LanceDB)",
-    subtitle: "Zero-Daemon Millions of Embeddings",
-    description: "Transitions flat JSON files past 10,000 entities to serverless, disk-backed Lance columnar files, offering sub-millisecond vector similarity search with zero RAM overhead.",
+    subtitle: "Zero-Daemon Disk-Backed Embeddings",
+    description: "Design direction past the current flat-JSON scale: serverless, disk-backed Lance columnar files for vector similarity search without a database daemon.",
     tech: "LanceDB • Apache Lance • Rust Native Bindings",
     badge: "Storage Engine"
   },
   {
     number: "07",
     title: "Incremental Static Regeneration (ISR)",
-    subtitle: "Edge Delivery for 10,000+ Pages",
+    subtitle: "Edge Delivery at Estate Scale",
     description: "Pre-renders critical hub routes at build time while lazily compiling long-tail entity pages on-demand, paired with client-side Orama WebAssembly search.",
     tech: "Next.js 14 App Router • Orama WASM • Vercel Edge",
     badge: "Web Delivery"
   }
 ];
 
+// Measured by scripts/scale-graph-benchmark.ts (re-run 2026-10-24 against
+// merged main; rerun the script instead of editing these by hand).
 const BENCHMARKS = [
   {
     label: "Direct Entity Lookup",
-    value: "0.12 ms",
-    subtext: "0.0119 µs/op across 10k lookups",
-    status: "94.7x faster than linear find",
+    value: "0.15 ms",
+    subtext: "Map.get x 10,000 lookups (0.0152 µs/op)",
+    status: "72.7x faster than linear find",
     indicator: "text-emerald-400"
   },
   {
     label: "2-Hop Subgraph Extraction",
-    value: "0.002 ms",
+    value: "0.005 ms",
     subtext: "1,000 queries on 5,000-node graph",
-    status: "445,137 queries/sec throughput",
+    status: "202,175 queries/sec throughput",
     indicator: "text-cyan-primary"
   },
   {
-    label: "Full-Estate Entity Scan",
-    value: "0.99 ms",
-    subtext: "5 multi-field scan passes over 5k nodes",
-    status: "11,457 entities matched",
+    label: "Full-Graph Entity Scan",
+    value: "1.37 ms",
+    subtext: "Per multi-field scan pass over 5k nodes",
+    status: "11,452 entities matched across 5 passes",
     indicator: "text-amber-authority"
   },
   {
     label: "5k Nodes Payload Size",
     value: "2.32 MB",
     subtext: "Serialized JSON Memory Footprint",
-    status: "LanceDB threshold at 10k nodes",
+    status: "Columnar threshold discussed at 10k nodes",
     indicator: "text-blue-400"
   }
 ];
 
+// Qualitative design targets. No dollar or percentage claim is published
+// here until it has a measured source in this repo.
 const COST_ROWS = [
   {
     dimension: "Model Ingestion",
-    naive: "Full context reinjected every turn ($5.00/M tokens)",
-    starlight: "KV-Cache Prefix Alignment ($0.50/M tokens cached)",
-    savings: "90% Savings"
+    naive: "Full context reinjected every turn",
+    starlight: "KV-Cache Prefix Alignment (static prefixes reused across turns)",
+    savings: "Fewer billed prompt tokens"
   },
   {
     dimension: "Model Routing",
-    naive: "Route every task to frontier models ($15–$75/M tokens)",
-    starlight: "Kilo Tier Router: Free models for scans, Frontier for review only",
-    savings: "85% Savings"
+    naive: "Route every task to frontier models",
+    starlight: "Tier routing: cheap models for scans, frontier for review only",
+    savings: "Frontier tokens reserved for judgment"
   },
   {
     dimension: "Knowledge Retrieval",
-    naive: "Inject entire 500-page repos into agent prompts (100k tokens)",
-    starlight: "2-Hop Subgraph Partitioning (<8k tokens targeted context)",
-    savings: "92% Savings"
+    naive: "Inject entire repositories into agent prompts",
+    starlight: "2-Hop Subgraph Partitioning (targeted neighborhood context)",
+    savings: "Smaller, relevant context windows"
   },
   {
     dimension: "Vector / Graph DB",
-    naive: "Cloud SaaS vector DBs (Pinecone/Milvus: $70–$350/mo)",
-    starlight: "LanceDB / sqlite-vec / Kùzu (Local disk, zero-daemon, $0)",
-    savings: "100% DB Savings"
+    naive: "Cloud SaaS vector DBs with monthly minimums",
+    starlight: "Local disk files today; columnar stores past 10k nodes",
+    savings: "No hosted-DB line item at current scale"
   },
   {
     dimension: "Web & API Hosting",
-    naive: "24/7 Node.js VPS / Docker clusters ($80–$250/mo)",
-    starlight: "Next.js 14 SSG on Vercel + SDS idle TTL on localhost",
-    savings: "~90% Hosting Savings"
-  },
-  {
-    dimension: "Per-Feature Run Cost",
-    naive: "$15.00 – $45.00 per feature task",
-    starlight: "$0.20 – $1.10 per verified feature task",
-    savings: "~95% Net Reduction"
+    naive: "Always-on servers and container clusters",
+    starlight: "Static generation; pages pre-rendered from canon data",
+    savings: "No always-on app server"
   }
 ];
 
@@ -147,7 +145,7 @@ export default function ScalePage() {
           The <span className="text-gradient-cyan">7 Pillars of Scale</span>
         </h1>
         <p className="text-white/60 text-lg max-w-2xl mx-auto">
-          How Starlight scales autonomous multi-agent swarms and knowledge graphs from hundreds of curated entities to millions of tokens with sub-millisecond retrieval and 95% cost efficiency.
+          The design direction for scaling autonomous multi-agent swarms and knowledge graphs beyond the current curated canon, with the retrieval benchmarks that are measured today.
         </p>
       </div>
 
@@ -235,20 +233,18 @@ export default function ScalePage() {
       <section className="glass-card p-8 rounded-xl border border-cyan-primary/20 bg-gradient-to-b from-cyan-primary/5 to-transparent">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="max-w-2xl">
-            <h3 className="text-2xl font-bold text-white mb-2">The 1-to-25 Founder Leverage Ratio</h3>
+            <h3 className="text-2xl font-bold text-white mb-2">Founder leverage, stated plainly</h3>
             <p className="text-white/70 text-xs leading-relaxed mb-4">
-              By grounding autonomous agents in verified domain canon, using KV-cache prompt reuse, and executing through isolated worktrees, a single human architect commands the throughput, rigor, and distribution velocity of a 25-person engineering and content organization with near-zero overhead.
+              The working hypothesis: grounding autonomous agents in verified domain canon, reusing cached
+              prompt prefixes, and executing through isolated worktrees lets one architect review and ship
+              at a multiple of solo throughput. The ratio is not published because it is not yet measured;
+              what is measured lives in the benchmark suite above.
             </p>
             <div className="flex flex-wrap gap-2 text-[11px] font-mono text-cyan-primary">
-              <span className="px-2.5 py-1 rounded bg-cyan-primary/10 border border-cyan-primary/20">95%+ Digital Margins</span>
-              <span className="px-2.5 py-1 rounded bg-cyan-primary/10 border border-cyan-primary/20">Zero Cloud DB Burn</span>
-              <span className="px-2.5 py-1 rounded bg-cyan-primary/10 border border-cyan-primary/20">Continuous Self-Refinement</span>
+              <span className="px-2.5 py-1 rounded bg-cyan-primary/10 border border-cyan-primary/20">Canon-grounded agents</span>
+              <span className="px-2.5 py-1 rounded bg-cyan-primary/10 border border-cyan-primary/20">No hosted DB at current scale</span>
+              <span className="px-2.5 py-1 rounded bg-cyan-primary/10 border border-cyan-primary/20">Measured before claimed</span>
             </div>
-          </div>
-          <div className="shrink-0 p-5 rounded-xl bg-black/40 border border-white/10 text-center">
-            <div className="text-xs font-mono text-white/50 uppercase mb-1">Average Run Cost</div>
-            <div className="text-3xl font-bold font-mono text-emerald-400 mb-1">$0.20 – $1.10</div>
-            <div className="text-[11px] text-white/40">per verified feature PR</div>
           </div>
         </div>
       </section>

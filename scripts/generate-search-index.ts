@@ -15,6 +15,7 @@ interface SearchItem {
   description: string;
   domain?: string;
   tags?: string[];
+  difficulty?: string;
   href: string;
 }
 
@@ -40,6 +41,7 @@ function pushItem(raw: any) {
     description: raw.summary || raw.abstract || raw.description || "",
     domain: raw.domain,
     tags: raw.tags,
+    difficulty: raw.difficulty,
     href: HREF_BY_TYPE[raw.type] || "/tree",
   });
 }

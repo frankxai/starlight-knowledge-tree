@@ -130,7 +130,7 @@ const TOOLS = [
     inputSchema: {
       type: "object",
       properties: {
-        pattern_id: { type: "string", description: "Swarm pattern ID (e.g. pattern-queen-conductor-worker, pattern-santa-method, pattern-blackboard-workspace)." },
+        pattern_id: { type: "string", description: "Swarm pattern ID (e.g. pattern-queen-conductor-worker, swarm-pattern-santa-loop, pattern-blackboard-workspace)." },
       },
       required: ["pattern_id"],
     },
