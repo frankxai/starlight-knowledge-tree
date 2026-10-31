@@ -1889,6 +1889,7 @@
       "nodes",
       "data"
     ],
+    "difficulty": "beginner",
     "href": "/tree"
   },
   {
@@ -1903,6 +1904,7 @@
       "papers",
       "research"
     ],
+    "difficulty": "beginner",
     "href": "/tree"
   },
   {
@@ -1917,6 +1919,7 @@
       "paths",
       "curriculum"
     ],
+    "difficulty": "intermediate",
     "href": "/tree"
   },
   {
@@ -1931,6 +1934,7 @@
       "experiments",
       "research"
     ],
+    "difficulty": "intermediate",
     "href": "/tree"
   },
   {
@@ -1945,6 +1949,7 @@
       "space",
       "expansion"
     ],
+    "difficulty": "intermediate",
     "href": "/tree"
   },
   {
@@ -2079,6 +2084,7 @@
       "superintelligence",
       "x-risk"
     ],
+    "difficulty": "unsolved",
     "href": "/tree"
   },
   {
@@ -2093,6 +2099,7 @@
       "reliability",
       "math"
     ],
+    "difficulty": "hard",
     "href": "/tree"
   },
   {
@@ -2107,6 +2114,7 @@
       "alignment",
       "agentic-ai"
     ],
+    "difficulty": "hard",
     "href": "/tree"
   },
   {
@@ -2121,6 +2129,7 @@
       "state-sync",
       "agent-mesh"
     ],
+    "difficulty": "hard",
     "href": "/tree"
   },
   {
@@ -2135,6 +2144,7 @@
       "storage",
       "second-brain"
     ],
+    "difficulty": "hard",
     "href": "/tree"
   },
   {
@@ -2149,6 +2159,7 @@
       "offline-first",
       "swarms"
     ],
+    "difficulty": "hard",
     "href": "/tree"
   },
   {
@@ -2163,6 +2174,7 @@
       "taste",
       "visual-ai"
     ],
+    "difficulty": "hard",
     "href": "/tree"
   },
   {
@@ -2176,6 +2188,7 @@
       "visual-hierarchy",
       "automated-qa"
     ],
+    "difficulty": "accessible",
     "href": "/tree"
   },
   {
@@ -2190,6 +2203,7 @@
       "accessibility",
       "canvas"
     ],
+    "difficulty": "hard",
     "href": "/tree"
   },
   {
@@ -2204,6 +2218,7 @@
       "canon",
       "narrative-consistency"
     ],
+    "difficulty": "hard",
     "href": "/tree"
   },
   {
@@ -2218,6 +2233,7 @@
       "tolkien",
       "coherence"
     ],
+    "difficulty": "hard",
     "href": "/tree"
   },
   {
@@ -2231,6 +2247,7 @@
       "campbell",
       "story-engine"
     ],
+    "difficulty": "hard",
     "href": "/tree"
   },
   {
@@ -2244,6 +2261,7 @@
       "video-generation",
       "deterministic-rendering"
     ],
+    "difficulty": "hard",
     "href": "/tree"
   },
   {
@@ -2258,6 +2276,7 @@
       "suno",
       "motion-graphics"
     ],
+    "difficulty": "accessible",
     "href": "/tree"
   },
   {
@@ -2271,6 +2290,7 @@
       "generative-video",
       "animation"
     ],
+    "difficulty": "hard",
     "href": "/tree"
   },
   {
@@ -2284,6 +2304,7 @@
       "platform-risk",
       "decentralization"
     ],
+    "difficulty": "accessible",
     "href": "/tree"
   },
   {
@@ -2298,6 +2319,7 @@
       "digital-products",
       "cashflow"
     ],
+    "difficulty": "accessible",
     "href": "/tree"
   },
   {
@@ -2311,6 +2333,7 @@
       "leverage",
       "high-output"
     ],
+    "difficulty": "hard",
     "href": "/tree"
   },
   {
@@ -2325,6 +2348,7 @@
       "cost",
       "access-to-space"
     ],
+    "difficulty": "hard",
     "href": "/tree"
   },
   {
@@ -2340,6 +2364,7 @@
       "resource-extraction",
       "settlement"
     ],
+    "difficulty": "hard",
     "href": "/tree"
   },
   {
@@ -2354,6 +2379,7 @@
       "mechanism",
       "biology"
     ],
+    "difficulty": "unsolved",
     "href": "/tree"
   },
   {
@@ -2368,6 +2394,7 @@
       "neuroscience",
       "philosophy-of-mind"
     ],
+    "difficulty": "unsolved",
     "href": "/tree"
   },
   {
@@ -2382,6 +2409,7 @@
       "audience",
       "cold-start"
     ],
+    "difficulty": "accessible",
     "href": "/tree"
   },
   {
@@ -2396,6 +2424,7 @@
       "information-gain",
       "content-quality"
     ],
+    "difficulty": "hard",
     "href": "/tree"
   },
   {
@@ -2410,6 +2439,7 @@
       "publishing",
       "sovereignty"
     ],
+    "difficulty": "accessible",
     "href": "/tree"
   },
   {
@@ -2424,6 +2454,7 @@
       "checkout",
       "ecommerce"
     ],
+    "difficulty": "accessible",
     "href": "/tree"
   },
   {
@@ -2438,6 +2469,7 @@
       "capital-preservation",
       "sovereign-wealth"
     ],
+    "difficulty": "hard",
     "href": "/tree"
   },
   {
@@ -2452,6 +2484,7 @@
       "venture-capital",
       "ai-economics"
     ],
+    "difficulty": "hard",
     "href": "/tree"
   },
   {
@@ -2466,6 +2499,7 @@
       "race-conditions",
       "rate-limiting"
     ],
+    "difficulty": "hard",
     "href": "/tree"
   },
   {
@@ -2480,6 +2514,7 @@
       "context-compaction",
       "cost-scaling"
     ],
+    "difficulty": "hard",
     "href": "/tree"
   },
   {
@@ -2494,6 +2529,7 @@
       "kuzu",
       "subgraph-partitioning"
     ],
+    "difficulty": "medium",
     "href": "/tree"
   },
   {

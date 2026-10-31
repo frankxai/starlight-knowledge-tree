@@ -1,12 +1,8 @@
 import Link from "next/link";
 import { DemandCaptureWaitlist } from "@/components/DemandCaptureWaitlist";
+import { canonDomains, domainSlug } from "@/lib/canon-stats";
 
-const PATHS = [
-  { href: "/paths/ai-architect", label: "AI Architect" },
-  { href: "/paths/space-builder", label: "Space Builder" },
-  { href: "/paths/bio-human-intelligence", label: "Bio / Human Intelligence" },
-  { href: "/paths/creator-founder", label: "Creator-Founder" },
-];
+const PATHS = canonDomains.map((d) => ({ href: `/paths/${domainSlug(d.id)}`, label: d.label }));
 
 export default function HomePage() {
   return (
@@ -78,8 +74,8 @@ export default function HomePage() {
       {/* Paths */}
       <section className="py-16 px-6 max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-2xl font-semibold text-white/90 mb-3">Initial Paths</h2>
-          <p className="text-white/50">Four domains. Four maps. One graph.</p>
+          <h2 className="text-2xl font-semibold text-white/90 mb-3">Paths</h2>
+          <p className="text-white/50">{canonDomains.length} domains. One graph.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
