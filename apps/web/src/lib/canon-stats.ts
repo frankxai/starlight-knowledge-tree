@@ -24,7 +24,9 @@ export function countByType(type: string): number {
 }
 
 export function countByDomain(domainId: string): number {
-  return canonItems.filter((i) => i.domain === domainId).length;
+  // Partition of canon nodes only: domain entries (4 carry a self domain)
+  // and benchmarks (7, domain-tagged) are not nodes and must not inflate it.
+  return canonNodes.filter((i) => i.domain === domainId).length;
 }
 
 export function domainSlug(domainId: string): string {

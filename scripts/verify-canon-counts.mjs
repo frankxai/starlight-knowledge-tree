@@ -60,12 +60,15 @@ function main() {
     const p = path.join(root, f);
     if (fs.existsSync(p)) violations.push(...findCountViolations(fs.readFileSync(p, 'utf8'), counts, f));
   }
-  // The generated search index must cover canon exactly (nodes+domains+benchmarks).
+  // The generated search index must cover canon exactly (nodes+domains+benchmarks),
+  // and its per-domain node partition must sum back to the node count.
   const indexPath = path.join(root, 'apps/web/src/data/search-index.json');
   if (fs.existsSync(indexPath)) {
     const idx = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
     const expected = counts.nodes + counts.domains + counts.benchmarks;
     if (idx.length !== expected) violations.push(`apps/web/src/data/search-index.json: ${idx.length} entries, canon has ${expected} (regenerate: npx tsx scripts/generate-search-index.ts)`);
+    const partitioned = idx.filter((i) => i.type !== 'domain' && i.type !== 'benchmark' && i.domain).length;
+    if (partitioned !== counts.nodes) violations.push(`search-index domain partition sums to ${partitioned}, canon nodes ${counts.nodes}`);
   }
   console.log(`canon counts: nodes=${counts.nodes} uniqueIds=${counts.uniqueIds} domains=${counts.domains} edges=${counts.edges} benchmarks=${counts.benchmarks}`);
   if (counts.uniqueIds !== counts.nodes) violations.push(`duplicate node ids: ${counts.nodes - counts.uniqueIds} rows share an id`);

@@ -18,8 +18,8 @@ const PILLARS = [
   {
     number: "02",
     title: "KV-Cache Prefix Economics",
-    subtitle: "80% Latency & 75% Cost Reduction",
-    description: "Structures prompts with immutable static prefixes (system lore, contracts, tool schemas) so models reuse cached attention states, unlocking 80-90% prompt discounts.",
+    subtitle: "Cached Prefix Reuse",
+    description: "Structures prompts with immutable static prefixes (system lore, contracts, tool schemas) so models reuse cached attention states instead of re-encoding them every turn.",
     tech: "Static Prefix Alignment • Anthropic / Gemini Cache",
     badge: "Cost Reduction"
   },
@@ -27,15 +27,15 @@ const PILLARS = [
     number: "03",
     title: "Hierarchical Graph Partitioning",
     subtitle: "2-Hop Neighborhood Loading",
-    description: "Shards the knowledge graph by domain clusters. Agents query only the 2-hop radius of their specific problem, fitting rich graph context into <8,000 tokens.",
+    description: "Shards the knowledge graph by domain clusters. Agents query only the 2-hop radius of their specific problem instead of loading the whole graph.",
     tech: "Topological Traversal • Subgraph Extraction",
     badge: "Context Scaling"
   },
   {
     number: "04",
     title: "Memory Guardian & OOM Protection",
-    subtitle: "Host Stability Under 50+ Workers",
-    description: "Standing telemetry process monitoring WSL2 RAM, VRAM, and swap. Throttles concurrent worktrees and enforces text-only fallbacks when free memory drops below 50GB.",
+    subtitle: "Host Stability Under Parallel Workers",
+    description: "Standing telemetry process monitoring host RAM and swap. Throttles concurrent worktrees and enforces text-only fallbacks when free memory runs low.",
     tech: "Dynamic Throttling • Swap Prevention",
     badge: "Stability"
   },
@@ -43,22 +43,22 @@ const PILLARS = [
     number: "05",
     title: "Entity Resolution & Deduplication",
     subtitle: "Automated Graph SSOT Unification",
-    description: "Merges overlapping papers, tools, and author nodes from automated scrapers using normalized string distance and dense vector cosine similarity (>0.92).",
+    description: "Merges overlapping papers, tools, and author nodes from automated scrapers using normalized string distance and dense vector cosine similarity.",
     tech: "Jaro-Winkler • Vector Cosine Disambiguation",
     badge: "Data Quality"
   },
   {
     number: "06",
     title: "Columnar Disk Vectors (LanceDB)",
-    subtitle: "Zero-Daemon Millions of Embeddings",
-    description: "Transitions flat JSON files past 10,000 entities to serverless, disk-backed Lance columnar files, offering sub-millisecond vector similarity search with zero RAM overhead.",
+    subtitle: "Zero-Daemon Disk-Backed Embeddings",
+    description: "Design direction past the current flat-JSON scale: serverless, disk-backed Lance columnar files for vector similarity search without a database daemon.",
     tech: "LanceDB • Apache Lance • Rust Native Bindings",
     badge: "Storage Engine"
   },
   {
     number: "07",
     title: "Incremental Static Regeneration (ISR)",
-    subtitle: "Edge Delivery for 10,000+ Pages",
+    subtitle: "Edge Delivery at Estate Scale",
     description: "Pre-renders critical hub routes at build time while lazily compiling long-tail entity pages on-demand, paired with client-side Orama WebAssembly search.",
     tech: "Next.js 14 App Router • Orama WASM • Vercel Edge",
     badge: "Web Delivery"
