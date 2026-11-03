@@ -85,6 +85,12 @@ Each stage has a clear definition:
 
 ---
 
+## Current implementation and verification
+
+The repository provides a structured seed graph, a public browsing application, and an Atlas evidence contract. Learner submissions, reviewed capability progression and production SIS integration are not yet demonstrated end to end.
+
+Run `npm run health:graph` for data completeness and public search integrity, and `npm run test:health` for regression coverage. Unresolved path references are reported as backlog; duplicate identities, invalid domains and stale search projections fail validation. See the [repository assessment and acceptance gates](docs/repository-assessment-2026-11-03.md).
+
 ## Operating Specifications
 
 - [Starlight Learner & Teacher OS](docs/learner-teacher-os/README.md) — evidence-first operating contract and source-of-truth boundaries

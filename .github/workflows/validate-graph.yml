@@ -6,6 +6,7 @@ on:
     paths:
       - "data/**"
       - "packages/**"
+      - "scripts/**"
       - "scripts/validate-atlas.mjs"
       - "scripts/tests/atlas-contract.test.mjs"
       - "package.json"
@@ -15,6 +16,7 @@ on:
     paths:
       - "data/**"
       - "packages/**"
+      - "scripts/**"
       - "scripts/validate-atlas.mjs"
       - "scripts/tests/atlas-contract.test.mjs"
       - "package.json"
@@ -44,8 +46,11 @@ jobs:
       - name: Build graph-utils
         run: cd packages/graph-utils && npm run build
 
-      - name: Run graph validator
-        run: cd packages/graph-utils && npm run validate -- ../../data
+      - name: Test graph health regression cases
+        run: npm run test:health
+
+      - name: Run graph validator and public index integrity checks
+        run: npm run validate
         env:
           NODE_ENV: ci
 

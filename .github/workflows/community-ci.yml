@@ -26,6 +26,12 @@ jobs:
       - name: Validate Knowledge Graph Schemas & Edge Targets
         run: npm run validate
 
+      - name: Test graph health regression cases
+        run: npm run test:health
+
+      - name: Test schemas, graph utilities and Atlas evidence boundaries
+        run: npm run test:atlas
+
       - name: Run Scale Benchmark Stress-Test
         run: npx tsx scripts/scale-graph-benchmark.ts
 
