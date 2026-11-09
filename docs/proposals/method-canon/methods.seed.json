@@ -1,0 +1,313 @@
+{
+  "schema_version": "0.1.0",
+  "editorial_status": "draft_not_approved",
+  "records": [
+    {
+      "id": "method:starlight-human:stellar-human",
+      "namespace": "starlight-human",
+      "kind": "method",
+      "name": "STELLAR",
+      "expansion": [
+        "See",
+        "Think",
+        "Engineer",
+        "Leverage",
+        "Lead",
+        "Activate",
+        "Reinforce"
+      ],
+      "status": "proposed",
+      "origin": "conversation_derived",
+      "definition": "A proposed seven-stage human transformation methodology; Regenerate remains an alternative R.",
+      "source_refs": [
+        {
+          "url": "https://github.com/frankxai/agentic-ops/issues/527",
+          "evidence_state": "inspected"
+        }
+      ],
+      "rights": "original_proposed",
+      "verified_at": null,
+      "related_ids": [],
+      "supersedes": [],
+      "aliases": []
+    },
+    {
+      "id": "method:starlight-semantic:stellar-semantic",
+      "namespace": "starlight-semantic",
+      "kind": "mental_model",
+      "name": "STELLAR",
+      "expansion": [
+        "Signals",
+        "Truth",
+        "Entities",
+        "Lifecycles",
+        "Leverage",
+        "Assets",
+        "Results"
+      ],
+      "status": "proposed",
+      "origin": "conversation_derived",
+      "definition": "A proposed semantic vocabulary for intelligence and outcomes.",
+      "source_refs": [
+        {
+          "url": "https://github.com/frankxai/agentic-ops/issues/527",
+          "evidence_state": "inspected"
+        }
+      ],
+      "rights": "original_proposed",
+      "verified_at": null,
+      "related_ids": [],
+      "supersedes": [],
+      "aliases": []
+    },
+    {
+      "id": "method:starlight-founder:stellar-founder",
+      "namespace": "starlight-founder",
+      "kind": "mental_model",
+      "name": "STELLAR",
+      "expansion": [
+        "Substrate",
+        "Types",
+        "Evidence",
+        "Lineage",
+        "Ledger",
+        "Agents",
+        "Rhythm"
+      ],
+      "status": "historical_assumption",
+      "origin": "notion_historical",
+      "definition": "Historical working assumption in the Founder OS audit; not ratified.",
+      "source_refs": [
+        {
+          "url": "https://app.notion.com/p/40e26ac2b7f6816faab4dd57c500936e",
+          "evidence_state": "inspected"
+        }
+      ],
+      "rights": "review_required",
+      "verified_at": null,
+      "related_ids": [],
+      "supersedes": [],
+      "aliases": []
+    },
+    {
+      "id": "method:starlight-values:stellar-charter",
+      "namespace": "starlight-values",
+      "kind": "mental_model",
+      "name": "STELLAR",
+      "expansion": [
+        "Sovereignty",
+        "Truth",
+        "Excellence",
+        "Leverage",
+        "Learning",
+        "Alignment",
+        "Regeneration"
+      ],
+      "status": "proposed",
+      "origin": "conversation_derived",
+      "definition": "Proposed governance charter separate from human method.",
+      "source_refs": [
+        {
+          "url": "https://github.com/frankxai/agentic-ops/issues/527",
+          "evidence_state": "inspected"
+        }
+      ],
+      "rights": "original_proposed",
+      "verified_at": null,
+      "related_ids": [],
+      "supersedes": [],
+      "aliases": []
+    },
+    {
+      "id": "method:ai-reasoning:react",
+      "namespace": "ai-reasoning",
+      "kind": "research_pattern",
+      "name": "ReAct",
+      "expansion": [
+        "Reasoning",
+        "Acting"
+      ],
+      "status": "externally_documented",
+      "origin": "third_party",
+      "definition": "Research pattern interleaving language model reasoning and tool actions.",
+      "source_refs": [
+        {
+          "url": "https://arxiv.org/abs/2210.03629",
+          "evidence_state": "candidate_not_inspected"
+        }
+      ],
+      "rights": "third_party_attribution_required",
+      "verified_at": null,
+      "related_ids": [],
+      "supersedes": [],
+      "aliases": []
+    },
+    {
+      "id": "method:ai-retrieval:rag",
+      "namespace": "ai-retrieval",
+      "kind": "research_pattern",
+      "name": "RAG",
+      "expansion": [
+        "Retrieval-Augmented",
+        "Generation"
+      ],
+      "status": "externally_documented",
+      "origin": "third_party",
+      "definition": "Retrieval augmented generation using retrieved external documents.",
+      "source_refs": [
+        {
+          "url": "https://arxiv.org/abs/2005.11401",
+          "evidence_state": "candidate_not_inspected"
+        }
+      ],
+      "rights": "third_party_attribution_required",
+      "verified_at": null,
+      "related_ids": [],
+      "supersedes": [],
+      "aliases": []
+    },
+    {
+      "id": "method:agent-interop:mcp",
+      "namespace": "agent-interop",
+      "kind": "protocol",
+      "name": "MCP",
+      "expansion": [
+        "Model",
+        "Context",
+        "Protocol"
+      ],
+      "status": "externally_documented",
+      "origin": "third_party",
+      "definition": "Open protocol for AI applications to access tools and context.",
+      "source_refs": [
+        {
+          "url": "https://modelcontextprotocol.io/specification",
+          "evidence_state": "candidate_not_inspected"
+        }
+      ],
+      "rights": "third_party_attribution_required",
+      "verified_at": null,
+      "related_ids": [],
+      "supersedes": [],
+      "aliases": []
+    },
+    {
+      "id": "method:agent-interop:a2a",
+      "namespace": "agent-interop",
+      "kind": "protocol",
+      "name": "A2A",
+      "expansion": [
+        "Agent2Agent"
+      ],
+      "status": "externally_documented",
+      "origin": "third_party",
+      "definition": "Open protocol for communication among independent agent systems.",
+      "source_refs": [
+        {
+          "url": "https://a2a-protocol.org/latest/specification/",
+          "evidence_state": "candidate_not_inspected"
+        }
+      ],
+      "rights": "third_party_attribution_required",
+      "verified_at": null,
+      "related_ids": [],
+      "supersedes": [],
+      "aliases": []
+    },
+    {
+      "id": "method:semantic-web:rdf",
+      "namespace": "semantic-web",
+      "kind": "standard",
+      "name": "RDF",
+      "expansion": [
+        "Resource",
+        "Description",
+        "Framework"
+      ],
+      "status": "externally_documented",
+      "origin": "third_party",
+      "definition": "W3C model of linked resource statements.",
+      "source_refs": [
+        {
+          "url": "https://www.w3.org/TR/rdf11-concepts/",
+          "evidence_state": "candidate_not_inspected"
+        }
+      ],
+      "rights": "third_party_attribution_required",
+      "verified_at": null,
+      "related_ids": [],
+      "supersedes": [],
+      "aliases": []
+    },
+    {
+      "id": "method:semantic-web:shacl",
+      "namespace": "semantic-web",
+      "kind": "standard",
+      "name": "SHACL",
+      "expansion": [
+        "Shapes",
+        "Constraint",
+        "Language"
+      ],
+      "status": "externally_documented",
+      "origin": "third_party",
+      "definition": "W3C constraint language for RDF graph validation.",
+      "source_refs": [
+        {
+          "url": "https://www.w3.org/TR/shacl/",
+          "evidence_state": "candidate_not_inspected"
+        }
+      ],
+      "rights": "third_party_attribution_required",
+      "verified_at": null,
+      "related_ids": [],
+      "supersedes": [],
+      "aliases": []
+    },
+    {
+      "id": "method:semantic-web:prov-o",
+      "namespace": "semantic-web",
+      "kind": "standard",
+      "name": "PROV-O",
+      "expansion": [
+        "Provenance",
+        "Ontology"
+      ],
+      "status": "externally_documented",
+      "origin": "third_party",
+      "definition": "W3C provenance ontology for entities, activities and agents.",
+      "source_refs": [
+        {
+          "url": "https://www.w3.org/TR/prov-o/",
+          "evidence_state": "candidate_not_inspected"
+        }
+      ],
+      "rights": "third_party_attribution_required",
+      "verified_at": null,
+      "related_ids": [],
+      "supersedes": [],
+      "aliases": []
+    },
+    {
+      "id": "method:product-delivery:scrum",
+      "namespace": "product-delivery",
+      "kind": "method",
+      "name": "Scrum",
+      "expansion": null,
+      "status": "externally_documented",
+      "origin": "third_party",
+      "definition": "Lightweight iterative framework for complex product work.",
+      "source_refs": [
+        {
+          "url": "https://scrumguides.org/scrum-guide.html",
+          "evidence_state": "candidate_not_inspected"
+        }
+      ],
+      "rights": "third_party_attribution_required",
+      "verified_at": null,
+      "related_ids": [],
+      "supersedes": [],
+      "aliases": []
+    }
+  ]
+}
