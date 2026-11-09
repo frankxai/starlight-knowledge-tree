@@ -1,0 +1,5 @@
+import {readFileSync} from 'node:fs';import assert from 'node:assert/strict';
+const p=new URL('./',import.meta.url);const schema=JSON.parse(readFileSync(new URL('method.schema.json',p)));const {records,editorial_status}=JSON.parse(readFileSync(new URL('methods.seed.json',p)));
+assert.equal(editorial_status,'draft_not_approved');assert.equal(records.length,12);const ids=new Set();
+for(const r of records){for(const k of schema.required)assert.ok(Object.hasOwn(r,k),r.id+' missing '+k);assert.match(r.id,/^method:[a-z0-9-]+:[a-z0-9-]+$/);assert.ok(!ids.has(r.id),'duplicate '+r.id);ids.add(r.id);assert.ok(schema.properties.kind.enum.includes(r.kind));assert.ok(schema.properties.status.enum.includes(r.status));assert.ok(r.source_refs.length>0&&r.source_refs.every(s=>/^https:\/\//.test(s.url)));assert.equal(r.verified_at,null);if(r.origin==='third_party')assert.ok(r.source_refs.every(s=>s.evidence_state==='candidate_not_inspected'));if(r.name==='STELLAR')assert.notEqual(r.status,'reviewed');}
+assert.equal(records.filter(r=>r.name==='STELLAR').length,4);console.log('PASS 12 editorial seeds; four namespaced STELLAR variants; no verified claims');
