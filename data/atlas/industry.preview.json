@@ -1,0 +1,225 @@
+{
+  "schema_version": "starlight.atlas.industry.preview.v1",
+  "title": "Starlight Industry Intelligence",
+  "status": "editorial_draft",
+  "as_of": "2026-11-13",
+  "notice": "Curated editorial preview, not a live market feed. Company descriptions are source-backed paraphrases; scenarios are analyst hypotheses. Independent review pending. No company partnership or customer demand is implied.",
+  "rights": {
+    "stored_content": "bibliographic_metadata_and_original_paraphrase",
+    "full_text_redistribution": "not_granted",
+    "authored_collection_license": "pending_owner_review"
+  },
+  "layers": [
+    {
+      "id": "physical",
+      "label": "Physical foundations",
+      "summary": "Energy, cooling, optics and materials",
+      "question": "Where does a physical constraint limit the business?"
+    },
+    {
+      "id": "compute",
+      "label": "Compute & hardware",
+      "summary": "Fabrication, accelerators and packaging",
+      "question": "Which workload benefits on actual deployed hardware?"
+    },
+    {
+      "id": "infrastructure",
+      "label": "Infrastructure",
+      "summary": "Cloud, networking and inference",
+      "question": "Which deployment boundary changes cost or control?"
+    },
+    {
+      "id": "models",
+      "label": "Models & intelligence",
+      "summary": "Capabilities, weights and deployment choices",
+      "question": "Which model meets the quality bar for this task?"
+    },
+    {
+      "id": "agents",
+      "label": "Agentic systems",
+      "summary": "Context, tools and evaluated execution",
+      "question": "Can the workflow complete reliably within budget?"
+    },
+    {
+      "id": "applications",
+      "label": "Applications",
+      "summary": "Customer workflows and distribution",
+      "question": "Which outcome does the customer repeatedly buy?"
+    },
+    {
+      "id": "advantage",
+      "label": "Economic advantage",
+      "summary": "Rights, trust, switching costs and outcomes",
+      "question": "What becomes harder to replace through repeated use?"
+    }
+  ],
+  "entities": [
+    {
+      "id": "asml",
+      "name": "ASML",
+      "layer": "physical",
+      "role": "Lithography systems project chip patterns onto silicon wafers.",
+      "source_id": "asml-source",
+      "limit": "This source does not establish a specific customer contract or supply bottleneck."
+    },
+    {
+      "id": "tsmc",
+      "name": "TSMC",
+      "layer": "compute",
+      "role": "Dedicated foundry services span technology, manufacturing and advanced packaging.",
+      "source_id": "tsmc-source",
+      "limit": "Capacity availability, lead times and customer economics are not established here."
+    },
+    {
+      "id": "nvidia",
+      "name": "NVIDIA",
+      "layer": "compute",
+      "role": "Blackwell GPUs use a custom TSMC 4NP process, according to NVIDIA.",
+      "source_id": "nvidia-source",
+      "limit": "Vendor architecture description; performance and application savings are not independently tested."
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "layer": "infrastructure",
+      "role": "Workers AI provides serverless model inference through its platform and API.",
+      "source_id": "cloudflare-source",
+      "limit": "This source does not establish workload quality, residency suitability or customer savings."
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral AI",
+      "layer": "models",
+      "role": "Mistral develops or makes available open-weight and commercial language models.",
+      "source_id": "mistral-source",
+      "limit": "Open weights do not imply unrestricted rights. Check the exact model license and deployment requirements."
+    }
+  ],
+  "sources": [
+    {
+      "id": "asml-source",
+      "title": "ASML \u00b7 Lithography principles",
+      "url": "https://www.asml.com/en/technology/lithography-principles",
+      "locator": "Microchips and projection-system explanation",
+      "accessed_on": "2026-11-13",
+      "inspection": "relevant_sections"
+    },
+    {
+      "id": "tsmc-source",
+      "title": "TSMC \u00b7 Dedicated IC Foundry",
+      "url": "https://www.tsmc.com/english/dedicatedFoundry",
+      "locator": "Technology, manufacturing, services and advanced-packaging navigation",
+      "accessed_on": "2026-11-13",
+      "inspection": "relevant_sections"
+    },
+    {
+      "id": "nvidia-source",
+      "title": "NVIDIA \u00b7 Blackwell architecture",
+      "url": "https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/",
+      "locator": "A New Class of AI Superchip; custom TSMC 4NP process",
+      "accessed_on": "2026-11-13",
+      "inspection": "relevant_sections"
+    },
+    {
+      "id": "cloudflare-source",
+      "title": "Cloudflare \u00b7 Workers AI overview",
+      "url": "https://developers.cloudflare.com/workers-ai/",
+      "locator": "Overview; invoking models through Workers, Pages or API",
+      "accessed_on": "2026-11-13",
+      "inspection": "relevant_sections"
+    },
+    {
+      "id": "mistral-source",
+      "title": "Mistral \u00b7 Models overview",
+      "url": "https://docs.mistral.ai/models",
+      "locator": "Models Overview introductory paragraph",
+      "accessed_on": "2026-11-13",
+      "inspection": "relevant_sections"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "inference-economics",
+      "title": "When inference gets cheaper",
+      "trigger": "A candidate model or deployment lowers the cost of an accepted result.",
+      "mechanism": "Lower variable cost may make a previously uneconomic workflow viable. The advantage depends on demand, quality, latency and delivery costs.",
+      "standing": "analyst_hypothesis",
+      "assumptions": [
+        "Task acceptance stays constant across routes.",
+        "Support, retries and integration costs are included.",
+        "Customers value the additional completed workflow."
+      ],
+      "countercase": "Higher verification or support effort can consume the entire inference saving. Competitors may receive the same cost reduction.",
+      "action": "Replay a representative task set on two qualified routes. Compare total cost per accepted result before changing pricing or architecture.",
+      "layer_ids": [
+        "infrastructure",
+        "models",
+        "agents",
+        "applications",
+        "advantage"
+      ],
+      "entity_ids": [
+        "cloudflare",
+        "mistral"
+      ]
+    },
+    {
+      "id": "hardware-to-product",
+      "title": "From a chip to a customer outcome",
+      "trigger": "An accelerator or manufacturing change becomes available for a relevant workload.",
+      "mechanism": "Better hardware can enable more throughput, but a product benefits only after the software stack, access and utilization match its workload.",
+      "standing": "analyst_hypothesis",
+      "assumptions": [
+        "The hardware is actually accessible.",
+        "The workload benefits under matched precision and quality.",
+        "Power, networking and utilization are included in the comparison."
+      ],
+      "countercase": "A chip specification may not improve end-to-end latency or total cost. Software porting and utilization can dominate.",
+      "action": "Benchmark the end-to-end customer job. Separate vendor specifications, observed measurements and projected savings.",
+      "layer_ids": [
+        "physical",
+        "compute",
+        "infrastructure",
+        "applications"
+      ],
+      "entity_ids": [
+        "asml",
+        "tsmc",
+        "nvidia"
+      ]
+    },
+    {
+      "id": "owned-workflows",
+      "title": "Where the advantage can compound",
+      "trigger": "Sufficiently capable models become available through several deployment options.",
+      "mechanism": "A workflow may become more defensible through permissioned feedback, evaluation history and customer integration, even when model access is shared.",
+      "standing": "analyst_hypothesis",
+      "assumptions": [
+        "Customers grant appropriate rights to feedback.",
+        "Feedback improves measured outcomes.",
+        "Integration and switching value are real, not imposed friction."
+      ],
+      "countercase": "More collected data does not guarantee better outcomes. Providers may absorb the workflow or customers may prefer portability.",
+      "action": "Identify one outcome metric and a permissioned feedback loop. Test whether a second delivery improves it; retain portable exports.",
+      "layer_ids": [
+        "models",
+        "agents",
+        "applications",
+        "advantage"
+      ],
+      "entity_ids": [
+        "mistral"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "id": "blackwell-tsmc",
+      "to": "tsmc",
+      "label": "uses a custom manufacturing process from",
+      "standing": "company_reported",
+      "source_id": "nvidia-source",
+      "from": "nvidia"
+    }
+  ]
+}
